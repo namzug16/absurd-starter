@@ -7,9 +7,9 @@ environment:
   sdk: ^3.12.0
 
 dependencies:
-  archive: ^4.0.7
+  archive: ^4.0.7 # Used in order to generate the Lucide icons
+
   hotreloader: ^4.4.0
-  htmleez: ^0.15.0
   htmdart: ^0.8.2
   netto: ^0.1.5
 

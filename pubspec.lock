@@ -138,7 +138,7 @@ packages:
     source: hosted
     version: "0.8.2"
   htmleez:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: htmleez
       sha256: "311dbd9dde97297451fbe9da1ad5877d3ce95fb87e5f1a66de7a94a1757246e8"

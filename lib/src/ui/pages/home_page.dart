@@ -7,7 +7,7 @@ HTML pageHome() => primaryLayout(
   body([
     $class("min-h-screen bg-background text-foreground antialiased"),
     div([
-      $class("mx-auto flex min-h-screen w-full max-w-5xl flex-col justify-center gap-10 px-6 py-12"),
+      $class("mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center gap-10 px-6 py-12"),
       section([
         $class("grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center"),
         div([
@@ -40,6 +40,20 @@ HTML pageHome() => primaryLayout(
               $rel("noreferrer"),
               $class("btn-outline"),
               "HTMX".t,
+            ]),
+            a([
+              $href("https://basecoatui.com"),
+              $target("_blank"),
+              $rel("noreferrer"),
+              $class("btn-outline"),
+              "Basecoat".t,
+            ]),
+            a([
+              $href("https://lucide.dev"),
+              $target("_blank"),
+              $rel("noreferrer"),
+              $class("btn-outline"),
+              "Lucide".t,
             ]),
           ]),
         ]),
@@ -86,6 +100,26 @@ HTML pageHome() => primaryLayout(
         _featureCard(Lucide.refreshCw, "HTMX", "Return fragments from Dart and keep UI state boring."),
         _featureCard(Lucide.palette, "Basecoat", "Tailwind-friendly components and design tokens."),
       ]),
+      section([
+        $class("rounded-2xl border bg-card p-5 shadow-sm"),
+        div([
+          $class("mb-5 flex items-center gap-2 text-sm font-medium text-muted-foreground"),
+          Lucide.packageCheck([$class("size-4")]),
+          "Links and pinned versions".t,
+        ]),
+        div([
+          $class("grid gap-3 sm:grid-cols-2 lg:grid-cols-3"),
+          _stackLink("HTMX", "2.0.8", "https://htmx.org"),
+          _stackLink("hyperscript", "0.9.14", "https://hyperscript.org"),
+          _stackLink("Tailwind CSS", "4.1.14", "https://tailwindcss.com"),
+          _stackLink("Basecoat", "local asset, npm 1.0.2", "https://www.npmjs.com/package/basecoat-css"),
+          _stackLink("Lucide", "0.576.0", "https://lucide.dev"),
+          _stackLink("Netto", "0.1.5", "https://pub.dev/packages/netto"),
+          _stackLink("hotreloader", "4.4.0", "https://pub.dev/packages/hotreloader"),
+          _stackLink("htmdart", "0.8.2", "https://pub.dev/packages/htmdart"),
+          _stackLink("htmleez", "0.15.0", "https://pub.dev/packages/htmleez"),
+        ]),
+      ]),
     ]),
   ]),
 );
@@ -103,4 +137,19 @@ HTML _featureCard(HTML Function([List<HTML>]) icon, String title, String descrip
   icon([$class("mb-4 size-5 text-primary")]),
   h2([$class("font-semibold"), title.t]),
   p([$class("mt-2 text-sm leading-6 text-muted-foreground"), description.t]),
+]);
+
+HTML _stackLink(String name, String version, String href) => a([
+  $href(href),
+  $target("_blank"),
+  $rel("noreferrer"),
+  $class("group rounded-xl border bg-background p-4 transition-colors hover:bg-muted"),
+  div([
+    $class("flex items-start justify-between gap-3"),
+    div([
+      h3([$class("font-semibold group-hover:underline"), name.t]),
+      p([$class("mt-1 text-sm text-muted-foreground"), version.t]),
+    ]),
+    Lucide.externalLink([$class("mt-1 size-4 shrink-0 text-muted-foreground")]),
+  ]),
 ]);
