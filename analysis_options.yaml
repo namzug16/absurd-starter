@@ -13,6 +13,16 @@
 
 include: package:lints/recommended.yaml
 
+linter:
+  rules:
+    prefer_single_quotes: false
+    prefer_double_quotes: true
+    omit_local_variable_types: false
+
+formatter:
+  page_width: 300
+  trailing_commas: preserve
+
 # Uncomment the following section to specify additional rules.
 
 # linter:

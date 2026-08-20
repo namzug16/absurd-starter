@@ -10,11 +10,15 @@ RUN dart pub get
 COPY . .
 RUN dart build cli --target bin/server.dart -o output
 
+# Ensure /tmp exists in the final scratch image.
+RUN mkdir -p /tmp
+
 # Build minimal serving image from AOT-compiled `/server`
 # and the pre-built AOT-runtime in the `/runtime/` directory of the base image.
 FROM scratch
 COPY --from=build /runtime/ /
 COPY --from=build /app/output/bundle/ /app/
+COPY --from=build /app/public /public
 
 # Start server.
 EXPOSE 8080

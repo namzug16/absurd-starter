@@ -1,34 +1,149 @@
-import 'dart:io';
+import "dart:async";
+import "dart:io";
 
-import 'package:shelf/shelf.dart';
-import 'package:shelf/shelf_io.dart';
-import 'package:shelf_router/shelf_router.dart';
+import "package:absurd_starter/config.dart";
+import "package:absurd_starter/router.dart";
+import "package:hotreloader/hotreloader.dart";
+import "package:netto/netto.dart";
 
-// Configure routes.
-final _router = Router()
-  ..get('/', _rootHandler)
-  ..get('/echo/<message>', _echoHandler);
+Future<void> main() async {
+  final runtime = Config.dev
+      ? await withHotReload(
+          (runtime) => createServer(liveReload: runtime.liveReload),
+        )
+      : ServerRuntime(await createServer());
 
-Response _rootHandler(Request req) {
-  return Response.ok('Hello, World!\n');
+  final signals = [
+    ProcessSignal.sigint,
+    if (!Platform.isWindows) ProcessSignal.sigterm,
+  ];
+
+  for (final signal in signals) {
+    signal.watch().listen((_) {
+      unawaited(shutdown(runtime));
+    });
+  }
 }
 
-Response _echoHandler(Request request) {
-  final message = request.params['message'];
-  return Response.ok('$message\n');
+Future<HttpServer> createServer({
+  DevBrowserReloader? liveReload,
+}) async {
+  final app = Netto();
+
+  if (Config.dev && liveReload != null) {
+    app.get("/__dev/reload", (ctx) {
+      ctx.request.hijack((request) {
+        unawaited(liveReload.addClient(request.response));
+      });
+    });
+  }
+
+  router(app);
+
+  return app.serve(InternetAddress.anyIPv4, Config.port);
 }
 
-void main(List<String> args) async {
-  // Use any available host or container IP (usually `0.0.0.0`).
-  final ip = InternetAddress.anyIPv4;
+Future<ServerRuntime> withHotReload(
+  FutureOr<HttpServer> Function(ServerRuntime runtime) serverFactory,
+) async {
+  final runtime = ServerRuntime();
 
-  // Configure a pipeline that logs requests.
-  final handler = Pipeline()
-      .addMiddleware(logRequests())
-      .addHandler(_router.call);
+  Future<void> obtainNewServer() async {
+    final willReplaceServer = runtime.current != null;
 
-  // For running in containers, we respect the PORT environment variable.
-  final port = int.parse(Platform.environment['PORT'] ?? '8080');
-  final server = await serve(handler, ip, port);
-  print('Server listening on port ${server.port}');
+    if (willReplaceServer) {
+      runtime.liveReload.reloadBrowsers();
+      await Future<void>.delayed(const Duration(milliseconds: 100));
+    }
+
+    await runtime.replaceWith(() => serverFactory(runtime));
+
+    if (willReplaceServer) {
+      stdout.writeln("[Server hot reloaded]");
+    }
+  }
+
+  try {
+    await HotReloader.create(
+      onAfterReload: (_) {
+        unawaited(obtainNewServer());
+      },
+    );
+  } on StateError catch (e) {
+    if (e.message.contains("VM service not available")) {
+      stdout.writeln("Hot reload not available");
+    } else {
+      rethrow;
+    }
+  }
+
+  await obtainNewServer();
+  stdout.writeln("Server started on ${runtime.current?.port}");
+
+  return runtime;
+}
+
+Future<void> shutdown(ServerRuntime runtime) async {
+  stdout.writeln("Shutting down...");
+  await runtime.close(force: false);
+  exit(0);
+}
+
+class ServerRuntime {
+  ServerRuntime([this.current]);
+
+  HttpServer? current;
+
+  final liveReload = DevBrowserReloader();
+
+  Future<void> replaceWith(FutureOr<HttpServer> Function() serverFactory) async {
+    await current?.close(force: true);
+    current = await serverFactory();
+  }
+
+  Future<void> close({required bool force}) async {
+    await liveReload.close();
+    await current?.close(force: force);
+  }
+}
+
+class DevBrowserReloader {
+  final _clients = <IOSink>{};
+
+  Future<void> addClient(HttpResponse response) async {
+    response.bufferOutput = false;
+    response.headers
+      ..contentType = ContentType("text", "event-stream", charset: "utf-8")
+      ..set(HttpHeaders.cacheControlHeader, "no-cache")
+      ..set(HttpHeaders.connectionHeader, "keep-alive");
+
+    response.write("retry: 500\n\n");
+    await response.flush();
+
+    _clients.add(response);
+
+    response.done.whenComplete(() {
+      _clients.remove(response);
+    });
+  }
+
+  void reloadBrowsers() {
+    for (final client in List<IOSink>.from(_clients)) {
+      try {
+        client.write("data: reload\n\n");
+        if (client is HttpResponse) {
+          unawaited(client.flush());
+        }
+      } catch (_) {
+        _clients.remove(client);
+      }
+    }
+  }
+
+  Future<void> close() async {
+    for (final client in List<IOSink>.from(_clients)) {
+      await client.close();
+    }
+    _clients.clear();
+  }
 }

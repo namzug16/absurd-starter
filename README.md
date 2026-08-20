@@ -1,49 +1,46 @@
-A server app built using [Shelf](https://pub.dev/packages/shelf),
-configured to enable running with [Docker](https://www.docker.com/).
+# Absurd Starter
 
-This sample code handles HTTP GET requests to `/` and `/echo/<message>`
+A pragmatic Dart web starter using:
 
-# Running the sample
+- Netto for the HTTP server
+- htmdart/htmleez for server-rendered HTML and HTMX attributes
+- HTMX for partial updates
+- hyperscript for tiny client-side behaviors
+- Tailwind CSS and Basecoat for styling/components
+- Lucide icons generated into Dart helpers
+- Docker for deployment
 
-## Running with the Dart SDK
+## Commands
 
-You can run the example with the [Dart SDK](https://dart.dev/get-dart)
-like this:
-
-```
-$ dart run bin/server.dart
-Server listening on port 8080
-```
-
-And then from a second terminal:
-```
-$ curl http://0.0.0.0:8080
-Hello, World!
-$ curl http://0.0.0.0:8080/echo/I_love_Dart
-I_love_Dart
+```sh
+dart pub get
+make css
+make lucide
+make dev
 ```
 
-## Running with Docker
+## Verification
 
-If you have [Docker Desktop](https://www.docker.com/get-started) installed, you
-can build and run with the `docker` command:
-
-```
-$ docker build . -t myserver
-$ docker run -it -p 8080:8080 myserver
-Server listening on port 8080
+```sh
+dart analyze
+dart test
 ```
 
-And then from a second terminal:
-```
-$ curl http://0.0.0.0:8080
-Hello, World!
-$ curl http://0.0.0.0:8080/echo/I_love_Dart
-I_love_Dart
-```
+## Structure
 
-You should see the logging printed in the first terminal:
-```
-2021-05-06T15:47:04.620417  0:00:00.000158 GET     [200] /
-2021-05-06T15:47:08.392928  0:00:00.001216 GET     [200] /echo/I_love_Dart
+- `bin/server.dart`: server entry point, hot reload, shutdown handling
+- `lib/router.dart`: route wiring
+- `lib/src/ui/layout/primary_layout.dart`: base HTML layout and assets
+- `lib/src/ui/pages/home_page.dart`: starter page and HTMX demo
+- `lib/src/utils/htmx.dart`: response/request helpers for HTMX
+- `lib/src/ui/components/hyperscript.dart`: reusable hyperscript snippets
+- `bin/generate_lucide.dart`: downloads Lucide SVGs and generates `lib/src/ui/lucide.dart`
+- `input.css`: Tailwind/Basecoat input
+- `public/`: static assets
+
+## Docker
+
+```sh
+docker build . -t absurd-starter
+docker run --rm -p 8080:8080 absurd-starter
 ```
