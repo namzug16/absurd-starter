@@ -6,7 +6,7 @@ import "dart:io";
 import "package:archive/archive.dart";
 import "package:http/http.dart" as http;
 
-const _version = "0.576.0";
+const _version = "1.33.0";
 const _iconsUrl = "https://github.com/lucide-icons/lucide/releases/download/$_version/lucide-icons-$_version.zip";
 const _outputPath = "lib/src/ui/lucide.dart";
 

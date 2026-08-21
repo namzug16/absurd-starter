@@ -29,6 +29,8 @@ class Lucide {
 
   static HTML activity([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2\" />\n");
 
+  static HTML ad([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 13H6\" />\n  <path d=\"M10 15v-4a2 2 0 0 0-4 0v4\" />\n  <path d=\"M14 14.5a.5.5 0 0 0 .5.5h1a2.5 2.5 0 0 0 2.5-2.5v-1A2.5 2.5 0 0 0 15.5 9h-1a.5.5 0 0 0-.5.5z\" />\n  <rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2\" />\n");
+
   static HTML airVent([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M18 17.5a2.5 2.5 0 1 1-4 2.03V12\" />\n  <path d=\"M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\" />\n  <path d=\"M6 8h12\" />\n  <path d=\"M6.6 15.572A2 2 0 1 0 10 17v-5\" />\n");
 
   static HTML airplay([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1\" />\n  <path d=\"m12 15 5 6H7Z\" />\n");
@@ -91,7 +93,7 @@ class Lucide {
 
   static HTML alignVerticalSpaceBetween([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"14\" height=\"6\" x=\"5\" y=\"15\" rx=\"2\" />\n  <rect width=\"10\" height=\"6\" x=\"7\" y=\"3\" rx=\"2\" />\n  <path d=\"M2 21h20\" />\n  <path d=\"M2 3h20\" />\n");
 
-  static HTML ambulance([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 10H6\" />\n  <path d=\"M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2\" />\n  <path\n    d=\"M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14\" />\n  <path d=\"M8 8v4\" />\n  <path d=\"M9 18h6\" />\n  <circle cx=\"17\" cy=\"18\" r=\"2\" />\n  <circle cx=\"7\" cy=\"18\" r=\"2\" />\n");
+  static HTML ambulance([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 10H6\" />\n  <path d=\"M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2\" />\n  <path d=\"M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14\" />\n  <path d=\"M8 8v4\" />\n  <path d=\"M9 18h6\" />\n  <circle cx=\"17\" cy=\"18\" r=\"2\" />\n  <circle cx=\"7\" cy=\"18\" r=\"2\" />\n");
 
   static HTML ampersand([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 12h3\" />\n  <path d=\"M17.5 12a8 8 0 0 1-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13\" />\n");
 
@@ -101,9 +103,7 @@ class Lucide {
 
   static HTML anchor([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 6v16\" />\n  <path d=\"m19 13 2-1a9 9 0 0 1-18 0l2 1\" />\n  <path d=\"M9 11h6\" />\n  <circle cx=\"12\" cy=\"4\" r=\"2\" />\n");
 
-  static HTML angry([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"M16 16s-1.5-2-4-2-4 2-4 2\" />\n  <path d=\"M7.5 8 10 9\" />\n  <path d=\"m14 9 2.5-1\" />\n  <path d=\"M9 10h.01\" />\n  <path d=\"M15 10h.01\" />\n");
-
-  static HTML annoyed([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"M8 15h8\" />\n  <path d=\"M8 9h2\" />\n  <path d=\"M14 9h2\" />\n");
+  static HTML angle([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 3v16a2 2 0 0 0 2 2h16\" />\n  <path d=\"M3 11a10 10 0 0 1 10 10\" />\n");
 
   static HTML antenna([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 12 7 2\" />\n  <path d=\"m7 12 5-10\" />\n  <path d=\"m12 12 5-10\" />\n  <path d=\"m17 12 5-10\" />\n  <path d=\"M4.5 7h15\" />\n  <path d=\"M12 16v6\" />\n");
 
@@ -125,21 +125,21 @@ class Lucide {
 
   static HTML armchair([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3\" />\n  <path d=\"M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z\" />\n  <path d=\"M5 18v2\" />\n  <path d=\"M19 18v2\" />\n");
 
-  static HTML arrowBigDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\" />\n");
+  static HTML arrowBigDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M9 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 0 1 1h3.293a.707.707 0 0 1 .5 1.207l-7.086 7.086a1 1 0 0 1-1.414 0l-7.086-7.086a.707.707 0 0 1 .5-1.207H8a1 1 0 0 0 1-1z\" />\n");
 
-  static HTML arrowBigDownDash([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\" />\n  <path d=\"M9 4h6\" />\n");
+  static HTML arrowBigDownDash([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 8a1 1 0 0 1 1 1v2a1 1 0 0 0 1 1h3.293a.707.707 0 0 1 .5 1.207l-6.939 6.939a1.207 1.207 0 0 1-1.708 0l-6.94-6.94a.707.707 0 0 1 .5-1.206H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1z\" />\n  <path d=\"M9 4h6\" />\n");
 
-  static HTML arrowBigLeft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z\" />\n");
+  static HTML arrowBigLeft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.793 19.793a.707.707 0 0 0 1.207-.5V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-6a1 1 0 0 1-1-1V4.707a.707.707 0 0 0-1.207-.5l-6.94 6.94a1.207 1.207 0 0 0 0 1.707z\" />\n");
 
-  static HTML arrowBigLeftDash([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h2a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z\" />\n  <path d=\"M20 9v6\" />\n");
+  static HTML arrowBigLeftDash([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13 9a1 1 0 0 1-1-1V4.707a.707.707 0 0 0-1.207-.5l-6.94 6.94a1.207 1.207 0 0 0 0 1.707l6.94 6.94a.707.707 0 0 0 1.207-.5V16a1 1 0 0 1 1-1h2a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z\" />\n  <path d=\"M20 9v6\" />\n");
 
-  static HTML arrowBigRight([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 9a1 1 0 0 0 1-1V5.061a1 1 0 0 1 1.811-.75l6.836 6.836a1.207 1.207 0 0 1 0 1.707l-6.836 6.835a1 1 0 0 1-1.811-.75V16a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z\" />\n");
+  static HTML arrowBigRight([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13.207 19.793a.707.707 0 0 1-1.207-.5V16a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1V4.707a.707.707 0 0 1 1.207-.5l6.94 6.94a1.207 1.207 0 0 1 0 1.707z\" />\n");
 
-  static HTML arrowBigRightDash([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 9a1 1 0 0 0 1-1V5.061a1 1 0 0 1 1.811-.75l6.836 6.836a1.207 1.207 0 0 1 0 1.707l-6.836 6.835a1 1 0 0 1-1.811-.75V16a1 1 0 0 0-1-1H9a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z\" />\n  <path d=\"M4 9v6\" />\n");
+  static HTML arrowBigRightDash([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 9a1 1 0 0 0 1-1V4.707a.707.707 0 0 1 1.207-.5l6.94 6.94a1.207 1.207 0 0 1 0 1.707l-6.94 6.94a.707.707 0 0 1-1.207-.5V16a1 1 0 0 0-1-1H9a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z\" />\n  <path d=\"M4 9v6\" />\n");
 
-  static HTML arrowBigUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\" />\n");
+  static HTML arrowBigUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M9 19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-6a1 1 0 0 1 1-1h3.293a.707.707 0 0 0 .5-1.207l-7.086-7.086a1 1 0 0 0-1.414 0l-7.086 7.086a.707.707 0 0 0 .5 1.207H8a1 1 0 0 1 1 1z\" />\n");
 
-  static HTML arrowBigUpDash([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\" />\n  <path d=\"M9 20h6\" />\n");
+  static HTML arrowBigUpDash([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 16a1 1 0 0 0 1-1v-2a1 1 0 0 1 1-1h3.293a.707.707 0 0 0 .5-1.207l-6.939-6.939a1.207 1.207 0 0 0-1.708 0l-6.94 6.94a.707.707 0 0 0 .5 1.206H8a1 1 0 0 1 1 1v2a1 1 0 0 0 1 1z\" />\n  <path d=\"M9 20h6\" />\n");
 
   static HTML arrowDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 5v14\" />\n  <path d=\"m19 12-7 7-7-7\" />\n");
 
@@ -213,11 +213,17 @@ class Lucide {
 
   static HTML asterisk([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 6v12\" />\n  <path d=\"M17.196 9 6.804 15\" />\n  <path d=\"m6.804 9 10.392 6\" />\n");
 
+  static HTML astroid([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.983 21.186a1 1 0 0 1-1.966 0 10 10 0 0 0-8.203-8.203 1 1 0 0 1 0-1.966 10 10 0 0 0 8.203-8.203 1 1 0 0 1 1.966 0 10 10 0 0 0 8.203 8.203 1 1 0 0 1 0 1.966 10 10 0 0 0-8.203 8.203\" />\n");
+
   static HTML atSign([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"4\" />\n  <path d=\"M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8\" />\n");
 
   static HTML atom([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"1\" />\n  <path d=\"M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z\" />\n  <path d=\"M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z\" />\n");
 
   static HTML audioLines([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 10v3\" />\n  <path d=\"M6 6v11\" />\n  <path d=\"M10 3v18\" />\n  <path d=\"M14 8v7\" />\n  <path d=\"M18 5v13\" />\n  <path d=\"M22 10v3\" />\n");
+
+  static HTML audioLinesOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 10v11\" />\n  <path d=\"M10 3v1.35\" />\n  <path d=\"M14 14v1\" />\n  <path d=\"M14 8v.35\" />\n  <path d=\"M18 5v7.35\" />\n  <path d=\"M2 10v3\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M22 10v3\" />\n  <path d=\"M6 6v11\" />\n");
+
+  static HTML audioLinesX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 3v18\" />\n  <path d=\"M14 8v6.35\" />\n  <path d=\"m17 17 5 5\" />\n  <path d=\"M18 5v8.1\" />\n  <path d=\"M2 10v3\" />\n  <path d=\"M22 10v3\" />\n  <path d=\"m22 17-5 5\" />\n  <path d=\"M6 6v11\" />\n");
 
   static HTML audioWaveform([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2\" />\n");
 
@@ -283,11 +289,13 @@ class Lucide {
 
   static HTML banknoteArrowUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5\" />\n  <path d=\"M18 12h.01\" />\n  <path d=\"M19 22v-6\" />\n  <path d=\"m22 19-3-3-3 3\" />\n  <path d=\"M6 12h.01\" />\n  <circle cx=\"12\" cy=\"12\" r=\"2\" />\n");
 
+  static HTML banknoteCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11.748 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4.875\" />\n  <path d=\"m16 19 2 2 4-4\" />\n  <path d=\"M18 12h.01\" />\n  <path d=\"M6 12h.01\" />\n  <circle cx=\"12\" cy=\"12\" r=\"2\" />\n");
+
   static HTML banknoteX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5\" />\n  <path d=\"m17 17 5 5\" />\n  <path d=\"M18 12h.01\" />\n  <path d=\"m22 17-5 5\" />\n  <path d=\"M6 12h.01\" />\n  <circle cx=\"12\" cy=\"12\" r=\"2\" />\n");
 
   static HTML barcode([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 5v14\" />\n  <path d=\"M8 5v14\" />\n  <path d=\"M12 5v14\" />\n  <path d=\"M17 5v14\" />\n  <path d=\"M21 5v14\" />\n");
 
-  static HTML barrel([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 3a41 41 0 0 0 0 18\" />\n  <path d=\"M14 3a41 41 0 0 1 0 18\" />\n  <path d=\"M17 3a2 2 0 0 1 1.68.92 15.25 15.25 0 0 1 0 16.16A2 2 0 0 1 17 21H7a2 2 0 0 1-1.68-.92 15.25 15.25 0 0 1 0-16.16A2 2 0 0 1 7 3z\" />\n  <path d=\"M3.84 17h16.32\" />\n  <path d=\"M3.84 7h16.32\" />\n");
+  static HTML barrel([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 3a41 41 0 000 18\" />\n  <path d=\"M14 3a41 41 0 010 18\" />\n  <path d=\"M16.997 21a2 2 0 001.68-.92 15.25 15.25 0 000-16.16 2 2 0 00-1.68-.92h-10a2 2 0 00-1.681.92 15.25 15.25 0 000 16.16 2 2 0 001.681.92z\" />\n  <path d=\"M3.54 16h16.914\" />\n  <path d=\"M3.54 8h16.914\" />\n");
 
   static HTML baseline([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4 20h16\" />\n  <path d=\"m6 16 6-12 6 12\" />\n  <path d=\"M8 12h8\" />\n");
 
@@ -321,11 +329,15 @@ class Lucide {
 
   static HTML beef([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16.4 13.7A6.5 6.5 0 1 0 6.28 6.6c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c4 0 8.4-1.8 11.4-4.3\" />\n  <path d=\"m18.5 6 2.19 4.5a6.48 6.48 0 0 1-2.29 7.2C15.4 20.2 11 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5\" />\n  <circle cx=\"12.5\" cy=\"8.5\" r=\"2.5\" />\n");
 
+  static HTML beefOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11.771 6.109a2.5 2.5 0 0 1 3.12 3.12\" />\n  <path d=\"M17.852 12.185a6.5 6.5 0 0 0-9.035-9.04\" />\n  <path d=\"M18.013 18.013C15.029 20.349 10.831 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5\" />\n  <path d=\"m18.5 6 2.19 4.5a6.48 6.48 0 0 1-.139 4.393\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M6.355 6.37a7 7 0 0 0-.075.23c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c3.356 0 6.993-1.267 9.85-3.151\" />\n");
+
   static HTML beer([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17 11h1a3 3 0 0 1 0 6h-1\" />\n  <path d=\"M9 12v6\" />\n  <path d=\"M13 12v6\" />\n  <path d=\"M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z\" />\n  <path d=\"M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8\" />\n");
 
   static HTML beerOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13 13v5\" />\n  <path d=\"M17 11.47V8\" />\n  <path d=\"M17 11h1a3 3 0 0 1 2.745 4.211\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-3\" />\n  <path d=\"M7.536 7.535C6.766 7.649 6.154 8 5.5 8a2.5 2.5 0 0 1-1.768-4.268\" />\n  <path d=\"M8.727 3.204C9.306 2.767 9.885 2 11 2c1.56 0 2 1.5 3 1.5s1.72-.5 2.5-.5a1 1 0 1 1 0 5c-.78 0-1.5-.5-2.5-.5a3.149 3.149 0 0 0-.842.12\" />\n  <path d=\"M9 14.6V18\" />\n");
 
   static HTML bell([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.268 21a2 2 0 0 0 3.464 0\" />\n  <path d=\"M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326\" />\n");
+
+  static HTML bellCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.268 21a2 2 0 0 0 3.464 0\" />\n  <path d=\"m15 8 2 2 4-4\" />\n  <path d=\"M16.8607 4.4824A6 6 0 0 0 6 8C6 12.499 4.589 13.956 3.262 15.326\" />\n  <path d=\"M3.262 15.326A1 1 0 0 0 4 17H20A1 1 0 0 0 20.74 15.327C20.209 14.779 19.665 14.218 19.203 13.454\" />\n");
 
   static HTML bellDot([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.268 21a2 2 0 0 0 3.464 0\" />\n  <path d=\"M11.68 2.009A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673c-.824-.85-1.678-1.731-2.21-3.348\" />\n  <circle cx=\"18\" cy=\"5\" r=\"3\" />\n");
 
@@ -365,6 +377,8 @@ class Lucide {
 
   static HTML blend([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"9\" cy=\"9\" r=\"7\" />\n  <circle cx=\"15\" cy=\"15\" r=\"7\" />\n");
 
+  static HTML blender([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 14a2 2 0 0 0-1.963 1.615l-1.018 5.193A1 1 0 0 0 6 22h12a1 1 0 0 0 .981-1.192l-1.018-5.193A2 2 0 0 0 16 14z\" />\n  <path d=\"m17 2-1 12\" />\n  <path d=\"M8.006 14 7 2\" />\n  <path d=\"M7.565 8.787A5 5 0 0 0 12 8a5 5 0 0 1 4.56-.75\" />\n  <path d=\"M19 2H5a2 2 0 0 0-2 2v5a2 2 0 0 0 .688 1.5\" />\n  <path d=\"M12 18h.01\" />\n");
+
   static HTML blinds([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 3h18\" />\n  <path d=\"M20 7H8\" />\n  <path d=\"M20 11H8\" />\n  <path d=\"M10 19h10\" />\n  <path d=\"M8 15h12\" />\n  <path d=\"M4 3v14\" />\n  <circle cx=\"4\" cy=\"19\" r=\"2\" />\n");
 
   static HTML blocks([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2\" />\n  <rect x=\"14\" y=\"2\" width=\"8\" height=\"8\" rx=\"1\" />\n");
@@ -384,6 +398,8 @@ class Lucide {
   static HTML bomb([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"11\" cy=\"13\" r=\"9\" />\n  <path d=\"M14.35 4.65 16.3 2.7a2.41 2.41 0 0 1 3.4 0l1.6 1.6a2.4 2.4 0 0 1 0 3.4l-1.95 1.95\" />\n  <path d=\"m22 2-1.5 1.5\" />\n");
 
   static HTML bone([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z\" />\n");
+
+  static HTML boneFracture([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 4.5a1 1 0 0 1 5 0 .5.5 0 0 0 .5.5 1 1 0 0 1 0 5c-.81 0-1.8-.7-2.5 0l-1.958 1.957a.15.15 0 0 1-.252-.072l-.493-2.07a.15.15 0 0 0-.111-.112l-2.072-.494a.15.15 0 0 1-.072-.252L14 7c.7-.7 0-1.69 0-2.5\" />\n  <path d=\"m16 20-1-2\" />\n  <path d=\"m20 16-2-1\" />\n  <path d=\"m4 8 2 1\" />\n  <path d=\"m8 4 1 2\" />\n  <path d=\"M9.698 14.19a.15.15 0 0 0 .112.112l2.074.489a.15.15 0 0 1 .072.252L10 17c-.7.7 0 1.69 0 2.5a1 1 0 0 1-5 0 .495.495 0 0 0-.5-.5 1 1 0 0 1 0-5c.81 0 1.8.7 2.5 0l1.956-1.957a.15.15 0 0 1 .252.072z\" />\n");
 
   static HTML book([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20\" />\n");
 
@@ -415,11 +431,11 @@ class Lucide {
 
   static HTML bookMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20\" />\n  <path d=\"M9 10h6\" />\n");
 
-  static HTML bookOpen([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 7v14\" />\n  <path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\" />\n");
+  static HTML bookOpen([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 5v16\" />\n  <path d=\"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z\" />\n");
 
-  static HTML bookOpenCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 21V7\" />\n  <path d=\"m16 12 2 2 4-4\" />\n  <path d=\"M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3\" />\n");
+  static HTML bookOpenCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 5v16\" />\n  <path d=\"m16 12 2 2 4-4\" />\n  <path d=\"M22 6V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2h4.001A2 2 0 0022 17v-1.344\" />\n");
 
-  static HTML bookOpenText([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 7v14\" />\n  <path d=\"M16 12h2\" />\n  <path d=\"M16 8h2\" />\n  <path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\" />\n  <path d=\"M6 12h2\" />\n  <path d=\"M6 8h2\" />\n");
+  static HTML bookOpenText([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 5v16\" />\n  <path d=\"M16 13h2\" />\n  <path d=\"M16 9h2\" />\n  <path d=\"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z\" />\n  <path d=\"M6 13h2\" />\n  <path d=\"M6 9h2\" />\n");
 
   static HTML bookPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 7v6\" />\n  <path d=\"M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20\" />\n  <path d=\"M9 10h6\" />\n");
 
@@ -442,6 +458,8 @@ class Lucide {
   static HTML bookmarkCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z\" />\n  <path d=\"m9 10 2 2 4-4\" />\n");
 
   static HTML bookmarkMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 10H9\" />\n  <path d=\"M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z\" />\n");
+
+  static HTML bookmarkOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M19 19v1a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M8.656 3H17a2 2 0 0 1 2 2v8.344\" />\n");
 
   static HTML bookmarkPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 7v6\" />\n  <path d=\"M15 10H9\" />\n  <path d=\"M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z\" />\n");
 
@@ -489,6 +507,12 @@ class Lucide {
 
   static HTML bringToFront([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect x=\"8\" y=\"8\" width=\"8\" height=\"8\" rx=\"2\" />\n  <path d=\"M4 10a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2\" />\n  <path d=\"M14 20a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2\" />\n");
 
+  static HTML broccoli([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 13a3 3 0 0 1-2.121-5.121\" />\n  <path d=\"M15.606 14.204c-3.5 1.5-5.899 4.503-8.899 7.503A1 1 0 0 1 6 22c-2 0-4-2-4-4a1 1 0 0 1 .293-.707c1.911-1.911 3.823-3.578 5.347-5.441\" />\n  <path d=\"M16.573 14.737A4 4 0 0 1 14 11\" />\n  <path d=\"M7.14 10.907a4 4 0 1 1 2.756-7.43A4 4 0 0 1 16.7 4.48a2 2 0 0 1 2.82 2.82 4 4 0 0 1 1.002 6.805A4 4 0 1 1 13 16\" />\n");
+
+  static HTML broom([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13.5 10.5 22 2\" />\n  <path d=\"M14.734 13.841a2 2 0 00-.314-2.42L12.58 9.58a2 2 0 00-2.421-.314l-7.657 4.461A1 1 0 002.3 15.3l6.403 6.403a1 1 0 001.571-.204z\" />\n  <path d=\"m5 18 2-2\" />\n  <path d=\"m7.699 10.7 5.602 5.601\" />\n");
+
+  static HTML broomSparkles([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 2v2\" />\n  <path d=\"M12 3h-2\" />\n  <path d=\"M13.5 10.5 22 2\" />\n  <path d=\"M14.734 13.841a2 2 0 00-.314-2.42L12.58 9.58a2 2 0 00-2.421-.314l-7.657 4.461A1 1 0 002.3 15.3l6.403 6.403a1 1 0 001.571-.204z\" />\n  <path d=\"M20 15v4\" />\n  <path d=\"M22 17h-4\" />\n  <path d=\"M4 4v4\" />\n  <path d=\"m5 18 2-2\" />\n  <path d=\"M6 6H2\" />\n  <path d=\"m7.699 10.7 5.602 5.601\" />\n");
+
   static HTML brush([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m11 10 3 3\" />\n  <path d=\"M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z\" />\n  <path d=\"M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031\" />\n");
 
   static HTML brushCleaning([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m16 22-1-4\" />\n  <path d=\"M19 14a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2h-3a1 1 0 0 1-1-1V4a2 2 0 0 0-4 0v5a1 1 0 0 1-1 1H6a2 2 0 0 0-2 2v1a1 1 0 0 0 1 1\" />\n  <path d=\"M19 14H5l-1.973 6.767A1 1 0 0 0 4 22h16a1 1 0 0 0 .973-1.233z\" />\n  <path d=\"m8 22 1-4\" />\n");
@@ -519,47 +543,47 @@ class Lucide {
 
   static HTML calculator([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\" />\n  <line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\" />\n  <line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\" />\n  <path d=\"M16 10h.01\" />\n  <path d=\"M12 10h.01\" />\n  <path d=\"M8 10h.01\" />\n  <path d=\"M12 14h.01\" />\n  <path d=\"M8 14h.01\" />\n  <path d=\"M12 18h.01\" />\n  <path d=\"M8 18h.01\" />\n");
 
-  static HTML calendar([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v4\" />\n  <path d=\"M16 2v4\" />\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" />\n  <path d=\"M3 10h18\" />\n");
+  static HTML calendar([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v3\" />\n  <path d=\"M16 2v3\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n  <path d=\"M3 9h18\" />\n");
 
-  static HTML calendar1([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 14h1v4\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 2v4\" />\n  <rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\" />\n");
+  static HTML calendar1([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 13h1v4\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n");
 
-  static HTML calendarArrowDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m14 18 4 4 4-4\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M18 14v8\" />\n  <path d=\"M21 11.354V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.343\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 2v4\" />\n");
+  static HTML calendarArrowDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m14 17 4 4 4-4\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"M18 13v8\" />\n  <path d=\"M21 10.354V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h7.343\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n");
 
-  static HTML calendarArrowUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m14 18 4-4 4 4\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M18 22v-8\" />\n  <path d=\"M21 11.343V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 2v4\" />\n");
+  static HTML calendarArrowUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m14 17 4-4 4 4\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"M18 21v-8\" />\n  <path d=\"M21 10.343V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h9\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n");
 
-  static HTML calendarCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v4\" />\n  <path d=\"M16 2v4\" />\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"m9 16 2 2 4-4\" />\n");
+  static HTML calendarCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v3\" />\n  <path d=\"M16 2v3\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"m9 15 2 2 4-4\" />\n");
 
-  static HTML calendarCheck2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v4\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M21 14V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"m16 20 2 2 4-4\" />\n");
+  static HTML calendarCheck2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M 19 3 L 5 3\" />\n  <path d=\"M 21 13 L 21 5\" />\n  <path d=\"M 21 5 A2 2 0 0 0 19 3\" />\n  <path d=\"M 3 19 A2 2 0 0 0 5 21\" />\n  <path d=\"M 3 5 L 3 19\" />\n  <path d=\"M 5 3 A2 2 0 0 0 3 5\" />\n  <path d=\"m16 19 2 2 4-4\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M5 21 L12.5 21\" />\n  <path d=\"M8 2v3\" />\n");
 
-  static HTML calendarClock([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 14v2.2l1.6 1\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5\" />\n  <path d=\"M3 10h5\" />\n  <path d=\"M8 2v4\" />\n  <circle cx=\"16\" cy=\"16\" r=\"6\" />\n");
+  static HTML calendarClock([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 14v2.2l1.6 1\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"M21 7.338V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h2.338\" />\n  <path d=\"M3 9h5.859\" />\n  <path d=\"M8 2v3\" />\n  <circle cx=\"16\" cy=\"16\" r=\"6\" />\n");
 
-  static HTML calendarCog([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15.228 16.852-.923-.383\" />\n  <path d=\"m15.228 19.148-.923.383\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"m16.47 14.305.382.923\" />\n  <path d=\"m16.852 20.772-.383.924\" />\n  <path d=\"m19.148 15.228.383-.923\" />\n  <path d=\"m19.53 21.696-.382-.924\" />\n  <path d=\"m20.772 16.852.924-.383\" />\n  <path d=\"m20.772 19.148.924.383\" />\n  <path d=\"M21 10.592V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 2v4\" />\n  <circle cx=\"18\" cy=\"18\" r=\"3\" />\n");
+  static HTML calendarCog([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15.228 16.852-.923-.383\" />\n  <path d=\"m15.228 19.148-.923.383\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"m16.47 14.305.382.923\" />\n  <path d=\"m16.852 20.772-.383.924\" />\n  <path d=\"m19.148 15.228.383-.923\" />\n  <path d=\"m19.53 21.696-.382-.924\" />\n  <path d=\"m20.773 16.852.924-.383\" />\n  <path d=\"m20.773 19.148.924.383\" />\n  <path d=\"M21 10.5V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h5.5\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n  <circle cx=\"18\" cy=\"18\" r=\"3\" />\n");
 
-  static HTML calendarDays([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v4\" />\n  <path d=\"M16 2v4\" />\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 14h.01\" />\n  <path d=\"M12 14h.01\" />\n  <path d=\"M16 14h.01\" />\n  <path d=\"M8 18h.01\" />\n  <path d=\"M12 18h.01\" />\n  <path d=\"M16 18h.01\" />\n");
+  static HTML calendarDays([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v3\" />\n  <path d=\"M16 2v3\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 13h.01\" />\n  <path d=\"M12 13h.01\" />\n  <path d=\"M16 13h.01\" />\n  <path d=\"M8 17h.01\" />\n  <path d=\"M12 17h.01\" />\n  <path d=\"M16 17h.01\" />\n");
 
-  static HTML calendarFold([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 20a2 2 0 0 0 2 2h10a2.4 2.4 0 0 0 1.706-.706l3.588-3.588A2.4 2.4 0 0 0 21 16V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z\" />\n  <path d=\"M15 22v-5a1 1 0 0 1 1-1h5\" />\n  <path d=\"M8 2v4\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M3 10h18\" />\n");
+  static HTML calendarFold([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 2v3\" />\n  <path d=\"M21 15V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h10v-5a1 1 0 011-1za2.4 2.4 0 01-.706 1.706l-3.588 3.588A2.4 2.4 0 0115 21\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n");
 
-  static HTML calendarHeart([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.127 22H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5.125\" />\n  <path d=\"M14.62 18.8A2.25 2.25 0 1 1 18 15.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a.998.998 0 0 1-1.507 0z\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 2v4\" />\n");
+  static HTML calendarHeart([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.127 21H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v5.125\" />\n  <path d=\"M14.62 17.8A2.25 2.25 0 1118 14.836a2.25 2.25 0 113.38 2.966l-2.626 2.856a.998.998 0 01-1.507 0z\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n");
 
-  static HTML calendarMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 19h6\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M21 15V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8.5\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 2v4\" />\n");
+  static HTML calendarMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 18h6\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"M21 14V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h8.3\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n");
 
-  static HTML calendarMinus2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v4\" />\n  <path d=\"M16 2v4\" />\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M10 16h4\" />\n");
+  static HTML calendarMinus2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v3\" />\n  <path d=\"M16 2v3\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M10 15h4\" />\n");
 
-  static HTML calendarOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4.2 4.2A2 2 0 0 0 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 1.82-1.18\" />\n  <path d=\"M21 15.5V6a2 2 0 0 0-2-2H9.5\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M3 10h7\" />\n  <path d=\"M21 10h-5.5\" />\n  <path d=\"m2 2 20 20\" />\n");
+  static HTML calendarOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 2v3\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M21 9h-5.5\" />\n  <path d=\"M3 9h6\" />\n  <path d=\"M3.586 3.586A2 2 0 003 5v14a2 2 0 002 2h14a2 2 0 001.414-.586\" />\n  <path d=\"M8.656 3H19a2 2 0 012 2v10.344\" />\n");
 
-  static HTML calendarPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 19h6\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M19 16v6\" />\n  <path d=\"M21 12.598V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8.5\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 2v4\" />\n");
+  static HTML calendarPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 18h6\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"M19 15v6\" />\n  <path d=\"M21 11.5V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h8.3\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n");
 
-  static HTML calendarPlus2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v4\" />\n  <path d=\"M16 2v4\" />\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M10 16h4\" />\n  <path d=\"M12 14v4\" />\n");
+  static HTML calendarPlus2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v3\" />\n  <path d=\"M16 2v3\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M10 15h4\" />\n  <path d=\"M12 13v4\" />\n");
 
-  static HTML calendarRange([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 2v4\" />\n  <path d=\"M17 14h-6\" />\n  <path d=\"M13 18H7\" />\n  <path d=\"M7 14h.01\" />\n  <path d=\"M17 18h.01\" />\n");
+  static HTML calendarRange([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n  <path d=\"M17 13h-6\" />\n  <path d=\"M13 17H7\" />\n  <path d=\"M7 13h.01\" />\n  <path d=\"M17 17h.01\" />\n");
 
-  static HTML calendarSearch([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 2v4\" />\n  <path d=\"M21 11.75V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.25\" />\n  <path d=\"m22 22-1.875-1.875\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 2v4\" />\n  <circle cx=\"18\" cy=\"18\" r=\"3\" />\n");
+  static HTML calendarSearch([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 2v3\" />\n  <path d=\"M21 10.69V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h7.25\" />\n  <path d=\"m22 21-1.875-1.875\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n  <circle cx=\"18\" cy=\"17\" r=\"3\" />\n");
 
-  static HTML calendarSync([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 10v4h4\" />\n  <path d=\"m11 14 1.535-1.605a5 5 0 0 1 8 1.5\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"m21 18-1.535 1.605a5 5 0 0 1-8-1.5\" />\n  <path d=\"M21 22v-4h-4\" />\n  <path d=\"M21 8.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4.3\" />\n  <path d=\"M3 10h4\" />\n  <path d=\"M8 2v4\" />\n");
+  static HTML calendarSync([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 10v4h4\" />\n  <path d=\"m11 14 1.535-1.605a5 5 0 018 1.5\" />\n  <path d=\"M16 2v3\" />\n  <path d=\"m21 18-1.535 1.605a5 5 0 01-8-1.5\" />\n  <path d=\"M21 22v-4h-4\" />\n  <path d=\"M21 8.517V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h3.517\" />\n  <path d=\"M3 9h4\" />\n  <path d=\"M8 2v3\" />\n");
 
-  static HTML calendarX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v4\" />\n  <path d=\"M16 2v4\" />\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"m14 14-4 4\" />\n  <path d=\"m10 14 4 4\" />\n");
+  static HTML calendarX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v3\" />\n  <path d=\"M16 2v3\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"m14 13-4 4\" />\n  <path d=\"m10 13 4 4\" />\n");
 
-  static HTML calendarX2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2v4\" />\n  <path d=\"M16 2v4\" />\n  <path d=\"M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"m17 22 5-5\" />\n  <path d=\"m17 17 5 5\" />\n");
+  static HTML calendarX2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 2v3\" />\n  <path d=\"m17 16 5 5\" />\n  <path d=\"m17 21 5-5\" />\n  <path d=\"M21 12V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h8\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M8 2v3\" />\n");
 
   static HTML calendars([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 2v2\" />\n  <path d=\"M15.726 21.01A2 2 0 0 1 14 22H4a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2\" />\n  <path d=\"M18 2v2\" />\n  <path d=\"M2 13h2\" />\n  <path d=\"M8 8h14\" />\n  <rect x=\"8\" y=\"3\" width=\"14\" height=\"14\" rx=\"2\" />\n");
 
@@ -569,7 +593,7 @@ class Lucide {
 
   static HTML candy([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 7v10.9\" />\n  <path d=\"M14 6.1V17\" />\n  <path d=\"M16 7V3a1 1 0 0 1 1.707-.707 2.5 2.5 0 0 0 2.152.717 1 1 0 0 1 1.131 1.131 2.5 2.5 0 0 0 .717 2.152A1 1 0 0 1 21 8h-4\" />\n  <path d=\"M16.536 7.465a5 5 0 0 0-7.072 0l-2 2a5 5 0 0 0 0 7.07 5 5 0 0 0 7.072 0l2-2a5 5 0 0 0 0-7.07\" />\n  <path d=\"M8 17v4a1 1 0 0 1-1.707.707 2.5 2.5 0 0 0-2.152-.717 1 1 0 0 1-1.131-1.131 2.5 2.5 0 0 0-.717-2.152A1 1 0 0 1 3 16h4\" />\n");
 
-  static HTML candyCane([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5.7 21a2 2 0 0 1-3.5-2l8.6-14a6 6 0 0 1 10.4 6 2 2 0 1 1-3.464-2 2 2 0 1 0-3.464-2Z\" />\n  <path d=\"M17.75 7 15 2.1\" />\n  <path d=\"M10.9 4.8 13 9\" />\n  <path d=\"m7.9 9.7 2 4.4\" />\n  <path d=\"M4.9 14.7 7 18.9\" />\n");
+  static HTML candyCane([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m10.8 5 2.111 4.223\" />\n  <path d=\"M17.75 7 15 2.1\" />\n  <path d=\"m4.874 14.647 2.12 4.24\" />\n  <path d=\"M5.7 21a2 2 0 0 1-3.5-2l8.6-14a6 6 0 0 1 10.4 6 2 2 0 1 1-3.464-2 2 2 0 1 0-3.464-2z\" />\n  <path d=\"m7.906 9.712 2.005 4.411\" />\n");
 
   static HTML candyOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 10v7.9\" />\n  <path d=\"M11.802 6.145a5 5 0 0 1 6.053 6.053\" />\n  <path d=\"M14 6.1v2.243\" />\n  <path d=\"m15.5 15.571-.964.964a5 5 0 0 1-7.071 0 5 5 0 0 1 0-7.07l.964-.965\" />\n  <path d=\"M16 7V3a1 1 0 0 1 1.707-.707 2.5 2.5 0 0 0 2.152.717 1 1 0 0 1 1.131 1.131 2.5 2.5 0 0 0 .717 2.152A1 1 0 0 1 21 8h-4\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M8 17v4a1 1 0 0 1-1.707.707 2.5 2.5 0 0 0-2.152-.717 1 1 0 0 1-1.131-1.131 2.5 2.5 0 0 0-.717-2.152A1 1 0 0 1 3 16h4\" />\n");
 
@@ -583,6 +607,8 @@ class Lucide {
 
   static HTML car([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2\" />\n  <circle cx=\"7\" cy=\"17\" r=\"2\" />\n  <path d=\"M9 17h6\" />\n  <circle cx=\"17\" cy=\"17\" r=\"2\" />\n");
 
+  static HTML carBattery([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 13h4\" />\n  <path d=\"M16 15v-4\" />\n  <path d=\"M18 5v2\" />\n  <path d=\"M6 13h4\" />\n  <path d=\"M6 5v2\" />\n  <rect x=\"2\" y=\"7\" width=\"20\" height=\"12\" rx=\"2\" />\n");
+
   static HTML carFront([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8\" />\n  <path d=\"M7 14h.01\" />\n  <path d=\"M17 14h.01\" />\n  <rect width=\"18\" height=\"8\" x=\"3\" y=\"10\" rx=\"2\" />\n  <path d=\"M5 18v2\" />\n  <path d=\"M19 18v2\" />\n");
 
   static HTML carTaxiFront([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 2h4\" />\n  <path d=\"m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8\" />\n  <path d=\"M7 14h.01\" />\n  <path d=\"M17 14h.01\" />\n  <rect width=\"18\" height=\"8\" x=\"3\" y=\"10\" rx=\"2\" />\n  <path d=\"M5 18v2\" />\n  <path d=\"M19 18v2\" />\n");
@@ -591,7 +617,7 @@ class Lucide {
 
   static HTML cardSim([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 14v4\" />\n  <path d=\"M14.172 2a2 2 0 0 1 1.414.586l3.828 3.828A2 2 0 0 1 20 7.828V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z\" />\n  <path d=\"M8 14h8\" />\n  <rect x=\"8\" y=\"10\" width=\"8\" height=\"8\" rx=\"1\" />\n");
 
-  static HTML carrot([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2.27 21.7s9.87-3.5 12.73-6.36a4.5 4.5 0 0 0-6.36-6.37C5.77 11.84 2.27 21.7 2.27 21.7zM8.64 14l-2.05-2.04M15.34 15l-2.46-2.46\" />\n  <path d=\"M22 9s-1.33-2-3.5-2C16.86 7 15 9 15 9s1.33 2 3.5 2S22 9 22 9z\" />\n  <path d=\"M15 2s-2 1.33-2 3.5S15 9 15 9s2-1.84 2-3.5C17 3.33 15 2 15 2z\" />\n");
+  static HTML carrot([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 16a1 1 0 0 0-7-7q-4 4-5.987 12.385a.5.5 0 0 0 .602.602Q11 20 15 16l-3-3\" />\n  <path d=\"M15 9q4 4 7 0-3-4-7 0 4-4 0-7-4 3 0 7\" />\n  <path d=\"m8 15-2.58-2.58\" />\n");
 
   static HTML caseLower([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 9v7\" />\n  <path d=\"M14 6v10\" />\n  <circle cx=\"17.5\" cy=\"12.5\" r=\"3.5\" />\n  <circle cx=\"6.5\" cy=\"12.5\" r=\"3.5\" />\n");
 
@@ -608,6 +634,8 @@ class Lucide {
   static HTML cat([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z\" />\n  <path d=\"M8 14v.5\" />\n  <path d=\"M16 14v.5\" />\n  <path d=\"M11.25 16.25h1.5L12 17l-.75-.75Z\" />\n");
 
   static HTML cctv([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16.75 12h3.632a1 1 0 0 1 .894 1.447l-2.034 4.069a1 1 0 0 1-1.708.134l-2.124-2.97\" />\n  <path d=\"M17.106 9.053a1 1 0 0 1 .447 1.341l-3.106 6.211a1 1 0 0 1-1.342.447L3.61 12.3a2.92 2.92 0 0 1-1.3-3.91L3.69 5.6a2.92 2.92 0 0 1 3.92-1.3z\" />\n  <path d=\"M2 19h3.76a2 2 0 0 0 1.8-1.1L9 15\" />\n  <path d=\"M2 21v-4\" />\n  <path d=\"M7 9h.01\" />\n");
+
+  static HTML cctvOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m12.309 6.652 4.797 2.401a1 1 0 0 1 .447 1.341l-.501 1.001.605.605h2.725a1 1 0 0 1 .894 1.447l-.724 1.448\" />\n  <path d=\"m15.166 15.166-.719 1.439a1 1 0 0 1-1.342.447L3.61 12.3a2.92 2.92 0 0 1-1.3-3.91L3.69 5.6a2.9 2.9 0 0 1 .873-1.037\" />\n  <path d=\"M2 19h3.76a2 2 0 0 0 1.8-1.1l1.441-2.902\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M2 21v-4\" />\n  <path d=\"M7 9h.01\" />\n");
 
   static HTML chartArea([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 3v16a2 2 0 0 0 2 2h16\" />\n  <path d=\"M7 11.207a.5.5 0 0 1 .146-.353l2-2a.5.5 0 0 1 .708 0l3.292 3.292a.5.5 0 0 0 .708 0l4.292-4.292a.5.5 0 0 1 .854.353V16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z\" />\n");
 
@@ -645,7 +673,7 @@ class Lucide {
 
   static HTML chartNoAxesColumnIncreasing([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5 21v-6\" />\n  <path d=\"M12 21V9\" />\n  <path d=\"M19 21V3\" />\n");
 
-  static HTML chartNoAxesCombined([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 16v5\" />\n  <path d=\"M16 14v7\" />\n  <path d=\"M20 10v11\" />\n  <path d=\"m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15\" />\n  <path d=\"M4 18v3\" />\n  <path d=\"M8 14v7\" />\n");
+  static HTML chartNoAxesCombined([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 16v5\" />\n  <path d=\"M16 14.639V21\" />\n  <path d=\"M20 10.656V21\" />\n  <path d=\"m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15\" />\n  <path d=\"M4 18.463V21\" />\n  <path d=\"M8 14.656V21\" />\n");
 
   static HTML chartNoAxesGantt([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M6 5h12\" />\n  <path d=\"M4 12h10\" />\n  <path d=\"M12 19h8\" />\n");
 
@@ -707,8 +735,6 @@ class Lucide {
 
   static HTML chevronsUpDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m7 15 5 5 5-5\" />\n  <path d=\"m7 9 5-5 5 5\" />\n");
 
-  static HTML chromium([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.88 21.94 15.46 14\" />\n  <path d=\"M21.17 8H12\" />\n  <path d=\"M3.95 6.06 8.54 14\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <circle cx=\"12\" cy=\"12\" r=\"4\" />\n");
-
   static HTML church([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 9h4\" />\n  <path d=\"M12 7v5\" />\n  <path d=\"M14 21v-3a2 2 0 0 0-4 0v3\" />\n  <path d=\"m18 9 3.52 2.147a1 1 0 0 1 .48.854V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6.999a1 1 0 0 1 .48-.854L6 9\" />\n  <path d=\"M6 21V7a1 1 0 0 1 .376-.782l5-3.999a1 1 0 0 1 1.249.001l5 4A1 1 0 0 1 18 7v14\" />\n");
 
   static HTML cigarette([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17 12H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h14\" />\n  <path d=\"M18 8c0-2.5-2-2.5-2-5\" />\n  <path d=\"M21 16a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1\" />\n  <path d=\"M22 8c0-2.5-2-2.5-2-5\" />\n  <path d=\"M7 12v4\" />\n");
@@ -761,6 +787,8 @@ class Lucide {
 
   static HTML circleEqual([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"M7 10h10\" />\n  <path d=\"M7 14h10\" />\n");
 
+  static HTML circleEuro([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 9.4a4 4 0 1 0 0 5.2\" />\n  <path d=\"M7 12h5\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
+
   static HTML circleFadingArrowUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 2a10 10 0 0 1 7.38 16.75\" />\n  <path d=\"m16 12-4-4-4 4\" />\n  <path d=\"M12 16V8\" />\n  <path d=\"M2.5 8.875a10 10 0 0 0-.5 3\" />\n  <path d=\"M2.83 16a10 10 0 0 0 2.43 3.4\" />\n  <path d=\"M4.636 5.235a10 10 0 0 1 .891-.857\" />\n  <path d=\"M8.644 21.42a10 10 0 0 0 7.631-.38\" />\n");
 
   static HTML circleFadingPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 2a10 10 0 0 1 7.38 16.75\" />\n  <path d=\"M12 8v8\" />\n  <path d=\"M16 12H8\" />\n  <path d=\"M2.5 8.875a10 10 0 0 0-.5 3\" />\n  <path d=\"M2.83 16a10 10 0 0 0 2.43 3.4\" />\n  <path d=\"M4.636 5.235a10 10 0 0 1 .891-.857\" />\n  <path d=\"M8.644 21.42a10 10 0 0 0 7.631-.38\" />\n");
@@ -803,7 +831,7 @@ class Lucide {
 
   static HTML circleUser([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <circle cx=\"12\" cy=\"10\" r=\"3\" />\n  <path d=\"M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662\" />\n");
 
-  static HTML circleUserRound([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M18 20a6 6 0 0 0-12 0\" />\n  <circle cx=\"12\" cy=\"10\" r=\"4\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
+  static HTML circleUserRound([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17.925 20.056a6 6 0 0 0-11.851.001\" />\n  <circle cx=\"12\" cy=\"11\" r=\"4\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
 
   static HTML circleX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"m15 9-6 6\" />\n  <path d=\"m9 9 6 6\" />\n");
 
@@ -867,6 +895,10 @@ class Lucide {
 
   static HTML clockArrowDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 6v6l2 1\" />\n  <path d=\"M12.337 21.994a10 10 0 1 1 9.588-8.767\" />\n  <path d=\"m14 18 4 4 4-4\" />\n  <path d=\"M18 14v8\" />\n");
 
+  static HTML clockArrowLeft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 6v6l1.5.8\" />\n  <path d=\"M12.338 21.994a10 10 0 1 1 9.587-8.767\" />\n  <path d=\"M14 18h8\" />\n  <path d=\"m18 22-4-4 4-4\" />\n");
+
+  static HTML clockArrowRight([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 6v6l2 1\" />\n  <path d=\"M13.5 21.885A10 10 0 1 1 22 12\" />\n  <path d=\"M14 18h8\" />\n  <path d=\"m18 22 4-4-4-4\" />\n");
+
   static HTML clockArrowUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 6v6l1.56.78\" />\n  <path d=\"M13.227 21.925a10 10 0 1 1 8.767-9.588\" />\n  <path d=\"m14 18 4-4 4 4\" />\n  <path d=\"M18 22v-8\" />\n");
 
   static HTML clockCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 6v6l4 2\" />\n  <path d=\"M22 12a10 10 0 1 0-11 9.95\" />\n  <path d=\"m22 16-5.5 5.5L14 19\" />\n");
@@ -927,10 +959,6 @@ class Lucide {
 
   static HTML codeXml([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m18 16 4-4-4-4\" />\n  <path d=\"m6 8-4 4 4 4\" />\n  <path d=\"m14.5 4-5 16\" />\n");
 
-  static HTML codepen([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <polygon points=\"12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2\" />\n  <line x1=\"12\" x2=\"12\" y1=\"22\" y2=\"15.5\" />\n  <polyline points=\"22 8.5 12 15.5 2 8.5\" />\n  <polyline points=\"2 15.5 12 8.5 22 15.5\" />\n  <line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"8.5\" />\n");
-
-  static HTML codesandbox([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />\n  <polyline points=\"7.5 4.21 12 6.81 16.5 4.21\" />\n  <polyline points=\"7.5 19.79 7.5 14.6 3 12\" />\n  <polyline points=\"21 12 16.5 14.6 16.5 19.79\" />\n  <polyline points=\"3.27 6.96 12 12.01 20.73 6.96\" />\n  <line x1=\"12\" x2=\"12\" y1=\"22.08\" y2=\"12\" />\n");
-
   static HTML coffee([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 2v2\" />\n  <path d=\"M14 2v2\" />\n  <path d=\"M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1\" />\n  <path d=\"M6 2v2\" />\n");
 
   static HTML cog([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 10.27 7 3.34\" />\n  <path d=\"m11 13.73-4 6.93\" />\n  <path d=\"M12 22v-2\" />\n  <path d=\"M12 2v2\" />\n  <path d=\"M14 12h8\" />\n  <path d=\"m17 20.66-1-1.73\" />\n  <path d=\"m17 3.34-1 1.73\" />\n  <path d=\"M2 12h2\" />\n  <path d=\"m20.66 17-1.73-1\" />\n  <path d=\"m20.66 7-1.73 1\" />\n  <path d=\"m3.34 17 1.73-1\" />\n  <path d=\"m3.34 7 1.73 1\" />\n  <circle cx=\"12\" cy=\"12\" r=\"2\" />\n  <circle cx=\"12\" cy=\"12\" r=\"8\" />\n");
@@ -941,7 +969,7 @@ class Lucide {
 
   static HTML columns3([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M9 3v18\" />\n  <path d=\"M15 3v18\" />\n");
 
-  static HTML columns3Cog([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.5 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5.5\" />\n  <path d=\"m14.3 19.6 1-.4\" />\n  <path d=\"M15 3v7.5\" />\n  <path d=\"m15.2 16.9-.9-.3\" />\n  <path d=\"m16.6 21.7.3-.9\" />\n  <path d=\"m16.8 15.3-.4-1\" />\n  <path d=\"m19.1 15.2.3-.9\" />\n  <path d=\"m19.6 21.7-.4-1\" />\n  <path d=\"m20.7 16.8 1-.4\" />\n  <path d=\"m21.7 19.4-.9-.3\" />\n  <path d=\"M9 3v18\" />\n  <circle cx=\"18\" cy=\"18\" r=\"3\" />\n");
+  static HTML columns3Cog([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.6 21H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v5.6\" />\n  <path d=\"m14.305 19.53.923-.382\" />\n  <path d=\"M15 3v7.6\" />\n  <path d=\"m15.229 16.852-.924-.383\" />\n  <path d=\"m16.852 15.228-.383-.923\" />\n  <path d=\"m16.852 20.772-.383.924\" />\n  <path d=\"m19.148 15.228.383-.923\" />\n  <path d=\"m19.53 21.696-.382-.924\" />\n  <path d=\"m20.773 16.852.922-.383\" />\n  <path d=\"m20.773 19.148.922.383\" />\n  <path d=\"M9 3v18\" />\n  <circle cx=\"18\" cy=\"18\" r=\"3\" />\n");
 
   static HTML columns4([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M7.5 3v18\" />\n  <path d=\"M12 3v18\" />\n  <path d=\"M16.5 3v18\" />\n");
 
@@ -961,9 +989,9 @@ class Lucide {
 
   static HTML construction([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect x=\"2\" y=\"6\" width=\"20\" height=\"8\" rx=\"1\" />\n  <path d=\"M17 14v7\" />\n  <path d=\"M7 14v7\" />\n  <path d=\"M17 3v3\" />\n  <path d=\"M7 3v3\" />\n  <path d=\"M10 14 2.3 6.3\" />\n  <path d=\"m14 6 7.7 7.7\" />\n  <path d=\"m8 6 8 8\" />\n");
 
-  static HTML contact([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 2v2\" />\n  <path d=\"M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2\" />\n  <path d=\"M8 2v2\" />\n  <circle cx=\"12\" cy=\"11\" r=\"3\" />\n  <rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\" />\n");
+  static HTML contact([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 2v2\" />\n  <path d=\"M7 21v-2a2 2 0 012-2h6a2 2 0 012 2v2\" />\n  <path d=\"M8 2v2\" />\n  <circle cx=\"12\" cy=\"10\" r=\"3\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n");
 
-  static HTML contactRound([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 2v2\" />\n  <path d=\"M17.915 22a6 6 0 0 0-12 0\" />\n  <path d=\"M8 2v2\" />\n  <circle cx=\"12\" cy=\"12\" r=\"4\" />\n  <rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\" />\n");
+  static HTML contactRound([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 2v2\" />\n  <path d=\"M17.915 21a6 6 0 10-12 0\" />\n  <path d=\"M8 2v2\" />\n  <circle cx=\"12\" cy=\"11\" r=\"4\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n");
 
   static HTML container([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z\" />\n  <path d=\"M10 21.9V14L2.1 9.1\" />\n  <path d=\"m10 14 11.9-6.9\" />\n  <path d=\"M14 19.8v-8.1\" />\n  <path d=\"M18 17.5V9.4\" />\n");
 
@@ -1033,9 +1061,21 @@ class Lucide {
 
   static HTML database([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n  <path d=\"M3 5V19A9 3 0 0 0 21 19V5\" />\n  <path d=\"M3 12A9 3 0 0 0 21 12\" />\n");
 
+  static HTML databaseArrowDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m16 19 3 3 3-3\" />\n  <path d=\"M19 16v6\" />\n  <path d=\"M21 12.536V5\" />\n  <path d=\"M3 12A9 3 0 0 0 15.182 14.806\" />\n  <path d=\"M3 5V19A9 3 0 0 0 13.318 21.968\" />\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n");
+
+  static HTML databaseArrowUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M19 22v-6\" />\n  <path d=\"M21 12.536V5\" />\n  <path d=\"m22 19-3-3-3 3\" />\n  <path d=\"M3 12A9 3 0 0 0 14.457 14.886\" />\n  <path d=\"M3 5V19A9 3 0 0 0 13.318 21.968\" />\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n");
+
   static HTML databaseBackup([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n  <path d=\"M3 12a9 3 0 0 0 5 2.69\" />\n  <path d=\"M21 9.3V5\" />\n  <path d=\"M3 5v14a9 3 0 0 0 6.47 2.88\" />\n  <path d=\"M12 12v4h4\" />\n  <path d=\"M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16\" />\n");
 
+  static HTML databaseCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m16 19 2 2 4-4\" />\n  <path d=\"M21 13.127V5\" />\n  <path d=\"M3 12A9 3 0 0 0 21 12\" />\n  <path d=\"M3 5V19A9 3 0 0 0 13.318 21.968\" />\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n");
+
+  static HTML databaseMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 15V5\" />\n  <path d=\"M22 19h-6\" />\n  <path d=\"M3 12A9 3 0 0 0 21 12\" />\n  <path d=\"M3 5V19A9 3 0 0 0 13.318 21.968\" />\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n");
+
+  static HTML databasePlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M19 16v6\" />\n  <path d=\"M21 12.536V5\" />\n  <path d=\"M22 19h-6\" />\n  <path d=\"M3 12A9 3 0 0 0 15.1824 14.8061\" />\n  <path d=\"M3 5V19A9 3 0 0 0 13.318 21.968\" />\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n");
+
   static HTML databaseSearch([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 11.693V5\" />\n  <path d=\"m22 22-1.875-1.875\" />\n  <path d=\"M3 12a9 3 0 0 0 8.697 2.998\" />\n  <path d=\"M3 5v14a9 3 0 0 0 9.28 2.999\" />\n  <circle cx=\"18\" cy=\"18\" r=\"3\" />\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n");
+
+  static HTML databaseX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m17 17 5 5\" />\n  <path d=\"M19.323 13.744A9 3 0 0 0 21 12\" />\n  <path d=\"M21 13.127V5\" />\n  <path d=\"m22 17-5 5\" />\n  <path d=\"M3 12A9 3 0 0 0 13.563 14.954\" />\n  <path d=\"M3 5V19A9 3 0 0 0 13 21.981\" />\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n");
 
   static HTML databaseZap([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n  <path d=\"M3 5V19A9 3 0 0 0 15 21.84\" />\n  <path d=\"M21 5V8\" />\n  <path d=\"M21 12L18 17H22L19 22\" />\n  <path d=\"M3 12A9 3 0 0 0 14.59 14.87\" />\n");
 
@@ -1101,15 +1141,13 @@ class Lucide {
 
   static HTML doorOpen([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 20H2\" />\n  <path d=\"M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z\" />\n  <path d=\"M11 4H8a2 2 0 0 0-2 2v14\" />\n  <path d=\"M14 12h.01\" />\n  <path d=\"M22 20h-3\" />\n");
 
-  static HTML dot([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12.1\" cy=\"12.1\" r=\"1\" />\n");
+  static HTML dot([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"1\" />\n");
 
   static HTML download([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 15V3\" />\n  <path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" />\n  <path d=\"m7 10 5 5 5-5\" />\n");
 
   static HTML draftingCompass([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m12.99 6.74 1.93 3.44\" />\n  <path d=\"M19.136 12a10 10 0 0 1-14.271 0\" />\n  <path d=\"m21 21-2.16-3.84\" />\n  <path d=\"m3 21 8.02-14.26\" />\n  <circle cx=\"12\" cy=\"5\" r=\"2\" />\n");
 
   static HTML drama([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 11h.01\" />\n  <path d=\"M14 6h.01\" />\n  <path d=\"M18 6h.01\" />\n  <path d=\"M6.5 13.1h.01\" />\n  <path d=\"M22 5c0 9-4 12-6 12s-6-3-6-12c0-2 2-3 6-3s6 1 6 3\" />\n  <path d=\"M17.4 9.9c-.8.8-2 .8-2.8 0\" />\n  <path d=\"M10.1 7.1C9 7.2 7.7 7.7 6 8.6c-3.5 2-4.7 3.9-3.7 5.6 4.5 7.8 9.5 8.4 11.2 7.4.9-.5 1.9-2.1 1.9-4.7\" />\n  <path d=\"M9.1 16.5c.3-1.1 1.4-1.7 2.4-1.4\" />\n");
-
-  static HTML dribbble([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94\" />\n  <path d=\"M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32\" />\n  <path d=\"M8.56 2.75c4.37 6 6 9.42 8 17.72\" />\n");
 
   static HTML drill([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a3 3 0 0 1-3-3 1 1 0 0 1 1-1z\" />\n  <path d=\"M13 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1l-.81 3.242a1 1 0 0 1-.97.758H8\" />\n  <path d=\"M14 4h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3\" />\n  <path d=\"M18 6h4\" />\n  <path d=\"m5 10-2 8\" />\n  <path d=\"m7 18 2-8\" />\n");
 
@@ -1143,6 +1181,10 @@ class Lucide {
 
   static HTML eggOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M20 14.347V14c0-6-4-12-8-12-1.078 0-2.157.436-3.157 1.19\" />\n  <path d=\"M6.206 6.21C4.871 8.4 4 11.2 4 14a8 8 0 0 0 14.568 4.568\" />\n");
 
+  static HTML eject([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4 13a1 1 0 0 1-.72-1.695l7.257-7.668a2 2 0 0 1 2.926 0l7.256 7.668A1 1 0 0 1 20 13z\" />\n  <rect x=\"3\" y=\"17\" width=\"18\" height=\"4\" rx=\"1\" />\n");
+
+  static HTML ellipse([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"6\" />\n");
+
   static HTML ellipsis([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"1\" />\n  <circle cx=\"19\" cy=\"12\" r=\"1\" />\n  <circle cx=\"5\" cy=\"12\" r=\"1\" />\n");
 
   static HTML ellipsisVertical([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"1\" />\n  <circle cx=\"12\" cy=\"5\" r=\"1\" />\n  <circle cx=\"12\" cy=\"19\" r=\"1\" />\n");
@@ -1155,7 +1197,7 @@ class Lucide {
 
   static HTML eraser([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21\" />\n  <path d=\"m5.082 11.09 8.828 8.828\" />\n");
 
-  static HTML ethernetPort([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z\" />\n  <path d=\"M6 8v1\" />\n  <path d=\"M10 8v1\" />\n  <path d=\"M14 8v1\" />\n  <path d=\"M18 8v1\" />\n");
+  static HTML ethernetPort([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 8v1\" />\n  <path d=\"M14 8v1\" />\n  <path d=\"M18 8v1\" />\n  <path d=\"M19 17a2 2 0 00-1.765 1.059l-.47.882A2 2 0 0115 20H9a2 2 0 01-1.765-1.059l-.47-.882A2 2 0 005 17H4a2 2 0 01-2-2V6a2 2 0 012-2h16a2 2 0 012 2v9a2 2 0 01-2 2z\" />\n  <path d=\"M6 8v1\" />\n");
 
   static HTML euro([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4 10h12\" />\n  <path d=\"M4 14h9\" />\n  <path d=\"M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2\" />\n");
 
@@ -1169,9 +1211,23 @@ class Lucide {
 
   static HTML eyeClosed([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15 18-.722-3.25\" />\n  <path d=\"M2 8a10.645 10.645 0 0 0 20 0\" />\n  <path d=\"m20 15-1.726-2.05\" />\n  <path d=\"m4 15 1.726-2.05\" />\n  <path d=\"m9 18 .722-3.25\" />\n");
 
+  static HTML eyeDashed([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13.054 18.946a11 11 0 0 1-2.11 0\" />\n  <path d=\"M13.054 5.054a11 11 0 0 0-2.11-.001\" />\n  <path d=\"M17.072 6.274a11 11 0 0 1 1.753 1.173\" />\n  <path d=\"M18.825 16.552a11 11 0 0 1-1.753 1.174\" />\n  <path d=\"M2.514 13.303a11 11 0 0 1-.452-.954 1 1 0 0 1 0-.697 11 11 0 0 1 .45-.955\" />\n  <path d=\"M21.485 10.697a11 11 0 0 1 .453.955 1 1 0 0 1 0 .697 11 11 0 0 1-.453.954\" />\n  <path d=\"M5.173 7.448a11 11 0 0 1 1.753-1.174\" />\n  <path d=\"M6.926 17.726a11 11 0 0 1-1.753-1.174\" />\n  <circle cx=\"12\" cy=\"12\" r=\"3\" />\n");
+
   static HTML eyeOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49\" />\n  <path d=\"M14.084 14.158a3 3 0 0 1-4.242-4.242\" />\n  <path d=\"M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143\" />\n  <path d=\"m2 2 20 20\" />\n");
 
-  static HTML facebook([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z\" />\n");
+  static HTML faceAngry([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 11V9.416\" />\n  <path d=\"M17 9a5 5 0 00-3 1\" />\n  <path d=\"M7 9a5 5 0 013 1\" />\n  <path d=\"M9 11V9.416\" />\n  <path d=\"M9 16a5 5 0 016.001 0\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
+
+  static HTML faceExpressionless([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 10h2\" />\n  <path d=\"M8 10h2\" />\n  <path d=\"M8 16h8\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
+
+  static HTML faceGrinning([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 10V9\" />\n  <path d=\"M7.084 14.302a5.12 5.12 0 009.833 0 .24.24 0 00-.235-.302H7.32a.24.24 0 00-.235.302\" />\n  <path d=\"M9 10V9\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
+
+  static HTML faceNeutral([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 10V9\" />\n  <path d=\"M8 16h8\" />\n  <path d=\"M9 10V9\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
+
+  static HTML faceSlightlyFrowning([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 10V9\" />\n  <path d=\"M9 10V9\" />\n  <path d=\"M9 16a5 5 0 016 0\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
+
+  static HTML faceSlightlySmiling([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 10V9\" />\n  <path d=\"M16.472 15a6 6 0 01-8.943 0\" />\n  <path d=\"M9 10V9\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
+
+  static HTML faceSlightlySmilingPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13.267 2.08a10 10 0 108.653 8.653\" />\n  <path d=\"M15 10V9\" />\n  <path d=\"M16 5h6\" />\n  <path d=\"M16.472 15a6 6 0 01-8.943 0\" />\n  <path d=\"M19 2v6\" />\n  <path d=\"M9 10V9\" />\n");
 
   static HTML factory([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 16h.01\" />\n  <path d=\"M16 16h.01\" />\n  <path d=\"M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z\" />\n  <path d=\"M8 16h.01\" />\n");
 
@@ -1179,13 +1235,11 @@ class Lucide {
 
   static HTML fastForward([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 12 18z\" />\n  <path d=\"M2 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 2 18z\" />\n");
 
-  static HTML feather([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z\" />\n  <path d=\"M16 8 2 22\" />\n  <path d=\"M17.5 15H9\" />\n");
+  static HTML feather([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14.086 18.412A2 2 0 0112.67 19H5v-7.672a2 2 0 01.586-1.414L11.75 3.75a6 6 0 118.49 8.49z\" />\n  <path d=\"M16 8 2 22\" />\n  <path d=\"M17.488 15H9\" />\n");
 
   static HTML fence([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z\" />\n  <path d=\"M6 8h4\" />\n  <path d=\"M6 18h4\" />\n  <path d=\"m12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z\" />\n  <path d=\"M14 8h4\" />\n  <path d=\"M14 18h4\" />\n  <path d=\"m20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z\" />\n");
 
   static HTML ferrisWheel([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"2\" />\n  <path d=\"M12 2v4\" />\n  <path d=\"m6.8 15-3.5 2\" />\n  <path d=\"m20.7 7-3.5 2\" />\n  <path d=\"M6.8 9 3.3 7\" />\n  <path d=\"m20.7 17-3.5-2\" />\n  <path d=\"m9 22 3-8 3 8\" />\n  <path d=\"M8 22h8\" />\n  <path d=\"M18 18.7a9 9 0 1 0-12 0\" />\n");
-
-  static HTML figma([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z\" />\n  <path d=\"M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z\" />\n  <path d=\"M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z\" />\n  <path d=\"M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z\" />\n  <path d=\"M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z\" />\n");
 
   static HTML file([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z\" />\n  <path d=\"M14 2v5a1 1 0 0 0 1 1h5\" />\n");
 
@@ -1195,7 +1249,7 @@ class Lucide {
 
   static HTML fileBadge([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3\" />\n  <path d=\"M14 2v5a1 1 0 0 0 1 1h5\" />\n  <path d=\"m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88\" />\n  <circle cx=\"6\" cy=\"14\" r=\"3\" />\n");
 
-  static HTML fileBox([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14.5 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.8\" />\n  <path d=\"M14 2v5a1 1 0 0 0 1 1h5\" />\n  <path d=\"M11.7 14.2 7 17l-4.7-2.8\" />\n  <path d=\"M3 13.1a2 2 0 0 0-.999 1.76v3.24a2 2 0 0 0 .969 1.78L6 21.7a2 2 0 0 0 2.03.01L11 19.9a2 2 0 0 0 1-1.76V14.9a2 2 0 0 0-.97-1.78L8 11.3a2 2 0 0 0-2.03-.01z\" />\n  <path d=\"M7 17v5\" />\n");
+  static HTML fileBox([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 2v5a1 1 0 001 1h5\" />\n  <path d=\"M14.692 22H18a2 2 0 002-2V8a2.4 2.4 0 00-.706-1.706l-3.588-3.588A2.4 2.4 0 0014 2H6a2 2 0 00-2 2v3.804\" />\n  <path d=\"M2.264 13.752 7 16.5l4.737-2.748\" />\n  <path d=\"M2.995 13.014A2 2 0 002 14.744v3.516a2 2 0 00.996 1.73l3 1.74a2 2 0 002.008 0l3-1.74A2 2 0 0012 18.26v-3.517a2 2 0 00-.995-1.73l-3-1.742a2 2 0 00-1.892-.064z\" />\n  <path d=\"M7 16.5V22\" />\n");
 
   static HTML fileBraces([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z\" />\n  <path d=\"M14 2v5a1 1 0 0 0 1 1h5\" />\n  <path d=\"M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1\" />\n  <path d=\"M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1\" />\n");
 
@@ -1355,6 +1409,8 @@ class Lucide {
 
   static HTML folderArchive([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"15\" cy=\"19\" r=\"2\" />\n  <path d=\"M20.9 19.8A2 2 0 0 0 22 18V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h5.1\" />\n  <path d=\"M15 11v-1\" />\n  <path d=\"M15 17v-2\" />\n");
 
+  static HTML folderBookmark([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 6v8l3-3 3 3V6\" />\n  <path d=\"M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z\" />\n");
+
   static HTML folderCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z\" />\n  <path d=\"m9 13 2 2 4-4\" />\n");
 
   static HTML folderClock([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 14v2.2l1.6 1\" />\n  <path d=\"M7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2\" />\n  <circle cx=\"16\" cy=\"16\" r=\"6\" />\n");
@@ -1423,10 +1479,6 @@ class Lucide {
 
   static HTML frame([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <line x1=\"22\" x2=\"2\" y1=\"6\" y2=\"6\" />\n  <line x1=\"22\" x2=\"2\" y1=\"18\" y2=\"18\" />\n  <line x1=\"6\" x2=\"6\" y1=\"2\" y2=\"22\" />\n  <line x1=\"18\" x2=\"18\" y1=\"2\" y2=\"22\" />\n");
 
-  static HTML framer([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5 16V9h14V2H5l14 14h-7m-7 0 7 7v-7m-7 0h7\" />\n");
-
-  static HTML frown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"M16 16s-1.5-2-4-2-4 2-4 2\" />\n  <line x1=\"9\" x2=\"9.01\" y1=\"9\" y2=\"9\" />\n  <line x1=\"15\" x2=\"15.01\" y1=\"9\" y2=\"9\" />\n");
-
   static HTML fuel([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 4 0v-6.998a2 2 0 0 0-.59-1.42L18 5\" />\n  <path d=\"M14 21V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16\" />\n  <path d=\"M2 21h13\" />\n  <path d=\"M3 9h11\" />\n");
 
   static HTML fullscreen([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 7V5a2 2 0 0 1 2-2h2\" />\n  <path d=\"M17 3h2a2 2 0 0 1 2 2v2\" />\n  <path d=\"M21 17v2a2 2 0 0 1-2 2h-2\" />\n  <path d=\"M7 21H5a2 2 0 0 1-2-2v-2\" />\n  <rect width=\"10\" height=\"8\" x=\"7\" y=\"8\" rx=\"1\" />\n");
@@ -1451,7 +1503,7 @@ class Lucide {
 
   static HTML gamepad2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <line x1=\"6\" x2=\"10\" y1=\"11\" y2=\"11\" />\n  <line x1=\"8\" x2=\"8\" y1=\"9\" y2=\"13\" />\n  <line x1=\"15\" x2=\"15.01\" y1=\"12\" y2=\"12\" />\n  <line x1=\"18\" x2=\"18.01\" y1=\"10\" y2=\"10\" />\n  <path d=\"M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z\" />\n");
 
-  static HTML gamepadDirectional([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path\n    d=\"M11.146 15.854a1.207 1.207 0 0 1 1.708 0l1.56 1.56A2 2 0 0 1 15 18.828V21a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2.172a2 2 0 0 1 .586-1.414z\" />\n  <path\n    d=\"M18.828 15a2 2 0 0 1-1.414-.586l-1.56-1.56a1.207 1.207 0 0 1 0-1.708l1.56-1.56A2 2 0 0 1 18.828 9H21a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1z\" />\n  <path\n    d=\"M6.586 14.414A2 2 0 0 1 5.172 15H3a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h2.172a2 2 0 0 1 1.414.586l1.56 1.56a1.207 1.207 0 0 1 0 1.708z\" />\n  <path\n    d=\"M9 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2.172a2 2 0 0 1-.586 1.414l-1.56 1.56a1.207 1.207 0 0 1-1.708 0l-1.56-1.56A2 2 0 0 1 9 5.172z\" />\n");
+  static HTML gamepadDirectional([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11.146 15.854a1.207 1.207 0 0 1 1.708 0l1.56 1.56A2 2 0 0 1 15 18.828V21a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2.172a2 2 0 0 1 .586-1.414z\" />\n  <path d=\"M18.828 15a2 2 0 0 1-1.414-.586l-1.56-1.56a1.207 1.207 0 0 1 0-1.708l1.56-1.56A2 2 0 0 1 18.828 9H21a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1z\" />\n  <path d=\"M6.586 14.414A2 2 0 0 1 5.172 15H3a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h2.172a2 2 0 0 1 1.414.586l1.56 1.56a1.207 1.207 0 0 1 0 1.708z\" />\n  <path d=\"M9 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2.172a2 2 0 0 1-.586 1.414l-1.56 1.56a1.207 1.207 0 0 1-1.708 0l-1.56-1.56A2 2 0 0 1 9 5.172z\" />\n");
 
   static HTML gauge([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m12 14 4-4\" />\n  <path d=\"M3.34 19a10 10 0 1 1 17.32 0\" />\n");
 
@@ -1499,15 +1551,13 @@ class Lucide {
 
   static HTML gitPullRequestDraft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"18\" cy=\"18\" r=\"3\" />\n  <circle cx=\"6\" cy=\"6\" r=\"3\" />\n  <path d=\"M18 6V5\" />\n  <path d=\"M18 11v-1\" />\n  <line x1=\"6\" x2=\"6\" y1=\"9\" y2=\"21\" />\n");
 
-  static HTML github([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4\" />\n  <path d=\"M9 18c-4.51 2-5-2-7-2\" />\n");
-
-  static HTML gitlab([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m22 13.29-3.33-10a.42.42 0 0 0-.14-.18.38.38 0 0 0-.22-.11.39.39 0 0 0-.23.07.42.42 0 0 0-.14.18l-2.26 6.67H8.32L6.1 3.26a.42.42 0 0 0-.1-.18.38.38 0 0 0-.26-.08.39.39 0 0 0-.23.07.42.42 0 0 0-.14.18L2 13.29a.74.74 0 0 0 .27.83L12 21l9.69-6.88a.71.71 0 0 0 .31-.83Z\" />\n");
-
   static HTML glassWater([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5.116 4.104A1 1 0 0 1 6.11 3h11.78a1 1 0 0 1 .994 1.105L17.19 20.21A2 2 0 0 1 15.2 22H8.8a2 2 0 0 1-2-1.79z\" />\n  <path d=\"M6 12a5 5 0 0 1 6 0 5 5 0 0 0 6 0\" />\n");
 
   static HTML glasses([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"6\" cy=\"15\" r=\"4\" />\n  <circle cx=\"18\" cy=\"15\" r=\"4\" />\n  <path d=\"M14 15a2 2 0 0 0-2-2 2 2 0 0 0-2 2\" />\n  <path d=\"M2.5 13 5 7c.7-1.3 1.4-2 3-2\" />\n  <path d=\"M21.5 13 19 7c-.7-1.3-1.5-2-3-2\" />\n");
 
   static HTML globe([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20\" />\n  <path d=\"M2 12h20\" />\n");
+
+  static HTML globeCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15 6 2 2 4-4\" />\n  <path d=\"M2 12h20A10 10 0 1 1 12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 4-10\" />\n");
 
   static HTML globeLock([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15.686 15A14.5 14.5 0 0 1 12 22a14.5 14.5 0 0 1 0-20 10 10 0 1 0 9.542 13\" />\n  <path d=\"M2 12h8.5\" />\n  <path d=\"M20 6V4a2 2 0 1 0-4 0v2\" />\n  <rect width=\"8\" height=\"5\" x=\"14\" y=\"6\" rx=\"1\" />\n");
 
@@ -1517,7 +1567,7 @@ class Lucide {
 
   static HTML goal([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 13V2l8 4-8 4\" />\n  <path d=\"M20.561 10.222a9 9 0 1 1-12.55-5.29\" />\n  <path d=\"M8.002 9.997a5 5 0 1 0 8.9 2.02\" />\n");
 
-  static HTML gpu([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 21V3\" />\n  <path d=\"M2 5h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2.26\" />\n  <path d=\"M7 17v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3\" />\n  <circle cx=\"16\" cy=\"11\" r=\"2\" />\n  <circle cx=\"8\" cy=\"11\" r=\"2\" />\n");
+  static HTML gpu([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 17h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H2\" />\n  <path d=\"M2 21V3\" />\n  <path d=\"M7 17v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3\" />\n  <circle cx=\"16\" cy=\"11\" r=\"2\" />\n  <circle cx=\"8\" cy=\"11\" r=\"2\" />\n");
 
   static HTML graduationCap([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z\" />\n  <path d=\"M22 10v6\" />\n  <path d=\"M6 12.5V16a6 3 0 0 0 12 0v-3.5\" />\n");
 
@@ -1587,7 +1637,7 @@ class Lucide {
 
   static HTML hd([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 12H6\" />\n  <path d=\"M10 15V9\" />\n  <path d=\"M14 14.5a.5.5 0 0 0 .5.5h1a2.5 2.5 0 0 0 2.5-2.5v-1A2.5 2.5 0 0 0 15.5 9h-1a.5.5 0 0 0-.5.5z\" />\n  <path d=\"M6 15V9\" />\n  <rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2\" />\n");
 
-  static HTML hdmiPort([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 9a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h1l2 2h12l2-2h1a1 1 0 0 0 1-1Z\" />\n  <path d=\"M7.5 12h9\" />\n");
+  static HTML hdmiPort([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 9a1 1 0 00-1-1H3a1 1 0 00-1 1v4a1 1 0 001 1h.5a2 2 0 011.6.8l.3.4A2 2 0 007 16h10a2 2 0 001.6-.8l.3-.4a2 2 0 011.6-.8h.5a1 1 0 001-1z\" />\n  <path d=\"M8 12h8\" />\n");
 
   static HTML heading([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M6 12h12\" />\n  <path d=\"M6 20V4\" />\n  <path d=\"M18 20V4\" />\n");
 
@@ -1623,6 +1673,8 @@ class Lucide {
 
   static HTML heartPulse([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5\" />\n  <path d=\"M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\" />\n");
 
+  static HTML heartX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15.5 12.5 5 5\" />\n  <path d=\"m20.5 12.5-5 5\" />\n  <path d=\"M21.955 8.774a5.5 5.5 0 0 0-9.546-2.95.6.6 0 0 1-.818 0A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.508 5.332a2 2 0 0 0 2.57.352\" />\n");
+
   static HTML heater([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 8c2-3-2-3 0-6\" />\n  <path d=\"M15.5 8c2-3-2-3 0-6\" />\n  <path d=\"M6 10h.01\" />\n  <path d=\"M6 14h.01\" />\n  <path d=\"M10 16v-4\" />\n  <path d=\"M14 16v-4\" />\n  <path d=\"M18 16v-4\" />\n  <path d=\"M20 6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3\" />\n  <path d=\"M5 20v2\" />\n  <path d=\"M19 20v2\" />\n");
 
   static HTML helicopter([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 17v4\" />\n  <path d=\"M14 3v8a2 2 0 0 0 2 2h5.865\" />\n  <path d=\"M17 17v4\" />\n  <path d=\"M18 17a4 4 0 0 0 4-4 8 6 0 0 0-8-6 6 5 0 0 0-6 5v3a2 2 0 0 0 2 2z\" />\n  <path d=\"M2 10v5\" />\n  <path d=\"M6 3h16\" />\n  <path d=\"M7 21h14\" />\n  <path d=\"M8 13H2\" />\n");
@@ -1630,8 +1682,6 @@ class Lucide {
   static HTML hexagon([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />\n");
 
   static HTML highlighter([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m9 11-6 6v3h9l3-3\" />\n  <path d=\"m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4\" />\n");
-
-  static HTML history([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\" />\n  <path d=\"M3 3v5h5\" />\n  <path d=\"M12 7v5l4 2\" />\n");
 
   static HTML hop([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.82 16.12c1.69.6 3.91.79 5.18.85.55.03 1-.42.97-.97-.06-1.27-.26-3.5-.85-5.18\" />\n  <path d=\"M11.5 6.5c1.64 0 5-.38 6.71-1.07.52-.2.55-.82.12-1.17A10 10 0 0 0 4.26 18.33c.35.43.96.4 1.17-.12.69-1.71 1.07-5.07 1.07-6.71 1.34.45 3.1.9 4.88.62a.88.88 0 0 0 .73-.74c.3-2.14-.15-3.5-.61-4.88\" />\n  <path d=\"M15.62 16.95c.2.85.62 2.76.5 4.28a.77.77 0 0 1-.9.7 16.64 16.64 0 0 1-4.08-1.36\" />\n  <path d=\"M16.13 21.05c1.65.63 3.68.84 4.87.91a.9.9 0 0 0 .96-.96 17.68 17.68 0 0 0-.9-4.87\" />\n  <path d=\"M16.94 15.62c.86.2 2.77.62 4.29.5a.77.77 0 0 0 .7-.9 16.64 16.64 0 0 0-1.36-4.08\" />\n  <path d=\"M17.99 5.52a20.82 20.82 0 0 1 3.15 4.5.8.8 0 0 1-.68 1.13c-2.33.2-5.3-.32-8.27-1.57\" />\n  <path d=\"M4.93 4.93 3 3a.7.7 0 0 1 0-1\" />\n  <path d=\"M9.58 12.18c1.24 2.98 1.77 5.95 1.57 8.28a.8.8 0 0 1-1.13.68 20.82 20.82 0 0 1-4.5-3.15\" />\n");
 
@@ -1691,8 +1741,6 @@ class Lucide {
 
   static HTML inspectionPanel([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M7 7h.01\" />\n  <path d=\"M17 7h.01\" />\n  <path d=\"M7 17h.01\" />\n  <path d=\"M17 17h.01\" />\n");
 
-  static HTML instagram([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"20\" height=\"20\" x=\"2\" y=\"2\" rx=\"5\" ry=\"5\" />\n  <path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\" />\n  <line x1=\"17.5\" x2=\"17.51\" y1=\"6.5\" y2=\"6.5\" />\n");
-
   static HTML italic([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <line x1=\"19\" x2=\"10\" y1=\"4\" y2=\"4\" />\n  <line x1=\"14\" x2=\"5\" y1=\"20\" y2=\"20\" />\n  <line x1=\"15\" x2=\"9\" y1=\"4\" y2=\"20\" />\n");
 
   static HTML iterationCcw([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m16 14 4 4-4 4\" />\n  <path d=\"M20 10a8 8 0 1 0-8 8h8\" />\n");
@@ -1733,7 +1781,7 @@ class Lucide {
 
   static HTML landPlot([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m12 8 6-3-6-3v10\" />\n  <path d=\"m8 11.99-5.5 3.14a1 1 0 0 0 0 1.74l8.5 4.86a2 2 0 0 0 2 0l8.5-4.86a1 1 0 0 0 0-1.74L16 12\" />\n  <path d=\"m6.49 12.85 11.02 6.3\" />\n  <path d=\"M17.51 12.85 6.5 19.15\" />\n");
 
-  static HTML landmark([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 18v-7\" />\n  <path d=\"M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z\" />\n  <path d=\"M14 18v-7\" />\n  <path d=\"M18 18v-7\" />\n  <path d=\"M3 22h18\" />\n  <path d=\"M6 18v-7\" />\n");
+  static HTML landmark([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 18v-7\" />\n  <path d=\"M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z\" />\n  <path d=\"M14 18v-7\" />\n  <path d=\"M18 18v-7\" />\n  <path d=\"M3 22h18\" />\n  <path d=\"M6 18v-7\" />\n");
 
   static HTML languages([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m5 8 6 6\" />\n  <path d=\"m4 14 6-6 2-3\" />\n  <path d=\"M2 5h12\" />\n  <path d=\"M7 2h1\" />\n  <path d=\"m22 22-5-10-5 10\" />\n  <path d=\"M14 18h6\" />\n");
 
@@ -1747,15 +1795,25 @@ class Lucide {
 
   static HTML lassoSelect([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M7 22a5 5 0 0 1-2-4\" />\n  <path d=\"M7 16.93c.96.43 1.96.74 2.99.91\" />\n  <path d=\"M3.34 14A6.8 6.8 0 0 1 2 10c0-4.42 4.48-8 10-8s10 3.58 10 8a7.19 7.19 0 0 1-.33 2\" />\n  <path d=\"M5 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z\" />\n  <path d=\"M14.33 22h-.09a.35.35 0 0 1-.24-.32v-10a.34.34 0 0 1 .33-.34c.08 0 .15.03.21.08l7.34 6a.33.33 0 0 1-.21.59h-4.49l-2.57 3.85a.35.35 0 0 1-.28.14z\" />\n");
 
-  static HTML laugh([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"M18 13a6 6 0 0 1-6 5 6 6 0 0 1-6-5h12Z\" />\n  <line x1=\"9\" x2=\"9.01\" y1=\"9\" y2=\"9\" />\n  <line x1=\"15\" x2=\"15.01\" y1=\"9\" y2=\"9\" />\n");
+  static HTML layerArrowDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 10v10\" />\n  <path d=\"M22 10a1 1 0 01-.59.92l-5.077 2.308\" />\n  <path d=\"M22.017 10.005a1 1 0 00-.597-.916l-8.59-3.91a2 2 0 00-1.66.001L2.6 9.08a1 1 0 00-.02 1.831l5.093 2.316\" />\n  <path d=\"m9 17 3 3 3-3\" />\n");
+
+  static HTML layerArrowUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 14V4\" />\n  <path d=\"M7.674 10.774 2.58 13.09a1 1 0 000 1.822l8.6 3.91a2 2 0 001.65 0l8.58-3.9a1 1 0 00.59-.92 1 1 0 00-.59-.922l-5.078-2.308\" />\n  <path d=\"m9 7 3-3 3 3\" />\n");
 
   static HTML layers([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z\" />\n  <path d=\"M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12\" />\n  <path d=\"M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17\" />\n");
 
   static HTML layers2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13 13.74a2 2 0 0 1-2 0L2.5 8.87a1 1 0 0 1 0-1.74L11 2.26a2 2 0 0 1 2 0l8.5 4.87a1 1 0 0 1 0 1.74z\" />\n  <path d=\"m20 14.285 1.5.845a1 1 0 0 1 0 1.74L13 21.74a2 2 0 0 1-2 0l-8.5-4.87a1 1 0 0 1 0-1.74l1.5-.845\" />\n");
 
+  static HTML layersArrowDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 7v15\" />\n  <path d=\"M2 12a1 1 0 00.58.91l5.093 2.316\" />\n  <path d=\"M22 12a1 1 0 01-.59.92l-5.077 2.308\" />\n  <path d=\"M8 10.37 2.6 7.91a1 1 0 010-1.831l8.57-3.9a2 2 0 011.66.001l8.59 3.91a1 1 0 010 1.831l-5.392 2.45\" />\n  <path d=\"m9 19 3 3 3-3\" />\n");
+
+  static HTML layersArrowUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 12V2\" />\n  <path d=\"M2 17.002a1 1 0 00.58.91l8.6 3.91a2 2 0 001.65 0l8.58-3.9a1 1 0 00.59-.92\" />\n  <path d=\"M7.674 8.774 2.58 11.09a1 1 0 000 1.822l8.6 3.91a2 2 0 001.65 0l8.58-3.9a1 1 0 00.59-.92 1 1 0 00-.59-.922l-5.078-2.308\" />\n  <path d=\"m9 5 3-3 3 3\" />\n");
+
+  static HTML layersMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 .83.18 2 2 0 0 0 .83-.18l8.58-3.9a1 1 0 0 0 0-1.832z\" />\n  <path d=\"M16 17h6\" />\n  <path d=\"M2.003 11.995a1 1 0 0 0 .597.915l8.58 3.91a2 2 0 0 0 .83.18\" />\n  <path d=\"M2.003 16.995a1 1 0 0 0 .597.915l8.58 3.91a2 2 0 0 0 .83.18 2 2 0 0 0 .83-.18l2.11-.96\" />\n  <path d=\"M22.018 12.004a1 1 0 0 1-.598.916l-.177.08\" />\n");
+
   static HTML layersPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 .83.18 2 2 0 0 0 .83-.18l8.58-3.9a1 1 0 0 0 0-1.831z\" />\n  <path d=\"M16 17h6\" />\n  <path d=\"M19 14v6\" />\n  <path d=\"M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 .825.178\" />\n  <path d=\"M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l2.116-.962\" />\n");
 
   static HTML layoutDashboard([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"7\" height=\"9\" x=\"3\" y=\"3\" rx=\"1\" />\n  <rect width=\"7\" height=\"5\" x=\"14\" y=\"3\" rx=\"1\" />\n  <rect width=\"7\" height=\"9\" x=\"14\" y=\"12\" rx=\"1\" />\n  <rect width=\"7\" height=\"5\" x=\"3\" y=\"16\" rx=\"1\" />\n");
+
+  static HTML layoutFreeform([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"7\" height=\"7\" x=\"3\" y=\"3\" rx=\"1\" />\n  <rect width=\"7\" height=\"7\" x=\"14\" y=\"4\" rx=\"1\" />\n  <rect width=\"7\" height=\"7\" x=\"4\" y=\"14\" rx=\"1\" />\n");
 
   static HTML layoutGrid([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"7\" height=\"7\" x=\"3\" y=\"3\" rx=\"1\" />\n  <rect width=\"7\" height=\"7\" x=\"14\" y=\"3\" rx=\"1\" />\n  <rect width=\"7\" height=\"7\" x=\"14\" y=\"14\" rx=\"1\" />\n  <rect width=\"7\" height=\"7\" x=\"3\" y=\"14\" rx=\"1\" />\n");
 
@@ -1775,7 +1833,7 @@ class Lucide {
 
   static HTML lensConcave([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M7 2a1 1 0 0 0-.8 1.6 14 14 0 0 1 0 16.8A1 1 0 0 0 7 22h10a1 1 0 0 0 .8-1.6 14 14 0 0 1 0-16.8A1 1 0 0 0 17 2z\" />\n");
 
-  static HTML lensConvex([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path\n    d=\"M13.433 2a1 1 0 0 1 .824.448 18 18 0 0 1 0 19.104 1 1 0 0 1-.824.448h-2.866a1 1 0 0 1-.824-.448 18 18 0 0 1 0-19.104A1 1 0 0 1 10.567 2z\" />\n");
+  static HTML lensConvex([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13.433 2a1 1 0 0 1 .824.448 18 18 0 0 1 0 19.104 1 1 0 0 1-.824.448h-2.866a1 1 0 0 1-.824-.448 18 18 0 0 1 0-19.104A1 1 0 0 1 10.567 2z\" />\n");
 
   static HTML library([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m16 6 4 14\" />\n  <path d=\"M12 6v14\" />\n  <path d=\"M8 8v12\" />\n  <path d=\"M4 4v16\" />\n");
 
@@ -1793,13 +1851,13 @@ class Lucide {
 
   static HTML lineSquiggle([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M7 3.5c5-2 7 2.5 3 4C1.5 10 2 15 5 16c5 2 9-10 14-7s.5 13.5-4 12c-5-2.5.5-11 6-2\" />\n");
 
+  static HTML lineStyle([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 5h2\" />\n  <path d=\"M15 12h6\" />\n  <path d=\"M19 5h2\" />\n  <path d=\"M3 12h6\" />\n  <path d=\"M3 19h18\" />\n  <path d=\"M3 5h2\" />\n");
+
   static HTML link([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\" />\n  <path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\" />\n");
 
   static HTML link2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M9 17H7A5 5 0 0 1 7 7h2\" />\n  <path d=\"M15 7h2a5 5 0 1 1 0 10h-2\" />\n  <line x1=\"8\" x2=\"16\" y1=\"12\" y2=\"12\" />\n");
 
   static HTML link2Off([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M9 17H7A5 5 0 0 1 7 7\" />\n  <path d=\"M15 7h2a5 5 0 0 1 4 8\" />\n  <line x1=\"8\" x2=\"12\" y1=\"12\" y2=\"12\" />\n  <line x1=\"2\" x2=\"22\" y1=\"2\" y2=\"22\" />\n");
-
-  static HTML linkedin([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\" />\n  <rect width=\"4\" height=\"12\" x=\"2\" y=\"9\" />\n  <circle cx=\"4\" cy=\"4\" r=\"2\" />\n");
 
   static HTML list([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 5h.01\" />\n  <path d=\"M3 12h.01\" />\n  <path d=\"M3 19h.01\" />\n  <path d=\"M8 5h13\" />\n  <path d=\"M8 12h13\" />\n  <path d=\"M8 19h13\" />\n");
 
@@ -1810,6 +1868,8 @@ class Lucide {
   static HTML listChevronsDownUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 5h8\" />\n  <path d=\"M3 12h8\" />\n  <path d=\"M3 19h8\" />\n  <path d=\"m15 5 3 3 3-3\" />\n  <path d=\"m15 19 3-3 3 3\" />\n");
 
   static HTML listChevronsUpDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 5h8\" />\n  <path d=\"M3 12h8\" />\n  <path d=\"M3 19h8\" />\n  <path d=\"m15 8 3-3 3 3\" />\n  <path d=\"m15 16 3 3 3-3\" />\n");
+
+  static HTML listClock([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 13v2.2l1.6 1\" />\n  <path d=\"M3 12h3.458\" />\n  <path d=\"M3 19h3.832\" />\n  <path d=\"M3 5h18\" />\n  <circle cx=\"16\" cy=\"15\" r=\"6\" />\n");
 
   static HTML listCollapse([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 5h11\" />\n  <path d=\"M10 12h11\" />\n  <path d=\"M10 19h11\" />\n  <path d=\"m3 10 3-3-3-3\" />\n  <path d=\"m3 20 3-3-3-3\" />\n");
 
@@ -1832,6 +1892,10 @@ class Lucide {
   static HTML listPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 5H3\" />\n  <path d=\"M11 12H3\" />\n  <path d=\"M16 19H3\" />\n  <path d=\"M18 9v6\" />\n  <path d=\"M21 12h-6\" />\n");
 
   static HTML listRestart([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 5H3\" />\n  <path d=\"M7 12H3\" />\n  <path d=\"M7 19H3\" />\n  <path d=\"M12 18a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L11 14\" />\n  <path d=\"M11 10v4h4\" />\n");
+
+  static HTML listSortAscending([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 19h18\" />\n  <path d=\"M15 12H3\" />\n  <path d=\"M9 5H3\" />\n");
+
+  static HTML listSortDescending([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 12H3\" />\n  <path d=\"M3 5h18\" />\n  <path d=\"M9 19H3\" />\n");
 
   static HTML listStart([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 5h6\" />\n  <path d=\"M3 12h13\" />\n  <path d=\"M3 19h13\" />\n  <path d=\"m16 8-3-3 3-3\" />\n  <path d=\"M21 19V7a2 2 0 0 0-2-2h-6\" />\n");
 
@@ -1877,6 +1941,8 @@ class Lucide {
 
   static HTML mail([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7\" />\n  <rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\" />\n");
 
+  static HTML mailBadge([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 7.7V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8.25\" />\n  <path d=\"M12 12.996a1.94 1.94 0 0 1-1.03-.296L2 7\" />\n  <path d=\"m20.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88\" />\n  <circle cx=\"19\" cy=\"14\" r=\"3\" />\n");
+
   static HTML mailCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8\" />\n  <path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\" />\n  <path d=\"m16 19 2 2 4-4\" />\n");
 
   static HTML mailMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 15V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8\" />\n  <path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\" />\n  <path d=\"M16 19h6\" />\n");
@@ -1921,6 +1987,8 @@ class Lucide {
 
   static HTML mapPinPlusInside([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\" />\n  <path d=\"M12 7v6\" />\n  <path d=\"M9 10h6\" />\n");
 
+  static HTML mapPinSearch([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M 12.248 21.969 a 1 1 0 0 1 -0.849 -0.17 C 9.539 20.193 4 14.993 4 10 a 8 8 0 0 1 16 0 C 20 10.42 19.961 10.841 19.888 11.262\" />\n  <path d=\"m22 22-1.88-1.88\" />\n  <circle cx=\"12\" cy=\"10\" r=\"3\" />\n  <circle cx=\"18\" cy=\"18\" r=\"3\" />\n");
+
   static HTML mapPinX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M19.752 11.901A7.78 7.78 0 0 0 20 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 1.202 0 19 19 0 0 0 .09-.077\" />\n  <circle cx=\"12\" cy=\"10\" r=\"3\" />\n  <path d=\"m21.5 15.5-5 5\" />\n  <path d=\"m21.5 20.5-5-5\" />\n");
 
   static HTML mapPinXInside([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\" />\n  <path d=\"m14.5 7.5-5 5\" />\n  <path d=\"m9.5 7.5 5 5\" />\n");
@@ -1933,7 +2001,7 @@ class Lucide {
 
   static HTML marsStroke([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m14 6 4 4\" />\n  <path d=\"M17 3h4v4\" />\n  <path d=\"m21 3-7.75 7.75\" />\n  <circle cx=\"9\" cy=\"15\" r=\"6\" />\n");
 
-  static HTML martini([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 22h8\" />\n  <path d=\"M12 11v11\" />\n  <path d=\"m19 3-7 8-7-8Z\" />\n");
+  static HTML martini([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 12 4.207 4.207A.707.707 0 0 1 4.707 3h14.586a.707.707 0 0 1 .5 1.207z\" />\n  <path d=\"M12 12v10\" />\n  <path d=\"M7 22h10\" />\n");
 
   static HTML maximize([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 3H5a2 2 0 0 0-2 2v3\" />\n  <path d=\"M21 8V5a2 2 0 0 0-2-2h-3\" />\n  <path d=\"M3 16v3a2 2 0 0 0 2 2h3\" />\n  <path d=\"M16 21h3a2 2 0 0 0 2-2v-3\" />\n");
 
@@ -1944,8 +2012,6 @@ class Lucide {
   static HTML megaphone([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z\" />\n  <path d=\"M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14\" />\n  <path d=\"M8 6v8\" />\n");
 
   static HTML megaphoneOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344\" />\n  <path d=\"M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14\" />\n  <path d=\"M8 8v6\" />\n");
-
-  static HTML meh([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <line x1=\"8\" x2=\"16\" y1=\"15\" y2=\"15\" />\n  <line x1=\"9\" x2=\"9.01\" y1=\"9\" y2=\"9\" />\n  <line x1=\"15\" x2=\"15.01\" y1=\"9\" y2=\"9\" />\n");
 
   static HTML memoryStick([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 12v-2\" />\n  <path d=\"M12 18v-2\" />\n  <path d=\"M16 12v-2\" />\n  <path d=\"M16 18v-2\" />\n  <path d=\"M2 11h1.5\" />\n  <path d=\"M20 18v-2\" />\n  <path d=\"M20.5 11H22\" />\n  <path d=\"M4 18v-2\" />\n  <path d=\"M8 12v-2\" />\n  <path d=\"M8 18v-2\" />\n  <rect x=\"2\" y=\"6\" width=\"20\" height=\"10\" rx=\"2\" />\n");
 
@@ -2017,7 +2083,11 @@ class Lucide {
 
   static HTML mic([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 19v3\" />\n  <path d=\"M19 10v2a7 7 0 0 1-14 0v-2\" />\n  <rect x=\"9\" y=\"2\" width=\"6\" height=\"13\" rx=\"3\" />\n");
 
+  static HTML micAudioLines([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 3v2.341\" />\n  <path d=\"M12 17v4\" />\n  <path d=\"M14 5v.341\" />\n  <path d=\"M18 5v13\" />\n  <path d=\"M2 10v3\" />\n  <path d=\"M22 10v3\" />\n  <path d=\"M6 6v11\" />\n  <path d=\"M9 21h6\" />\n  <rect width=\"4\" height=\"8\" x=\"10\" y=\"9\" rx=\"2\" />\n");
+
   static HTML micOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 19v3\" />\n  <path d=\"M15 9.34V5a3 3 0 0 0-5.68-1.33\" />\n  <path d=\"M16.95 16.95A7 7 0 0 1 5 12v-2\" />\n  <path d=\"M18.89 13.23A7 7 0 0 0 19 12v-2\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M9 9v3a3 3 0 0 0 5.12 2.12\" />\n");
+
+  static HTML micSignal([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 17v4\" />\n  <path d=\"M18 11a6 6 0 00-3-5.197\" />\n  <path d=\"M2 11a10 10 0 015-8.662\" />\n  <path d=\"M22 11a10 10 0 00-5-8.662\" />\n  <path d=\"M6 11a6 6 0 013-5.197\" />\n  <path d=\"M9 21h6\" />\n  <rect x=\"10\" y=\"9\" width=\"4\" height=\"8\" rx=\"2\" />\n");
 
   static HTML micVocal([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12\" />\n  <path d=\"M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5\" />\n  <circle cx=\"16\" cy=\"7\" r=\"5\" />\n");
 
@@ -2027,7 +2097,9 @@ class Lucide {
 
   static HTML microwave([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"20\" height=\"15\" x=\"2\" y=\"4\" rx=\"2\" />\n  <rect width=\"8\" height=\"7\" x=\"6\" y=\"8\" rx=\"1\" />\n  <path d=\"M18 8v7\" />\n  <path d=\"M6 19v2\" />\n  <path d=\"M18 19v2\" />\n");
 
-  static HTML milestone([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 13v8\" />\n  <path d=\"M12 3v3\" />\n  <path d=\"M4 6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h13a2 2 0 0 0 1.152-.365l3.424-2.317a1 1 0 0 0 0-1.635l-3.424-2.318A2 2 0 0 0 17 6z\" />\n");
+  static HTML midiPort([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 18h.01\" />\n  <path d=\"M15 2.458V5a1 1 0 01-1 1h-4a1 1 0 01-1-1V2.458\" />\n  <path d=\"M16 16h.01\" />\n  <path d=\"M18 12h.01\" />\n  <path d=\"M6 12h.01\" />\n  <path d=\"M8 16h.01\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
+
+  static HTML milestone([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 13v8\" />\n  <path d=\"M12 3v3\" />\n  <path d=\"M18.172 6a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z\" />\n");
 
   static HTML milk([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 2h8\" />\n  <path d=\"M9 2v2.789a4 4 0 0 1-.672 2.219l-.656.984A4 4 0 0 0 7 10.212V20a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-9.789a4 4 0 0 0-.672-2.219l-.656-.984A4 4 0 0 1 15 4.788V2\" />\n  <path d=\"M7 15a6.472 6.472 0 0 1 5 0 6.47 6.47 0 0 0 5 0\" />\n");
 
@@ -2074,6 +2146,12 @@ class Lucide {
   static HTML moon([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\" />\n");
 
   static HTML moonStar([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M18 5h4\" />\n  <path d=\"M20 3v4\" />\n  <path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\" />\n");
+
+  static HTML mop([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 22c2.761 0 5-1.79 5-4-4.42 0-4.08-5-8.5-5a1 1 0 100 9za3 3 0 01-3-3\" />\n  <path d=\"M12.5 11.5 22 2\" />\n  <path d=\"m6.98 13.02 2.665-2.664a1.21 1.21 0 011.71 0l2.29 2.288a1.21 1.21 0 010 1.712l-2.088 2.087\" />\n");
+
+  static HTML mopSparkles([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 22a3 3 0 01-3-3\" />\n  <path d=\"M10 22c2.761 0 5-1.79 5-4-4.42 0-4.08-5-8.5-5a4.501 4.501 0 000 9z\" />\n  <path d=\"M10 3H8\" />\n  <path d=\"M12.5 11.5 22 2\" />\n  <path d=\"M20 13v4\" />\n  <path d=\"M22 15h-4\" />\n  <path d=\"M4 5v4\" />\n  <path d=\"M6 7H2\" />\n  <path d=\"m6.98 13.02 2.665-2.664a1.21 1.21 0 011.71 0l2.29 2.288a1.21 1.21 0 010 1.712l-2.088 2.087\" />\n  <path d=\"M9 2v2\" />\n");
+
+  static HTML mosque([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.268 2a2 2 0 003.465 2\" />\n  <path d=\"M14 5 L14 8\" />\n  <path d=\"M16 22v-3a2 2 0 00-4 0v3\" />\n  <path d=\"M21 13c-.662-1.497-1.666-2.753-2.9-3.63C16.825 8.47 15.422 8 14 8s-2.826.47-4.1 1.37C8.668 10.248 7.663 11.504 7 13z\" />\n  <path d=\"M3 9h4\" />\n  <path d=\"M7 22V6a5 5 0 00-2-4 5 5 0 00-2 4v14a2 2 0 002 2h14a2 2 0 002-2v-7\" />\n");
 
   static HTML motorbike([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m18 14-1-3\" />\n  <path d=\"m3 9 6 2a2 2 0 0 1 2-2h2a2 2 0 0 1 1.99 1.81\" />\n  <path d=\"M8 17h3a1 1 0 0 0 1-1 6 6 0 0 1 6-6 1 1 0 0 0 1-1v-.75A5 5 0 0 0 17 5\" />\n  <circle cx=\"19\" cy=\"17\" r=\"3\" />\n  <circle cx=\"5\" cy=\"17\" r=\"3\" />\n");
 
@@ -2179,7 +2257,7 @@ class Lucide {
 
   static HTML omega([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 20h4.5a.5.5 0 0 0 .5-.5v-.282a.52.52 0 0 0-.247-.437 8 8 0 1 1 8.494-.001.52.52 0 0 0-.247.438v.282a.5.5 0 0 0 .5.5H21\" />\n");
 
-  static HTML option([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 3h6l6 18h6\" />\n  <path d=\"M14 3h7\" />\n");
+  static HTML option([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 3h7\" />\n  <path d=\"M3 3h5.28a1 1 0 0 1 .948.684l5.544 16.632a1 1 0 0 0 .949.684H21\" />\n");
 
   static HTML orbit([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20.341 6.484A10 10 0 0 1 10.266 21.85\" />\n  <path d=\"M3.659 17.516A10 10 0 0 1 13.74 2.152\" />\n  <circle cx=\"12\" cy=\"12\" r=\"3\" />\n  <circle cx=\"19\" cy=\"5\" r=\"2\" />\n  <circle cx=\"5\" cy=\"19\" r=\"2\" />\n");
 
@@ -2255,7 +2333,11 @@ class Lucide {
 
   static HTML panelsTopLeft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M3 9h18\" />\n  <path d=\"M9 21V9\" />\n");
 
+  static HTML paperBag([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5.364 3.848C4 6 3 9.652 3 12.652V19a2 2 0 002 2h14a2 2 0 002-2v-5c0-2.334-1.816-4.668-2.622-7.002\" />\n  <path d=\"M7 3h11.379a2 2 0 011.789 1.106l.723 1.447A1 1 0 0119.997 7h-8.525a2 2 0 01-1.789-1.106L8.79 4.105a2 2 0 10-3.579 1.789l2.261 4.522A5 5 0 018 12.652V21\" />\n");
+
   static HTML paperclip([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551\" />\n");
+
+  static HTML parasol([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.5 11.134 18.196 21\" />\n  <path d=\"M20.425 5.299a10 10 0 0 0-16.941 9.78c.183.563.843.774 1.355.478L20.16 6.711c.512-.296.66-.973.264-1.413\" />\n  <path d=\"M21 21H3\" />\n");
 
   static HTML parentheses([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 21s-4-3-4-9 4-9 4-9\" />\n  <path d=\"M16 3s4 3 4 9-4 9-4 9\" />\n");
 
@@ -2285,11 +2367,15 @@ class Lucide {
 
   static HTML pencilRuler([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13\" />\n  <path d=\"m8 6 2-2\" />\n  <path d=\"m18 16 2-2\" />\n  <path d=\"m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17\" />\n  <path d=\"M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z\" />\n  <path d=\"m15 5 4 4\" />\n");
 
+  static HTML pencilSparkles([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 3H8\" />\n  <path d=\"m15.007 5.008 3.987 3.986\" />\n  <path d=\"M20 15v4\" />\n  <path d=\"M21.174 6.813a2.82 2.82 0 0 0-3.986-3.987L3.842 16.175a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z\" />\n  <path d=\"M22 17h-4\" />\n  <path d=\"M4 5v4\" />\n  <path d=\"M6 7H2\" />\n  <path d=\"M9 2v2\" />\n");
+
   static HTML pentagon([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.83 2.38a2 2 0 0 1 2.34 0l8 5.74a2 2 0 0 1 .73 2.25l-3.04 9.26a2 2 0 0 1-1.9 1.37H7.04a2 2 0 0 1-1.9-1.37L2.1 10.37a2 2 0 0 1 .73-2.25z\" />\n");
 
   static HTML percent([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <line x1=\"19\" x2=\"5\" y1=\"5\" y2=\"19\" />\n  <circle cx=\"6.5\" cy=\"6.5\" r=\"2.5\" />\n  <circle cx=\"17.5\" cy=\"17.5\" r=\"2.5\" />\n");
 
   static HTML personStanding([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"5\" r=\"1\" />\n  <path d=\"m9 20 3-6 3 6\" />\n  <path d=\"m6 8 6 2 6-2\" />\n  <path d=\"M12 10v4\" />\n");
+
+  static HTML phi([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 2v20\" />\n  <circle cx=\"12\" cy=\"12\" r=\"7\" />\n");
 
   static HTML philippinePeso([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 11H4\" />\n  <path d=\"M20 7H4\" />\n  <path d=\"M7 21V4a1 1 0 0 1 1-1h4a1 1 0 0 1 0 12H7\" />\n");
 
@@ -2345,6 +2431,8 @@ class Lucide {
 
   static HTML play([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z\" />\n");
 
+  static HTML playOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m10.215 4.56 9.79 5.71a2 2 0 0 1 .003 3.458l-.393.23\" />\n  <path d=\"m16.042 16.042-8.034 4.686A2 2 0 0 1 5 19V5\" />\n  <path d=\"m2 2 20 20\" />\n");
+
   static HTML plug([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 22v-5\" />\n  <path d=\"M15 8V2\" />\n  <path d=\"M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z\" />\n  <path d=\"M9 8V2\" />\n");
 
   static HTML plug2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M9 2v6\" />\n  <path d=\"M15 2v6\" />\n  <path d=\"M12 17v5\" />\n  <path d=\"M5 8h14\" />\n  <path d=\"M6 11V8h12v3a6 6 0 1 1-12 0Z\" />\n");
@@ -2353,11 +2441,9 @@ class Lucide {
 
   static HTML plus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5 12h14\" />\n  <path d=\"M12 5v14\" />\n");
 
-  static HTML pocket([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 3a2 2 0 0 1 2 2v6a1 1 0 0 1-20 0V5a2 2 0 0 1 2-2z\" />\n  <path d=\"m8 10 4 4 4-4\" />\n");
-
   static HTML pocketKnife([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 2v1c0 1 2 1 2 2S3 6 3 7s2 1 2 2-2 1-2 2 2 1 2 2\" />\n  <path d=\"M18 6h.01\" />\n  <path d=\"M6 18h.01\" />\n  <path d=\"M20.83 8.83a4 4 0 0 0-5.66-5.66l-12 12a4 4 0 1 0 5.66 5.66Z\" />\n  <path d=\"M18 11.66V22a4 4 0 0 0 4-4V6\" />\n");
 
-  static HTML podcast([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13 17a1 1 0 1 0-2 0l.5 4.5a0.5 0.5 0 0 0 1 0z\" fill=\"currentColor\" />\n  <path d=\"M16.85 18.58a9 9 0 1 0-9.7 0\" />\n  <path d=\"M8 14a5 5 0 1 1 8 0\" />\n  <circle cx=\"12\" cy=\"11\" r=\"1\" fill=\"currentColor\" />\n");
+  static HTML podium([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 6V2h-1\" />\n  <path d=\"M9 15a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1\" />\n  <path d=\"M9 21V11a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v10\" />\n");
 
   static HTML pointer([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 14a8 8 0 0 1-8 8\" />\n  <path d=\"M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2\" />\n  <path d=\"M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1\" />\n  <path d=\"M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10\" />\n  <path d=\"M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15\" />\n");
 
@@ -2403,13 +2489,13 @@ class Lucide {
 
   static HTML radio([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16.247 7.761a6 6 0 0 1 0 8.478\" />\n  <path d=\"M19.075 4.933a10 10 0 0 1 0 14.134\" />\n  <path d=\"M4.925 19.067a10 10 0 0 1 0-14.134\" />\n  <path d=\"M7.753 16.239a6 6 0 0 1 0-8.478\" />\n  <circle cx=\"12\" cy=\"12\" r=\"2\" />\n");
 
+  static HTML radioOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13.414 13.414a2 2 0 1 1-2.828-2.828\" />\n  <path d=\"M16.247 7.761a6 6 0 0 1 1.744 4.572\" />\n  <path d=\"M19.075 4.933a10 10 0 0 1 2.234 10.72\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M4.925 19.067a10 10 0 0 1 0-14.134\" />\n  <path d=\"M7.753 16.239a6 6 0 0 1 0-8.478\" />\n");
+
   static HTML radioReceiver([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5 16v2\" />\n  <path d=\"M19 16v2\" />\n  <rect width=\"20\" height=\"8\" x=\"2\" y=\"8\" rx=\"2\" />\n  <path d=\"M18 12h.01\" />\n");
 
   static HTML radioTower([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4.9 16.1C1 12.2 1 5.8 4.9 1.9\" />\n  <path d=\"M7.8 4.7a6.14 6.14 0 0 0-.8 7.5\" />\n  <circle cx=\"12\" cy=\"9\" r=\"2\" />\n  <path d=\"M16.2 4.8c2 2 2.26 5.11.8 7.47\" />\n  <path d=\"M19.1 1.9a9.96 9.96 0 0 1 0 14.1\" />\n  <path d=\"M9.5 18h5\" />\n  <path d=\"m8 22 4-11 4 11\" />\n");
 
   static HTML radius([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20.34 17.52a10 10 0 1 0-2.82 2.82\" />\n  <circle cx=\"19\" cy=\"19\" r=\"2\" />\n  <path d=\"m13.41 13.41 4.18 4.18\" />\n  <circle cx=\"12\" cy=\"12\" r=\"2\" />\n");
-
-  static HTML railSymbol([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M5 15h14\" />\n  <path d=\"M5 9h14\" />\n  <path d=\"m14 20-5-5 6-6-5-5\" />\n");
 
   static HTML rainbow([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 17a10 10 0 0 0-20 0\" />\n  <path d=\"M6 17a6 6 0 0 1 12 0\" />\n  <path d=\"M10 17a2 2 0 0 1 4 0\" />\n");
 
@@ -2475,6 +2561,8 @@ class Lucide {
 
   static HTML repeat2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m2 9 3-3 3 3\" />\n  <path d=\"M13 18H7a2 2 0 0 1-2-2V6\" />\n  <path d=\"m22 15-3 3-3-3\" />\n  <path d=\"M11 6h6a2 2 0 0 1 2 2v10\" />\n");
 
+  static HTML repeatOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11.656 6H21l-4-4\" />\n  <path d=\"M17.898 17.898A4 4 0 0 1 17 18H3l4-4\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M21 13v1a4 4 0 0 1-.171 1.159\" />\n  <path d=\"m21 6-4 4\" />\n  <path d=\"M3 11v-1a4 4 0 0 1 3.102-3.898\" />\n  <path d=\"m7 22-4-4\" />\n");
+
   static HTML replace([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 4a1 1 0 0 1 1-1\" />\n  <path d=\"M15 10a1 1 0 0 1-1-1\" />\n  <path d=\"M21 4a1 1 0 0 0-1-1\" />\n  <path d=\"M21 9a1 1 0 0 1-1 1\" />\n  <path d=\"m3 7 3 3 3-3\" />\n  <path d=\"M6 10V5a2 2 0 0 1 2-2h2\" />\n  <rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\" />\n");
 
   static HTML replaceAll([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 14a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1\" />\n  <path d=\"M14 4a1 1 0 0 1 1-1\" />\n  <path d=\"M15 10a1 1 0 0 1-1-1\" />\n  <path d=\"M19 14a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1\" />\n  <path d=\"M21 4a1 1 0 0 0-1-1\" />\n  <path d=\"M21 9a1 1 0 0 1-1 1\" />\n  <path d=\"m3 7 3 3 3-3\" />\n  <path d=\"M6 10V5a2 2 0 0 1 2-2h2\" />\n  <rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\" />\n");
@@ -2487,6 +2575,8 @@ class Lucide {
 
   static HTML ribbon([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 11.22C11 9.997 10 9 10 8a2 2 0 0 1 4 0c0 1-.998 2.002-2.01 3.22\" />\n  <path d=\"m12 18 2.57-3.5\" />\n  <path d=\"M6.243 9.016a7 7 0 0 1 11.507-.009\" />\n  <path d=\"M9.35 14.53 12 11.22\" />\n  <path d=\"M9.35 14.53C7.728 12.246 6 10.221 6 7a6 5 0 0 1 12 0c-.005 3.22-1.778 5.235-3.43 7.5l3.557 4.527a1 1 0 0 1-.203 1.43l-1.894 1.36a1 1 0 0 1-1.384-.215L12 18l-2.679 3.593a1 1 0 0 1-1.39.213l-1.865-1.353a1 1 0 0 1-.203-1.422z\" />\n");
 
+  static HTML road([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 17v4\" />\n  <path d=\"M12 5V3\" />\n  <path d=\"M12 9v3\" />\n  <path d=\"M2.077 18.449A2 2 0 0 0 4 21h16a2 2 0 0 0 1.924-2.55l-4-14A2 2 0 0 0 16 3H8a2 2 0 0 0-1.924 1.45z\" />\n");
+
   static HTML rocket([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5\" />\n  <path d=\"M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09\" />\n  <path d=\"M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z\" />\n  <path d=\"M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05\" />\n");
 
   static HTML rockingChair([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15 13 3.708 7.416\" />\n  <path d=\"M3 19a15 15 0 0 0 18 0\" />\n  <path d=\"m3 2 3.21 9.633A2 2 0 0 0 8.109 13H18\" />\n  <path d=\"m9 13-3.708 7.416\" />\n");
@@ -2495,15 +2585,19 @@ class Lucide {
 
   static HTML rose([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17 10h-1a4 4 0 1 1 4-4v.534\" />\n  <path d=\"M17 6h1a4 4 0 0 1 1.42 7.74l-2.29.87a6 6 0 0 1-5.339-10.68l2.069-1.31\" />\n  <path d=\"M4.5 17c2.8-.5 4.4 0 5.5.8s1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2\" />\n  <path d=\"M9.77 12C4 15 2 22 2 22\" />\n  <circle cx=\"17\" cy=\"8\" r=\"2\" />\n");
 
-  static HTML rotate3d([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2\" />\n  <path d=\"m15.194 13.707 3.814 1.86-1.86 3.814\" />\n  <path d=\"M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4\" />\n");
+  static HTML rotate3d([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15.194 13.707 3.814 1.86-1.86 3.814\" />\n  <path d=\"M16.47214 7.52786 A 5 10 0 1 0 13 21.79796\" />\n  <path d=\"M21.79796 11 A 10 5 0 1 0 19 15.57071\" />\n");
 
   static HTML rotateCcw([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\" />\n  <path d=\"M3 3v5h5\" />\n");
+
+  static HTML rotateCcwClock([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\" />\n  <path d=\"M3 3v5h5\" />\n  <path d=\"M12 7v5l4 2\" />\n");
 
   static HTML rotateCcwKey([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 7v6\" />\n  <path d=\"M12 9h2\" />\n  <path d=\"M3 12a9 9 0 1 0 9-9 9.74 9.74 0 0 0-6.74 2.74L3 8\" />\n  <path d=\"M3 3v5h5\" />\n  <circle cx=\"12\" cy=\"15\" r=\"2\" />\n");
 
   static HTML rotateCcwSquare([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 9V7a2 2 0 0 0-2-2h-6\" />\n  <path d=\"m15 2-3 3 3 3\" />\n  <path d=\"M20 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2\" />\n");
 
   static HTML rotateCw([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8\" />\n  <path d=\"M21 3v5h-5\" />\n");
+
+  static HTML rotateCwFadingClock([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 3a9.75 9.75 0 0 1 6.74 2.74\" />\n  <path d=\"M18.74 5.74 21 8\" />\n  <path d=\"M21 8V3\" />\n  <path d=\"M7.5 19.794c-6-3.464-6-12.124 0-15.588\" />\n  <path d=\"M7.5 4.206A9 9 0 0 1 12 3\" />\n  <path d=\"M12 7v5l4 2\" />\n  <path d=\"M14 20.775A9 9 0 0 1 12 21\" />\n  <path d=\"M19 17.656a9 9 0 0 1-1.5 1.456\" />\n  <path d=\"M21 12a9 9 0 0 1-.228 2\" />\n  <path d=\"M21 8h-5\" />\n");
 
   static HTML rotateCwSquare([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 5H6a2 2 0 0 0-2 2v3\" />\n  <path d=\"m9 8 3-3-3-3\" />\n  <path d=\"M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2\" />\n");
 
@@ -2543,7 +2637,13 @@ class Lucide {
 
   static HTML saveAll([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 2v3a1 1 0 0 0 1 1h5\" />\n  <path d=\"M18 18v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6\" />\n  <path d=\"M18 22H4a2 2 0 0 1-2-2V6\" />\n  <path d=\"M8 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9.172a2 2 0 0 1 1.414.586l2.828 2.828A2 2 0 0 1 22 6.828V16a2 2 0 0 1-2.01 2z\" />\n");
 
+  static HTML saveCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.5 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10.2a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4v4.35\" />\n  <path d=\"m16 19 2 2 4-4\" />\n  <path d=\"M17 15.13V14a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7\" />\n  <path d=\"M7 3v4a1 1 0 0 0 1 1h7\" />\n");
+
   static HTML saveOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13 13H8a1 1 0 0 0-1 1v7\" />\n  <path d=\"M14 8h1\" />\n  <path d=\"M17 21v-4\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M20.41 20.41A2 2 0 0 1 19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 .59-1.41\" />\n  <path d=\"M29.5 11.5s5 5 4 5\" />\n  <path d=\"M9 3h6.2a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V15\" />\n");
+
+  static HTML savePen([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13.33 13H8a1 1 0 00-1 1v7\" />\n  <path d=\"M14.363 17.634a2 2 0 00-.506.854l-.837 2.87a.5.5 0 00.62.62l2.87-.837a2 2 0 00.854-.506l4.013-4.009a1 1 0 10-3.004-3.004z\" />\n  <path d=\"M7 3v4a1 1 0 001 1h7\" />\n  <path d=\"M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h10.2a2 2 0 011.4.6l3.8 3.8a2 2 0 01.6 1.4v.3\" />\n");
+
+  static HTML savePlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.5 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10.2a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V12\" />\n  <path d=\"M16 13H8a1 1 0 0 0-1 1v7\" />\n  <path d=\"M19 22v-6\" />\n  <path d=\"M22 19h-6\" />\n  <path d=\"M7 3v4a1 1 0 0 0 1 1h7\" />\n");
 
   static HTML scale([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 3v18\" />\n  <path d=\"m19 8 3 8a5 5 0 0 1-6 0zV7\" />\n  <path d=\"M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1\" />\n  <path d=\"m5 8 3 8a5 5 0 0 1-6 0zV7\" />\n  <path d=\"M7 21h10\" />\n");
 
@@ -2554,6 +2654,8 @@ class Lucide {
   static HTML scan([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 7V5a2 2 0 0 1 2-2h2\" />\n  <path d=\"M17 3h2a2 2 0 0 1 2 2v2\" />\n  <path d=\"M21 17v2a2 2 0 0 1-2 2h-2\" />\n  <path d=\"M7 21H5a2 2 0 0 1-2-2v-2\" />\n");
 
   static HTML scanBarcode([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 7V5a2 2 0 0 1 2-2h2\" />\n  <path d=\"M17 3h2a2 2 0 0 1 2 2v2\" />\n  <path d=\"M21 17v2a2 2 0 0 1-2 2h-2\" />\n  <path d=\"M7 21H5a2 2 0 0 1-2-2v-2\" />\n  <path d=\"M8 7v10\" />\n  <path d=\"M12 7v10\" />\n  <path d=\"M17 7v10\" />\n");
+
+  static HTML scanBox([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 12v5.5\" />\n  <path d=\"M17 3h2a2 2 0 012 2v2\" />\n  <path d=\"M21 17v2a2 2 0 01-2 2h-2\" />\n  <path d=\"M3 7V5a2 2 0 012-2h2\" />\n  <path d=\"M7 21H5a2 2 0 01-2-2v-2\" />\n  <path d=\"M7.264 9.252 12 12l4.737-2.748\" />\n  <path d=\"M7.995 8.514A2 2 0 007 10.244v3.516a2 2 0 00.996 1.73l3 1.74a2 2 0 002.008 0l3-1.74A2 2 0 0017 13.76v-3.517a2 2 0 00-.995-1.73l-3-1.742a2 2 0 00-1.892-.064z\" />\n");
 
   static HTML scanEye([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 7V5a2 2 0 0 1 2-2h2\" />\n  <path d=\"M17 3h2a2 2 0 0 1 2 2v2\" />\n  <path d=\"M21 17v2a2 2 0 0 1-2 2h-2\" />\n  <path d=\"M7 21H5a2 2 0 0 1-2-2v-2\" />\n  <circle cx=\"12\" cy=\"12\" r=\"1\" />\n  <path d=\"M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0\" />\n");
 
@@ -2567,9 +2669,11 @@ class Lucide {
 
   static HTML scanSearch([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 7V5a2 2 0 0 1 2-2h2\" />\n  <path d=\"M17 3h2a2 2 0 0 1 2 2v2\" />\n  <path d=\"M21 17v2a2 2 0 0 1-2 2h-2\" />\n  <path d=\"M7 21H5a2 2 0 0 1-2-2v-2\" />\n  <circle cx=\"12\" cy=\"12\" r=\"3\" />\n  <path d=\"m16 16-1.9-1.9\" />\n");
 
+  static HTML scanSquare([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 7V5a2 2 0 0 1 2-2h2\" />\n  <path d=\"M17 3h2a2 2 0 0 1 2 2v2\" />\n  <path d=\"M21 17v2a2 2 0 0 1-2 2h-2\" />\n  <path d=\"M7 21H5a2 2 0 0 1-2-2v-2\" />\n  <rect width=\"8\" height=\"8\" x=\"8\" y=\"8\" rx=\"1\" />\n");
+
   static HTML scanText([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 7V5a2 2 0 0 1 2-2h2\" />\n  <path d=\"M17 3h2a2 2 0 0 1 2 2v2\" />\n  <path d=\"M21 17v2a2 2 0 0 1-2 2h-2\" />\n  <path d=\"M7 21H5a2 2 0 0 1-2-2v-2\" />\n  <path d=\"M7 8h8\" />\n  <path d=\"M7 12h10\" />\n  <path d=\"M7 16h6\" />\n");
 
-  static HTML school([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 21v-3a2 2 0 0 0-4 0v3\" />\n  <path d=\"M18 5v16\" />\n  <path d=\"m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6\" />\n  <path d=\"m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11\" />\n  <path d=\"M6 5v16\" />\n  <circle cx=\"12\" cy=\"9\" r=\"2\" />\n");
+  static HTML school([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 21v-3a2 2 0 0 0-4 0v3\" />\n  <path d=\"M18 4.933V21\" />\n  <path d=\"m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6\" />\n  <path d=\"m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11\" />\n  <path d=\"M6 4.933V21\" />\n  <circle cx=\"12\" cy=\"9\" r=\"2\" />\n");
 
   static HTML scissors([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"6\" cy=\"6\" r=\"3\" />\n  <path d=\"M8.12 8.12 12 12\" />\n  <path d=\"M20 4 8.12 15.88\" />\n  <circle cx=\"6\" cy=\"18\" r=\"3\" />\n  <path d=\"M14.8 14.8 20 20\" />\n");
 
@@ -2617,6 +2721,8 @@ class Lucide {
 
   static HTML serverOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M7 2h13a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-5\" />\n  <path d=\"M10 10 2.5 2.5C2 2 2 2.5 2 5v3a2 2 0 0 0 2 2h6z\" />\n  <path d=\"M22 17v-1a2 2 0 0 0-2-2h-1\" />\n  <path d=\"M4 14a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16.5l1-.5.5.5-8-8H4z\" />\n  <path d=\"M6 18h.01\" />\n  <path d=\"m2 2 20 20\" />\n");
 
+  static HTML serverPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.5 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v2\" />\n  <path d=\"M16 12h6\" />\n  <path d=\"M19 9v6\" />\n  <path d=\"M22 18v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h8.5\" />\n  <path d=\"M6 18h.01\" />\n  <path d=\"M6 6h.01\" />\n");
+
   static HTML settings([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915\" />\n  <circle cx=\"12\" cy=\"12\" r=\"3\" />\n");
 
   static HTML settings2([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 17H5\" />\n  <path d=\"M19 7h-9\" />\n  <circle cx=\"17\" cy=\"17\" r=\"3\" />\n  <circle cx=\"7\" cy=\"7\" r=\"3\" />\n");
@@ -2641,9 +2747,17 @@ class Lucide {
 
   static HTML shieldCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" />\n  <path d=\"m9 12 2 2 4-4\" />\n");
 
+  static HTML shieldCog([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m10.929 14.467-.383.924\" />\n  <path d=\"M10.929 8.923 10.546 8\" />\n  <path d=\"M13.225 8.923 13.608 8\" />\n  <path d=\"m13.607 15.391-.382-.924\" />\n  <path d=\"m14.849 10.547.923-.383\" />\n  <path d=\"m14.849 12.843.923.383\" />\n  <path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" />\n  <path d=\"m9.305 10.547-.923-.383\" />\n  <path d=\"m9.305 12.843-.923.383\" />\n  <circle cx=\"12.077\" cy=\"11.695\" r=\"3\" />\n");
+
+  static HTML shieldCogCorner([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 22c-3.806-1.45-7-3.966-7-9V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1v4\" />\n  <path d=\"M14.923 16.547 14 16.164\" />\n  <path d=\"m14.923 18.843-.923.383\" />\n  <path d=\"M16.547 14.923 16.164 14\" />\n  <path d=\"m16.547 20.467-.383.924\" />\n  <path d=\"m18.843 14.923.383-.923\" />\n  <path d=\"m19.225 21.391-.382-.924\" />\n  <path d=\"m20.467 16.547.923-.383\" />\n  <path d=\"m20.467 18.843.923.383\" />\n  <circle cx=\"17.695\" cy=\"17.695\" r=\"3\" />\n");
+
   static HTML shieldEllipsis([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" />\n  <path d=\"M8 12h.01\" />\n  <path d=\"M12 12h.01\" />\n  <path d=\"M16 12h.01\" />\n");
 
   static HTML shieldHalf([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" />\n  <path d=\"M12 22V2\" />\n");
+
+  static HTML shieldKeyhole([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 13v3\" />\n  <path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 01-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 011-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 011.52 0C14.51 3.81 17 5 19 5a1 1 0 011 1z\" />\n  <circle cx=\"12\" cy=\"11\" r=\"2\" />\n");
+
+  static HTML shieldLock([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 9.807V6a1 1 0 00-1-1c-2 0-4.49-1.19-6.24-2.72a1.17 1.17 0 00-1.52 0C9.5 3.8 7 5 5 5a1 1 0 00-1 1v7c0 3.88 2.107 6.254 5 7.796\" />\n  <path d=\"M19 17v-2a2 2 0 00-4 0v2\" />\n  <rect x=\"13\" y=\"17\" width=\"8\" height=\"5\" rx=\"1\" />\n");
 
   static HTML shieldMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" />\n  <path d=\"M9 12h6\" />\n");
 
@@ -2697,7 +2811,7 @@ class Lucide {
 
   static HTML signature([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284\" />\n  <path d=\"M3 21h18\" />\n");
 
-  static HTML signpost([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 13v8\" />\n  <path d=\"M12 3v3\" />\n  <path d=\"M18 6a2 2 0 0 1 1.387.56l2.307 2.22a1 1 0 0 1 0 1.44l-2.307 2.22A2 2 0 0 1 18 13H6a2 2 0 0 1-1.387-.56l-2.306-2.22a1 1 0 0 1 0-1.44l2.306-2.22A2 2 0 0 1 6 6z\" />\n");
+  static HTML signpost([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 13v8\" />\n  <path d=\"M12 3v3\" />\n  <path d=\"M2.354 10.354a1.207 1.207 0 0 1 0-1.708l2.06-2.06A2 2 0 0 1 5.828 6h12.344a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H5.828a2 2 0 0 1-1.414-.586z\" />\n");
 
   static HTML signpostBig([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 9H4L2 7l2-2h6\" />\n  <path d=\"M14 5h6l2 2-2 2h-6\" />\n  <path d=\"M10 22V4a2 2 0 1 1 4 0v18\" />\n  <path d=\"M8 22h8\" />\n");
 
@@ -2708,8 +2822,6 @@ class Lucide {
   static HTML skipForward([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 4v16\" />\n  <path d=\"M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z\" />\n");
 
   static HTML skull([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m12.5 17-.5-1-.5 1h1z\" />\n  <path d=\"M15 22a1 1 0 0 0 1-1v-1a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20v1a1 1 0 0 0 1 1z\" />\n  <circle cx=\"15\" cy=\"12\" r=\"1\" />\n  <circle cx=\"9\" cy=\"12\" r=\"1\" />\n");
-
-  static HTML slack([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"3\" height=\"8\" x=\"13\" y=\"2\" rx=\"1.5\" />\n  <path d=\"M19 8.5V10h1.5A1.5 1.5 0 1 0 19 8.5\" />\n  <rect width=\"3\" height=\"8\" x=\"8\" y=\"14\" rx=\"1.5\" />\n  <path d=\"M5 15.5V14H3.5A1.5 1.5 0 1 0 5 15.5\" />\n  <rect width=\"8\" height=\"3\" x=\"14\" y=\"13\" rx=\"1.5\" />\n  <path d=\"M15.5 19H14v1.5a1.5 1.5 0 1 0 1.5-1.5\" />\n  <rect width=\"8\" height=\"3\" x=\"2\" y=\"8\" rx=\"1.5\" />\n  <path d=\"M8.5 5H10V3.5A1.5 1.5 0 1 0 8.5 5\" />\n");
 
   static HTML slash([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 2 2 22\" />\n");
 
@@ -2724,10 +2836,6 @@ class Lucide {
   static HTML smartphoneCharging([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"14\" height=\"20\" x=\"5\" y=\"2\" rx=\"2\" ry=\"2\" />\n  <path d=\"M12.667 8 10 12h4l-2.667 4\" />\n");
 
   static HTML smartphoneNfc([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"7\" height=\"12\" x=\"2\" y=\"6\" rx=\"1\" />\n  <path d=\"M13 8.32a7.43 7.43 0 0 1 0 7.36\" />\n  <path d=\"M16.46 6.21a11.76 11.76 0 0 1 0 11.58\" />\n  <path d=\"M19.91 4.1a15.91 15.91 0 0 1 .01 15.8\" />\n");
-
-  static HTML smile([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <path d=\"M8 14s1.5 2 4 2 4-2 4-2\" />\n  <line x1=\"9\" x2=\"9.01\" y1=\"9\" y2=\"9\" />\n  <line x1=\"15\" x2=\"15.01\" y1=\"9\" y2=\"9\" />\n");
-
-  static HTML smilePlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 11v1a10 10 0 1 1-9-10\" />\n  <path d=\"M8 14s1.5 2 4 2 4-2 4-2\" />\n  <line x1=\"9\" x2=\"9.01\" y1=\"9\" y2=\"9\" />\n  <line x1=\"15\" x2=\"15.01\" y1=\"9\" y2=\"9\" />\n  <path d=\"M16 5h6\" />\n  <path d=\"M19 2v6\" />\n");
 
   static HTML snail([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0\" />\n  <circle cx=\"10\" cy=\"13\" r=\"8\" />\n  <path d=\"M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6\" />\n  <path d=\"M18 3 19.1 5.2\" />\n  <path d=\"M22 3 20.9 5.2\" />\n");
 
@@ -2765,6 +2873,8 @@ class Lucide {
 
   static HTML spool([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17 13.44 4.442 17.082A2 2 0 0 0 4.982 21H19a2 2 0 0 0 .558-3.921l-1.115-.32A2 2 0 0 1 17 14.837V7.66\" />\n  <path d=\"m7 10.56 12.558-3.642A2 2 0 0 0 19.018 3H5a2 2 0 0 0-.558 3.921l1.115.32A2 2 0 0 1 7 9.163v7.178\" />\n");
 
+  static HTML sportShoe([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15 10.42 4.8-5.07\" />\n  <path d=\"M19 18h3\" />\n  <path d=\"M9.5 22 21.414 9.415A2 2 0 0 0 21.2 6.4l-5.61-4.208A1 1 0 0 0 14 3v2a2 2 0 0 1-1.394 1.906L8.677 8.053A1 1 0 0 0 8 9c-.155 6.393-2.082 9-4 9a2 2 0 0 0 0 4h14\" />\n");
+
   static HTML spotlight([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15.295 19.562 16 22\" />\n  <path d=\"m17 16 3.758 2.098\" />\n  <path d=\"m19 12.5 3.026-.598\" />\n  <path d=\"M7.61 6.3a3 3 0 0 0-3.92 1.3l-1.38 2.79a3 3 0 0 0 1.3 3.91l6.89 3.597a1 1 0 0 0 1.342-.447l3.106-6.211a1 1 0 0 0-.447-1.341z\" />\n  <path d=\"M8 9V2\" />\n");
 
   static HTML sprayCan([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 3h.01\" />\n  <path d=\"M7 5h.01\" />\n  <path d=\"M11 7h.01\" />\n  <path d=\"M3 7h.01\" />\n  <path d=\"M7 9h.01\" />\n  <path d=\"M3 11h.01\" />\n  <rect width=\"4\" height=\"4\" x=\"15\" y=\"5\" />\n  <path d=\"m19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2\" />\n  <path d=\"m13 14 8-2\" />\n  <path d=\"m13 19 8-2\" />\n");
@@ -2777,9 +2887,9 @@ class Lucide {
 
   static HTML squareArrowDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M12 8v8\" />\n  <path d=\"m8 12 4 4 4-4\" />\n");
 
-  static HTML squareArrowDownLeft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"m16 8-8 8\" />\n  <path d=\"M16 16H8V8\" />\n");
+  static HTML squareArrowDownLeft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 15H9l6-6\" />\n  <path d=\"M9 15V9\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n");
 
-  static HTML squareArrowDownRight([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"m8 8 8 8\" />\n  <path d=\"M16 8v8H8\" />\n");
+  static HTML squareArrowDownRight([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 15 9 9\" />\n  <path d=\"M9 15h6V9\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n");
 
   static HTML squareArrowLeft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"m12 8-4 4 4 4\" />\n  <path d=\"M16 12H8\" />\n");
 
@@ -2799,13 +2909,13 @@ class Lucide {
 
   static HTML squareArrowUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"m16 12-4-4-4 4\" />\n  <path d=\"M12 16V8\" />\n");
 
-  static HTML squareArrowUpLeft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M8 16V8h8\" />\n  <path d=\"M16 16 8 8\" />\n");
+  static HTML squareArrowUpLeft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 15 9 9\" />\n  <path d=\"M9 15V9h6\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n");
 
-  static HTML squareArrowUpRight([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M8 8h8v8\" />\n  <path d=\"m8 16 8-8\" />\n");
+  static HTML squareArrowUpRight([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 15V9H9\" />\n  <path d=\"m9 15 6-6\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n");
 
   static HTML squareAsterisk([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M12 8v8\" />\n  <path d=\"m8.5 14 7-4\" />\n  <path d=\"m8.5 10 7 4\" />\n");
 
-  static HTML squareBottomDashedScissors([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <line x1=\"5\" y1=\"3\" x2=\"19\" y2=\"3\" />\n  <line x1=\"3\" y1=\"5\" x2=\"3\" y2=\"19\" />\n  <line x1=\"21\" y1=\"5\" x2=\"21\" y2=\"19\" />\n  <line x1=\"9\" y1=\"21\" x2=\"10\" y2=\"21\" />\n  <line x1=\"14\" y1=\"21\" x2=\"15\" y2=\"21\" />\n  <path d=\"M 3 5 A2 2 0 0 1 5 3\" />\n  <path d=\"M 19 3 A2 2 0 0 1 21 5\" />\n  <path d=\"M 5 21 A2 2 0 0 1 3 19\" />\n  <path d=\"M 21 19 A2 2 0 0 1 19 21\" />\n  <circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\" />\n  <line x1=\"9.56066\" y1=\"9.56066\" x2=\"12\" y2=\"12\" />\n  <line x1=\"17\" y1=\"17\" x2=\"14.82\" y2=\"14.82\" />\n  <circle cx=\"8.5\" cy=\"15.5\" r=\"1.5\" />\n  <line x1=\"9.56066\" y1=\"14.43934\" x2=\"17\" y2=\"7\" />\n");
+  static HTML squareBottomDashedScissors([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 21h1\" />\n  <path d=\"m17 17-2.18-2.18\" />\n  <path d=\"M5 21a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2\" />\n  <path d=\"M9 21h1\" />\n  <path d=\"M9.56 14.44 17 7\" />\n  <path d=\"M9.56 9.56 12 12\" />\n  <circle cx=\"8.5\" cy=\"15.5\" r=\"1.5\" />\n  <circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\" />\n");
 
   static HTML squareCenterlineDashedHorizontal([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M8 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h3\" />\n  <path d=\"M16 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3\" />\n  <path d=\"M12 20v2\" />\n  <path d=\"M12 14v2\" />\n  <path d=\"M12 8v2\" />\n  <path d=\"M12 2v2\" />\n");
 
@@ -2837,7 +2947,11 @@ class Lucide {
 
   static HTML squareDashedMousePointer([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z\" />\n  <path d=\"M5 3a2 2 0 0 0-2 2\" />\n  <path d=\"M19 3a2 2 0 0 1 2 2\" />\n  <path d=\"M5 21a2 2 0 0 1-2-2\" />\n  <path d=\"M9 3h1\" />\n  <path d=\"M9 21h2\" />\n  <path d=\"M14 3h1\" />\n  <path d=\"M3 9v1\" />\n  <path d=\"M21 9v2\" />\n  <path d=\"M3 14v1\" />\n");
 
+  static HTML squareDashedText([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 21h1\" />\n  <path d=\"M14 3h1\" />\n  <path d=\"M19 3a2 2 0 0 1 2 2\" />\n  <path d=\"M21 14v1\" />\n  <path d=\"M21 19a2 2 0 0 1-2 2\" />\n  <path d=\"M21 9v1\" />\n  <path d=\"M3 14v1\" />\n  <path d=\"M3 9v1\" />\n  <path d=\"M5 21a2 2 0 0 1-2-2\" />\n  <path d=\"M5 3a2 2 0 0 0-2 2\" />\n  <path d=\"M7 12h10\" />\n  <path d=\"M7 16h6\" />\n  <path d=\"M7 8h8\" />\n  <path d=\"M9 21h1\" />\n  <path d=\"M9 3h1\" />\n");
+
   static HTML squareDashedTopSolid([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 21h1\" />\n  <path d=\"M21 14v1\" />\n  <path d=\"M21 19a2 2 0 0 1-2 2\" />\n  <path d=\"M21 9v1\" />\n  <path d=\"M3 14v1\" />\n  <path d=\"M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2\" />\n  <path d=\"M3 9v1\" />\n  <path d=\"M5 21a2 2 0 0 1-2-2\" />\n  <path d=\"M9 21h1\" />\n");
+
+  static HTML squareDimensions([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M12 7H7v5\" />\n  <path d=\"M12 17h5v-5\" />\n");
 
   static HTML squareDivide([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" ry=\"2\" />\n  <line x1=\"8\" x2=\"16\" y1=\"12\" y2=\"12\" />\n  <line x1=\"12\" x2=\"12\" y1=\"16\" y2=\"16\" />\n  <line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"8\" />\n");
 
@@ -2858,6 +2972,8 @@ class Lucide {
   static HTML squareMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M8 12h8\" />\n");
 
   static HTML squareMousePointer([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z\" />\n  <path d=\"M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6\" />\n");
+
+  static HTML squareOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M20.4 20.4a2 2 0 01-1.4.6H5a2 2 0 01-2-2V5a2 2 0 01.59-1.41\" />\n  <path d=\"M21 15.3V5a2 2 0 00-2-2H8.7\" />\n  <path d=\"M22 22 2 2\" />\n");
 
   static HTML squareParking([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M9 17V7h4a3 3 0 0 1 0 6H9\" />\n");
 
@@ -2883,7 +2999,7 @@ class Lucide {
 
   static HTML squareRoundCorner([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 11a8 8 0 0 0-8-8\" />\n  <path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4\" />\n");
 
-  static HTML squareScissors([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\" />\n  <line x1=\"9.56066\" y1=\"9.56066\" x2=\"12\" y2=\"12\" />\n  <line x1=\"17\" y1=\"17\" x2=\"14.82\" y2=\"14.82\" />\n  <circle cx=\"8.5\" cy=\"15.5\" r=\"1.5\" />\n  <line x1=\"9.56066\" y1=\"14.43934\" x2=\"17\" y2=\"7\" />\n");
+  static HTML squareScissors([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m17 17-2.18-2.18\" />\n  <path d=\"M9.56 14.44 17 7\" />\n  <path d=\"M9.56 9.56 12 12\" />\n  <circle cx=\"8.5\" cy=\"15.5\" r=\"1.5\" />\n  <circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n");
 
   static HTML squareSigma([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M16 8.9V7H8l4 5-4 5h8v-1.9\" />\n");
 
@@ -2902,6 +3018,8 @@ class Lucide {
   static HTML squareStop([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <rect x=\"9\" y=\"9\" width=\"6\" height=\"6\" rx=\"1\" />\n");
 
   static HTML squareTerminal([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m7 11 2-2-2-2\" />\n  <path d=\"M11 13h4\" />\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" ry=\"2\" />\n");
+
+  static HTML squareText([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M7 8h8\" />\n  <path d=\"M7 12h10\" />\n  <path d=\"M7 16h6\" />\n");
 
   static HTML squareUser([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <circle cx=\"12\" cy=\"10\" r=\"3\" />\n  <path d=\"M7 21v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2\" />\n");
 
@@ -2927,9 +3045,17 @@ class Lucide {
 
   static HTML star([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z\" />\n");
 
+  static HTML starCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m19.06 12.501 2.78-2.707a.53.53 0 0 0-.294-.905l-5.166-.755a2.1 2.1 0 0 1-1.595-1.16l-2.31-4.68a.53.53 0 0 0-.95.001L9.216 6.974a2.1 2.1 0 0 1-1.597 1.16l-5.165.755a.53.53 0 0 0-.294.906l3.736 3.637a2.1 2.1 0 0 1 .611 1.879l-.88 5.139a.53.53 0 0 0 .769.56l4.617-2.428.027-.014\" />\n  <path d=\"m15 18 2 2 4-4\" />\n");
+
   static HTML starHalf([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 18.338a2.1 2.1 0 0 0-.987.244L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16l2.309-4.679A.53.53 0 0 1 12 2\" />\n");
 
+  static HTML starMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 18h6\" />\n  <path d=\"M17.688 14a2.1 2.1 0 0 1 .416-.568l3.736-3.638a.53.53 0 0 0-.294-.905l-5.166-.755a2.1 2.1 0 0 1-1.595-1.16l-2.31-4.68a.53.53 0 0 0-.95.001L9.216 6.974a2.1 2.1 0 0 1-1.597 1.16l-5.165.755a.53.53 0 0 0-.294.906l3.736 3.637a2.1 2.1 0 0 1 .611 1.879l-.88 5.139a.53.53 0 0 0 .769.56l4.617-2.428.027-.014\" />\n");
+
   static HTML starOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m10.344 4.688 1.181-2.393a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.237 3.152\" />\n  <path d=\"m17.945 17.945.43 2.505a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a8 8 0 0 0 .4-.099\" />\n  <path d=\"m2 2 20 20\" />\n");
+
+  static HTML starPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11.013 18.582 6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16l2.309-4.679a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904L20 11.5\" />\n  <path d=\"M15 18h6\" />\n  <path d=\"M18 15v6\" />\n");
+
+  static HTML starX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15.5 15.5 5 5\" />\n  <path d=\"m20.063 11.525 1.777-1.731a.53.53 0 0 0-.294-.905l-5.166-.755a2.1 2.1 0 0 1-1.595-1.16l-2.31-4.68a.53.53 0 0 0-.95.001L9.216 6.974a2.1 2.1 0 0 1-1.597 1.16l-5.165.755a.53.53 0 0 0-.294.906l3.736 3.637a2.1 2.1 0 0 1 .611 1.879l-.88 5.139a.53.53 0 0 0 .769.56l4.617-2.428a2.1 2.1 0 0 1 .987-.243 2 2 0 0 1 .132.004\" />\n  <path d=\"m20.5 15.5-5 5\" />\n");
 
   static HTML stepBack([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13.971 4.285A2 2 0 0 1 17 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z\" />\n  <path d=\"M21 20V4\" />\n");
 
@@ -2940,6 +3066,18 @@ class Lucide {
   static HTML sticker([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z\" />\n  <path d=\"M15 3v5a1 1 0 0 0 1 1h5\" />\n  <path d=\"M8 13h.01\" />\n  <path d=\"M16 13h.01\" />\n  <path d=\"M10 16s.8 1 2 1c1.3 0 2-1 2-1\" />\n");
 
   static HTML stickyNote([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z\" />\n  <path d=\"M15 3v5a1 1 0 0 0 1 1h5\" />\n");
+
+  static HTML stickyNoteCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m15 19 2 2 4-4\" />\n  <path d=\"M15 3v5a1 1 0 0 0 1 1h5\" />\n  <path d=\"M21 13V9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6.5\" />\n");
+
+  static HTML stickyNoteMinus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 3v5a1 1 0 0 0 1 1h5\" />\n  <path d=\"M21 14V9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.35\" />\n  <path d=\"M21 18h-6\" />\n");
+
+  static HTML stickyNoteOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 3v5a1 1 0 0 0 1 1h5\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M3.586 3.586A2 2 0 0 0 3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 1.414-.586\" />\n  <path d=\"M8.656 3H15a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 21 9v6.344\" />\n");
+
+  static HTML stickyNotePlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 3v5a1 1 0 0 0 1 1h5\" />\n  <path d=\"M18 15v6\" />\n  <path d=\"M21 12.356V9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.355\" />\n  <path d=\"M21 18h-6\" />\n");
+
+  static HTML stickyNoteX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 3v5a1 1 0 0 0 1 1h5\" />\n  <path d=\"m16 16 5 5\" />\n  <path d=\"M21 12V9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7\" />\n  <path d=\"m21 16-5 5\" />\n");
+
+  static HTML stickyNotes([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 16 14v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\" />\n  <path d=\"M10 8v5a1 1 0 0 0 1 1h5\" />\n  <path d=\"M8 4a2 2 0 0 1 2-2h6a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 22 8v6a2 2 0 0 1-2 2\" />\n  <path d=\"M16 2v5a1 1 0 0 0 1 1h5\" />\n");
 
   static HTML stone([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11.264 2.205A4 4 0 0 0 6.42 4.211l-4 8a4 4 0 0 0 1.359 5.117l6 4a4 4 0 0 0 4.438 0l6-4a4 4 0 0 0 1.576-4.592l-2-6a4 4 0 0 0-2.53-2.53z\" />\n  <path d=\"M11.99 22 14 12l7.822 3.184\" />\n  <path d=\"M14 12 8.47 2.302\" />\n");
 
@@ -2952,6 +3090,8 @@ class Lucide {
   static HTML strikethrough([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 4H9a3 3 0 0 0-2.83 4\" />\n  <path d=\"M14 12a4 4 0 0 1 0 8H6\" />\n  <line x1=\"4\" x2=\"20\" y1=\"12\" y2=\"12\" />\n");
 
   static HTML subscript([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m4 5 8 8\" />\n  <path d=\"m12 5-8 8\" />\n  <path d=\"M20 19h-4c0-1.5.44-2 1.5-2.5S20 15.33 20 14c0-.47-.17-.93-.48-1.29a2.11 2.11 0 0 0-2.62-.44c-.42.24-.74.62-.9 1.07\" />\n");
+
+  static HTML summary([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15 4H7\" />\n  <path d=\"m18 16 3 3-3 3\" />\n  <path d=\"M3 4v13a2 2 0 0 0 2 2h16\" />\n  <path d=\"M7 14h7\" />\n  <path d=\"M7 9h12\" />\n");
 
   static HTML sun([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"12\" r=\"4\" />\n  <path d=\"M12 2v2\" />\n  <path d=\"M12 20v2\" />\n  <path d=\"m4.93 4.93 1.41 1.41\" />\n  <path d=\"m17.66 17.66 1.41 1.41\" />\n  <path d=\"M2 12h2\" />\n  <path d=\"M20 12h2\" />\n  <path d=\"m6.34 17.66-1.41 1.41\" />\n  <path d=\"m19.07 4.93-1.41 1.41\" />\n");
 
@@ -3005,6 +3145,10 @@ class Lucide {
 
   static HTML tag([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\" />\n  <circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\" />\n");
 
+  static HTML tagPlus([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 13h6\" />\n  <path d=\"m16.5 6.5-3.914-3.914A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l1.79-1.79\" />\n  <path d=\"M19 10v6\" />\n  <circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\" />\n");
+
+  static HTML tagX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m16.5 6.5-3.914-3.914A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.43 2.43 0 0 0 3.42 0l1.79-1.79\" />\n  <path d=\"m16.5 10.5 5 5\" />\n  <path d=\"m21.5 10.5-5 5\" />\n  <circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\" />\n");
+
   static HTML tags([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M13.172 2a2 2 0 0 1 1.414.586l6.71 6.71a2.4 2.4 0 0 1 0 3.408l-4.592 4.592a2.4 2.4 0 0 1-3.408 0l-6.71-6.71A2 2 0 0 1 6 9.172V3a1 1 0 0 1 1-1z\" />\n  <path d=\"M2 7v6.172a2 2 0 0 0 .586 1.414l6.71 6.71a2.4 2.4 0 0 0 3.191.193\" />\n  <circle cx=\"10.5\" cy=\"6.5\" r=\".5\" fill=\"currentColor\" />\n");
 
   static HTML tally1([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4 4v16\" />\n");
@@ -3043,7 +3187,7 @@ class Lucide {
 
   static HTML textAlignStart([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 5H3\" />\n  <path d=\"M15 12H3\" />\n  <path d=\"M17 19H3\" />\n");
 
-  static HTML textCursor([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1\" />\n  <path d=\"M7 22h1a4 4 0 0 0 4-4v-1\" />\n  <path d=\"M7 2h1a4 4 0 0 1 4 4v1\" />\n");
+  static HTML textCursor([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1\" />\n  <path d=\"M7 22h1a4 4 0 0 0 4-4\" />\n  <path d=\"M7 2h1a4 4 0 0 1 4 4\" />\n");
 
   static HTML textCursorInput([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 20h-1a2 2 0 0 1-2-2 2 2 0 0 1-2 2H6\" />\n  <path d=\"M13 8h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7\" />\n  <path d=\"M5 16H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1\" />\n  <path d=\"M6 4h1a2 2 0 0 1 2 2 2 2 0 0 1 2-2h1\" />\n  <path d=\"M9 6v12\" />\n");
 
@@ -3052,8 +3196,6 @@ class Lucide {
   static HTML textQuote([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17 5H3\" />\n  <path d=\"M21 12H8\" />\n  <path d=\"M21 19H8\" />\n  <path d=\"M3 12v7\" />\n");
 
   static HTML textSearch([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 5H3\" />\n  <path d=\"M10 12H3\" />\n  <path d=\"M10 19H3\" />\n  <circle cx=\"17\" cy=\"15\" r=\"3\" />\n  <path d=\"m21 19-1.9-1.9\" />\n");
-
-  static HTML textSelect([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 21h1\" />\n  <path d=\"M14 3h1\" />\n  <path d=\"M19 3a2 2 0 0 1 2 2\" />\n  <path d=\"M21 14v1\" />\n  <path d=\"M21 19a2 2 0 0 1-2 2\" />\n  <path d=\"M21 9v1\" />\n  <path d=\"M3 14v1\" />\n  <path d=\"M3 9v1\" />\n  <path d=\"M5 21a2 2 0 0 1-2-2\" />\n  <path d=\"M5 3a2 2 0 0 0-2 2\" />\n  <path d=\"M7 12h10\" />\n  <path d=\"M7 16h6\" />\n  <path d=\"M7 8h8\" />\n  <path d=\"M9 21h1\" />\n  <path d=\"M9 3h1\" />\n");
 
   static HTML textWrap([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m16 16-3 3 3 3\" />\n  <path d=\"M3 12h14.5a1 1 0 0 1 0 7H13\" />\n  <path d=\"M3 19h6\" />\n  <path d=\"M3 5h18\" />\n");
 
@@ -3087,6 +3229,8 @@ class Lucide {
 
   static HTML ticketsPlane([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.5 17h1.227a2 2 0 0 0 1.345-.52L18 12\" />\n  <path d=\"m12 13.5 3.794.506\" />\n  <path d=\"m3.173 8.18 11-5a2 2 0 0 1 2.647.993L18.56 8\" />\n  <path d=\"M6 10V8\" />\n  <path d=\"M6 14v1\" />\n  <path d=\"M6 19v2\" />\n  <rect x=\"2\" y=\"8\" width=\"20\" height=\"13\" rx=\"2\" />\n");
 
+  static HTML timeline([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4 12h.01\" />\n  <path d=\"M4 16h.01\" />\n  <path d=\"M4 20h.01\" />\n  <path d=\"M4 4h.01\" />\n  <path d=\"M4 8h.01\" />\n  <path d=\"M9.414 13.414a2 2 0 0 0 1.414.586H19a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-8.172a2 2 0 0 0-1.414.586L8 12z\" />\n  <path d=\"M9.414 21.414a2 2 0 0 0 1.414.586H19a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-8.172a2 2 0 0 0-1.414.586L8 20z\" />\n  <path d=\"M9.414 5.414A2 2 0 0 0 10.828 6H19a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-8.172a2 2 0 0 0-1.414.586L8 4z\" />\n");
+
   static HTML timer([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <line x1=\"10\" x2=\"14\" y1=\"2\" y2=\"2\" />\n  <line x1=\"12\" x2=\"15\" y1=\"14\" y2=\"11\" />\n  <circle cx=\"12\" cy=\"14\" r=\"8\" />\n");
 
   static HTML timerOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 2h4\" />\n  <path d=\"M4.6 11a8 8 0 0 0 1.7 8.7 8 8 0 0 0 8.7 1.7\" />\n  <path d=\"M7.4 7.4a8 8 0 0 1 10.3 1 8 8 0 0 1 .9 10.2\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M12 12v-2\" />\n");
@@ -3101,7 +3245,7 @@ class Lucide {
 
   static HTML toolCase([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 15h4\" />\n  <path d=\"m14.817 10.995-.971-1.45 1.034-1.232a2 2 0 0 0-2.025-3.238l-1.82.364L9.91 3.885a2 2 0 0 0-3.625.748L6.141 6.55l-1.725.426a2 2 0 0 0-.19 3.756l.657.27\" />\n  <path d=\"m18.822 10.995 2.26-5.38a1 1 0 0 0-.557-1.318L16.954 2.9a1 1 0 0 0-1.281.533l-.924 2.122\" />\n  <path d=\"M4 12.006A1 1 0 0 1 4.994 11H19a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z\" />\n");
 
-  static HTML toolbox([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 12v4\" />\n  <path d=\"M16 6a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 22 12v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 .586-1.414l4-4A2 2 0 0 1 8 6z\" />\n  <path d=\"M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2\" />\n  <path d=\"M2 14h20\" />\n  <path d=\"M8 12v4\" />\n");
+  static HTML toolbox([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 12v4\" />\n  <path d=\"M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2\" />\n  <path d=\"M17 6a2 2 0 011.414.586l3 3A2 2 0 0122 11v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 01.586-1.414l3-3A2 2 0 017 6z\" />\n  <path d=\"M2 14h20\" />\n  <path d=\"M8 12v4\" />\n");
 
   static HTML tornado([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 4H3\" />\n  <path d=\"M18 8H6\" />\n  <path d=\"M19 12H9\" />\n  <path d=\"M16 16h-6\" />\n  <path d=\"M11 20H9\" />\n");
 
@@ -3143,8 +3287,6 @@ class Lucide {
 
   static HTML trees([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z\" />\n  <path d=\"M7 16v6\" />\n  <path d=\"M13 19v3\" />\n  <path d=\"M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5\" />\n");
 
-  static HTML trello([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" ry=\"2\" />\n  <rect width=\"3\" height=\"9\" x=\"7\" y=\"7\" />\n  <rect width=\"3\" height=\"5\" x=\"14\" y=\"7\" />\n");
-
   static HTML trendingDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 17h6v-6\" />\n  <path d=\"m22 17-8.5-8.5-5 5L2 7\" />\n");
 
   static HTML trendingUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16 7h6v6\" />\n  <path d=\"m22 7-8.5 8.5-5-5L2 17\" />\n");
@@ -3159,7 +3301,7 @@ class Lucide {
 
   static HTML triangleRight([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 18a2 2 0 0 1-2 2H3c-1.1 0-1.3-.6-.4-1.3L20.4 4.3c.9-.7 1.6-.4 1.6.7Z\" />\n");
 
-  static HTML trophy([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978\" />\n  <path d=\"M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978\" />\n  <path d=\"M18 9h1.5a1 1 0 0 0 0-5H18\" />\n  <path d=\"M4 22h16\" />\n  <path d=\"M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z\" />\n  <path d=\"M6 9H4.5a1 1 0 0 1 0-5H6\" />\n");
+  static HTML trophy([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2\" />\n  <path d=\"M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2\" />\n  <path d=\"M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3\" />\n  <path d=\"M4 22h16\" />\n  <path d=\"M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z\" />\n  <path d=\"M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3\" />\n");
 
   static HTML truck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2\" />\n  <path d=\"M15 18H9\" />\n  <path d=\"M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14\" />\n  <circle cx=\"17\" cy=\"18\" r=\"2\" />\n  <circle cx=\"7\" cy=\"18\" r=\"2\" />\n");
 
@@ -3176,10 +3318,6 @@ class Lucide {
   static HTML tvMinimal([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M7 21h10\" />\n  <rect width=\"20\" height=\"14\" x=\"2\" y=\"3\" rx=\"2\" />\n");
 
   static HTML tvMinimalPlay([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15.033 9.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56V7.648a.645.645 0 0 1 .967-.56z\" />\n  <path d=\"M7 21h10\" />\n  <rect width=\"20\" height=\"14\" x=\"2\" y=\"3\" rx=\"2\" />\n");
-
-  static HTML twitch([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7\" />\n");
-
-  static HTML twitter([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z\" />\n");
 
   static HTML type([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 4v16\" />\n  <path d=\"M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2\" />\n  <path d=\"M9 20h6\" />\n");
 
@@ -3201,7 +3339,7 @@ class Lucide {
 
   static HTML unfoldVertical([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 22v-6\" />\n  <path d=\"M12 8V2\" />\n  <path d=\"M4 12H2\" />\n  <path d=\"M10 12H8\" />\n  <path d=\"M16 12h-2\" />\n  <path d=\"M22 12h-2\" />\n  <path d=\"m15 19-3 3-3-3\" />\n  <path d=\"m15 5-3-3-3 3\" />\n");
 
-  static HTML ungroup([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"8\" height=\"6\" x=\"5\" y=\"4\" rx=\"1\" />\n  <rect width=\"8\" height=\"6\" x=\"11\" y=\"14\" rx=\"1\" />\n");
+  static HTML ungroup([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect x=\"11\" y=\"14\" width=\"10\" height=\"7\" rx=\"2\" />\n  <rect x=\"3\" y=\"3\" width=\"10\" height=\"7\" rx=\"2\" />\n");
 
   static HTML university([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14 21v-3a2 2 0 0 0-4 0v3\" />\n  <path d=\"M18 12h.01\" />\n  <path d=\"M18 16h.01\" />\n  <path d=\"M22 7a1 1 0 0 0-1-1h-2a2 2 0 0 1-1.143-.359L13.143 2.36a2 2 0 0 0-2.286-.001L6.143 5.64A2 2 0 0 1 5 6H3a1 1 0 0 0-1 1v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2z\" />\n  <path d=\"M6 12h.01\" />\n  <path d=\"M6 16h.01\" />\n  <circle cx=\"12\" cy=\"10\" r=\"2\" />\n");
 
@@ -3214,6 +3352,8 @@ class Lucide {
   static HTML upload([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 3v12\" />\n  <path d=\"m17 8-5-5-5 5\" />\n  <path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" />\n");
 
   static HTML usb([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"10\" cy=\"7\" r=\"1\" />\n  <circle cx=\"4\" cy=\"20\" r=\"1\" />\n  <path d=\"M4.7 19.3 19 5\" />\n  <path d=\"m21 3-3 1 2 2Z\" />\n  <path d=\"M9.26 7.68 5 12l2 5\" />\n  <path d=\"m10 14 5 2 3.5-3.5\" />\n  <path d=\"m18 12 1-1 1 1-1 1Z\" />\n");
+
+  static HTML usbCPort([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M6 12h12\" />\n  <rect x=\"2\" y=\"8\" width=\"20\" height=\"8\" rx=\"4\" />\n");
 
   static HTML user([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\" />\n  <circle cx=\"12\" cy=\"7\" r=\"4\" />\n");
 
@@ -3233,6 +3373,8 @@ class Lucide {
 
   static HTML userRound([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"8\" r=\"5\" />\n  <path d=\"M20 21a8 8 0 0 0-16 0\" />\n");
 
+  static HTML userRoundArrowLeft([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m19 16-3 3\" />\n  <path d=\"M2 21a8 8 0 0 1 12.664-6.5\" />\n  <path d=\"M22 19h-6l3 3\" />\n  <circle cx=\"10\" cy=\"8\" r=\"5\" />\n");
+
   static HTML userRoundCheck([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 21a8 8 0 0 1 13.292-6\" />\n  <circle cx=\"10\" cy=\"8\" r=\"5\" />\n  <path d=\"m16 19 2 2 4-4\" />\n");
 
   static HTML userRoundCog([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m14.305 19.53.923-.382\" />\n  <path d=\"m15.228 16.852-.923-.383\" />\n  <path d=\"m16.852 15.228-.383-.923\" />\n  <path d=\"m16.852 20.772-.383.924\" />\n  <path d=\"m19.148 15.228.383-.923\" />\n  <path d=\"m19.53 21.696-.382-.924\" />\n  <path d=\"M2 21a8 8 0 0 1 10.434-7.62\" />\n  <path d=\"m20.772 16.852.924-.383\" />\n  <path d=\"m20.772 19.148.924.383\" />\n  <circle cx=\"10\" cy=\"8\" r=\"5\" />\n  <circle cx=\"18\" cy=\"18\" r=\"3\" />\n");
@@ -3250,6 +3392,8 @@ class Lucide {
   static HTML userRoundX([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 21a8 8 0 0 1 11.873-7\" />\n  <circle cx=\"10\" cy=\"8\" r=\"5\" />\n  <path d=\"m17 17 5 5\" />\n  <path d=\"m22 17-5 5\" />\n");
 
   static HTML userSearch([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"10\" cy=\"7\" r=\"4\" />\n  <path d=\"M10.3 15H7a4 4 0 0 0-4 4v2\" />\n  <circle cx=\"17\" cy=\"17\" r=\"3\" />\n  <path d=\"m21 21-1.9-1.9\" />\n");
+
+  static HTML userShield([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10 15H6a4 4 0 0 0-4 4v2\" />\n  <path d=\"M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5z\" />\n  <circle cx=\"9\" cy=\"7\" r=\"4\" />\n");
 
   static HTML userStar([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M16.051 12.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.866l-1.156-1.153a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z\" />\n  <path d=\"M8 15H7a4 4 0 0 0-4 4v2\" />\n  <circle cx=\"10\" cy=\"7\" r=\"4\" />\n");
 
@@ -3295,7 +3439,7 @@ class Lucide {
 
   static HTML voicemail([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"6\" cy=\"12\" r=\"4\" />\n  <circle cx=\"18\" cy=\"12\" r=\"4\" />\n  <line x1=\"6\" x2=\"18\" y1=\"16\" y2=\"16\" />\n");
 
-  static HTML volleyball([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11.1 7.1a16.55 16.55 0 0 1 10.9 4\" />\n  <path d=\"M12 12a12.6 12.6 0 0 1-8.7 5\" />\n  <path d=\"M16.8 13.6a16.55 16.55 0 0 1-9 7.5\" />\n  <path d=\"M20.7 17a12.8 12.8 0 0 0-8.7-5 13.3 13.3 0 0 1 0-10\" />\n  <path d=\"M6.3 3.8a16.55 16.55 0 0 0 1.9 11.5\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
+  static HTML volleyball([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 7a16 16 20 0 1 10.98 4.362\" />\n  <path d=\"M12 12a13 13 0 0 1-8.66 5\" />\n  <path d=\"M16.83 13.634a16 16 0 0 1-9.267 7.328\" />\n  <path d=\"M20.66 17A13 13 0 0 0 12 12a13 13 0 0 1 0-10\" />\n  <path d=\"M8.17 15.366a16 16 0 0 1-1.713-11.69\" />\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n");
 
   static HTML volume([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z\" />\n");
 
@@ -3311,7 +3455,7 @@ class Lucide {
 
   static HTML wallet([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1\" />\n  <path d=\"M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4\" />\n");
 
-  static HTML walletCards([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />\n  <path d=\"M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2\" />\n  <path d=\"M3 11h3c.8 0 1.6.3 2.1.9l1.1.9c1.6 1.6 4.1 1.6 5.7 0l1.1-.9c.5-.5 1.3-.9 2.1-.9H21\" />\n");
+  static HTML walletCards([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M3 11h3.75a2 2 0 0 1 1.6.8l.45.6a4 4 0 0 0 6.4 0l.45-.6a2 2 0 0 1 1.6-.8H21\" />\n  <path d=\"M3 7h18\" />\n  <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" />\n");
 
   static HTML walletMinimal([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M17 14h.01\" />\n  <path d=\"M7 7h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14\" />\n");
 
@@ -3327,17 +3471,21 @@ class Lucide {
 
   static HTML watch([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 10v2.2l1.6 1\" />\n  <path d=\"m16.13 7.66-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05\" />\n  <path d=\"m7.88 16.36.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05\" />\n  <circle cx=\"12\" cy=\"12\" r=\"6\" />\n");
 
-  static HTML waves([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\" />\n  <path d=\"M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\" />\n  <path d=\"M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\" />\n");
-
   static HTML wavesArrowDown([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 10L12 2\" />\n  <path d=\"M16 6L12 10L8 6\" />\n  <path d=\"M2 15C2.6 15.5 3.2 16 4.5 16C7 16 7 14 9.5 14C12.1 14 11.9 16 14.5 16C17 16 17 14 19.5 14C20.8 14 21.4 14.5 22 15\" />\n  <path d=\"M2 21C2.6 21.5 3.2 22 4.5 22C7 22 7 20 9.5 20C12.1 20 11.9 22 14.5 22C17 22 17 20 19.5 20C20.8 20 21.4 20.5 22 21\" />\n");
 
   static HTML wavesArrowUp([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 2v8\" />\n  <path d=\"M2 15c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\" />\n  <path d=\"M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\" />\n  <path d=\"m8 6 4-4 4 4\" />\n");
 
+  static HTML wavesHorizontal([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2 12q2.5 2 5 0t5 0 5 0 5 0\" />\n  <path d=\"M2 19q2.5 2 5 0t5 0 5 0 5 0\" />\n  <path d=\"M2 5q2.5 2 5 0t5 0 5 0 5 0\" />\n");
+
   static HTML wavesLadder([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M19 5a2 2 0 0 0-2 2v11\" />\n  <path d=\"M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\" />\n  <path d=\"M7 13h10\" />\n  <path d=\"M7 9h10\" />\n  <path d=\"M9 5a2 2 0 0 0-2 2v11\" />\n");
+
+  static HTML wavesVertical([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 2q2 2.5 0 5t0 5 0 5 0 5\" />\n  <path d=\"M19 2q2 2.5 0 5t0 5 0 5 0 5\" />\n  <path d=\"M5 2q2 2.5 0 5t0 5 0 5 0 5\" />\n");
 
   static HTML waypoints([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m10.586 5.414-5.172 5.172\" />\n  <path d=\"m18.586 13.414-5.172 5.172\" />\n  <path d=\"M6 12h12\" />\n  <circle cx=\"12\" cy=\"20\" r=\"2\" />\n  <circle cx=\"12\" cy=\"4\" r=\"2\" />\n  <circle cx=\"20\" cy=\"12\" r=\"2\" />\n  <circle cx=\"4\" cy=\"12\" r=\"2\" />\n");
 
   static HTML webcam([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <circle cx=\"12\" cy=\"10\" r=\"8\" />\n  <circle cx=\"12\" cy=\"10\" r=\"3\" />\n  <path d=\"M7 22h10\" />\n  <path d=\"M12 22v-4\" />\n");
+
+  static HTML webcamOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M12 22v-4\" />\n  <path d=\"M12.754 7.096a3 3 0 0 1 2.15 2.15\" />\n  <path d=\"M12.863 12.873a3 3 0 0 1-3.736-3.735\" />\n  <path d=\"M16.566 16.57A8 8 0 0 1 5.43 5.433\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"M7 22h10\" />\n  <path d=\"M8.478 2.817a8 8 0 0 1 10.705 10.705\" />\n");
 
   static HTML webhook([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2\" />\n  <path d=\"m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06\" />\n  <path d=\"m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8\" />\n");
 
@@ -3383,15 +3531,15 @@ class Lucide {
 
   static HTML wrench([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\" />\n");
 
+  static HTML wrenchOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.747 5.093a6 6 0 0 1 6.841-2.882c.438.12.54.662.219.984L14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-2.882 6.842\" />\n  <path d=\"m13.5 13.5-7.88 7.88a1 1 0 0 1-2.999-3l7.88-7.88\" />\n  <path d=\"m2 2 20 20\" />\n");
+
   static HTML x([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M18 6 6 18\" />\n  <path d=\"m6 6 12 12\" />\n");
 
   static HTML xLineTop([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M18 4H6\" />\n  <path d=\"M18 8 6 20\" />\n  <path d=\"m6 8 12 12\" />\n");
 
-  static HTML youtube([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17\" />\n  <path d=\"m10 15 5-3-5-3z\" />\n");
+  static HTML zap([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z\" />\n");
 
-  static HTML zap([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\" />\n");
-
-  static HTML zapOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.513 4.856 13.12 2.17a.5.5 0 0 1 .86.46l-1.377 4.317\" />\n  <path d=\"M15.656 10H20a1 1 0 0 1 .78 1.63l-1.72 1.773\" />\n  <path d=\"M16.273 16.273 10.88 21.83a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14H4a1 1 0 0 1-.78-1.63l4.507-4.643\" />\n  <path d=\"m2 2 20 20\" />\n");
+  static HTML zapOff([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"M10.768 5.111 13.44 2.44a1.5 1.5 0 012.474 1.561l-1.633 4.625\" />\n  <path d=\"m18.889 13.232.672-.672A1.5 1.5 0 0018.5 10h-2.844\" />\n  <path d=\"m2 2 20 20\" />\n  <path d=\"m7.94 7.94-3.5 3.499A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l5.5-5.5\" />\n");
 
   static HTML zodiacAquarius([List<HTML> extraContent = const []]) => _svg(extraContent, "\n  <path d=\"m2 10 2.456-3.684a.7.7 0 0 1 1.106-.013l2.39 3.413a.7.7 0 0 0 1.096-.001l2.402-3.432a.7.7 0 0 1 1.098 0l2.402 3.432a.7.7 0 0 0 1.098 0l2.389-3.413a.7.7 0 0 1 1.106.013L22 10\" />\n  <path d=\"m2 18.002 2.456-3.684a.7.7 0 0 1 1.106-.013l2.39 3.413a.7.7 0 0 0 1.097 0l2.402-3.432a.7.7 0 0 1 1.098 0l2.402 3.432a.7.7 0 0 0 1.098 0l2.389-3.413a.7.7 0 0 1 1.106.013L22 18.002\" />\n");
 
