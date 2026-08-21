@@ -30,3 +30,6 @@
 - Use `ctx.response.htmlPage`, `htmlFragments`, and `htmlFragmentsOob` for HTML responses.
 - Keep Basecoat/Tailwind classes in Dart files so `make css` can discover them.
 - Do not hand-edit `lib/src/ui/lucide.dart`; run `make lucide`.
+- For htmleez syntax, reference `docs/htmleez_llms.md`.
+- For HTMX helpers and htmdart syntax, reference `docs/htmdart_llms.md`.
+- For Basecoat markup/classes, reference `docs/basecoat-llms.md` and `docs/basecoat-kitchen-sink.html`.

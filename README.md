@@ -37,6 +37,14 @@ dart test
 - `bin/generate_lucide.dart`: downloads Lucide SVGs and generates `lib/src/ui/lucide.dart`
 - `input.css`: Tailwind/Basecoat input
 - `public/`: static assets
+- `docs/`: LLM-oriented references for htmleez, htmdart, and Basecoat
+
+## LLM Docs
+
+- `docs/htmleez_llms.md`: Dart HTML builder reference
+- `docs/htmdart_llms.md`: HTMX attributes, events, and response headers
+- `docs/basecoat-llms.md`: Basecoat component/class reference
+- `docs/basecoat-kitchen-sink.html`: broad Basecoat markup examples
 
 ## Docker
 
