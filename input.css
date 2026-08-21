@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "./basecoat.css";
+@import "./basecoat/basecoat-vega.cdn.min.css";
+@import "./theme.css";
 @source "./lib/**/*.{dart}";
-
-@custom-variant dark (&:is(.dark *));

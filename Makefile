@@ -1,3 +1,5 @@
+.PHONY: _ css lucide basecoat dev prod
+
 _: css dev
 
 css:
@@ -5,6 +7,9 @@ css:
 
 lucide:
 	dart run bin/generate_lucide.dart
+
+basecoat:
+	dart run bin/download_basecoat.dart
 
 dev:
 	DEV=true dart run --enable-vm-service bin/server.dart
