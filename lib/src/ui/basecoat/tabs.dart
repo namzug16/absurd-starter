@@ -30,8 +30,9 @@ HTML tabs({
     $id(id),
     $classes(["tabs", ?mainExtraClasses]),
     ...?mainAttrs,
-    div([
+    nav([
       $role("tablist"),
+      $aria.orientation("horizontal"),
       $classes([?tablistExtraClasses]),
       ...?tablistAttrs,
       for (var i = 0; i < tabsets.length; i++)
@@ -51,6 +52,8 @@ HTML tabs({
         $role("tabpanel"),
         $id("$id-panel-${i + 1}"),
         $aria.labelledby("$id-tab-${i + 1}"),
+        $("tabindex")("-1"),
+        $aria.selected((i + 1 == selectedIndex).toString()),
         if (i + 1 != selectedIndex) $("hidden")(""),
         ...tabsets[i].panelAttrs,
         BasecoatHelpers.normalizeComponent(tabsets[i].panel),

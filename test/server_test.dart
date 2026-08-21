@@ -32,6 +32,14 @@ void main() {
     expect(response.body, "ok");
   });
 
+  test("UI kitchen sink is available in development", () async {
+    final response = await get(Uri.parse("$host/ui"));
+    expect(response.statusCode, 200);
+    expect(response.headers["content-type"], contains("text/html"));
+    expect(response.body, contains("UI laboratory"));
+    expect(response.body, contains("Basecoat 1.x"));
+  });
+
   test("counter endpoint returns HTML fragment", () async {
     final response = await post(Uri.parse("$host/api/counter/increment"), body: {"count": "2"});
     expect(response.statusCode, 200);
