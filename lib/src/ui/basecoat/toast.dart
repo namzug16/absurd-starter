@@ -15,10 +15,16 @@ enum ToastType {
   };
 }
 
-HTML toaster() {
+HTML toaster({
+  String id = "toaster",
+  List<HTML> toasts = const [],
+  List<HTML> attrs = const [],
+}) {
   return div([
-    $id("toaster"),
+    $id(id),
     $class("toaster"),
+    ...attrs,
+    ...toasts,
   ]);
 }
 
@@ -42,6 +48,7 @@ HTML toast(
   required String description,
   ToastAction? action,
   ToastAction? cancel,
+  int? duration,
   String extraClasses = "",
   List<HTML> attrs = const [],
 }) {
@@ -56,6 +63,7 @@ HTML toast(
     $("aria-atomic")("true"),
     $("aria-hidden")("false"),
     $("data-category")(type.name),
+    if (duration != null) $("data-duration")(duration.toString()),
     ...attrs,
     div([
       $class("toast-content"),
@@ -70,7 +78,8 @@ HTML toast(
             if (action.href != null)
               a([
                 $href(action.href),
-                $class("btn-sm"),
+                $class("btn"),
+                $("data-size")("sm"),
                 $("data-toast-action")(""),
                 ...action.attrs,
                 action.label.t,
@@ -79,6 +88,7 @@ HTML toast(
               button([
                 $type("button"),
                 $class("btn"),
+                $("data-size")("sm"),
                 $("data-toast-action")(""),
                 if (action.onClick != null) $("onclick")(action.onClick),
                 ...action.attrs,
@@ -87,9 +97,11 @@ HTML toast(
           if (cancel != null)
             button([
               $type("button"),
-              $class("btn-sm-outline"),
+              $class("btn"),
+              $("data-variant")("outline"),
+              $("data-size")("sm"),
               $("data-toast-cancel")(""),
-              if (cancel.onClick != "") $("onclick")(cancel.onClick),
+              if (cancel.onClick != null && cancel.onClick!.isNotEmpty) $("onclick")(cancel.onClick),
               ...cancel.attrs,
               cancel.label.t,
             ]),
@@ -104,6 +116,7 @@ HTML toastHtmx(
   required String description,
   ToastAction? action,
   ToastAction? cancel,
+  int? duration,
   String extraClasses = "",
   List<HTML> attrs = const [],
 }) => div([
@@ -115,6 +128,8 @@ HTML toastHtmx(
     description: description,
     action: action,
     cancel: cancel,
+    duration: duration,
+    extraClasses: extraClasses,
     attrs: attrs,
   ),
 ]);

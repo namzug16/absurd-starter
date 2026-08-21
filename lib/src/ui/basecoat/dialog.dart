@@ -11,6 +11,7 @@ HTML dialog({
   String? description,
   required HTML body,
   HTML? footer,
+  String? contentExtraClasses,
 
   List<HTML>? dialogAttrs,
   List<HTML>? triggerAttrs,
@@ -36,12 +37,13 @@ HTML dialog({
     tags.dialog([
       $id(id),
       $classes(["dialog", ?dialogExtraClasses]),
-      $aria.labelledby("$id-title"),
+      if (title != null && title.isNotEmpty) $aria.labelledby("$id-title"),
       if (hasDescription) $aria.describedby("$id-description"),
       if (open) $open(""),
       if (closeOnOverlayClick) $("onclick")("if (event.target === this) this.close()"),
       ...?dialogAttrs,
       div([
+        $classes([?contentExtraClasses]),
         if (hasHeader)
           tags.header([
             ...?headerAttrs,
@@ -67,6 +69,9 @@ HTML dialog({
         if (closeButton)
           button([
             $type("button"),
+            $class("btn"),
+            $("data-variant")("ghost"),
+            $("data-size")("icon-sm"),
             $aria.label("Close dialog"),
             $("onclick")("this.closest('dialog').close()"),
             Lucide.x([Attribute("aria-hidden")("true")]),

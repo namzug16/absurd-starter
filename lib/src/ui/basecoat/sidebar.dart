@@ -68,8 +68,7 @@ HTML sidebar({
     if (id.isNotEmpty) $id(id),
     $classes(["sidebar", ?mainExtraClasses]),
     $("data-side")(side),
-    $aria.hidden((!isOpen).toString()),
-    if (!isOpen) $("inert")(""),
+    if (!isOpen) $("data-initial-open")("false"),
     ...?mainAttrs,
     nav([
       $aria.label(label),
@@ -80,7 +79,7 @@ HTML sidebar({
           BasecoatHelpers.normalizeComponent(header),
         ]),
       section([
-        $classes([?contentExtraClasses]),
+        $classes(["scrollbar-sm", ?contentExtraClasses]),
         ...?contentAttrs,
         ...contentNodes,
       ]),

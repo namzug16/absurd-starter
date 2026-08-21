@@ -53,6 +53,9 @@ HTML temporaryDialog({
       if (closeButton)
         button([
           $type("button"),
+          $class("btn"),
+          $("data-variant")("ghost"),
+          $("data-size")("icon-sm"),
           $aria.label("Close dialog"),
           $("onclick")("this.closest('dialog').close()"),
           Lucide.x([Attribute("aria-hidden")("true")]),

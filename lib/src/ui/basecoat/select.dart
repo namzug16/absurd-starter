@@ -47,6 +47,7 @@ HTML select({
   bool multiple = false,
   String? placeholder,
   bool closeOnSelect = false,
+  String format = "value",
   String searchPlaceholder = "Search entries...",
   bool isCombobox = false,
   HTML? content,
@@ -66,11 +67,10 @@ HTML select({
   final selectedSet = selected.toSet();
 
   final options = _collectSelectOptions(items, selectedSet);
-  final firstOption = options.firstOption;
   final selectedOptions = options.selectedOptions;
-  final defaultOption = selectedOptions.isNotEmpty ? selectedOptions.first : firstOption;
+  final defaultOption = selectedOptions.isNotEmpty ? selectedOptions.first : null;
 
-  final defaultLabel = multiple ? (selectedOptions.isNotEmpty ? selectedOptions.map(_optionLabelText).join(", ") : (placeholder ?? "")) : (defaultOption != null ? _optionLabelText(defaultOption) : "");
+  final defaultLabel = multiple ? (selectedOptions.isNotEmpty ? selectedOptions.map(_optionLabelText).join(", ") : (placeholder ?? "")) : (defaultOption != null ? _optionLabelText(defaultOption) : (placeholder ?? ""));
 
   final hiddenName = (name != null && name.isNotEmpty) ? name : "$id-value";
   final hiddenValue = multiple ? jsonEncode(selected) : (defaultOption != null ? defaultOption.value : "");
@@ -80,12 +80,14 @@ HTML select({
   return div([
     $id(id),
     $classes(["select", ?mainExtraClasses]),
-    if (multiple && placeholder != null && placeholder.isNotEmpty) $("data-placeholder")(placeholder),
+    if (placeholder != null && placeholder.isNotEmpty) $("data-placeholder")(placeholder),
     if (multiple && closeOnSelect) $("data-close-on-select")("true"),
+    if (format == "object") $("data-format")("object"),
     ...?mainAttrs,
     button([
       $type("button"),
-      $classes(["btn-outline", ?triggerExtraClasses]),
+      $classes(["btn", ?triggerExtraClasses]),
+      $("data-variant")("outline"),
       $id("$id-trigger"),
       $("aria-haspopup")("listbox"),
       $("aria-expanded")("false"),
@@ -183,7 +185,7 @@ HTML _renderSelectItems(List<SelectItem> items, Set<String> selectedSet, String 
             $role("group"),
             $aria.labelledby(groupLabelId),
             ...item.attrs,
-            div([
+            span([
               $role("heading"),
               $id(groupLabelId),
               BasecoatHelpers.normalizeComponent(item.label),
@@ -201,6 +203,7 @@ HTML _renderSelectItems(List<SelectItem> items, Set<String> selectedSet, String 
             $id(itemId),
             $role("option"),
             if (item.value.isNotEmpty) $("data-value")(item.value),
+            if (_optionLabelText(item).isNotEmpty) $("data-label")(_optionLabelText(item)),
             if (_isSelected(selectedSet, item.value)) $aria.selected("true"),
             ...item.attrs,
             BasecoatHelpers.normalizeComponent(item.label),
