@@ -1011,7 +1011,6 @@ HTML _selectSection() => _showcase("select", "Select", "Single, placeholder, gro
     $class("grid gap-4 sm:grid-cols-2 xl:grid-cols-3"),
     bc_select.select(id: "ui-select-basic", name: "runtime", selected: const ["dart"], items: _frameworks, placeholder: "Select runtime"),
     bc_select.select(id: "ui-select-placeholder", items: _groupedFrameworks, placeholder: "Grouped options"),
-    bc_select.select(id: "ui-select-search", selected: const ["go"], items: _frameworks, isCombobox: true, popoverExtraClasses: "w-64"),
     bc_select.select(id: "ui-select-multiple", selected: const ["dart", "go"], items: _frameworks, multiple: true, closeOnSelect: true, placeholder: "Multiple"),
   ]),
 ]);
