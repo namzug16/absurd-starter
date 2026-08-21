@@ -31,6 +31,7 @@ dart test
 - `bin/server.dart`: server entry point, hot reload, shutdown handling
 - `lib/router.dart`: route wiring
 - `lib/src/ui/layout/primary_layout.dart`: base HTML layout and assets
+- `lib/src/ui/basecoat/`: reusable Dart helpers for Basecoat components
 - `lib/src/ui/pages/home_page.dart`: starter page and HTMX demo
 - `lib/src/utils/htmx.dart`: response/request helpers for HTMX
 - `lib/src/ui/components/hyperscript.dart`: reusable hyperscript snippets
