@@ -1,5 +1,5 @@
 name: absurd_starter
-description: A Dart server starter using Netto, HTMX, hyperscript, Tailwind, Basecoat, and htmdart.
+description: A Dart server starter using Netto, HTMX, hyperscript, Tailwind, Basecoat, and htmleez.
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
@@ -10,7 +10,7 @@ dependencies:
   archive: ^4.0.7 # Used in order to generate the Lucide icons
 
   hotreloader: ^4.4.0
-  htmdart: ^0.8.2
+  htmleez: ^0.15.0
   netto: ^0.1.5
 
 dev_dependencies:

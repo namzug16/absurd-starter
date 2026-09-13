@@ -1,5 +1,5 @@
 import "package:absurd_starter/src/ui/lucide.dart";
-import "package:htmdart/htmdart.dart";
+import "package:htmleez/htmleez.dart";
 
 enum ToastType {
   success,
@@ -8,10 +8,10 @@ enum ToastType {
   warning;
 
   HTML get icon => switch (this) {
-    ToastType.success => Lucide.circleCheck([Attribute("aria-hidden")("true")]),
-    ToastType.error => Lucide.circleAlert([Attribute("aria-hidden")("true")]),
-    ToastType.info => Lucide.info([Attribute("aria-hidden")("true")]),
-    ToastType.warning => Lucide.triangleAlert([Attribute("aria-hidden")("true")]),
+    ToastType.success => Lucide.circleCheck([$("aria-hidden")("true")]),
+    ToastType.error => Lucide.circleAlert([$("aria-hidden")("true")]),
+    ToastType.info => Lucide.info([$("aria-hidden")("true")]),
+    ToastType.warning => Lucide.triangleAlert([$("aria-hidden")("true")]),
   };
 }
 
@@ -121,7 +121,7 @@ HTML toastHtmx(
   List<HTML> attrs = const [],
 }) => div([
   $id("toaster"),
-  $hx.swapOob("beforeend"),
+  $("hx-swap-oob")("beforeend"),
   toast(
     type,
     title: title,

@@ -1,5 +1,5 @@
 import "package:absurd_starter/config.dart";
-import "package:htmdart/htmdart.dart";
+import "package:htmleez/htmleez.dart";
 
 class PageSeo {
   const PageSeo({
@@ -13,7 +13,7 @@ class PageSeo {
 
 const defaultSeo = PageSeo(
   title: "Absurd Starter",
-  description: "A Dart starter using Netto, HTMX, hyperscript, Tailwind, Basecoat, and htmdart.",
+  description: "A Dart starter using Netto, HTMX, hyperscript, Tailwind, Basecoat, and htmleez.",
 );
 
 HTML primaryLayout(HTML bodyContent, {PageSeo seo = defaultSeo}) => html([

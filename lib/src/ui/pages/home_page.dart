@@ -1,7 +1,7 @@
 import "package:absurd_starter/src/ui/components/hyperscript.dart";
 import "package:absurd_starter/src/ui/layout/primary_layout.dart";
 import "package:absurd_starter/src/ui/lucide.dart";
-import "package:htmdart/htmdart.dart";
+import "package:htmleez/htmleez.dart";
 
 HTML pageHome() => primaryLayout(
   body([
@@ -23,7 +23,7 @@ HTML pageHome() => primaryLayout(
           ]),
           p([
             $class("max-w-2xl text-lg leading-8 text-muted-foreground"),
-            "Absurd Starter wires Netto, HTMX, hyperscript, Tailwind, Basecoat, htmdart, and Lucide into a minimal production-shaped template.".t,
+            "Absurd Starter wires Netto, HTMX, hyperscript, Tailwind, Basecoat, htmleez, and Lucide into a minimal production-shaped template.".t,
           ]),
           div([
             $class("flex flex-wrap gap-3"),
@@ -75,9 +75,9 @@ HTML pageHome() => primaryLayout(
           ]),
           form([
             $id("counter-form"),
-            $hx.post("/api/counter/increment"),
-            $hx.target("#counter-result"),
-            $hx.swap("outerHTML"),
+            $("hx-post")("/api/counter/increment"),
+            $("hx-target")("#counter-result"),
+            $("hx-swap")("outerHTML"),
             $_disableFieldsetsOnHtmxRequest(),
             fieldset([
               $class("flex gap-3"),
@@ -119,7 +119,6 @@ HTML pageHome() => primaryLayout(
           _stackLink("Lucide", "1.33.0", "https://lucide.dev"),
           _stackLink("Netto", "0.1.5", "https://pub.dev/packages/netto"),
           _stackLink("hotreloader", "4.4.0", "https://pub.dev/packages/hotreloader"),
-          _stackLink("htmdart", "0.8.2", "https://pub.dev/packages/htmdart"),
           _stackLink("htmleez", "0.15.0", "https://pub.dev/packages/htmleez"),
         ]),
       ]),

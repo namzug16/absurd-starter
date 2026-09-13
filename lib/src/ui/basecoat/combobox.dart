@@ -3,7 +3,7 @@ import "dart:convert";
 import "package:absurd_starter/src/ui/basecoat/helpers.dart";
 import "package:absurd_starter/src/ui/basecoat/select.dart";
 import "package:absurd_starter/src/ui/lucide.dart";
-import "package:htmdart/htmdart.dart";
+import "package:htmleez/htmleez.dart";
 
 HTML combobox({
   required String id,

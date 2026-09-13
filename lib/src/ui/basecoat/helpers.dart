@@ -1,4 +1,4 @@
-import "package:htmdart/htmdart.dart";
+import "package:htmleez/htmleez.dart";
 
 class BasecoatHelpers {
   static HTML normalizeComponent(Object? component) {

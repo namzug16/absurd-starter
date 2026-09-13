@@ -1,6 +1,7 @@
+import "package:absurd_starter/src/ui/components/hyperscript.dart";
 import "package:absurd_starter/src/ui/lucide.dart";
-import "package:htmdart/htmdart.dart";
-import "package:htmdart/htmdart.dart" as tags;
+import "package:htmleez/htmleez.dart";
+import "package:htmleez/htmleez.dart" as tags;
 
 /// Renders a self-contained modal dialog intended for temporary HTMX/service
 /// responses.
@@ -20,8 +21,8 @@ import "package:htmdart/htmdart.dart" as tags;
 /// ```dart
 /// button([
 ///   $type("button"),
-///   $hx.get("/items/$itemId/details-dialog"),
-///   $hx.swap("none"),
+///   $("hx-get")("/items/$itemId/details-dialog"),
+///   $("hx-swap")("none"),
 ///   "Details".t,
 /// ]);
 /// ```
@@ -36,7 +37,7 @@ import "package:htmdart/htmdart.dart" as tags;
 ///
 ///   ctx.response.htmlFragments([
 ///     div([
-///       $hx.swapOob("beforeend:body"),
+///       $("hx-swap-oob")("beforeend:body"),
 ///       temporaryDialog(
 ///         id: "item-details-dialog-$itemId",
 ///         title: "Item details",
@@ -70,8 +71,8 @@ HTML temporaryDialog({
     $classes(["dialog", ?dialogExtraClasses]),
     $aria.labelledby("$id-title"),
     if (hasDescription) $aria.describedby("$id-description"),
-    $_("init js document.getElementById('$id').showModal() end on close remove me"),
-    if (closeOnOverlayClick) $("onclick")("if (event.target === this) this.close()"),
+    $_()("init js document.getElementById('$id').showModal() end on close remove me"),
+    if (closeOnOverlayClick) $onclick("if (event.target === this) this.close()"),
     ...?dialogAttrs,
     div([
       $classes([?dialogContentExtraClasses]),

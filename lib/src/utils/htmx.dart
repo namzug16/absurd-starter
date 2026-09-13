@@ -1,25 +1,25 @@
 import "dart:convert";
 import "dart:io";
 
-import "package:htmdart/htmdart.dart";
+import "package:htmleez/htmleez.dart";
 import "package:netto/netto.dart";
 
 extension HxRequestExtensions on Ctx {
-  bool get isHx => request.headers[HX.request.toLowerCase()]?.firstOrNull == "true";
+  bool get isHx => request.headers["hx-request"]?.firstOrNull == "true";
 
-  String? get hxBoosted => request.headers[HX.boosted.toLowerCase()]?.firstOrNull;
+  String? get hxBoosted => request.headers["hx-boosted"]?.firstOrNull;
 
-  String? get hxCurrentURL => request.headers[HX.currentURL.toLowerCase()]?.firstOrNull;
+  String? get hxCurrentURL => request.headers["hx-current-url"]?.firstOrNull;
 
-  String? get hxHistoryRestoreRequest => request.headers[HX.historyRestoreRequest.toLowerCase()]?.firstOrNull;
+  String? get hxHistoryRestoreRequest => request.headers["hx-history-restore-request"]?.firstOrNull;
 
-  String? get hxPrompt => request.headers[HX.prompt.toLowerCase()]?.firstOrNull;
+  String? get hxPrompt => request.headers["hx-prompt"]?.firstOrNull;
 
-  String? get hxTarget => request.headers[HX.target.toLowerCase()]?.firstOrNull;
+  String? get hxTarget => request.headers["hx-target"]?.firstOrNull;
 
-  String? get hxTriggerName => request.headers[HX.triggerName.toLowerCase()]?.firstOrNull;
+  String? get hxTriggerName => request.headers["hx-trigger-name"]?.firstOrNull;
 
-  String? get hxTrigger => request.headers[HX.trigger.toLowerCase()]?.firstOrNull;
+  String? get hxTrigger => request.headers["hx-trigger"]?.firstOrNull;
 }
 
 extension HxCtxResponse on CtxResponse {
@@ -27,5 +27,5 @@ extension HxCtxResponse on CtxResponse {
 
   void htmlFragments(List<HTML> fragments, {int status = HttpStatus.ok, Encoding enc = utf8}) => this.html(fragments.toHtml(), status: status, enc: enc);
 
-  void htmlFragmentsOob(List<HTML> fragments, {int status = HttpStatus.ok, Encoding enc = utf8}) => this.html(fragments.map((fragment) => fragment.add($hx.swapOob.yes)).toList().toHtml(), status: status, enc: enc);
+  void htmlFragmentsOob(List<HTML> fragments, {int status = HttpStatus.ok, Encoding enc = utf8}) => this.html(fragments.map((fragment) => fragment.add($("hx-swap-oob")("true"))).toList().toHtml(), status: status, enc: enc);
 }

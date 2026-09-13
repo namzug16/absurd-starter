@@ -13,7 +13,7 @@ The starter uses:
 
 - Netto for the HTTP server
 - hotreloader for faster local development iterations
-- htmdart/htmleez for server-rendered HTML and HTMX attributes
+- htmleez for server-rendered HTML and HTMX attributes
 - HTMX for partial updates
 - hyperscript for tiny client-side behaviors
 - Tailwind CSS and Basecoat for styling/components
@@ -63,20 +63,20 @@ dart test
 
 ### Return An HTMX Fragment
 
-Use the HTMX attributes from `htmdart` in your markup, then return only the
+Use htmleez custom attributes for HTMX in your markup, then return only the
 fragment that should replace the target.
 
 ```dart
 form([
-  $hx.post("/api/counter/increment"),
-  $hx.target("#counter-result"),
-  $hx.swap("outerHTML"),
+  $("hx-post")("/api/counter/increment"),
+  $("hx-target")("#counter-result"),
+  $("hx-swap")("outerHTML"),
   // ...
 ]);
 ```
 
 For response helpers, see `lib/src/utils/htmx.dart`. For syntax examples, see
-`docs/htmdart_llms.md`.
+`docs/htmleez_llms.md`.
 
 ### Update Basecoat CSS And JS
 
@@ -153,7 +153,7 @@ structure.
 ```dart
 ctx.response.htmlFragments([
   div([
-    $hx.swapOob("beforeend:body"),
+    $("hx-swap-oob")("beforeend:body"),
     temporaryDialog(
       id: "item-details-dialog",
       title: "Item details",
@@ -173,7 +173,7 @@ Basecoat examples into Dart markup:
   components.
 
 When adding a new Basecoat component, check the kitchen sink HTML first, then
-translate the markup into `htmdart`/`htmleez` Dart code. Keep Tailwind and
+translate the markup into htmleez Dart code. Keep Tailwind and
 Basecoat classes in Dart files so Tailwind can discover them through
 `@source "./lib/**/*.{dart}"` in `input.css`.
 
@@ -192,18 +192,16 @@ Basecoat classes in Dart files so Tailwind can discover them through
 - `bin/generate_lucide.dart`: downloads Lucide SVGs and generates `lib/src/ui/lucide.dart`
 - `input.css`: Tailwind/Basecoat input
 - `public/`: static assets
-- `docs/`: LLM-oriented references for htmleez, htmdart, and Basecoat
+- `docs/`: LLM-oriented references for htmleez and Basecoat
 
 ## LLM Docs
 
 - `docs/htmleez_llms.md`: Dart HTML builder reference
-- `docs/htmdart_llms.md`: HTMX attributes, events, and response headers
 - `docs/basecoat-llms.md`: Basecoat component/class reference
 - `docs/basecoat-kitchen-sink.html`: broad Basecoat markup examples
 
 For agents: read `docs/basecoat-kitchen-sink.html` before implementing an
-unfamiliar Basecoat component, then use `docs/htmleez_llms.md` and
-`docs/htmdart_llms.md` for the Dart syntax.
+unfamiliar Basecoat component, then use `docs/htmleez_llms.md` for the Dart syntax.
 
 ## Docker
 

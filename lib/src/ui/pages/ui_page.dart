@@ -9,8 +9,8 @@ import "package:absurd_starter/src/ui/basecoat/tabs.dart" as bc_tabs;
 import "package:absurd_starter/src/ui/basecoat/toast.dart" as bc_toast;
 import "package:absurd_starter/src/ui/layout/primary_layout.dart";
 import "package:absurd_starter/src/ui/lucide.dart";
-import "package:htmdart/htmdart.dart";
-import "package:htmdart/htmdart.dart" as tags;
+import "package:htmleez/htmleez.dart";
+import "package:htmleez/htmleez.dart" as tags;
 
 const _components = <(String, String)>[
   ("accordion", "Accordion"),
