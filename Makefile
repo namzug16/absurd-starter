@@ -1,6 +1,15 @@
-.PHONY: _ css lucide basecoat dev prod
+.PHONY: help start css lucide basecoat dev prod
 
-_: css dev
+help:
+	@printf "Available commands:\n"
+	@printf "  make start     rebuild CSS, then run the development server\n"
+	@printf "  make dev       run the development server\n"
+	@printf "  make prod      run the production-like server\n"
+	@printf "  make css       rebuild public/index.css\n"
+	@printf "  make basecoat  download Basecoat CSS bundles and JS\n"
+	@printf "  make lucide    regenerate Lucide Dart icon helpers\n"
+
+start: css dev
 
 css:
 	npx @tailwindcss/cli -i ./input.css -o ./public/index.css --minify
@@ -17,4 +26,4 @@ dev:
 prod:
 	dart run bin/server.dart
 
-.DEFAULT_GOAL := _
+.DEFAULT_GOAL := help

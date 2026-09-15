@@ -1,5 +1,18 @@
 # Absurd Starter
 
+| Tool | Version | Used for |
+| --- | --- | --- |
+| Dart SDK | `^3.12.0` | Runtime and server application language |
+| Netto | `0.1.5` | HTTP server and routing foundation |
+| htmleez | `1.0.0` | Server-rendered HTML and custom attributes |
+| HTMX | `4.0.0` | Partial page updates and HTML fragments |
+| hyperscript | `0.9.14` | Small client-side behaviors without a SPA |
+| Tailwind CSS | `v4` via `@tailwindcss/cli` | Utility CSS generation |
+| Basecoat UI | `1.0.2` | CSS components and themes |
+| Lucide Icons | `1.33.0` | Generated Dart icon helpers |
+| hotreloader | `4.4.0` | Faster local Dart development |
+| Docker | Dockerfile-based | Production image packaging |
+
 Absurd Starter is a pragmatic Dart web template for building small,
 server-driven web apps without pulling in a SPA stack.
 
