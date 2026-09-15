@@ -15,12 +15,12 @@ HTML popover({
   String? popoverExtraClasses,
 }) {
   return div([
-    $id(id),
+    $("id")(id),
     $classes(["popover ", ?mainExtraClasses]),
     ...?mainAttrs,
     button([
-      $id("$id-trigger"),
-      $type("button"),
+      $("id")("$id-trigger"),
+      $("type")("button"),
       $("aria-expanded")("false"),
       $("aria-controls")("$id-popover"),
       $classes([?triggerExtraClasses]),
@@ -28,7 +28,7 @@ HTML popover({
       BasecoatHelpers.normalizeComponent(trigger),
     ]),
     div([
-      $id("$id-popover"),
+      $("id")("$id-popover"),
       $("data-popover")(""),
       $("aria-hidden")("true"),
       $classes([?popoverExtraClasses]),

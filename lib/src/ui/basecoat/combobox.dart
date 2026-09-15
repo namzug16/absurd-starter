@@ -31,7 +31,7 @@ HTML combobox({
   final listContent = items.isNotEmpty ? _renderComboboxItems(items, selectedValues.toSet(), "$id-items") : (content ?? "".t);
 
   return div([
-    $id(id),
+    $("id")(id),
     $classes(["combobox", ?mainExtraClasses]),
     if (autoHighlight) $("data-auto-highlight")("true"),
     if (multiple && closeOnSelect) $("data-close-on-select")("true"),
@@ -39,11 +39,11 @@ HTML combobox({
     ...?mainAttrs,
     if (clear)
       div([
-        $class("input-group"),
+        $("class")("input-group"),
         input([
-          $type("text"),
-          $role("combobox"),
-          if (placeholder != null) $placeholder(placeholder),
+          $("type")("text"),
+          $("role")("combobox"),
+          if (placeholder != null) $("placeholder")(placeholder),
           $("autocomplete")("off"),
           $("autocorrect")("off"),
           $("spellcheck")("false"),
@@ -53,20 +53,20 @@ HTML combobox({
           ...?inputAttrs,
         ]),
         span([
-          $role("group"),
+          $("role")("group"),
           $("data-align")("inline-end"),
           button([
-            $type("button"),
+            $("type")("button"),
             $("data-clear")(""),
-            $aria.label("Clear selection"),
-            Lucide.x([$class("size-4"), Attribute("aria-hidden")("true")]),
+            $("aria-label")("Clear selection"),
+            Lucide.x([$("class")("size-4"), Attribute("aria-hidden")("true")]),
           ]),
           button([
-            $type("button"),
-            $class("btn"),
+            $("type")("button"),
+            $("class")("btn"),
             $("data-variant")("ghost"),
             $("data-size")("icon-xs"),
-            $aria.label("Open suggestions"),
+            $("aria-label")("Open suggestions"),
             $("aria-haspopup")("listbox"),
             $("aria-expanded")("false"),
             $("aria-controls")("$id-listbox"),
@@ -76,9 +76,9 @@ HTML combobox({
       ])
     else ...[
       input([
-        $type("text"),
-        $role("combobox"),
-        if (placeholder != null) $placeholder(placeholder),
+        $("type")("text"),
+        $("role")("combobox"),
+        if (placeholder != null) $("placeholder")(placeholder),
         $("autocomplete")("off"),
         $("autocorrect")("off"),
         $("spellcheck")("false"),
@@ -87,16 +87,16 @@ HTML combobox({
         $("aria-controls")("$id-listbox"),
         ...?inputAttrs,
       ]),
-      Lucide.chevronDown([$class("combobox-trigger-icon"), Attribute("aria-hidden")("true")]),
+      Lucide.chevronDown([$("class")("combobox-trigger-icon"), Attribute("aria-hidden")("true")]),
     ],
     div([
-      $id("$id-popover"),
+      $("id")("$id-popover"),
       $("data-popover")(""),
       $("aria-hidden")("true"),
       ...?popoverAttrs,
       div([
-        $role("listbox"),
-        $id("$id-listbox"),
+        $("role")("listbox"),
+        $("id")("$id-listbox"),
         $("aria-orientation")("vertical"),
         if (multiple) $("aria-multiselectable")("true"),
         if (emptyText.isNotEmpty) $("data-empty")(emptyText),
@@ -106,9 +106,9 @@ HTML combobox({
       ]),
     ]),
     input([
-      $type("hidden"),
-      if (name != null && name.isNotEmpty) $name(name),
-      $value(hiddenValue),
+      $("type")("hidden"),
+      if (name != null && name.isNotEmpty) $("name")(name),
+      $("value")(hiddenValue),
       ...?hiddenInputAttrs,
     ]),
   ]);
@@ -134,12 +134,12 @@ HTML _renderComboboxItems(List<SelectItem> items, Set<String> selectedSet, Strin
         final groupLabelId = item.id ?? "group-label-$itemId";
         entries.add(
           div([
-            $role("group"),
-            $aria.labelledby(groupLabelId),
+            $("role")("group"),
+            $("aria-labelledby")(groupLabelId),
             ...item.attrs,
             div([
-              $role("heading"),
-              $id(groupLabelId),
+              $("role")("heading"),
+              $("id")(groupLabelId),
               BasecoatHelpers.normalizeComponent(item.label),
             ]),
             _renderComboboxItems(item.items, selectedSet, itemId),
@@ -147,17 +147,17 @@ HTML _renderComboboxItems(List<SelectItem> items, Set<String> selectedSet, Strin
         );
         break;
       case SelectItemType.separator:
-        entries.add(hr([$role("separator")]));
+        entries.add(hr([$("role")("separator")]));
         break;
       case SelectItemType.item:
         final label = _labelText(item.label);
         entries.add(
           div([
-            $id(itemId),
-            $role("option"),
+            $("id")(itemId),
+            $("role")("option"),
             if (item.value.isNotEmpty) $("data-value")(item.value),
             if (label.isNotEmpty) $("data-label")(label),
-            if (selectedSet.contains(item.value)) $aria.selected("true"),
+            if (selectedSet.contains(item.value)) $("aria-selected")("true"),
             ...item.attrs,
             BasecoatHelpers.normalizeComponent(item.label),
           ]),

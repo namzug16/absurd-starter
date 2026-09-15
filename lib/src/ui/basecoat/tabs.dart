@@ -27,21 +27,21 @@ HTML tabs({
   final selectedIndex = tabsets.isEmpty ? 0 : defaultTabIndex.clamp(1, tabsets.length);
 
   return div([
-    $id(id),
+    $("id")(id),
     $classes(["tabs", ?mainExtraClasses]),
     ...?mainAttrs,
     nav([
-      $role("tablist"),
-      $aria.orientation("horizontal"),
+      $("role")("tablist"),
+      $("aria-orientation")("horizontal"),
       $classes([?tablistExtraClasses]),
       ...?tablistAttrs,
       for (var i = 0; i < tabsets.length; i++)
         button([
-          $type("button"),
-          $role("tab"),
-          $id("$id-tab-${i + 1}"),
+          $("type")("button"),
+          $("role")("tab"),
+          $("id")("$id-tab-${i + 1}"),
           $("aria-controls")("$id-panel-${i + 1}"),
-          $aria.selected((i + 1 == selectedIndex).toString()),
+          $("aria-selected")((i + 1 == selectedIndex).toString()),
           $("tabindex")(i + 1 == selectedIndex ? "0" : "-1"),
           ...tabsets[i].tabAttrs,
           BasecoatHelpers.normalizeComponent(tabsets[i].tab),
@@ -49,11 +49,11 @@ HTML tabs({
     ]),
     for (var i = 0; i < tabsets.length; i++)
       div([
-        $role("tabpanel"),
-        $id("$id-panel-${i + 1}"),
-        $aria.labelledby("$id-tab-${i + 1}"),
+        $("role")("tabpanel"),
+        $("id")("$id-panel-${i + 1}"),
+        $("aria-labelledby")("$id-tab-${i + 1}"),
         $("tabindex")("-1"),
-        $aria.selected((i + 1 == selectedIndex).toString()),
+        $("aria-selected")((i + 1 == selectedIndex).toString()),
         if (i + 1 != selectedIndex) $("hidden")(""),
         ...tabsets[i].panelAttrs,
         BasecoatHelpers.normalizeComponent(tabsets[i].panel),

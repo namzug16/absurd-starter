@@ -46,12 +46,12 @@ HTML dropdownMenu({
   final menuContent = items.isNotEmpty ? _renderDropdownItems(items, "$id-items") : (content ?? "".t);
 
   return div([
-    $id(id),
+    $("id")(id),
     $classes(["dropdown-menu", ?mainExtraClasses]),
     ...?mainAttrs,
     button([
-      $type("button"),
-      $id("$id-trigger"),
+      $("type")("button"),
+      $("id")("$id-trigger"),
       $("aria-haspopup")("menu"),
       $("aria-controls")("$id-menu"),
       $("aria-expanded")("false"),
@@ -60,14 +60,14 @@ HTML dropdownMenu({
       BasecoatHelpers.normalizeComponent(trigger),
     ]),
     div([
-      $id("$id-popover"),
+      $("id")("$id-popover"),
       $("data-popover")(""),
       $("aria-hidden")("true"),
       $classes([?popoverExtraClasses]),
       ...?popoverAttrs,
       div([
-        $role("menu"),
-        $id("$id-menu"),
+        $("role")("menu"),
+        $("id")("$id-menu"),
         $("aria-labelledby")("$id-trigger"),
         $classes([?menuExtraClasses]),
         ...?menuAttrs,
@@ -91,12 +91,12 @@ HTML _renderDropdownItems(List<DropdownMenuItem> items, String parentIdPrefix) {
 
         entries.add(
           div([
-            $role("group"),
-            $aria.labelledby(groupLabelId),
+            $("role")("group"),
+            $("aria-labelledby")(groupLabelId),
             ...item.attrs,
             div([
-              $role("heading"),
-              $id(groupLabelId),
+              $("role")("heading"),
+              $("id")(groupLabelId),
               BasecoatHelpers.normalizeComponent(item.label),
             ]),
             groupItems,
@@ -104,15 +104,15 @@ HTML _renderDropdownItems(List<DropdownMenuItem> items, String parentIdPrefix) {
         );
         break;
       case DropdownMenuItemType.separator:
-        entries.add(hr([$role("separator")]));
+        entries.add(hr([$("role")("separator")]));
         break;
       case DropdownMenuItemType.item:
         if (item.url != null && item.url!.isNotEmpty) {
           entries.add(
             a([
-              $id(itemId),
-              $role("menuitem"),
-              $href(item.url),
+              $("id")(itemId),
+              $("role")("menuitem"),
+              $("href")(item.url),
               ...item.attrs,
               BasecoatHelpers.normalizeComponent(item.icon),
               BasecoatHelpers.normalizeComponent(item.label),
@@ -123,8 +123,8 @@ HTML _renderDropdownItems(List<DropdownMenuItem> items, String parentIdPrefix) {
 
         entries.add(
           div([
-            $id(itemId),
-            $role("menuitem"),
+            $("id")(itemId),
+            $("role")("menuitem"),
             ...item.attrs,
             BasecoatHelpers.normalizeComponent(item.icon),
             BasecoatHelpers.normalizeComponent(item.label),

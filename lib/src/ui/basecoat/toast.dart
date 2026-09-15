@@ -21,8 +21,8 @@ HTML toaster({
   List<HTML> attrs = const [],
 }) {
   return div([
-    $id(id),
-    $class("toaster"),
+    $("id")(id),
+    $("class")("toaster"),
     ...attrs,
     ...toasts,
   ]);
@@ -66,19 +66,19 @@ HTML toast(
     if (duration != null) $("data-duration")(duration.toString()),
     ...attrs,
     div([
-      $class("toast-content"),
+      $("class")("toast-content"),
       type.icon,
       section([
-        if (title != "") title.h2(),
-        if (description != "") description.p(),
+        if (title != "") h2([title.t]),
+        if (description != "") p([description.t]),
       ]),
       if (action != null || cancel != null)
         footer([
           if (action != null)
             if (action.href != null)
               a([
-                $href(action.href),
-                $class("btn"),
+                $("href")(action.href),
+                $("class")("btn"),
                 $("data-size")("sm"),
                 $("data-toast-action")(""),
                 ...action.attrs,
@@ -86,8 +86,8 @@ HTML toast(
               ])
             else
               button([
-                $type("button"),
-                $class("btn"),
+                $("type")("button"),
+                $("class")("btn"),
                 $("data-size")("sm"),
                 $("data-toast-action")(""),
                 if (action.onClick != null) $("onclick")(action.onClick),
@@ -96,8 +96,8 @@ HTML toast(
               ]),
           if (cancel != null)
             button([
-              $type("button"),
-              $class("btn"),
+              $("type")("button"),
+              $("class")("btn"),
               $("data-variant")("outline"),
               $("data-size")("sm"),
               $("data-toast-cancel")(""),
@@ -120,7 +120,7 @@ HTML toastHtmx(
   String extraClasses = "",
   List<HTML> attrs = const [],
 }) => div([
-  $id("toaster"),
+  $("id")("toaster"),
   $("hx-swap-oob")("beforeend"),
   toast(
     type,

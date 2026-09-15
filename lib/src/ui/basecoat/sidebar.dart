@@ -65,13 +65,13 @@ HTML sidebar({
       : [content ?? "".t];
 
   return aside([
-    if (id.isNotEmpty) $id(id),
+    if (id.isNotEmpty) $("id")(id),
     $classes(["sidebar", ?mainExtraClasses]),
     $("data-side")(side),
     if (!isOpen) $("data-initial-open")("false"),
     ...?mainAttrs,
     nav([
-      $aria.label(label),
+      $("aria-label")(label),
       if (header != null)
         tags.header([
           $classes([?headerExtraClasses]),
@@ -124,12 +124,12 @@ HTML _group(SidebarItem item, String itemId) {
   final groupItems = item.items.isNotEmpty ? _content(item.items, itemId) : const <HTML>[];
 
   return div([
-    $role("group"),
-    if (_hasSidebarLabel(item.label)) $aria.labelledby(groupLabelId),
+    $("role")("group"),
+    if (_hasSidebarLabel(item.label)) $("aria-labelledby")(groupLabelId),
     ...item.attrs,
     if (_hasSidebarLabel(item.label))
       h3([
-        $id(groupLabelId),
+        $("id")(groupLabelId),
         BasecoatHelpers.normalizeComponent(item.label),
       ]),
     ul([
@@ -139,7 +139,7 @@ HTML _group(SidebarItem item, String itemId) {
 }
 
 HTML _separator() {
-  return hr([$role("separator")]);
+  return hr([$("role")("separator")]);
 }
 
 HTML _submenu(SidebarItem item, String itemId) {
@@ -149,16 +149,16 @@ HTML _submenu(SidebarItem item, String itemId) {
 
   return li([
     details([
-      $id(submenuId),
-      if (item.open) $open(""),
+      $("id")(submenuId),
+      if (item.open) $("open")(""),
       ...item.attrs,
       summary([
-        $aria.controls(submenuContentId),
+        $("aria-controls")(submenuContentId),
         BasecoatHelpers.normalizeComponent(item.icon),
         BasecoatHelpers.normalizeComponent(item.label),
       ]),
       ul([
-        $id(submenuContentId),
+        $("id")(submenuContentId),
         ...submenuItems,
       ]),
     ]),
@@ -168,8 +168,8 @@ HTML _submenu(SidebarItem item, String itemId) {
 HTML _item(SidebarItem item) {
   return li([
     a([
-      if (item.url != null) $href(item.url),
-      if (item.current) $aria.current("page"),
+      if (item.url != null) $("href")(item.url),
+      if (item.current) $("aria-current")("page"),
       ...item.attrs,
       BasecoatHelpers.normalizeComponent(item.icon),
       span([

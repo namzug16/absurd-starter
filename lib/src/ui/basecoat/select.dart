@@ -78,30 +78,30 @@ HTML select({
   final listContent = items.isNotEmpty ? _renderSelectItems(items, selectedSet, "$id-items") : (content ?? "".t);
 
   return div([
-    $id(id),
+    $("id")(id),
     $classes(["select", ?mainExtraClasses]),
     if (placeholder != null && placeholder.isNotEmpty) $("data-placeholder")(placeholder),
     if (multiple && closeOnSelect) $("data-close-on-select")("true"),
     if (format == "object") $("data-format")("object"),
     ...?mainAttrs,
     button([
-      $type("button"),
+      $("type")("button"),
       $classes(["btn", ?triggerExtraClasses]),
       $("data-variant")("outline"),
-      $id("$id-trigger"),
+      $("id")("$id-trigger"),
       $("aria-haspopup")("listbox"),
       $("aria-expanded")("false"),
       $("aria-controls")("$id-listbox"),
       ...?triggerAttrs,
       span([
-        $class("truncate"),
+        $("class")("truncate"),
         defaultLabel.t,
       ]),
-      if (isCombobox) Lucide.chevronsUpDown([$class("text-muted-foreground opacity-50 shrink-0")]),
-      if (!isCombobox) Lucide.chevronDown([$class("text-muted-foreground opacity-50 shrink-0")]),
+      if (isCombobox) Lucide.chevronsUpDown([$("class")("text-muted-foreground opacity-50 shrink-0")]),
+      if (!isCombobox) Lucide.chevronDown([$("class")("text-muted-foreground opacity-50 shrink-0")]),
     ]),
     div([
-      $id("$id-popover"),
+      $("id")("$id-popover"),
       $("data-popover")(""),
       $("aria-hidden")("true"),
       $classes([?popoverExtraClasses]),
@@ -110,22 +110,22 @@ HTML select({
         tags.header([
           Lucide.search(),
           input([
-            $type("text"),
-            $value(""),
-            $placeholder(effectiveSearchPlaceholder),
+            $("type")("text"),
+            $("value")(""),
+            $("placeholder")(effectiveSearchPlaceholder),
             $("autocomplete")("off"),
             $("autocorrect")("off"),
             $("spellcheck")("false"),
             $("aria-autocomplete")("list"),
-            $role("combobox"),
+            $("role")("combobox"),
             $("aria-expanded")("false"),
             $("aria-controls")("$id-listbox"),
             $("aria-labelledby")("$id-trigger"),
           ]),
         ]),
       div([
-        $role("listbox"),
-        $id("$id-listbox"),
+        $("role")("listbox"),
+        $("id")("$id-listbox"),
         $("aria-orientation")("vertical"),
         $("aria-labelledby")("$id-trigger"),
         if (multiple) $("aria-multiselectable")("true"),
@@ -135,9 +135,9 @@ HTML select({
       ]),
     ]),
     input([
-      $type("hidden"),
-      $name(hiddenName),
-      $value(hiddenValue),
+      $("type")("hidden"),
+      $("name")(hiddenName),
+      $("value")(hiddenValue),
       ...?inputAttrs,
     ]),
   ]);
@@ -182,12 +182,12 @@ HTML _renderSelectItems(List<SelectItem> items, Set<String> selectedSet, String 
 
         entries.add(
           div([
-            $role("group"),
-            $aria.labelledby(groupLabelId),
+            $("role")("group"),
+            $("aria-labelledby")(groupLabelId),
             ...item.attrs,
             span([
-              $role("heading"),
-              $id(groupLabelId),
+              $("role")("heading"),
+              $("id")(groupLabelId),
               BasecoatHelpers.normalizeComponent(item.label),
             ]),
             groupItems,
@@ -195,16 +195,16 @@ HTML _renderSelectItems(List<SelectItem> items, Set<String> selectedSet, String 
         );
         break;
       case SelectItemType.separator:
-        entries.add(hr([$role("separator")]));
+        entries.add(hr([$("role")("separator")]));
         break;
       case SelectItemType.item:
         entries.add(
           div([
-            $id(itemId),
-            $role("option"),
+            $("id")(itemId),
+            $("role")("option"),
             if (item.value.isNotEmpty) $("data-value")(item.value),
             if (_optionLabelText(item).isNotEmpty) $("data-label")(_optionLabelText(item)),
-            if (_isSelected(selectedSet, item.value)) $aria.selected("true"),
+            if (_isSelected(selectedSet, item.value)) $("aria-selected")("true"),
             ...item.attrs,
             BasecoatHelpers.normalizeComponent(item.label),
           ]),

@@ -29,17 +29,17 @@ HTML dialog({
   return HTML.fragment([
     if (trigger != null)
       button([
-        $type("button"),
+        $("type")("button"),
         $("onclick")("document.getElementById('$id').showModal()"),
         ...?triggerAttrs,
         BasecoatHelpers.normalizeComponent(trigger),
       ]),
     tags.dialog([
-      $id(id),
+      $("id")(id),
       $classes(["dialog", ?dialogExtraClasses]),
-      if (title != null && title.isNotEmpty) $aria.labelledby("$id-title"),
-      if (hasDescription) $aria.describedby("$id-description"),
-      if (open) $open(""),
+      if (title != null && title.isNotEmpty) $("aria-labelledby")("$id-title"),
+      if (hasDescription) $("aria-describedby")("$id-description"),
+      if (open) $("open")(""),
       if (closeOnOverlayClick) $("onclick")("if (event.target === this) this.close()"),
       ...?dialogAttrs,
       div([
@@ -48,12 +48,12 @@ HTML dialog({
           tags.header([
             ...?headerAttrs,
             h2([
-              $id("$id-title"),
+              $("id")("$id-title"),
               (title ?? "").t,
             ]),
             if (hasDescription)
               p([
-                $id("$id-description"),
+                $("id")("$id-description"),
                 description.t,
               ]),
           ]),
@@ -68,11 +68,11 @@ HTML dialog({
           ]),
         if (closeButton)
           button([
-            $type("button"),
-            $class("btn"),
+            $("type")("button"),
+            $("class")("btn"),
             $("data-variant")("ghost"),
             $("data-size")("icon-sm"),
-            $aria.label("Close dialog"),
+            $("aria-label")("Close dialog"),
             $("onclick")("this.closest('dialog').close()"),
             Lucide.x([Attribute("aria-hidden")("true")]),
           ]),

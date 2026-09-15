@@ -1,4 +1,3 @@
-import "package:absurd_starter/src/ui/components/hyperscript.dart";
 import "package:absurd_starter/src/ui/lucide.dart";
 import "package:htmleez/htmleez.dart";
 import "package:htmleez/htmleez.dart" as tags;
@@ -20,7 +19,7 @@ import "package:htmleez/htmleez.dart" as tags;
 ///
 /// ```dart
 /// button([
-///   $type("button"),
+///   $("type")("button"),
 ///   $("hx-get")("/items/$itemId/details-dialog"),
 ///   $("hx-swap")("none"),
 ///   "Details".t,
@@ -67,24 +66,24 @@ HTML temporaryDialog({
   final hasDescription = description != null && description.isNotEmpty;
 
   return tags.dialog([
-    $id(id),
+    $("id")(id),
     $classes(["dialog", ?dialogExtraClasses]),
-    $aria.labelledby("$id-title"),
-    if (hasDescription) $aria.describedby("$id-description"),
-    $_()("init js document.getElementById('$id').showModal() end on close remove me"),
-    if (closeOnOverlayClick) $onclick("if (event.target === this) this.close()"),
+    $("aria-labelledby")("$id-title"),
+    if (hasDescription) $("aria-describedby")("$id-description"),
+    $("_")("init js document.getElementById('$id').showModal() end on close remove me"),
+    if (closeOnOverlayClick) $("onclick")("if (event.target === this) this.close()"),
     ...?dialogAttrs,
     div([
       $classes([?dialogContentExtraClasses]),
       tags.header([
         ...?headerAttrs,
         h2([
-          $id("$id-title"),
+          $("id")("$id-title"),
           title.t,
         ]),
         if (hasDescription)
           p([
-            $id("$id-description"),
+            $("id")("$id-description"),
             description.t,
           ]),
       ]),
@@ -99,11 +98,11 @@ HTML temporaryDialog({
         ]),
       if (closeButton)
         button([
-          $type("button"),
-          $class("btn"),
+          $("type")("button"),
+          $("class")("btn"),
           $("data-variant")("ghost"),
           $("data-size")("icon-sm"),
-          $aria.label("Close dialog"),
+          $("aria-label")("Close dialog"),
           $("onclick")("this.closest('dialog').close()"),
           Lucide.x([Attribute("aria-hidden")("true")]),
         ]),

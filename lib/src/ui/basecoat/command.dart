@@ -50,28 +50,28 @@ HTML command({
   final menuContent = items.isNotEmpty ? _renderCommandItems(items, "$id-items") : (content ?? "".t);
 
   return div([
-    $id(id),
+    $("id")(id),
     $classes(["command", ?mainExtraClasses]),
     ...?mainAttrs,
     tags.header([
       Lucide.search(),
       input([
-        $type("text"),
-        $id("$id-input"),
-        $placeholder(placeholder),
+        $("type")("text"),
+        $("id")("$id-input"),
+        $("placeholder")(placeholder),
         $("autocomplete")("off"),
         $("autocorrect")("off"),
         $("spellcheck")("false"),
         $("aria-autocomplete")("list"),
-        $role("combobox"),
+        $("role")("combobox"),
         $("aria-expanded")("true"),
         $("aria-controls")("$id-menu"),
         ...?inputAttrs,
       ]),
     ]),
     div([
-      $role("menu"),
-      $id("$id-menu"),
+      $("role")("menu"),
+      $("id")("$id-menu"),
       $("aria-orientation")("vertical"),
       if (emptyText.isNotEmpty) $("data-empty")(emptyText),
       $classes([?menuExtraClasses]),
@@ -93,10 +93,10 @@ HTML commandDialog({
   List<HTML>? menuAttrs,
 }) {
   return tags.dialog([
-    $id(id),
-    $class("command-dialog"),
-    $aria.label("Command menu"),
-    if (open) $open(""),
+    $("id")(id),
+    $("class")("command-dialog"),
+    $("aria-label")("Command menu"),
+    if (open) $("open")(""),
     $("onclick")("if (event.target === this) this.close()"),
     ...?dialogAttrs,
     command(
@@ -123,12 +123,12 @@ HTML _renderCommandItems(List<CommandItem> items, String parentIdPrefix) {
         final groupLabelId = item.id ?? "group-label-$itemId";
         entries.add(
           div([
-            $role("group"),
-            $aria.labelledby(groupLabelId),
+            $("role")("group"),
+            $("aria-labelledby")(groupLabelId),
             ...item.attrs,
             span([
-              $role("heading"),
-              $id(groupLabelId),
+              $("role")("heading"),
+              $("id")(groupLabelId),
               BasecoatHelpers.normalizeComponent(item.label),
             ]),
             _renderCommandItems(item.items, itemId),
@@ -136,7 +136,7 @@ HTML _renderCommandItems(List<CommandItem> items, String parentIdPrefix) {
         );
         break;
       case CommandItemType.separator:
-        entries.add(hr([$role("separator")]));
+        entries.add(hr([$("role")("separator")]));
         break;
       case CommandItemType.item:
         final children = <HTML>[
@@ -155,17 +155,17 @@ HTML _renderCommandItems(List<CommandItem> items, String parentIdPrefix) {
         if (item.url != null && item.url!.isNotEmpty) {
           entries.add(
             a([
-              $id(item.id ?? itemId),
-              $role("menuitem"),
-              $href(item.url),
+              $("id")(item.id ?? itemId),
+              $("role")("menuitem"),
+              $("href")(item.url),
               ...children,
             ]),
           );
         } else {
           entries.add(
             div([
-              $id(item.id ?? itemId),
-              $role("menuitem"),
+              $("id")(item.id ?? itemId),
+              $("role")("menuitem"),
               ...children,
             ]),
           );
