@@ -133,10 +133,10 @@ packages:
     dependency: "direct main"
     description:
       name: htmleez
-      sha256: "311dbd9dde97297451fbe9da1ad5877d3ce95fb87e5f1a66de7a94a1757246e8"
+      sha256: "67b187601ae69e6974e14bf82d1de41c9cda8a56a183b6a28bf3460de4bec12c"
       url: "https://pub.dev"
     source: hosted
-    version: "0.15.0"
+    version: "1.0.0"
   http:
     dependency: "direct dev"
     description:

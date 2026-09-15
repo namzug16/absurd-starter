@@ -10,7 +10,7 @@ dependencies:
   archive: ^4.0.7 # Used in order to generate the Lucide icons
 
   hotreloader: ^4.4.0
-  htmleez: ^0.15.0
+  htmleez: ^1.0.0
   netto: ^0.1.5
 
 dev_dependencies:
