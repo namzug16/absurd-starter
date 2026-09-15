@@ -3,5 +3,4 @@ function initBasecoat() {
 }
 
 document.addEventListener("DOMContentLoaded", initBasecoat)
-document.addEventListener("htmx:load", initBasecoat)
-document.addEventListener("htmx:historyRestore", initBasecoat)
+document.addEventListener("htmx:after:swap", initBasecoat)

@@ -70,7 +70,7 @@ HTML temporaryDialog({
     $classes(["dialog", ?dialogExtraClasses]),
     $("aria-labelledby")("$id-title"),
     if (hasDescription) $("aria-describedby")("$id-description"),
-    $("_")("init js document.getElementById('$id').showModal() end on close remove me"),
+    raw$("_")("init call me.showModal() end on close remove me"),
     if (closeOnOverlayClick) $("onclick")("if (event.target === this) this.close()"),
     ...?dialogAttrs,
     div([

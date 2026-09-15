@@ -17,9 +17,9 @@ extension HxRequestExtensions on Ctx {
 
   String? get hxTarget => request.headers["hx-target"]?.firstOrNull;
 
-  String? get hxTriggerName => request.headers["hx-trigger-name"]?.firstOrNull;
+  String? get hxRequestType => request.headers["hx-request-type"]?.firstOrNull;
 
-  String? get hxTrigger => request.headers["hx-trigger"]?.firstOrNull;
+  String? get hxSource => request.headers["hx-source"]?.firstOrNull;
 }
 
 extension HxCtxResponse on CtxResponse {

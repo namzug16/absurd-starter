@@ -2,10 +2,10 @@
 
 import "package:htmleez/htmleez.dart";
 
-HTML $disableFieldsetsAndShowLoadersOnHtmxRequest() => $("_")("on htmx:beforeSend toggle @disabled on <fieldset/> in me toggle .hidden on .loader in me until htmx:afterOnLoad");
+HTML $disableFieldsetsAndShowLoadersOnHtmxRequest() => raw$("_")("on htmx:before:request toggle @disabled on <fieldset/> in me toggle .hidden on .loader in me until htmx:finally:request");
 
-HTML $_disableFieldsetsOnHtmxRequest() => $("_")("on htmx:beforeSend toggle @disabled on <fieldset/> in me until htmx:afterOnLoad");
+HTML $_disableFieldsetsOnHtmxRequest() => raw$("_")("on htmx:before:request toggle @disabled on <fieldset/> in me until htmx:finally:request");
 
-HTML $_toggleLoaderOnHtmxRequest() => $("_")("on htmx:beforeSend from the closest <form/> toggle .hidden on .loader in me until htmx:afterOnLoad from the closest <form/>");
+HTML $_toggleLoaderOnHtmxRequest() => raw$("_")("on htmx:before:request from the closest <form/> toggle .hidden on .loader in me until htmx:finally:request from the closest <form/>");
 
-HTML $_toggleDisabledOnHtmxRequest() => $("_")("on htmx:beforeSend toggle @disabled on me until htmx:afterOnLoad");
+HTML $_toggleDisabledOnHtmxRequest() => raw$("_")("on htmx:before:request toggle @disabled on me until htmx:finally:request");
