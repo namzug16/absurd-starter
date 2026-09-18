@@ -54,6 +54,15 @@ make basecoat  # download Basecoat CSS bundles and JS
 make lucide    # regenerate lib/src/ui/lucide.dart from Lucide SVGs
 ```
 
+Update agent skills from Dart package dependencies with:
+
+```sh
+dart run skills@ get
+```
+
+When prompted, install the skills you want. Use `dart run skills@ get --all`
+to install every available skill without prompting.
+
 `make dev` runs `DEV=true dart run --enable-vm-service bin/server.dart`, using
 Netto for the HTTP server and hotreloader/dev reload wiring for faster feedback
 while editing Dart files.
@@ -88,8 +97,8 @@ form([
 ]);
 ```
 
-For response helpers, see `lib/src/utils/htmx.dart`. For syntax examples, see
-`docs/htmleez_llms.md`.
+For response helpers, see `lib/src/utils/htmx.dart`. For htmleez syntax, use
+the installed `htmleez-html` agent skill rather than a copied markdown reference.
 
 ### Update Basecoat CSS And JS
 
@@ -144,8 +153,8 @@ Example usage:
 import "package:absurd_starter/src/ui/lucide.dart";
 
 button([
-  $class("btn"),
-  Lucide.plus([$class("size-4")]),
+  $("class")("btn"),
+  Lucide.plus([$("class")("size-4")]),
   "Add item".t,
 ]);
 ```
@@ -205,16 +214,16 @@ Basecoat classes in Dart files so Tailwind can discover them through
 - `bin/generate_lucide.dart`: downloads Lucide SVGs and generates `lib/src/ui/lucide.dart`
 - `input.css`: Tailwind/Basecoat input
 - `public/`: static assets
-- `docs/`: LLM-oriented references for htmleez and Basecoat
+- `docs/`: LLM-oriented references for Basecoat
 
 ## LLM Docs
 
-- `docs/htmleez_llms.md`: Dart HTML builder reference
 - `docs/basecoat-llms.md`: Basecoat component/class reference
 - `docs/basecoat-kitchen-sink.html`: broad Basecoat markup examples
 
 For agents: read `docs/basecoat-kitchen-sink.html` before implementing an
-unfamiliar Basecoat component, then use `docs/htmleez_llms.md` for the Dart syntax.
+unfamiliar Basecoat component. For htmleez, load the `htmleez-html` skill; keep
+it updated with `dart run skills@ get`.
 
 ## Docker
 
