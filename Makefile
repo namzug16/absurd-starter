@@ -21,7 +21,7 @@ basecoat:
 	dart run bin/download_basecoat.dart
 
 dev:
-	DEV=true dart run --enable-vm-service bin/server.dart
+	DEV=true dart run bin/server.dart
 
 prod:
 	dart run bin/server.dart

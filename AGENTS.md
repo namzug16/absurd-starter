@@ -3,7 +3,7 @@
 ## Fast Start Commands
 
 - Install deps: `dart pub get`
-- Run dev server with hot reload: `make dev`
+- Run dev server: `make dev`
 - Run prod-like locally: `make prod`
 - Rebuild Tailwind output: `make css`
 - Regenerate Lucide icon wrapper: `make lucide`
