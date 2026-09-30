@@ -1,27 +1,22 @@
 import "package:absurd_starter/src/ui/pages/home_page.dart";
 import "package:absurd_starter/src/ui/pages/ui_page.dart";
 import "package:absurd_starter/src/utils/htmx.dart";
-import "package:netto/netto.dart";
+import "package:relic/relic.dart";
 
-void handleHomePage(Ctx ctx) {
-  ctx.response.htmlPage(pageHome());
-}
+Response handleHomePage(Request request) => htmlPage(pageHome());
 
-void handleUiPage(Ctx ctx) {
-  ctx.response.htmlPage(pageUi());
-}
+Response handleUiPage(Request request) => htmlPage(pageUi());
 
-void handleHealth(Ctx ctx) {
-  ctx.response.string("ok");
-}
+Response handleHealth(Request request) => Response.ok(body: Body.fromString("ok"));
 
-Future<void> handleCounterIncrement(Ctx ctx) async {
-  final rawCount = (await ctx.request.body.formValue("count")) ?? "0";
+Future<Response> handleCounterIncrement(Request request) async {
+  final form = await request.urlEncodedForm();
+  final rawCount = form.fields(const StringFormField("count")) ?? "0";
   final count = int.tryParse(rawCount) ?? 0;
 
   await Future<void>.delayed(const Duration(seconds: 3));
 
-  ctx.response.htmlFragments([
+  return htmlFragments([
     counterFragment(count + 1),
   ]);
 }

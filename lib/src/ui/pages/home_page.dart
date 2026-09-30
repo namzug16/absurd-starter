@@ -23,16 +23,16 @@ HTML pageHome() => primaryLayout(
           ]),
           p([
             $("class")("max-w-2xl text-lg leading-8 text-muted-foreground"),
-            "Absurd Starter wires Netto, HTMX, hyperscript, Tailwind, Basecoat, htmleez, and Lucide into a minimal production-shaped template.".t,
+            "Absurd Starter wires Relic, HTMX, hyperscript, Tailwind, Basecoat, htmleez, and Lucide into a minimal production-ish-shaped template.".t,
           ]),
           div([
             $("class")("flex flex-wrap gap-3"),
             a([
-              $("href")("https://pub.dev/packages/netto"),
+              $("href")("https://github.com/namzug16/relic/tree/feat/form_and_multipart"),
               $("target")("_blank"),
               $("rel")("noreferrer"),
               $("class")("btn"),
-              "Netto".t,
+              "Relic".t,
             ]),
             a([
               $("href")("https://htmx.org"),
@@ -99,7 +99,7 @@ HTML pageHome() => primaryLayout(
       ]),
       section([
         $("class")("grid gap-4 sm:grid-cols-3"),
-        _featureCard(Lucide.server, "Netto", "Small HTTP server with simple route wiring."),
+        _featureCard(Lucide.server, "Relic", "Modern Dart server with typed requests, routing, middleware, static files, WebSockets, and hot reload."),
         _featureCard(Lucide.refreshCw, "HTMX", "Return fragments from Dart and keep UI state boring."),
         _featureCard(Lucide.palette, "Basecoat", "Tailwind-friendly components and design tokens."),
       ]),
@@ -117,7 +117,7 @@ HTML pageHome() => primaryLayout(
           _stackLink("Tailwind CSS", "+4", "https://tailwindcss.com"),
           _stackLink("Basecoat", "1.0.2", "https://www.npmjs.com/package/basecoat-css"),
           _stackLink("Lucide", "1.33.0", "https://lucide.dev"),
-          _stackLink("Netto", "0.1.5", "https://pub.dev/packages/netto"),
+          _stackLink("Relic", "2.0.0-rc.1", "https://github.com/namzug16/relic/tree/feat/form_and_multipart"),
           _stackLink("hotreloader", "4.4.0", "https://pub.dev/packages/hotreloader"),
           _stackLink("htmleez", "1.0.0", "https://pub.dev/packages/htmleez"),
         ]),
