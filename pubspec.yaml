@@ -14,20 +14,17 @@ dependencies:
   htmleez: ^1.0.0
   relic:
     git:
-      url: https://github.com/namzug16/relic.git
-      ref: feat/form_and_multipart
+      url: https://github.com/serverpod/relic.git
       path: packages/relic
 
 dependency_overrides:
   relic_core:
     git:
-      url: https://github.com/namzug16/relic.git
-      ref: feat/form_and_multipart
+      url: https://github.com/serverpod/relic.git
       path: packages/relic_core
   relic_io:
     git:
-      url: https://github.com/namzug16/relic.git
-      ref: feat/form_and_multipart
+      url: https://github.com/serverpod/relic.git
       path: packages/relic_io
 
 dev_dependencies:

@@ -3,7 +3,7 @@
 | Tool | Version | Used for |
 | --- | --- | --- |
 | Dart SDK | `^3.12.0` | Runtime and server application language |
-| Relic | `2.0.0-rc.1` fork | HTTP server and routing foundation |
+| Relic | `2.0.0-rc.1` | HTTP server and routing foundation |
 | htmleez | `1.0.0` | Server-rendered HTML and custom attributes |
 | HTMX | `4.0.0` | Partial page updates and HTML fragments |
 | hyperscript | `0.9.14` | Small client-side behaviors without a SPA |
