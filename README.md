@@ -6,7 +6,7 @@
 | Relic | `2.0.0-rc.1` | HTTP server and routing foundation |
 | htmleez | `1.0.0` | Server-rendered HTML and custom attributes |
 | HTMX | `4.0.0` | Partial page updates and HTML fragments |
-| hyperscript | `0.9.14` | Small client-side behaviors without a SPA |
+| hyperscript | `0.9.93` | Small client-side behaviors without a SPA |
 | Tailwind CSS | `v4` via `@tailwindcss/cli` | Utility CSS generation |
 | Basecoat UI | `1.0.2` | CSS components and themes |
 | Lucide Icons | `1.33.0` | Generated Dart icon helpers |
