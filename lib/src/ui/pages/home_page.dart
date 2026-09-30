@@ -113,7 +113,7 @@ HTML pageHome() => primaryLayout(
         div([
           $("class")("grid gap-3 sm:grid-cols-2 lg:grid-cols-3"),
           _stackLink("HTMX", "4.0.0", "https://htmx.org"),
-          _stackLink("hyperscript", "0.9.14", "https://hyperscript.org"),
+          _stackLink("hyperscript", "0.9.93", "https://hyperscript.org"),
           _stackLink("Tailwind CSS", "+4", "https://tailwindcss.com"),
           _stackLink("Basecoat", "1.0.2", "https://www.npmjs.com/package/basecoat-css"),
           _stackLink("Lucide", "1.33.0", "https://lucide.dev"),
