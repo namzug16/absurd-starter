@@ -31,10 +31,10 @@ import "package:htmleez/htmleez.dart" as tags;
 /// it, the dialog removes itself from the DOM.
 ///
 /// ```dart
-/// Future<void> itemDetailsDialogHandler(Ctx ctx) async {
-///   final itemId = ctx.request.pathParameter("itemId");
+/// Future<Response> itemDetailsDialogHandler(Request request) async {
+///   final itemId = request.pathParameters[#itemId];
 ///
-///   ctx.response.htmlFragments([
+///   return htmlFragments([
 ///     div([
 ///       $("hx-swap-oob")("beforeend:body"),
 ///       temporaryDialog(

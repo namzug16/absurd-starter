@@ -3,7 +3,7 @@
 | Tool | Version | Used for |
 | --- | --- | --- |
 | Dart SDK | `^3.12.0` | Runtime and server application language |
-| Netto | `0.1.5` | HTTP server and routing foundation |
+| Relic | `2.0.0-rc.1` fork | HTTP server and routing foundation |
 | htmleez | `1.0.0` | Server-rendered HTML and custom attributes |
 | HTMX | `4.0.0` | Partial page updates and HTML fragments |
 | hyperscript | `0.9.14` | Small client-side behaviors without a SPA |
@@ -16,7 +16,7 @@
 Absurd Starter is a pragmatic Dart web template for building small,
 server-driven web apps without pulling in a SPA stack.
 
-It combines Netto, hotreloader, server-rendered HTML, HTMX fragments, tiny
+It combines Relic, hotreloader, server-rendered HTML, HTMX fragments, tiny
 client-side behavior with hyperscript, Tailwind CSS, Basecoat UI, and generated
 Lucide icon helpers. The goal is to make the common path fast: add routes,
 return full pages or fragments, style with Tailwind/Basecoat classes, iterate
@@ -24,7 +24,7 @@ quickly in development, and ship a Docker image.
 
 The starter uses:
 
-- Netto for the HTTP server
+- Relic for the HTTP server
 - hotreloader for faster local development iterations
 - htmleez for server-rendered HTML and HTMX attributes
 - HTMX for partial updates
@@ -64,7 +64,7 @@ When prompted, install the skills you want. Use `dart run skills@ get --all`
 to install every available skill without prompting.
 
 `make dev` runs `DEV=true dart run --enable-vm-service bin/server.dart`, using
-Netto for the HTTP server and hotreloader/dev reload wiring for faster feedback
+Relic for the HTTP server and hotreloader/dev reload wiring for faster feedback
 while editing Dart files.
 
 ## Verification
@@ -81,7 +81,7 @@ dart test
 1. Create a page function under `lib/src/ui/pages/`.
 2. Wrap full pages with `primaryLayout(...)` from `lib/src/ui/layout/primary_layout.dart`.
 3. Register the route in `lib/router.dart`.
-4. Return HTML with `ctx.response.htmlPage(...)`.
+4. Return HTML with `htmlPage(...)`.
 
 ### Return An HTMX Fragment
 
@@ -173,7 +173,7 @@ closes, so it is best for short-lived dialogs rather than persistent page
 structure.
 
 ```dart
-ctx.response.htmlFragments([
+return htmlFragments([
   div([
     $("hx-swap-oob")("beforeend:body"),
     temporaryDialog(

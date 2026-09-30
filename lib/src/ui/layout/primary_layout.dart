@@ -13,7 +13,7 @@ class PageSeo {
 
 const defaultSeo = PageSeo(
   title: "Absurd Starter",
-  description: "A Dart starter using Netto, HTMX, hyperscript, Tailwind, Basecoat, and htmleez.",
+  description: "A Dart starter using Relic, HTMX, hyperscript, Tailwind, Basecoat, and htmleez.",
 );
 
 HTML primaryLayout(HTML bodyContent, {PageSeo seo = defaultSeo}) => html([

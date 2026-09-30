@@ -1,5 +1,6 @@
 name: absurd_starter
-description: A Dart server starter using Netto, HTMX, hyperscript, Tailwind, Basecoat, and htmleez.
+description: A Dart server starter using Relic, HTMX, hyperscript, Tailwind, Basecoat, and htmleez.
+publish_to: none
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
@@ -11,7 +12,23 @@ dependencies:
 
   hotreloader: ^4.4.0
   htmleez: ^1.0.0
-  netto: ^0.1.5
+  relic:
+    git:
+      url: https://github.com/namzug16/relic.git
+      ref: feat/form_and_multipart
+      path: packages/relic
+
+dependency_overrides:
+  relic_core:
+    git:
+      url: https://github.com/namzug16/relic.git
+      ref: feat/form_and_multipart
+      path: packages/relic_core
+  relic_io:
+    git:
+      url: https://github.com/namzug16/relic.git
+      ref: feat/form_and_multipart
+      path: packages/relic_io
 
 dev_dependencies:
   http: ^1.2.2

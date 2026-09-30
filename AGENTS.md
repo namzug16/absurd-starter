@@ -28,7 +28,7 @@
 ## Project Conventions
 
 - Prefer server-rendered HTML and HTMX fragments over client-side state.
-- Use `ctx.response.htmlPage`, `htmlFragments`, and `htmlFragmentsOob` for HTML responses.
+- Use `htmlPage`, `htmlFragments`, and `htmlFragmentsOob` for HTML responses.
 - Keep Basecoat/Tailwind classes in Dart files so `make css` can discover them.
 - Do not hand-edit `lib/src/ui/lucide.dart`; run `make lucide`.
 - For htmleez syntax, use the `htmleez-html` skill; update installed skills with `dart run skills@ get`.
