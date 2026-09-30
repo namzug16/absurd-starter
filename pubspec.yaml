@@ -10,7 +10,6 @@ environment:
 dependencies:
   archive: ^4.0.7 # Used in order to generate the Lucide icons
 
-  hotreloader: ^4.4.0
   htmleez: ^1.0.0
   relic:
     git:

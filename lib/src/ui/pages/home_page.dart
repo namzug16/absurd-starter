@@ -99,7 +99,7 @@ HTML pageHome() => primaryLayout(
       ]),
       section([
         $("class")("grid gap-4 sm:grid-cols-3"),
-        _featureCard(Lucide.server, "Relic", "Modern Dart server with typed requests, routing, middleware, static files, WebSockets, and hot reload."),
+        _featureCard(Lucide.server, "Relic", "Modern Dart server with typed requests, routing, middleware, static files, and WebSockets."),
         _featureCard(Lucide.refreshCw, "HTMX", "Return fragments from Dart and keep UI state boring."),
         _featureCard(Lucide.palette, "Basecoat", "Tailwind-friendly components and design tokens."),
       ]),
@@ -118,7 +118,6 @@ HTML pageHome() => primaryLayout(
           _stackLink("Basecoat", "1.0.2", "https://www.npmjs.com/package/basecoat-css"),
           _stackLink("Lucide", "1.33.0", "https://lucide.dev"),
           _stackLink("Relic", "2.0.0-rc.1", "https://github.com/namzug16/relic/tree/feat/form_and_multipart"),
-          _stackLink("hotreloader", "4.4.0", "https://pub.dev/packages/hotreloader"),
           _stackLink("htmleez", "1.0.0", "https://pub.dev/packages/htmleez"),
         ]),
       ]),

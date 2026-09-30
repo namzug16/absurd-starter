@@ -10,22 +10,20 @@
 | Tailwind CSS | `v4` via `@tailwindcss/cli` | Utility CSS generation |
 | Basecoat UI | `1.0.2` | CSS components and themes |
 | Lucide Icons | `1.33.0` | Generated Dart icon helpers |
-| hotreloader | `4.4.0` | Faster local Dart development |
 | Docker | Dockerfile-based | Production image packaging |
 
 Absurd Starter is a pragmatic Dart web template for building small,
 server-driven web apps without pulling in a SPA stack.
 
-It combines Relic, hotreloader, server-rendered HTML, HTMX fragments, tiny
-client-side behavior with hyperscript, Tailwind CSS, Basecoat UI, and generated
-Lucide icon helpers. The goal is to make the common path fast: add routes,
-return full pages or fragments, style with Tailwind/Basecoat classes, iterate
-quickly in development, and ship a Docker image.
+It combines Relic, server-rendered HTML, HTMX fragments, tiny client-side
+behavior with hyperscript, Tailwind CSS, Basecoat UI, and generated Lucide icon
+helpers. The goal is to make the common path fast: add routes, return full pages
+or fragments, style with Tailwind/Basecoat classes, iterate quickly in
+development, and ship a Docker image.
 
 The starter uses:
 
 - Relic for the HTTP server
-- hotreloader for faster local development iterations
 - htmleez for server-rendered HTML and HTMX attributes
 - HTMX for partial updates
 - hyperscript for tiny client-side behaviors
@@ -47,7 +45,7 @@ Open `http://localhost:8080`.
 ## Common Commands
 
 ```sh
-make dev       # run the development server with hot reload enabled
+make dev       # run the development server
 make prod      # run the server without DEV=true
 make css       # rebuild public/index.css from input.css
 make basecoat  # download Basecoat CSS bundles and JS
@@ -63,9 +61,8 @@ dart run skills@ get
 When prompted, install the skills you want. Use `dart run skills@ get --all`
 to install every available skill without prompting.
 
-`make dev` runs `DEV=true dart run --enable-vm-service bin/server.dart`, using
-Relic for the HTTP server and hotreloader/dev reload wiring for faster feedback
-while editing Dart files.
+`make dev` runs `DEV=true dart run bin/server.dart`, using Relic for the HTTP
+server with development mode enabled.
 
 ## Verification
 
@@ -201,7 +198,7 @@ Basecoat classes in Dart files so Tailwind can discover them through
 
 ## Structure
 
-- `bin/server.dart`: server entry point, hot reload, shutdown handling
+- `bin/server.dart`: server entry point and shutdown handling
 - `lib/router.dart`: route wiring
 - `lib/src/ui/layout/primary_layout.dart`: base HTML layout and assets
 - `lib/src/ui/basecoat/`: reusable Dart helpers for Basecoat components
