@@ -261,27 +261,27 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/relic"
-      ref: "feat/form_and_multipart"
-      resolved-ref: "469df70581f9b2a527ad6f3186df99fb2abe2729"
-      url: "https://github.com/namzug16/relic.git"
+      ref: HEAD
+      resolved-ref: ab9d5f4bd25c3de8730794e88ed0184fcfad012d
+      url: "https://github.com/serverpod/relic.git"
     source: git
     version: "2.0.0-rc.1"
   relic_core:
     dependency: "direct overridden"
     description:
       path: "packages/relic_core"
-      ref: "feat/form_and_multipart"
-      resolved-ref: "469df70581f9b2a527ad6f3186df99fb2abe2729"
-      url: "https://github.com/namzug16/relic.git"
+      ref: HEAD
+      resolved-ref: ab9d5f4bd25c3de8730794e88ed0184fcfad012d
+      url: "https://github.com/serverpod/relic.git"
     source: git
     version: "2.0.0-rc.1"
   relic_io:
     dependency: "direct overridden"
     description:
       path: "packages/relic_io"
-      ref: "feat/form_and_multipart"
-      resolved-ref: "469df70581f9b2a527ad6f3186df99fb2abe2729"
-      url: "https://github.com/namzug16/relic.git"
+      ref: HEAD
+      resolved-ref: ab9d5f4bd25c3de8730794e88ed0184fcfad012d
+      url: "https://github.com/serverpod/relic.git"
     source: git
     version: "2.0.0-rc.1"
   shelf:
