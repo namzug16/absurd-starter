@@ -6,7 +6,6 @@
 | Relic | `2.0.0-rc.1` | HTTP server and routing foundation |
 | htmleez | `1.0.0` | Server-rendered HTML and custom attributes |
 | HTMX | `4.0.0` | Partial page updates and HTML fragments |
-| hyperscript | `0.9.93` | Small client-side behaviors without a SPA |
 | Tailwind CSS | `v4` via `@tailwindcss/cli` | Utility CSS generation |
 | Basecoat UI | `1.0.2` | CSS components and themes |
 | Lucide Icons | `1.33.0` | Generated Dart icon helpers |
@@ -15,8 +14,7 @@
 Absurd Starter is a pragmatic Dart web template for building small,
 server-driven web apps without pulling in a SPA stack.
 
-It combines Relic, server-rendered HTML, HTMX fragments, tiny client-side
-behavior with hyperscript, Tailwind CSS, Basecoat UI, and generated Lucide icon
+It combines Relic, server-rendered HTML, HTMX fragments, Tailwind CSS, Basecoat UI, and generated Lucide icon
 helpers. The goal is to make the common path fast: add routes, return full pages
 or fragments, style with Tailwind/Basecoat classes, iterate quickly in
 development, and ship a Docker image.
@@ -26,7 +24,6 @@ The starter uses:
 - Relic for the HTTP server
 - htmleez for server-rendered HTML and HTMX attributes
 - HTMX for partial updates
-- hyperscript for tiny client-side behaviors
 - Tailwind CSS and Basecoat for styling/components
 - Lucide icons generated into Dart helpers
 - Docker for deployment
@@ -160,7 +157,7 @@ button([
 
 Project-specific components live in `lib/src/ui/components/`.
 
-- `hyperscript.dart`: reusable hyperscript snippets for HTMX loading states.
+- `htmx_on.dart`: reusable hx-on snippets for HTMX loading states.
 - `temporary_dialog.dart`: a self-contained temporary `<dialog>` component for
   HTMX/server responses.
 
@@ -205,7 +202,6 @@ Basecoat classes in Dart files so Tailwind can discover them through
 - `lib/src/ui/components/`: extra app/template components
 - `lib/src/ui/pages/home_page.dart`: starter page and HTMX demo
 - `lib/src/utils/htmx.dart`: response/request helpers for HTMX
-- `lib/src/ui/components/hyperscript.dart`: reusable hyperscript snippets
 - `lib/src/ui/components/temporary_dialog.dart`: temporary HTMX dialog helper
 - `bin/download_basecoat.dart`: downloads pinned Basecoat CSS and JS assets
 - `bin/generate_lucide.dart`: downloads Lucide SVGs and generates `lib/src/ui/lucide.dart`

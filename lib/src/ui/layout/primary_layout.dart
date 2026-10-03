@@ -12,7 +12,7 @@ class PageSeo {
 
 const defaultSeo = PageSeo(
   title: "Absurd Starter",
-  description: "A Dart starter using Relic, HTMX, hyperscript, Tailwind, Basecoat, and htmleez.",
+  description: "A Dart starter using Relic, HTMX, Tailwind, Basecoat, and htmleez.",
 );
 
 HTML primaryLayout(HTML bodyContent, {PageSeo seo = defaultSeo}) => html([
@@ -22,11 +22,6 @@ HTML primaryLayout(HTML bodyContent, {PageSeo seo = defaultSeo}) => html([
     title([seo.title.t]),
     meta([$("name")("description"), $("content")(seo.description)]),
     link([$("rel")("stylesheet"), $("href")("/index.css")]),
-    script([
-      $("src")("https://cdn.jsdelivr.net/npm/hyperscript.org@0.9.93/dist/_hyperscript.min.js"),
-      $("integrity")("sha384-/6HsqTiz02YfFBUhzTwlH/yxe68DhfnkdHiWytM3nxAzs/yvG+3FZY0f4KLnNoov"),
-      $("crossorigin")("anonymous"),
-    ]),
     script([
       $("src")("https://cdn.jsdelivr.net/npm/htmx.org@4.0.0/dist/htmx.min.js"),
       $("integrity")("sha384-BvJpBiO8Kh31EqtJe5DRIeWrHWnCGkwytKs9NKFi86Hhw96dEqdEMzZDeK9iEGTc"),
