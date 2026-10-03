@@ -28,7 +28,7 @@ HTML pageHome() => primaryLayout(
           div([
             $("class")("flex flex-wrap gap-3"),
             a([
-              $("href")("https://github.com/namzug16/relic/tree/feat/form_and_multipart"),
+              $("href")("https://pub.dev/packages/relic"),
               $("target")("_blank"),
               $("rel")("noreferrer"),
               $("class")("btn"),
@@ -117,7 +117,7 @@ HTML pageHome() => primaryLayout(
           _stackLink("Tailwind CSS", "+4", "https://tailwindcss.com"),
           _stackLink("Basecoat", "1.0.2", "https://www.npmjs.com/package/basecoat-css"),
           _stackLink("Lucide", "1.33.0", "https://lucide.dev"),
-          _stackLink("Relic", "2.0.0-rc.1", "https://github.com/namzug16/relic/tree/feat/form_and_multipart"),
+          _stackLink("Relic", "2.0.0-rc.2", "https://pub.dev/packages/relic"),
           _stackLink("htmleez", "1.0.0", "https://pub.dev/packages/htmleez"),
         ]),
       ]),
