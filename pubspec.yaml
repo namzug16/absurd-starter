@@ -11,20 +11,7 @@ dependencies:
   archive: ^4.0.7 # Used in order to generate the Lucide icons
 
   htmleez: ^1.0.0
-  relic:
-    git:
-      url: https://github.com/serverpod/relic.git
-      path: packages/relic
-
-dependency_overrides:
-  relic_core:
-    git:
-      url: https://github.com/serverpod/relic.git
-      path: packages/relic_core
-  relic_io:
-    git:
-      url: https://github.com/serverpod/relic.git
-      path: packages/relic_io
+  relic: 2.0.0-rc.2
 
 dev_dependencies:
   http: ^1.2.2

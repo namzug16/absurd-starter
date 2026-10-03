@@ -252,30 +252,27 @@ packages:
   relic:
     dependency: "direct main"
     description:
-      path: "packages/relic"
-      ref: HEAD
-      resolved-ref: ab9d5f4bd25c3de8730794e88ed0184fcfad012d
-      url: "https://github.com/serverpod/relic.git"
-    source: git
-    version: "2.0.0-rc.1"
+      name: relic
+      sha256: "0239101113221b185c2467e7ff9b45e9100c900f52c8d1d9eba00e34da43be4b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0-rc.2"
   relic_core:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "packages/relic_core"
-      ref: HEAD
-      resolved-ref: ab9d5f4bd25c3de8730794e88ed0184fcfad012d
-      url: "https://github.com/serverpod/relic.git"
-    source: git
-    version: "2.0.0-rc.1"
+      name: relic_core
+      sha256: d0c13d2c1821aa5057ce771923377ec35494cd4257de0901148e2055b6dd4c41
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0-rc.2"
   relic_io:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "packages/relic_io"
-      ref: HEAD
-      resolved-ref: ab9d5f4bd25c3de8730794e88ed0184fcfad012d
-      url: "https://github.com/serverpod/relic.git"
-    source: git
-    version: "2.0.0-rc.1"
+      name: relic_io
+      sha256: fba5368494f615172a47b99d4ef49c83aa46b5abb91014a33085b2ea53f64c72
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0-rc.2"
   shelf:
     dependency: transitive
     description:
