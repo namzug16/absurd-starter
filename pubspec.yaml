@@ -1,5 +1,5 @@
 name: absurd_starter
-description: A Dart server starter using Relic, HTMX, hyperscript, Tailwind, Basecoat, and htmleez.
+description: A Dart server starter using Relic, HTMX, Tailwind, Basecoat, and htmleez.
 publish_to: none
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo

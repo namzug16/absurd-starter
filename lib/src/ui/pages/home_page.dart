@@ -1,4 +1,4 @@
-import "package:absurd_starter/src/ui/components/hyperscript.dart";
+import "package:absurd_starter/src/ui/components/htmx_on.dart";
 import "package:absurd_starter/src/ui/layout/primary_layout.dart";
 import "package:absurd_starter/src/ui/lucide.dart";
 import "package:htmleez/htmleez.dart";
@@ -23,7 +23,7 @@ HTML pageHome() => primaryLayout(
           ]),
           p([
             $("class")("max-w-2xl text-lg leading-8 text-muted-foreground"),
-            "Absurd Starter wires Relic, HTMX, hyperscript, Tailwind, Basecoat, htmleez, and Lucide into a minimal production-ish-shaped template.".t,
+            "Absurd Starter wires Relic, HTMX, Tailwind, Basecoat, htmleez, and Lucide into a minimal production-ish-shaped template.".t,
           ]),
           div([
             $("class")("flex flex-wrap gap-3"),
@@ -78,7 +78,7 @@ HTML pageHome() => primaryLayout(
             $("hx-post")("/api/counter/increment"),
             $("hx-target")("#counter-result"),
             $("hx-swap")("outerHTML"),
-            $_disableFieldsetsOnHtmxRequest(),
+            ...$disableFieldsetsOnHtmxRequest(),
             fieldset([
               $("class")("flex gap-3"),
               input([
@@ -113,7 +113,6 @@ HTML pageHome() => primaryLayout(
         div([
           $("class")("grid gap-3 sm:grid-cols-2 lg:grid-cols-3"),
           _stackLink("HTMX", "4.0.0", "https://htmx.org"),
-          _stackLink("hyperscript", "0.9.93", "https://hyperscript.org"),
           _stackLink("Tailwind CSS", "+4", "https://tailwindcss.com"),
           _stackLink("Basecoat", "1.0.2", "https://www.npmjs.com/package/basecoat-css"),
           _stackLink("Lucide", "1.33.0", "https://lucide.dev"),
