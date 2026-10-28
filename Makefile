@@ -3,7 +3,7 @@
 help:
 	@printf "Available commands:\n"
 	@printf "  make start     rebuild CSS and templates, then run the development server\n"
-	@printf "  make dev       generate templates and run the development server\n"
+	@printf "  make dev       generate templates and run the development server (with /ui)\n"
 	@printf "  make prod      generate templates and run the production-like server\n"
 	@printf "  make templates generate lib/generated/html.dart with abs\n"
 	@printf "  make css       rebuild public/index.css\n"
@@ -30,7 +30,10 @@ lucide:
 basecoat:
 	dart run bin/download_basecoat.dart
 
-dev prod: templates
+dev: templates
+	DEV=true dart run bin/server.dart
+
+prod: templates
 	dart run bin/server.dart
 
 .DEFAULT_GOAL := help
