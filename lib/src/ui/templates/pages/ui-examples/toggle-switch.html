@@ -1,0 +1,101 @@
+<section id="switch" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Switch</h2>
+    <a href="https://basecoatui.com/components/switch" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Description</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <div role="group" class="field" data-orientation="horizontal">
+          <section>
+            <label for="switch-focus-mode">Share across devices</label>
+            <p id="switch-focus-mode-description">Focus is shared across devices, and turns off when you leave the app.</p>
+          </section>
+          <input type="checkbox" id="switch-focus-mode" role="switch" class="input" aria-describedby="switch-focus-mode-description" />
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Choice card</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <div role="group" class="grid w-full gap-3" aria-label="Focus settings">
+          <label>
+            <div role="group" class="field" data-orientation="horizontal">
+              <section>
+                <h3>Share across devices</h3>
+                <p>Focus is shared across devices, and turns off when you leave the app.</p>
+              </section>
+              <input type="checkbox" role="switch" class="input" />
+            </div>
+          </label>
+          <label>
+            <div role="group" class="field" data-orientation="horizontal">
+              <section>
+                <h3>Enable notifications</h3>
+                <p>Receive notifications when focus mode changes.</p>
+              </section>
+              <input type="checkbox" role="switch" class="input" checked />
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Disabled</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="field" data-orientation="horizontal" data-disabled="true">
+        <input type="checkbox" id="switch-disabled-unchecked" role="switch" class="input" disabled />
+        <label for="switch-disabled-unchecked">Disabled</label>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Invalid</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <div role="group" class="field" data-orientation="horizontal" data-invalid="true">
+          <section>
+            <label for="switch-invalid">Accept terms and conditions.</label>
+            <p>You must accept the terms and conditions to continue.</p>
+          </section>
+          <input type="checkbox" id="switch-invalid" role="switch" class="input" aria-invalid="true" />
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Size</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-[10rem]">
+        <div role="group" class="grid w-full gap-4" aria-label="Switch sizes">
+          <div role="group" class="field" data-orientation="horizontal">
+            <input type="checkbox" id="switch-size-sm" role="switch" class="input" data-size="sm" />
+            <label for="switch-size-sm">Small</label>
+          </div>
+          <div role="group" class="field" data-orientation="horizontal">
+            <input type="checkbox" id="switch-size-default" role="switch" class="input" />
+            <label for="switch-size-default">Default</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <div dir="rtl" role="group" class="field" data-orientation="horizontal">
+          <section>
+            <label for="switch-rtl">المشاركة عبر الأجهزة</label>
+            <p id="switch-rtl-description">يتم مشاركة التركيز عبر الأجهزة، ويتم إيقاف تشغيله عند مغادرة التطبيق.</p>
+          </section>
+          <input type="checkbox" id="switch-rtl" role="switch" class="input" aria-describedby="switch-rtl-description" checked />
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

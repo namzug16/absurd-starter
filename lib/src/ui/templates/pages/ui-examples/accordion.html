@@ -1,0 +1,194 @@
+<section id="accordion" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Accordion</h2>
+    <a href="https://basecoatui.com/components/accordion" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Basic</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <section class="accordion">
+          <details open>
+            <summary>
+              How do I reset my password?
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>Click on 'Forgot Password' on the login page, enter your email address, and we'll send you a link to reset your password. The link will expire in 24 hours.</section>
+          </details>
+          <details>
+            <summary>
+              Can I change my subscription plan?
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>Yes. You can upgrade or downgrade your plan from the billing settings page.</section>
+          </details>
+          <details>
+            <summary>
+              What payment methods do you accept?
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>We accept all major credit cards, PayPal, and bank transfers for annual plans.</section>
+          </details>
+        </section>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Multiple</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-md">
+        <section class="accordion" data-multiple>
+          <details open>
+            <summary>
+              Notification Settings
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>Manage how you receive notifications. You can enable email alerts for updates or push notifications for mobile devices.</section>
+          </details>
+          <details>
+            <summary>
+              Privacy & Security
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>Control account security, session history, and privacy preferences.</section>
+          </details>
+          <details>
+            <summary>
+              Billing & Subscription
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>Review invoices, change plans, and update payment methods.</section>
+          </details>
+        </section>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Disabled</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-md">
+        <section class="accordion">
+          <details open>
+            <summary>
+              Can I access my account history?
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>Yes. Your account history is available from the activity page.</section>
+          </details>
+          <details aria-disabled="true">
+            <summary>
+              Premium feature information
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>This item is disabled.</section>
+          </details>
+          <details>
+            <summary>
+              How do I update my email address?
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>Go to account settings, update your email, then confirm the change from your inbox.</section>
+          </details>
+        </section>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Borders</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-md">
+        <section class="accordion rounded-md border [&>details>summary]:px-4 [&>details>:not(summary)]:px-4">
+          <details id="billing" open>
+            <summary>
+              How does billing work?
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>We offer monthly and annual subscription plans. Billing is charged at the beginning of each cycle, and you can cancel anytime. All plans include automatic backups, 24/7 support, and unlimited team members.</section>
+          </details>
+          <details>
+            <summary>
+              Is my data secure?
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>Data is encrypted in transit and at rest.</section>
+          </details>
+          <details>
+            <summary>
+              What integrations do you support?
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>We support Slack, GitHub, Google Workspace, and webhooks.</section>
+          </details>
+        </section>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Card</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-md">
+        <div class="card">
+          <header>
+            <h2>Subscription & Billing</h2>
+            <p>Common questions about your account, plans, payments and cancellations.</p>
+          </header>
+          <section>
+            <section class="accordion">
+              <details open>
+                <summary>
+                  What subscription plans do you offer?
+                  <i data-lucide="chevron-down" aria-hidden="true"></i>
+                </summary>
+                <section>We offer three subscription tiers: Starter ($9/month), Professional ($29/month), and Enterprise ($99/month). Each plan includes increasing storage limits, API access, priority support, and team collaboration features.</section>
+              </details>
+              <details>
+                <summary>
+                  How does billing work?
+                  <i data-lucide="chevron-down" aria-hidden="true"></i>
+                </summary>
+                <section>Billing is charged at the beginning of each cycle.</section>
+              </details>
+              <details>
+                <summary>
+                  How do I cancel my subscription?
+                  <i data-lucide="chevron-down" aria-hidden="true"></i>
+                </summary>
+                <section>Cancel from billing settings. Your plan remains active until the end of the current cycle.</section>
+              </details>
+            </section>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-md">
+        <section class="accordion" dir="rtl">
+          <details open>
+            <summary>
+              كيف يمكنني إعادة تعيين كلمة المرور؟
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>انقر على 'نسيت كلمة المرور' في صفحة تسجيل الدخول، أدخل عنوان بريدك الإلكتروني، وسنرسل لك رابطا لإعادة تعيين كلمة المرور. سينتهي صلاحية الرابط خلال 24 ساعة.</section>
+          </details>
+          <details>
+            <summary>
+              هل يمكنني تغيير خطة الاشتراك الخاصة بي؟
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>نعم، يمكنك تغيير الخطة من إعدادات الفوترة.</section>
+          </details>
+          <details>
+            <summary>
+              ما هي طرق الدفع التي تقبلونها؟
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </summary>
+            <section>نقبل بطاقات الائتمان الرئيسية والتحويلات البنكية.</section>
+          </details>
+        </section>
+      </div>
+    </div>
+  </article>
+</section>

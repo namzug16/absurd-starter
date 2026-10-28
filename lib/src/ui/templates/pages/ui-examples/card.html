@@ -1,0 +1,82 @@
+<section id="card" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Card</h2>
+    <a href="https://basecoatui.com/components/card" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Size</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <div class="card" data-size="sm">
+          <header>
+            <h2>Small Card</h2>
+            <p>This card uses the small size variant.</p>
+            <div class="card-action">
+              <button type="button" class="btn" data-size="sm" data-variant="outline">Action</button>
+            </div>
+          </header>
+          <section> <p>The card component supports a size attribute that can be set to <code>sm</code> for a more compact appearance.</p></section>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Image</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <div class="card">
+          <img
+            alt="Event cover"
+            class="aspect-video w-full object-cover"
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&auto=format&fit=crop&q=80"
+          />
+          <header>
+            <h2>Design systems meetup</h2>
+            <p>A practical talk on component APIs, accessibility, and shipping faster.</p>
+            <div class="card-action">
+              <span class="badge" data-variant="secondary">Featured</span>
+            </div>
+          </header>
+          <footer>
+            <button type="button" class="btn w-full">View Event</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <div class="card" dir="rtl">
+          <header>
+            <h2>تسجيل الدخول إلى حسابك</h2>
+            <p>أدخل بريدك الإلكتروني أدناه لتسجيل الدخول إلى حسابك</p>
+            <div class="card-action">
+              <button type="button" class="btn" data-variant="link">إنشاء حساب</button>
+            </div>
+          </header>
+          <section>
+            <form class="grid gap-6">
+              <div class="grid gap-2">
+                <label class="label" for="demo-card-rtl-email">البريد الإلكتروني</label>
+                <input class="input" type="email" id="demo-card-rtl-email" placeholder="m@example.com" required />
+              </div>
+              <div class="grid gap-2">
+                <div class="flex items-center">
+                  <label class="label" for="demo-card-rtl-password">كلمة المرور</label>
+                  <a href="#" class="ms-auto inline-block text-sm underline-offset-4 hover:underline">نسيت كلمة المرور؟</a>
+                </div>
+                <input class="input" type="password" id="demo-card-rtl-password" required />
+              </div>
+            </form>
+          </section>
+          <footer class="flex-col gap-2">
+            <button type="button" class="btn w-full">تسجيل الدخول</button>
+            <button type="button" class="btn w-full" data-variant="outline">تسجيل الدخول باستخدام Google</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

@@ -1,0 +1,217 @@
+<section id="button-group" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Button Group</h2>
+    <a href="https://basecoatui.com/components/button-group" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Orientation</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" aria-label="Media controls" class="button-group h-fit" data-orientation="vertical">
+        <button type="button" class="btn" data-variant="outline" data-size="icon" aria-label="Zoom in"><i data-lucide="plus" aria-hidden="true"></i></button>
+        <button type="button" class="btn" data-variant="outline" data-size="icon" aria-label="Zoom out"><i data-lucide="minus" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Size</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="flex flex-col items-start gap-8">
+        <div role="group" class="button-group">
+          <button type="button" class="btn" data-variant="outline" data-size="sm">Small</button>
+          <button type="button" class="btn" data-variant="outline" data-size="sm">Button</button>
+          <button type="button" class="btn" data-variant="outline" data-size="sm">Group</button>
+          <button type="button" class="btn" data-variant="outline" data-size="icon-sm" aria-label="Add small item"><i data-lucide="plus" aria-hidden="true"></i></button>
+        </div>
+        <div role="group" class="button-group">
+          <button type="button" class="btn" data-variant="outline">Default</button>
+          <button type="button" class="btn" data-variant="outline">Button</button>
+          <button type="button" class="btn" data-variant="outline">Group</button>
+          <button type="button" class="btn" data-variant="outline" data-size="icon" aria-label="Add item"><i data-lucide="plus" aria-hidden="true"></i></button>
+        </div>
+        <div role="group" class="button-group">
+          <button type="button" class="btn" data-variant="outline" data-size="lg">Large</button>
+          <button type="button" class="btn" data-variant="outline" data-size="lg">Button</button>
+          <button type="button" class="btn" data-variant="outline" data-size="lg">Group</button>
+          <button type="button" class="btn" data-variant="outline" data-size="icon-lg" aria-label="Add large item"><i data-lucide="plus" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Nested</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" aria-label="Pagination controls" class="button-group">
+        <div role="group" class="button-group">
+          <button type="button" class="btn" data-variant="outline" data-size="sm">1</button>
+          <button type="button" class="btn" data-variant="outline" data-size="sm">2</button>
+          <button type="button" class="btn" data-variant="outline" data-size="sm">3</button>
+          <button type="button" class="btn" data-variant="outline" data-size="sm">4</button>
+          <button type="button" class="btn" data-variant="outline" data-size="sm">5</button>
+        </div>
+        <div role="group" class="button-group">
+          <button type="button" class="btn" data-variant="outline" data-size="icon-sm" aria-label="Previous page"><i data-lucide="arrow-left" aria-hidden="true"></i></button>
+          <button type="button" class="btn" data-variant="outline" data-size="icon-sm" aria-label="Next page"><i data-lucide="arrow-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Separator</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="button-group">
+        <button type="button" class="btn" data-variant="secondary" data-size="sm">Copy</button>
+        <hr role="separator" />
+        <button type="button" class="btn" data-variant="secondary" data-size="sm">Paste</button>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Split</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="button-group">
+        <button type="button" class="btn" data-variant="secondary">Button</button>
+        <hr role="separator" />
+        <button type="button" class="btn" data-variant="secondary" data-size="icon" aria-label="Add"><i data-lucide="plus" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Input</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" aria-label="Search" class="button-group">
+        <input type="text" class="input" placeholder="Search..." />
+        <button type="button" class="btn" data-variant="outline" aria-label="Search"><i data-lucide="search" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Input group</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="button-group">
+        <div role="group" class="button-group">
+          <button type="button" class="btn" data-variant="outline" data-size="icon" aria-label="Add attachment"><i data-lucide="plus" aria-hidden="true"></i></button>
+        </div>
+        <div role="group" class="button-group">
+          <div class="input-group">
+            <input type="text" placeholder="Send a message..." />
+            <div role="group" data-align="inline-end">
+              <button type="button" class="btn" data-variant="ghost" data-size="icon-xs" aria-label="Voice mode" aria-pressed="false"><i data-lucide="audio-lines" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Dropdown menu</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="button-group">
+        <button type="button" class="btn" data-variant="outline">Follow</button>
+        <div id="dropdown-menu-609880" class="dropdown-menu">
+          <button type="button" id="dropdown-menu-609880-trigger" aria-label="More follow options" aria-haspopup="menu" aria-controls="dropdown-menu-609880-menu" aria-expanded="false" class="btn" data-variant="outline" data-size="icon"><i data-lucide="chevron-down" aria-hidden="true"></i></button>
+          <div id="dropdown-menu-609880-popover" data-popover aria-hidden="true" data-align="end">
+            <div role="menu" id="dropdown-menu-609880-menu" aria-labelledby="dropdown-menu-609880-trigger">
+              <div role="menuitem"><i data-lucide="volume-off" aria-hidden="true"></i>
+                Mute Conversation
+              </div>
+              <div role="menuitem"><i data-lucide="check" aria-hidden="true"></i>
+                Mark as Read
+              </div>
+              <div role="menuitem"><i data-lucide="triangle-alert" aria-hidden="true"></i>
+                Report Conversation
+              </div>
+              <div role="menuitem"><i data-lucide="user-round-x" aria-hidden="true"></i>
+                Block User
+              </div>
+              <div role="menuitem"><i data-lucide="share" aria-hidden="true"></i>
+                Share Conversation
+              </div>
+              <div role="menuitem"><i data-lucide="copy" aria-hidden="true"></i>
+                Copy Conversation
+              </div>
+              <hr role="separator" />
+              <div role="menuitem" class="text-destructive hover:bg-destructive/10 dark:hover:bg-destructive/20 focus:bg-destructive/10 dark:focus:bg-destructive/20 focus:text-destructive [&_svg]:!text-destructive"><i data-lucide="trash-2" aria-hidden="true"></i>
+                Delete Conversation
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Select</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="flex items-stretch gap-2">
+        <div role="group" aria-label="Currency amount" class="button-group">
+          <div id="select-797405" class="select">
+            <button type="button" class="[&amp;_[data-name]]:hidden" id="select-797405-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-797405-listbox">
+              <span class="truncate">$</span>
+              <i data-lucide="chevron-down" class="text-muted-foreground opacity-50 shrink-0" aria-hidden="true"></i>
+            </button>
+            <div id="select-797405-popover" data-popover aria-hidden="true">
+              <div role="listbox" id="select-797405-listbox" aria-orientation="vertical" aria-labelledby="select-797405-trigger">
+                <div role="option" data-value="$" data-label="$" aria-selected="true">
+                  $
+                  <span class="text-muted-foreground">US Dollar</span>
+                </div>
+                <div role="option" data-value="€" data-label="€">
+                  €
+                  <span class="text-muted-foreground">Euro</span>
+                </div>
+                <div role="option" data-value="£" data-label="£">
+                  £
+                  <span class="text-muted-foreground">British Pound</span>
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="select-797405-value" value="$" />
+          </div>
+          <input type="text" class="input" placeholder="10.00" />
+        </div>
+        <button type="button" class="btn" data-variant="outline" data-size="icon" aria-label="Submit amount"><i data-lucide="arrow-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Popover</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="button-group">
+        <button type="button" class="btn" data-variant="outline"><i data-lucide="bot" aria-hidden="true"></i>
+          Copilot
+        </button>
+        <div id="popover-788465" class="popover">
+          <button id="popover-788465-trigger" type="button" aria-label="Open Popover" aria-expanded="false" aria-controls="popover-788465-popover" class="btn" data-variant="outline" data-size="icon"><i data-lucide="chevron-down" aria-hidden="true"></i></button>
+          <div id="popover-788465-popover" data-popover aria-hidden="true" class="w-72 text-sm" data-align="end">
+            <div>
+              <p class="font-medium">Start a new task with Copilot</p>
+              <p class="text-muted-foreground">Describe your task in natural language.</p>
+            </div>
+            <textarea class="textarea min-h-16 w-full resize-none" placeholder="I need to..."></textarea>
+            <p class="text-muted-foreground text-xs">Copilot will open a pull request for review.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div dir="rtl">
+        <div role="group" aria-label="إجراءات الرسالة" class="button-group">
+          <div role="group" class="button-group">
+            <button type="button" class="btn" data-variant="outline" data-size="icon" aria-label="رجوع"><i data-lucide="arrow-left" class="rtl:rotate-180" aria-hidden="true"></i></button>
+          </div>
+          <div role="group" class="button-group">
+            <button type="button" class="btn" data-variant="outline">أرشفة</button>
+            <button type="button" class="btn" data-variant="outline">تقرير</button>
+          </div>
+          <div role="group" class="button-group">
+            <button type="button" class="btn" data-variant="outline">تأجيل</button>
+            <button type="button" class="btn" data-variant="outline" data-size="icon" aria-label="المزيد من الخيارات"><i data-lucide="ellipsis" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

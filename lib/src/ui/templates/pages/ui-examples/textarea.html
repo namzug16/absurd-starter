@@ -1,0 +1,76 @@
+<section id="textarea" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Textarea</h2>
+    <a href="https://basecoatui.com/components/textarea" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Field</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" class="field">
+          <label for="textarea-field">Message</label>
+          <textarea id="textarea-field" placeholder="Type your message here"></textarea>
+          <p>Write a short message.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Disabled</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <textarea class="textarea" placeholder="Type your message here" disabled></textarea>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Invalid</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" class="field w-full max-w-xs">
+          <label for="textarea-invalid">Message</label>
+          <textarea class="textarea" id="textarea-invalid" placeholder="Type your message here" aria-invalid="true"></textarea>
+          <p>Message is required.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Button</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div class="grid w-full max-w-xs gap-3">
+          <textarea class="textarea" placeholder="Type your message here"></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Form</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <form class="w-full max-w-sm space-y-6">
+          <div role="group" class="field">
+            <label for="textarea-form">Bio</label>
+            <textarea id="textarea-form" placeholder="Tell us a bit about yourself"></textarea>
+            <p>You can @mention other users and organizations.</p>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" class="field w-full max-w-xs" dir="rtl">
+          <label for="textarea-rtl">التعليقات</label>
+          <textarea id="textarea-rtl" placeholder="تعليقاتك تساعدنا على التحسين..." rows="4"></textarea>
+          <p>شاركنا أفكارك حول الخدمة.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

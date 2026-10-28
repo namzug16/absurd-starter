@@ -1,0 +1,76 @@
+<section id="native-select" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Native Select</h2>
+    <a href="https://basecoatui.com/components/native-select" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Groups</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <select class="select w-full" aria-label="Food">
+        <option value="">Select food</option>
+        <optgroup label="Fruits">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="blueberry">Blueberry</option>
+        </optgroup>
+        <optgroup label="Vegetables">
+          <option value="carrot">Carrot</option>
+          <option value="potato">Potato</option>
+          <option value="tomato">Tomato</option>
+        </optgroup>
+      </select>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Disabled</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <select class="select w-full" aria-label="Fruit" disabled>
+        <option value="">Select a fruit</option>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+      </select>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Invalid</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="field" data-invalid="true">
+        <label for="native-select-invalid">Fruit</label>
+        <select id="native-select-invalid" class="select w-full" aria-invalid="true" aria-describedby="native-select-invalid-error">
+          <option value="">Select a fruit</option>
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+        </select>
+        <p id="native-select-invalid-error" role="alert">Select a fruit to continue.</p>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Size</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="flex flex-wrap items-center gap-3">
+        <select class="select w-42" aria-label="Default size">
+          <option>Default</option>
+          <option>Apple</option>
+          <option>Banana</option>
+        </select>
+        <select class="select w-42" data-size="sm" aria-label="Small size">
+          <option>Small</option>
+          <option>Apple</option>
+          <option>Banana</option>
+        </select>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <select dir="rtl" class="select w-full" aria-label="الفاكهة">
+        <option value="">اختر فاكهة</option>
+        <option value="apple">تفاح</option>
+        <option value="banana">موز</option>
+        <option value="blueberry">توت</option>
+      </select>
+    </div>
+  </article>
+</section>

@@ -1,0 +1,319 @@
+<section id="dropdown-menu" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Dropdown Menu</h2>
+    <a href="https://basecoatui.com/components/dropdown-menu" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Basic</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="dropdown-basic" class="dropdown-menu">
+        <button type="button" id="dropdown-basic-trigger" aria-haspopup="menu" aria-controls="dropdown-basic-menu" aria-expanded="false" class="btn" data-variant="outline">Open</button>
+        <div id="dropdown-basic-popover" data-popover aria-hidden="true" class="min-w-32">
+          <div role="menu" id="dropdown-basic-menu" aria-labelledby="dropdown-basic-trigger">
+            <div role="group" aria-labelledby="dropdown-basic-account">
+              <div role="heading" id="dropdown-basic-account">My Account</div>
+              <div role="menuitem">Profile</div>
+              <div role="menuitem">Billing</div>
+              <div role="menuitem">Settings</div>
+            </div>
+            <hr role="separator" />
+            <div role="menuitem">GitHub</div>
+            <div role="menuitem">Support</div>
+            <div role="menuitem" aria-disabled="true">API</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Shortcuts</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="dropdown-shortcuts" class="dropdown-menu">
+        <button type="button" id="dropdown-shortcuts-trigger" aria-haspopup="menu" aria-controls="dropdown-shortcuts-menu" aria-expanded="false" class="btn" data-variant="outline">Open</button>
+        <div id="dropdown-shortcuts-popover" data-popover aria-hidden="true" class="min-w-46">
+          <div role="menu" id="dropdown-shortcuts-menu" aria-labelledby="dropdown-shortcuts-trigger">
+            <div role="group" aria-labelledby="dropdown-shortcuts-account">
+              <div role="heading" id="dropdown-shortcuts-account">My Account</div>
+              <div role="menuitem">
+                <span>Profile</span>
+                <kbd>⇧⌘P</kbd>
+              </div>
+              <div role="menuitem">
+                <span>Billing</span>
+                <kbd>⌘B</kbd>
+              </div>
+              <div role="menuitem">
+                <span>Settings</span>
+                <kbd>⌘S</kbd>
+              </div>
+            </div>
+            <hr role="separator" />
+            <div role="menuitem">
+              <span>Log out</span>
+              <kbd>⇧⌘Q</kbd>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Icons</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="dropdown-icons" class="dropdown-menu">
+        <button type="button" id="dropdown-icons-trigger" aria-haspopup="menu" aria-controls="dropdown-icons-menu" aria-expanded="false" class="btn" data-variant="outline">Open</button>
+        <div id="dropdown-icons-popover" data-popover aria-hidden="true" class="min-w-32">
+          <div role="menu" id="dropdown-icons-menu" aria-labelledby="dropdown-icons-trigger">
+            <div role="menuitem"><i data-lucide="user" aria-hidden="true"></i>
+              Profile
+            </div>
+            <div role="menuitem"><i data-lucide="credit-card" aria-hidden="true"></i>
+              Billing
+            </div>
+            <div role="menuitem"><i data-lucide="settings" aria-hidden="true"></i>
+              Settings
+            </div>
+            <hr role="separator" />
+            <div role="menuitem" data-variant="destructive"><i data-lucide="log-out" aria-hidden="true"></i>
+              Log out
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Checkboxes</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="dropdown-checkboxes" class="dropdown-menu">
+        <button type="button" id="dropdown-checkboxes-trigger" aria-haspopup="menu" aria-controls="dropdown-checkboxes-menu" aria-expanded="false" class="btn" data-variant="outline">Open</button>
+        <div id="dropdown-checkboxes-popover" data-popover aria-hidden="true" class="w-40">
+          <div role="menu" id="dropdown-checkboxes-menu" aria-labelledby="dropdown-checkboxes-trigger">
+            <div role="group" aria-labelledby="dropdown-checkboxes-label">
+              <div role="heading" id="dropdown-checkboxes-label">Appearance</div>
+              <div role="menuitemcheckbox" aria-checked="true">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                Status Bar
+              </div>
+              <div role="menuitemcheckbox" aria-checked="false" aria-disabled="true">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                Activity Bar
+              </div>
+              <div role="menuitemcheckbox" aria-checked="false">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                Panel
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Checkboxes Icons</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="dropdown-checkboxes-icons" class="dropdown-menu">
+        <button type="button" id="dropdown-checkboxes-icons-trigger" aria-haspopup="menu" aria-controls="dropdown-checkboxes-icons-menu" aria-expanded="false" class="btn" data-variant="outline">Notifications</button>
+        <div id="dropdown-checkboxes-icons-popover" data-popover aria-hidden="true" class="w-48">
+          <div role="menu" id="dropdown-checkboxes-icons-menu" aria-labelledby="dropdown-checkboxes-icons-trigger">
+            <div role="group" aria-labelledby="dropdown-checkboxes-icons-label">
+              <div role="heading" id="dropdown-checkboxes-icons-label">Notification Preferences</div>
+              <div role="menuitemcheckbox" aria-checked="true">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                <i data-lucide="mail" aria-hidden="true"></i>
+                Email notifications
+              </div>
+              <div role="menuitemcheckbox" aria-checked="false">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                <i data-lucide="message-square" aria-hidden="true"></i>
+                SMS notifications
+              </div>
+              <div role="menuitemcheckbox" aria-checked="true">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                <i data-lucide="bell" aria-hidden="true"></i>
+                Push notifications
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Radio group</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="dropdown-radio-group" class="dropdown-menu">
+        <button type="button" id="dropdown-radio-group-trigger" aria-haspopup="menu" aria-controls="dropdown-radio-group-menu" aria-expanded="false" class="btn" data-variant="outline">Open</button>
+        <div id="dropdown-radio-group-popover" data-popover aria-hidden="true" class="min-w-32">
+          <div role="menu" id="dropdown-radio-group-menu" aria-labelledby="dropdown-radio-group-trigger">
+            <div role="group" aria-labelledby="dropdown-radio-label">
+              <div role="heading" id="dropdown-radio-label">Panel Position</div>
+              <div role="menuitemradio" aria-checked="false">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                Top
+              </div>
+              <div role="menuitemradio" aria-checked="true">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                Bottom
+              </div>
+              <div role="menuitemradio" aria-checked="false">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                Right
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Radio Icons</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="dropdown-radio-icons" class="dropdown-menu">
+        <button type="button" id="dropdown-radio-icons-trigger" aria-haspopup="menu" aria-controls="dropdown-radio-icons-menu" aria-expanded="false" class="btn" data-variant="outline">Payment Method</button>
+        <div id="dropdown-radio-icons-popover" data-popover aria-hidden="true" class="min-w-56">
+          <div role="menu" id="dropdown-radio-icons-menu" aria-labelledby="dropdown-radio-icons-trigger">
+            <div role="group" aria-labelledby="dropdown-radio-icons-label">
+              <div role="heading" id="dropdown-radio-icons-label">Select Payment Method</div>
+              <div role="menuitemradio" aria-checked="true">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                <i data-lucide="credit-card" aria-hidden="true"></i>
+                Credit Card
+              </div>
+              <div role="menuitemradio" aria-checked="false">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                <i data-lucide="wallet" aria-hidden="true"></i>
+                PayPal
+              </div>
+              <div role="menuitemradio" aria-checked="false">
+                <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                <i data-lucide="building-2" aria-hidden="true"></i>
+                Bank Transfer
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Destructive</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="dropdown-destructive" class="dropdown-menu">
+        <button type="button" id="dropdown-destructive-trigger" aria-haspopup="menu" aria-controls="dropdown-destructive-menu" aria-expanded="false" class="btn" data-variant="outline">Actions</button>
+        <div id="dropdown-destructive-popover" data-popover aria-hidden="true" class="min-w-32">
+          <div role="menu" id="dropdown-destructive-menu" aria-labelledby="dropdown-destructive-trigger">
+            <div role="group">
+              <div role="menuitem"><i data-lucide="pencil" aria-hidden="true"></i>
+                Edit
+              </div>
+              <div role="menuitem"><i data-lucide="share" aria-hidden="true"></i>
+                Share
+              </div>
+            </div>
+            <hr role="separator" />
+            <div role="group">
+              <div role="menuitem" data-variant="destructive"><i data-lucide="trash" aria-hidden="true"></i>
+                Delete
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Avatar</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="dropdown-avatar" class="dropdown-menu">
+        <button type="button" id="dropdown-avatar-trigger" aria-haspopup="menu" aria-controls="dropdown-avatar-menu" aria-expanded="false" class="btn rounded-full" data-variant="ghost" data-size="icon">
+          <span class="avatar">
+            <img src="https://github.com/shadcn.png" alt="shadcn" />
+            <span>LR</span>
+          </span>
+        </button>
+        <div id="dropdown-avatar-popover" data-popover aria-hidden="true" data-align="end">
+          <div role="menu" id="dropdown-avatar-menu" aria-labelledby="dropdown-avatar-trigger">
+            <div role="group">
+              <div role="menuitem"><i data-lucide="badge-check" aria-hidden="true"></i>
+                Account
+              </div>
+              <div role="menuitem"><i data-lucide="credit-card" aria-hidden="true"></i>
+                Billing
+              </div>
+              <div role="menuitem"><i data-lucide="bell" aria-hidden="true"></i>
+                Notifications
+              </div>
+            </div>
+            <hr role="separator" />
+            <div role="menuitem"><i data-lucide="log-out" aria-hidden="true"></i>
+              Sign Out
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div dir="rtl">
+        <div id="dropdown-rtl" class="dropdown-menu">
+          <button type="button" id="dropdown-rtl-trigger" aria-haspopup="menu" aria-controls="dropdown-rtl-menu" aria-expanded="false" class="btn" data-variant="outline">افتح القائمة</button>
+          <div id="dropdown-rtl-popover" data-popover aria-hidden="true" class="w-36" data-align="end">
+            <div role="menu" id="dropdown-rtl-menu" aria-labelledby="dropdown-rtl-trigger">
+              <div role="group" aria-labelledby="dropdown-rtl-team">
+                <div role="heading" id="dropdown-rtl-team">الفريق</div>
+                <div role="menuitem">الفريق</div>
+                <div role="menuitem">
+                  <span>فريق جديد</span>
+                  <kbd>⌘+T</kbd>
+                </div>
+              </div>
+              <hr role="separator" />
+              <div role="group" aria-labelledby="dropdown-rtl-view">
+                <div role="heading" id="dropdown-rtl-view">عرض</div>
+                <div role="menuitemcheckbox" aria-checked="true">
+                  <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                  شريط الحالة
+                </div>
+                <div role="menuitemcheckbox" aria-checked="false">
+                  <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                  شريط النشاط
+                </div>
+                <div role="menuitemcheckbox" aria-checked="false">
+                  <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                  اللوحة
+                </div>
+              </div>
+              <hr role="separator" />
+              <div role="group" aria-labelledby="dropdown-rtl-position">
+                <div role="heading" id="dropdown-rtl-position">الموضع</div>
+                <div role="menuitemradio" aria-checked="false">
+                  <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                  أعلى
+                </div>
+                <div role="menuitemradio" aria-checked="true">
+                  <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                  أسفل
+                </div>
+                <div role="menuitemradio" aria-checked="false">
+                  <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                  يمين
+                </div>
+                <div role="menuitemradio" aria-checked="false">
+                  <span data-indicator><i data-lucide="check" aria-hidden="true"></i></span>
+                  يسار
+                </div>
+              </div>
+              <hr role="separator" />
+              <div role="group">
+                <div role="menuitem" data-variant="destructive">تسجيل الخروج</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
