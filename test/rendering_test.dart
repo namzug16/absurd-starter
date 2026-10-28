@@ -1,14 +1,13 @@
 import "package:absurd_starter/generated/html.dart";
 import "package:absurd_starter/src/ui/components/temporary_dialog.dart";
-import "package:absurd_starter/src/ui/layout/primary_layout.dart";
-import "package:absurd_starter/src/ui/pages/home_page.dart";
 import "package:test/test.dart";
 
 void main() {
   test("layout escapes SEO and composes fragments without escaping markup", () {
-    final html = primaryLayout(
-      counterFragment(7),
-      seo: const PageSeo(title: "<script> & title", description: '" onload="alert(1)'),
+    final html = Html.layout.primary(
+      title: "<script> & title",
+      description: '" onload="alert(1)',
+      body: Html.counter(count: "7"),
     ).toHtml();
 
     expect(html, startsWith("<!DOCTYPE html>"));
@@ -21,7 +20,7 @@ void main() {
   });
 
   test("home uses template icon placeholders and a single counter input", () {
-    final html = pageHome().toHtml();
+    final html = Html.pages.home().toHtml();
     expect(html, contains('data-lucide="plus"'));
     expect(html, contains('hx-post="/api/counter/increment"'));
     expect(html, contains("hx-on:htmx:finally:request="));
@@ -30,7 +29,7 @@ void main() {
   });
 
   test("counter is a fragment without document or script wrappers", () {
-    final html = counterFragment(3).toHtml();
+    final html = Html.counter(count: "3").toHtml();
     expect(html, contains('value="3" form="counter-form"'));
     expect(html, isNot(contains("<!DOCTYPE")));
     expect(html, isNot(contains("<script")));
@@ -41,8 +40,8 @@ void main() {
       id: "details",
       title: "<Details>",
       description: "A & B",
-      body: Html.counter(count: 2),
-      footer: Html.counter(count: 4),
+      body: Html.counter(count: "2"),
+      footer: Html.counter(count: "4"),
     ).toHtml();
     expect(html, contains("data-temporary-dialog"));
     expect(html, contains('aria-describedby="details-description"'));
@@ -57,7 +56,7 @@ void main() {
     final html = temporaryDialog(
       id: "details",
       title: "Details",
-      body: Html.counter(count: 0),
+      body: Html.counter(count: "0"),
       closeButton: false,
       closeOnOverlayClick: false,
     ).toHtml();

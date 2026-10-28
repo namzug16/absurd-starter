@@ -1,8 +1,8 @@
-import "package:absurd_starter/src/ui/pages/home_page.dart";
+import "package:absurd_starter/generated/html.dart";
 import "package:absurd_starter/src/utils/htmx.dart";
 import "package:relic/relic.dart";
 
-Response handleHomePage(Request request) => htmlPage(pageHome());
+Response handleHomePage(Request request) => htmlPage(Html.pages.home());
 
 Response handleHealth(Request request) => Response.ok(body: Body.fromString("ok"));
 
@@ -14,6 +14,6 @@ Future<Response> handleCounterIncrement(Request request) async {
   await Future<void>.delayed(const Duration(seconds: 3));
 
   return htmlFragments([
-    counterFragment(count + 1),
+    Html.counter(count: "${count + 1}"),
   ]);
 }

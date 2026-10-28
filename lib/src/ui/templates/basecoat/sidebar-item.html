@@ -1,2 +1,2 @@
 <x-props href="String" current="bool" icon="Fragment?" content="Fragment" attrs="Map<String, String>"></x-props>
-<li><a href="{{ href }}" <x-if case="current">aria-current="page" </x-if><x-for in="attrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ icon }}<span>{{ content }}</span></a></li>
+<li><a href="{{ href }}" ?current:aria-current="page" ...attrs>{{ icon }}<span>{{ content }}</span></a></li>

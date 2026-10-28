@@ -1,7 +1,7 @@
 <x-props id="String" trigger="Fragment" items="List<Fragment>" body="Fragment?" mainAttrs="Map<String, String>" triggerAttrs="Map<String, String>" popoverAttrs="Map<String, String>" menuAttrs="Map<String, String>"></x-props>
-<div id="{{ id }}" <x-for in="mainAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
-  <button type="button" id="{{ id }}-trigger" aria-haspopup="menu" aria-controls="{{ id }}-menu" aria-expanded="false" <x-for in="triggerAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ trigger }}</button>
-  <div id="{{ id }}-popover" data-popover aria-hidden="true" <x-for in="popoverAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
-    <div role="menu" id="{{ id }}-menu" aria-labelledby="{{ id }}-trigger" <x-for in="menuAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ items }}{{ body }}</div>
+<div id="{{ id }}" ...mainAttrs>
+  <button type="button" id="{{ id }}-trigger" aria-haspopup="menu" aria-controls="{{ id }}-menu" aria-expanded="false" ...triggerAttrs>{{ trigger }}</button>
+  <div id="{{ id }}-popover" data-popover aria-hidden="true" ...popoverAttrs>
+    <div role="menu" id="{{ id }}-menu" aria-labelledby="{{ id }}-trigger" ...menuAttrs>{{ items }}{{ body }}</div>
   </div>
 </div>

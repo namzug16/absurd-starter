@@ -1,4 +1,4 @@
-<x-props title="String" description="String" content="Fragment"></x-props>
+<x-props title="String" description="String" body="Fragment"></x-props>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,5 +12,7 @@
     <script src="/js/lucide.min.js"></script>
     <script src="/index.js"></script>
   </head>
-  {{ content }}
+  <body class="min-h-screen bg-background text-foreground antialiased">
+    {{ body }}
+  </body>
 </html>

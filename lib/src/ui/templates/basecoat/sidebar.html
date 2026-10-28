@@ -1,8 +1,8 @@
 <x-props id="String" label="String" side="String" hidden="String" closed="bool" header="Fragment?" footer="Fragment?" hasHeader="bool" hasFooter="bool" items="List<Fragment>" body="Fragment?" mainAttrs="Map<String, String>" headerAttrs="Map<String, String>" contentAttrs="Map<String, String>" footerAttrs="Map<String, String>"></x-props>
-<aside id="{{ id }}" data-side="{{ side }}" aria-hidden="{{ hidden }}" <x-if case="closed">inert </x-if><x-for in="mainAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+<aside id="{{ id }}" data-side="{{ side }}" aria-hidden="{{ hidden }}" ?closed:inert ...mainAttrs>
   <nav aria-label="{{ label }}">
-    <x-if case="hasHeader"><header <x-for in="headerAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ header }}</header></x-if>
-    <section <x-for in="contentAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ items }}{{ body }}</section>
-    <x-if case="hasFooter"><footer <x-for in="footerAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ footer }}</footer></x-if>
+    <x-if case="hasHeader"><header ...headerAttrs>{{ header }}</header></x-if>
+    <section ...contentAttrs>{{ items }}{{ body }}</section>
+    <x-if case="hasFooter"><footer ...footerAttrs>{{ footer }}</footer></x-if>
   </nav>
 </aside>

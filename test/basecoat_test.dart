@@ -116,8 +116,8 @@ void main() {
     expect(html, contains("A &amp; B"));
     expect(html, contains("document.getElementById(this.dataset.dialogId).showModal()"));
     expect(html, isNot(contains("getElementById('details")));
-    expect(html, contains("<section >Body"));
-    expect(html, contains("<footer >Footer"));
+    expect(html, contains("<section>Body"));
+    expect(html, contains("<footer>Footer"));
     expect(html, contains('aria-label="Close dialog"'));
     expect(html, isNot(contains("data-temporary-dialog")));
 

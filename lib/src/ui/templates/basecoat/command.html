@@ -1,2 +1,2 @@
 <x-props id="String" content="Fragment" mainAttrs="Map<String, String>"></x-props>
-<div id="{{ id }}" <x-for in="mainAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ content }}</div>
+<div id="{{ id }}" ...mainAttrs>{{ content }}</div>

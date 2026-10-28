@@ -1,6 +1,6 @@
 <x-props id="String" open="bool" icon="Fragment?" content="Fragment" children="List<Fragment>" attrs="Map<String, String>"></x-props>
 <li>
-  <details id="submenu-{{ id }}" <x-if case="open">open </x-if><x-for in="attrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+  <details id="submenu-{{ id }}" ?open:open ...attrs>
     <summary aria-controls="submenu-{{ id }}-content">{{ icon }}<span>{{ content }}</span></summary>
     <ul id="submenu-{{ id }}-content">{{ children }}</ul>
   </details>
