@@ -1,4 +1,4 @@
-import "package:htmleez/htmleez.dart";
+import "package:absurd_starter/generated/html.dart";
 
 class PageSeo {
   const PageSeo({
@@ -12,23 +12,7 @@ class PageSeo {
 
 const defaultSeo = PageSeo(
   title: "Absurd Starter",
-  description: "A Dart starter using Relic, HTMX, Tailwind, Basecoat, and htmleez.",
+  description: "A Dart starter using Relic, HTMX, Tailwind, Basecoat, and Absurd Templates.",
 );
 
-HTML primaryLayout(HTML bodyContent, {PageSeo seo = defaultSeo}) => html([
-  head([
-    meta([$("charset")("UTF-8")]),
-    meta([$("name")("viewport"), $("content")("width=device-width, initial-scale=1.0")]),
-    title([seo.title.t]),
-    meta([$("name")("description"), $("content")(seo.description)]),
-    link([$("rel")("stylesheet"), $("href")("/index.css")]),
-    script([
-      $("src")("https://cdn.jsdelivr.net/npm/htmx.org@4.0.0/dist/htmx.min.js"),
-      $("integrity")("sha384-BvJpBiO8Kh31EqtJe5DRIeWrHWnCGkwytKs9NKFi86Hhw96dEqdEMzZDeK9iEGTc"),
-      $("crossorigin")("anonymous"),
-    ]),
-    script([$("src")("/basecoat.all.min.js")]),
-    script([$("src")("/index.js")]),
-  ]),
-  bodyContent,
-]);
+Fragment primaryLayout(Fragment bodyContent, {PageSeo seo = defaultSeo}) => Html.layout.primary(title: seo.title, description: seo.description, content: bodyContent);

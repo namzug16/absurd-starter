@@ -1,0 +1,20 @@
+<x-props id="String" title="String" description="String?" hasDescription="bool" body="Fragment" footer="Fragment?" hasFooter="bool" dialogClasses="String" contentClasses="String" closeButton="bool" overlayClick="String"></x-props>
+<dialog id="{{ id }}" class="{{ dialogClasses }}" aria-labelledby="{{ id }}-title" <x-if case="hasDescription">aria-describedby="{{ id }}-description"</x-if> data-temporary-dialog onclick="{{ overlayClick }}">
+  <div class="{{ contentClasses }}">
+    <header>
+      <h2 id="{{ id }}-title">{{ title }}</h2>
+      <x-if case="hasDescription">
+        <p id="{{ id }}-description">{{ description }}</p>
+      </x-if>
+    </header>
+    <section>{{ body }}</section>
+    <x-if case="hasFooter">
+      <footer>{{ footer }}</footer>
+    </x-if>
+    <x-if case="closeButton">
+      <button type="button" class="btn" data-variant="ghost" data-size="icon-sm" aria-label="Close dialog" onclick="this.closest('dialog').close()">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </x-if>
+  </div>
+</dialog>

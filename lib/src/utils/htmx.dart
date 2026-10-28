@@ -1,7 +1,7 @@
 import "dart:convert";
 import "dart:io";
 
-import "package:htmleez/htmleez.dart";
+import "package:absurd_starter/generated/html.dart";
 import "package:relic/relic.dart";
 
 extension HxRequestExtensions on Request {
@@ -22,17 +22,12 @@ extension HxRequestExtensions on Request {
   String? get hxSource => headers["hx-source"]?.firstOrNull;
 }
 
-Response htmlPage(HTML page, {int status = HttpStatus.ok, Encoding enc = utf8}) => Response(
+Response htmlPage(Fragment page, {int status = HttpStatus.ok, Encoding enc = utf8}) => Response(
   status,
   body: Body.fromString(page.toHtml(), encoding: enc, mimeType: MimeType.html),
 );
 
-Response htmlFragments(List<HTML> fragments, {int status = HttpStatus.ok, Encoding enc = utf8}) => Response(
+Response htmlFragments(List<Fragment> fragments, {int status = HttpStatus.ok, Encoding enc = utf8}) => Response(
   status,
-  body: Body.fromString(fragments.toHtml(), encoding: enc, mimeType: MimeType.html),
-);
-
-Response htmlFragmentsOob(List<HTML> fragments, {int status = HttpStatus.ok, Encoding enc = utf8}) => Response(
-  status,
-  body: Body.fromString(fragments.map((fragment) => fragment.add($("hx-swap-oob")("true"))).toList().toHtml(), encoding: enc, mimeType: MimeType.html),
+  body: Body.fromString(fragments.map((fragment) => fragment.toHtml()).join(), encoding: enc, mimeType: MimeType.html),
 );

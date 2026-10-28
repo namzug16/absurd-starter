@@ -12,7 +12,7 @@ void main() {
     p = await Process.start(
       "dart",
       ["run", "bin/server.dart"],
-      environment: {"PORT": port, "DEV": "true"},
+      environment: {"PORT": port},
     );
     await _waitForServer(Uri.parse("$host/health"));
   });
@@ -24,6 +24,9 @@ void main() {
     expect(response.statusCode, 200);
     expect(response.headers["content-type"], contains("text/html"));
     expect(response.body, contains("Absurd Starter"));
+    expect(response.body, startsWith("<!DOCTYPE html>"));
+    expect(response.body, contains('src="/js/lucide.min.js"'));
+    expect(response.body, contains('data-lucide="plus"'));
   });
 
   test("health endpoint returns ok", () async {
@@ -32,12 +35,9 @@ void main() {
     expect(response.body, "ok");
   });
 
-  test("UI kitchen sink is available in development", () async {
+  test("removed component catalog is not served", () async {
     final response = await get(Uri.parse("$host/ui"));
-    expect(response.statusCode, 200);
-    expect(response.headers["content-type"], contains("text/html"));
-    expect(response.body, contains("Kitchen Sink"));
-    expect(response.body, contains("Basecoat 1.x"));
+    expect(response.statusCode, 404);
   });
 
   test("counter endpoint returns HTML fragment", () async {
@@ -46,6 +46,14 @@ void main() {
     expect(response.headers["content-type"], contains("text/html"));
     expect(response.body, contains("Counter"));
     expect(response.body, contains("3"));
+    expect(response.body, contains('value="3" form="counter-form"'));
+    expect(response.body, isNot(contains("<!DOCTYPE html>")));
+  });
+
+  test("vendored Lucide bundle is served locally", () async {
+    final response = await get(Uri.parse("$host/js/lucide.min.js"));
+    expect(response.statusCode, 200);
+    expect(response.body, contains("createIcons"));
   });
 
   test("404", () async {

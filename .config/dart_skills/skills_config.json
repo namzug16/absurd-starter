@@ -95,16 +95,6 @@
             "path": "skills/dart-build-cli-app"
           }
         ]
-      },
-      "package:htmleez": {
-        "skills": [
-          {
-            "name": "htmleez-html",
-            "installedAt": "2026-09-15T01:51:24.590397Z",
-            "contentHash": "jPTcmAgFNimjuEHDxZtpsQ==",
-            "path": "skills/htmleez-html"
-          }
-        ]
       }
     }
   },
