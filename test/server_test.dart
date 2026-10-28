@@ -35,7 +35,7 @@ void main() {
     expect(response.body, "ok");
   });
 
-  test("removed component catalog is not served", () async {
+  test("component gallery is dev-only", () async {
     final response = await get(Uri.parse("$host/ui"));
     expect(response.statusCode, 404);
   });
