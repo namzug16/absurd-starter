@@ -409,7 +409,7 @@ Fragment toast({String category = "success", String title = "", String descripti
 }
 
 Fragment _toastAction(ToastAction action, bool cancel) =>
-    Html.basecoat.toastAction(label: action.label, href: action.href == null ? null : _url(action.href!), link: action.href != null, button: action.href == null, cancel: cancel, action: !cancel, onclick: action.onclick, hasOnclick: action.onclick != null);
+    Html.basecoat.toastAction(label: action.label, href: action.href == null ? null : _url(action.href!), link: action.href != null, cancel: cancel, onclick: action.onclick, hasOnclick: action.onclick != null);
 
 List<Fragment> _renderItems(List<Item> items, String prefix, String context, {List<String> selected = const []}) {
   final result = <Fragment>[];
@@ -436,7 +436,6 @@ List<Fragment> _renderItems(List<Item> items, String prefix, String context, {Li
                 id: groupId,
                 label: item.label,
                 command: context == "command",
-                other: context != "command",
                 children: children,
                 attrs: _attrs(attrs, reserved: ["role", "aria-labelledby"]),
               ),
@@ -484,7 +483,6 @@ List<Fragment> _renderItems(List<Item> items, String prefix, String context, {Li
           id: id,
           href: item.url == null ? null : _url(item.url!),
           link: item.url != null,
-          button: item.url == null,
           role: role,
           icon: item.icon,
           content: content,

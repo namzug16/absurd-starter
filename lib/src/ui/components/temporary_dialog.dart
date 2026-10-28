@@ -20,7 +20,7 @@ Fragment temporaryDialog({
   footer: footer,
   hasFooter: footer != null,
   dialogClasses: ["dialog", ?dialogExtraClasses].join(" "),
-  contentClasses: dialogContentExtraClasses ?? "",
+  contentClasses: dialogContentExtraClasses,
   closeButton: closeButton,
-  overlayClick: closeOnOverlayClick ? "if (event.target === this) this.close()" : "",
+  closeOnOverlayClick: closeOnOverlayClick,
 );

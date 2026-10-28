@@ -1,4 +1,4 @@
 <x-props id="String" content="Fragment" open="bool" dialogAttrs="Map<String, String>"></x-props>
-<dialog id="{{ id }}" <x-if case="open">open </x-if>onclick="if (event.target === this) this.close()" <x-for in="dialogAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+<dialog id="{{ id }}" ?open:open onclick="if (event.target === this) this.close()" ...dialogAttrs>
   <div class="command">{{ content }}</div>
 </dialog>

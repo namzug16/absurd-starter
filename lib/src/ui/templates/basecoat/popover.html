@@ -1,5 +1,5 @@
 <x-props id="String" trigger="Fragment" body="Fragment?" mainAttrs="Map<String, String>" triggerAttrs="Map<String, String>" popoverAttrs="Map<String, String>"></x-props>
-<div id="{{ id }}" <x-for in="mainAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
-  <button id="{{ id }}-trigger" type="button" aria-expanded="false" aria-controls="{{ id }}-popover" <x-for in="triggerAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ trigger }}</button>
-  <div id="{{ id }}-popover" data-popover aria-hidden="true" <x-for in="popoverAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ body }}</div>
+<div id="{{ id }}" ...mainAttrs>
+  <button id="{{ id }}-trigger" type="button" aria-expanded="false" aria-controls="{{ id }}-popover" ...triggerAttrs>{{ trigger }}</button>
+  <div id="{{ id }}-popover" data-popover aria-hidden="true" ...popoverAttrs>{{ body }}</div>
 </div>
