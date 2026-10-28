@@ -1,2 +1,26 @@
-<x-props id="String" content="Fragment" mainAttrs="Map<String, String>"></x-props>
-<div id="{{ id }}" ...mainAttrs>{{ content }}</div>
+<x-props id="String" placeholder="String" emptyText="String" items="List<({bool isItem, bool isGroup, bool isSeparator, bool isLink, String id, String href, String role, String label, Object? icon, Object content, Map<String, String> attrs, List<({bool isLink, String id, String href, String role, Object? icon, Object content, Map<String, String> attrs})> items})>" body="Object?" mainAttrs="Map<String, String>" inputAttrs="Map<String, String>" menuAttrs="Map<String, String>"></x-props>
+<div ...mainAttrs>
+  <header>
+    <i data-lucide="search" aria-hidden="true"></i>
+    <input type="text" id="{{ id }}-input" placeholder="{{ placeholder }}" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="{{ id }}-menu" ...inputAttrs>
+  </header>
+  <div role="menu" id="{{ id }}-menu" aria-orientation="vertical" data-empty="{{ emptyText }}" ...menuAttrs>
+    <x-for in="items" as="item">
+      <x-if case="item.isItem">
+        <x-if case="item.isLink"><a id="{{ item.id }}" href="{{ item.href }}" role="{{ item.role }}" ...item.attrs>{{ item.icon }}{{ item.content }}</a></x-if>
+        <x-if-not case="item.isLink"><div id="{{ item.id }}" role="{{ item.role }}" ...item.attrs>{{ item.icon }}{{ item.content }}</div></x-if-not>
+      </x-if>
+      <x-if case="item.isSeparator"><hr role="separator"></x-if>
+      <x-if case="item.isGroup">
+        <div role="group" aria-labelledby="{{ item.id }}" ...item.attrs>
+          <span role="heading" id="{{ item.id }}">{{ item.label }}</span>
+          <x-for in="item.items" as="child">
+            <x-if case="child.isLink"><a id="{{ child.id }}" href="{{ child.href }}" role="{{ child.role }}" ...child.attrs>{{ child.icon }}{{ child.content }}</a></x-if>
+            <x-if-not case="child.isLink"><div id="{{ child.id }}" role="{{ child.role }}" ...child.attrs>{{ child.icon }}{{ child.content }}</div></x-if-not>
+          </x-for>
+        </div>
+      </x-if>
+    </x-for>
+    {{ body }}
+  </div>
+</div>

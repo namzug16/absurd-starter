@@ -1,8 +1,35 @@
-<x-props id="String" label="String" side="String" hidden="String" closed="bool" header="Fragment?" footer="Fragment?" hasHeader="bool" hasFooter="bool" items="List<Fragment>" body="Fragment?" mainAttrs="Map<String, String>" headerAttrs="Map<String, String>" contentAttrs="Map<String, String>" footerAttrs="Map<String, String>"></x-props>
+<x-props id="String" label="String" side="String" hidden="String" closed="bool" header="Object?" footer="Object?" hasHeader="bool" hasFooter="bool" items="List<({bool isGroup, bool isSeparator, String id, String label, bool hasLabel, Map<String, String> attrs, List<({bool isSubmenu, String id, String href, bool current, bool open, Object? icon, Object content, Map<String, String> attrs, List<({String href, bool current, Object? icon, Object content, Map<String, String> attrs})> items})> items})>" body="Object?" mainAttrs="Map<String, String>" headerAttrs="Map<String, String>" contentAttrs="Map<String, String>" footerAttrs="Map<String, String>"></x-props>
 <aside id="{{ id }}" data-side="{{ side }}" aria-hidden="{{ hidden }}" ?closed:inert ...mainAttrs>
   <nav aria-label="{{ label }}">
     <x-if case="hasHeader"><header ...headerAttrs>{{ header }}</header></x-if>
-    <section ...contentAttrs>{{ items }}{{ body }}</section>
+    <section ...contentAttrs>
+      <x-for in="items" as="group">
+        <x-if case="group.isSeparator"><hr role="separator"></x-if>
+        <x-if case="group.isGroup">
+          <div role="group" ?group.hasLabel:aria-labelledby="{{ group.id }}" ...group.attrs>
+            <x-if case="group.hasLabel"><h3 id="{{ group.id }}">{{ group.label }}</h3></x-if>
+            <ul>
+              <x-for in="group.items" as="item">
+                <x-if-not case="item.isSubmenu"><li><a href="{{ item.href }}" ?item.current:aria-current="page" ...item.attrs>{{ item.icon }}<span>{{ item.content }}</span></a></li></x-if-not>
+                <x-if case="item.isSubmenu">
+                  <li>
+                    <details id="submenu-{{ item.id }}" ?item.open:open ...item.attrs>
+                      <summary aria-controls="submenu-{{ item.id }}-content">{{ item.icon }}<span>{{ item.content }}</span></summary>
+                      <ul id="submenu-{{ item.id }}-content">
+                        <x-for in="item.items" as="link">
+                          <li><a href="{{ link.href }}" ?link.current:aria-current="page" ...link.attrs>{{ link.icon }}<span>{{ link.content }}</span></a></li>
+                        </x-for>
+                      </ul>
+                    </details>
+                  </li>
+                </x-if>
+              </x-for>
+            </ul>
+          </div>
+        </x-if>
+      </x-for>
+      {{ body }}
+    </section>
     <x-if case="hasFooter"><footer ...footerAttrs>{{ footer }}</footer></x-if>
   </nav>
 </aside>

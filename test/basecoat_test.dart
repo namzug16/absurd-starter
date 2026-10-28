@@ -1,10 +1,8 @@
 import "dart:convert";
 
-import "package:absurd_starter/generated/html.dart";
 import "package:absurd_starter/src/ui/basecoat/basecoat.dart" as bc;
 import "package:test/test.dart";
 
-Fragment text(String value) => Html.basecoat.text(text: value);
 String element(String html, String id) => RegExp('<[^>]+\\bid="${RegExp.escape(id)}"[^>]*>').firstMatch(html)!.group(0)!;
 String escaped(String value) => const HtmlEscape(HtmlEscapeMode.attribute).convert(value).replaceAll("'", "&#39;");
 
@@ -15,7 +13,7 @@ void main() {
     final html = bc
         .popover(
           id: "help",
-          trigger: text("Help <&>"),
+          trigger: "Help <&>",
           body: bc.toast(title: "Saved"),
           mainAttrs: {"class": "w-full", "id": "wrong", "hx-get": "/help?x=1&y=2"},
           triggerAttrs: {"class": "btn", "aria-controls": "wrong", "data-note": '" onmouseover="bad'},
@@ -33,38 +31,24 @@ void main() {
     expect(html, isNot(contains("<x-")));
   });
 
-  test("dropdown renders recursive groups, links, separators and rich content", () {
+  test("dropdown renders groups, links, separators and rich content", () {
     final html = bc
         .dropdownMenu(
           id: "account",
-          trigger: text("Account"),
+          trigger: "Account",
           items: [
-            bc.Item(
+            const bc.Item(
               type: bc.ItemType.group,
               label: "Team",
-              items: [
-                bc.Item(
-                  type: bc.ItemType.group,
-                  label: "Members",
-                  items: [
-                    bc.Item(
-                      label: "Gustavo",
-                      url: "/members/1",
-                      icon: Html.basecoat.icon(name: "user"),
-                      content: text("Profile"),
-                    ),
-                  ],
-                ),
-              ],
+              items: [bc.Item(label: "Profile", url: "/members/1")],
             ),
             const bc.Item(type: bc.ItemType.separator),
             const bc.Item(label: "Delete", disabled: true, attrs: {"hx-delete": "/account"}),
           ],
         )
         .toHtml();
-    expect(html, contains('aria-labelledby="group-label-account-items-1-1"'));
-    expect(html, contains('id="account-items-1-1-1" href="/members/1" role="menuitem"'));
-    expect(html, contains('data-lucide="user"'));
+    expect(html, contains('aria-labelledby="group-label-account-items-1"'));
+    expect(html, contains('id="account-items-1-1" href="/members/1" role="menuitem"'));
     expect(html, contains("Profile"));
     expect(html, contains('<hr role="separator">'));
     expect(html, contains('aria-disabled="true"'));
@@ -74,7 +58,7 @@ void main() {
   test("dropdown preserves checkbox/radio roles without duplicate attributes", () {
     final html = bc
         .dropdownMenu(
-          trigger: text("Options"),
+          trigger: "Options",
           items: const [
             bc.Item(label: "Notifications", attrs: {"role": "menuitemcheckbox", "aria-checked": "false"}),
             bc.Item(label: "Light", attrs: {"role": "menuitemradio", "aria-checked": "true"}),
@@ -86,7 +70,7 @@ void main() {
     expect(html, isNot(contains('role="menuitem"')));
     expect(
       () => bc.dropdownMenu(
-        trigger: text("Options"),
+        trigger: "Options",
         items: const [
           bc.Item(attrs: {"role": "invalid"}),
         ],
@@ -111,7 +95,7 @@ void main() {
   });
 
   test("dialog optional regions and trigger do not interpolate IDs into JS", () {
-    final html = bc.dialog(id: "details'quoted", trigger: text("Open"), title: "<Details>", description: "A & B", body: text("Body"), footer: text("Footer"), open: true).toHtml();
+    final html = bc.dialog(id: "details'quoted", trigger: "Open", title: "<Details>", description: "A & B", body: "Body", footer: "Footer", open: true).toHtml();
     expect(html, contains("&lt;Details&gt;"));
     expect(html, contains("A &amp; B"));
     expect(html, contains("document.getElementById(this.dataset.dialogId).showModal()"));
@@ -148,7 +132,7 @@ void main() {
       expect(html, contains('<span role="heading"'));
     }
     expect(element(bc.commandDialog(id: "palette", open: true).toHtml(), "palette"), contains("open "));
-    expect(bc.command(body: text("Custom command")).toHtml(), contains("Custom command"));
+    expect(bc.command(body: "Custom command").toHtml(), contains("Custom command"));
   });
 
   test("select picks first enabled option or preserves placeholder", () {
@@ -173,7 +157,7 @@ void main() {
     expect(empty, isNot(contains('aria-selected="true"')));
   });
 
-  test("select recursively resolves labels, selection and JSON", () {
+  test("select resolves grouped labels, selection and JSON", () {
     final html = bc
         .select(
           id: "fruit",
@@ -182,13 +166,7 @@ void main() {
           objectFormat: true,
           closeOnSelect: true,
           selected: ["apple", "pear"],
-          items: [
-            const bc.Item(
-              type: bc.ItemType.group,
-              label: "Fruit",
-              items: [bc.Item(type: bc.ItemType.group, label: "Available", items: fruits)],
-            ),
-          ],
+          items: [const bc.Item(type: bc.ItemType.group, label: "Fruit", items: fruits)],
         )
         .toHtml();
     expect(html, contains('<span class="truncate">Apple, Pear</span>'));
@@ -231,7 +209,7 @@ void main() {
         .toHtml();
     expect(html, contains('value="${escaped(jsonEncode({"value": value, "label": label}))}"'));
     expect(html, isNot(contains("<label>")));
-    final custom = bc.select(body: text("Custom options"), selected: ["pear"], selectedLabel: "Pear").toHtml();
+    final custom = bc.select(body: "Custom options", selected: ["pear"], selectedLabel: "Pear").toHtml();
     expect(custom, contains("Custom options"));
     expect(custom, contains('value="pear"'));
     expect(custom, contains('<span class="truncate">Pear</span>'));
@@ -271,8 +249,8 @@ void main() {
           id: "navigation",
           open: false,
           side: "right",
-          header: text("Workspace"),
-          footer: text("Signed in"),
+          header: "Workspace",
+          footer: "Signed in",
           menu: const [
             bc.Item(
               type: bc.ItemType.group,
@@ -299,9 +277,21 @@ void main() {
     expect(html, contains("Workspace"));
     expect(html, contains("Signed in"));
     expect(() => bc.sidebar(side: "middle"), throwsArgumentError);
+    expect(() => bc.sidebar(menu: const [bc.Item(label: "Loose link")]), throwsArgumentError);
+    expect(
+      () => bc.select(
+        items: const [
+          bc.Item(
+            type: bc.ItemType.group,
+            items: [bc.Item(type: bc.ItemType.group)],
+          ),
+        ],
+      ),
+      throwsArgumentError,
+    );
     expect(
       () => bc.dropdownMenu(
-        trigger: text("Menu"),
+        trigger: "Menu",
         items: const [bc.Item(type: bc.ItemType.submenu)],
       ),
       throwsArgumentError,
@@ -310,9 +300,9 @@ void main() {
 
   test("tabs wire panels, hide inactive content and skip disabled defaults", () {
     final sets = [
-      bc.TabSet(tab: text("Unavailable"), panel: text("Disabled panel"), tabAttrs: {"disabled": ""}),
-      bc.TabSet(tab: text("Account"), panel: text("Account panel")),
-      bc.TabSet(tab: text("Billing"), panel: text("Billing panel")),
+      bc.TabSet(tab: "Unavailable", panel: "Disabled panel", tabAttrs: {"disabled": ""}),
+      bc.TabSet(tab: "Account", panel: "Account panel"),
+      bc.TabSet(tab: "Billing", panel: "Billing panel"),
     ];
     final html = bc.tabs(id: "settings", tabsets: sets, tablistAttrs: {"aria-orientation": "vertical", "data-variant": "line"}).toHtml();
     expect(html, contains('aria-orientation="vertical" data-variant="line"'));
@@ -327,7 +317,7 @@ void main() {
       bc
           .tabs(
             tabsets: [
-              bc.TabSet(tab: text("Disabled"), tabAttrs: {"aria-disabled": "true"}),
+              bc.TabSet(tab: "Disabled", tabAttrs: {"aria-disabled": "true"}),
             ],
           )
           .toHtml(),
@@ -362,7 +352,7 @@ void main() {
       expect(html, contains('data-variant="outline" data-toast-cancel'));
       expect(html, contains("Saved &lt;&amp;&gt;"));
     }
-    final minimal = bc.toast(icon: text("Custom icon")).toHtml();
+    final minimal = bc.toast(icon: "Custom icon").toHtml();
     expect(minimal, contains("Custom icon"));
     expect(minimal, isNot(contains("<footer")));
     expect(minimal, isNot(contains("<h2")));
@@ -380,8 +370,8 @@ void main() {
   });
 
   test("generated IDs are unique and malformed attributes/unsafe URLs fail", () {
-    final a = bc.popover(trigger: text("Open")).toHtml();
-    final b = bc.popover(trigger: text("Open")).toHtml();
+    final a = bc.popover(trigger: "Open").toHtml();
+    final b = bc.popover(trigger: "Open").toHtml();
     expect(RegExp('id="([^"]+)"').firstMatch(a)!.group(1), isNot(RegExp('id="([^"]+)"').firstMatch(b)!.group(1)));
     for (final name in ["x onclick", 'x"', "CLASS"]) {
       expect(() => bc.toast(attrs: {name: "bad"}), throwsArgumentError);
@@ -389,7 +379,7 @@ void main() {
     for (final url in ["javascript:alert(1)", "JaVaScRiPt:alert(1)", "java\nscript:alert(1)", "data:text/html,bad", " javascript:alert(1)"]) {
       expect(
         () => bc.dropdownMenu(
-          trigger: text("Open"),
+          trigger: "Open",
           items: [bc.Item(url: url)],
         ),
         throwsArgumentError,
@@ -401,8 +391,8 @@ void main() {
         throwsArgumentError,
       );
     }
-    expect(() => bc.popover(id: "bad id", trigger: text("Open")), throwsArgumentError);
-    expect(() => bc.popover(id: "", trigger: text("Open")), throwsArgumentError);
+    expect(() => bc.popover(id: "bad id", trigger: "Open"), throwsArgumentError);
+    expect(() => bc.popover(id: "", trigger: "Open"), throwsArgumentError);
     expect(() => bc.toast(attrs: {"formaction": "javascript:alert(1)"}), throwsArgumentError);
   });
 }

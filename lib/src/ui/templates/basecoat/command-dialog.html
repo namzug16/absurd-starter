@@ -1,4 +1,4 @@
-<x-props id="String" content="Fragment" open="bool" dialogAttrs="Map<String, String>"></x-props>
+<x-props id="String" open="bool" placeholder="String" emptyText="String" items="List<({bool isItem, bool isGroup, bool isSeparator, bool isLink, String id, String href, String role, String label, Object? icon, Object content, Map<String, String> attrs, List<({bool isLink, String id, String href, String role, Object? icon, Object content, Map<String, String> attrs})> items})>" body="Object?" dialogAttrs="Map<String, String>" commandAttrs="Map<String, String>" inputAttrs="Map<String, String>" menuAttrs="Map<String, String>"></x-props>
 <dialog id="{{ id }}" ?open:open onclick="if (event.target === this) this.close()" ...dialogAttrs>
-  <div class="command">{{ content }}</div>
+  <x-fragment _="/basecoat/command.html" id="{{ id }}" placeholder="{{ placeholder }}" emptyText="{{ emptyText }}" items="{{ items }}" body="{{ body }}" mainAttrs="{{ commandAttrs }}" inputAttrs="{{ inputAttrs }}" menuAttrs="{{ menuAttrs }}" />
 </dialog>

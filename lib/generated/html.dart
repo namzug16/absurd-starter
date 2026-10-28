@@ -81,158 +81,188 @@ abstract final class Html {
 final class _Html$basecoat {
   const _Html$basecoat();
 
-  Fragment comboboxInput({
-    required String id, // lib/src/ui/templates/basecoat/combobox-input.html:1:14
-    required String placeholder, // lib/src/ui/templates/basecoat/combobox-input.html:1:35
-    required String value, // lib/src/ui/templates/basecoat/combobox-input.html:1:50
-    required Map<String, String> inputAttrs, // lib/src/ui/templates/basecoat/combobox-input.html:1:70
-  }) =>
-      Fragment._(($out) {
-    final $attributeNames0 = <String, bool>{'type': false, 'role': false, 'value': false, 'placeholder': false, 'autocomplete': false, 'autocorrect': false, 'spellcheck': false, 'aria-autocomplete': false, 'aria-expanded': false, 'aria-controls': false};
-    $out.write('<input type="text" role="combobox" value="');
-    _$write($out, value); // lib/src/ui/templates/basecoat/combobox-input.html:2:46
-    $out.write('" placeholder="');
-    _$write($out, placeholder); // lib/src/ui/templates/basecoat/combobox-input.html:2:72
-    $out.write('" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/combobox-input.html:2:209
-    $out.write('-listbox"');
-    _$writeAttributes($out, inputAttrs, $attributeNames0); // lib/src/ui/templates/basecoat/combobox-input.html:2:227
-    $out.write('>\n');
-  });
-
   Fragment combobox({
-    required String id, // lib/src/ui/templates/basecoat/combobox.html:1:14
-    String? name, // lib/src/ui/templates/basecoat/combobox.html:1:28
-    required bool hasName, // lib/src/ui/templates/basecoat/combobox.html:1:46
-    required String value, // lib/src/ui/templates/basecoat/combobox.html:1:59
-    required bool multiple, // lib/src/ui/templates/basecoat/combobox.html:1:77
-    required bool objectFormat, // lib/src/ui/templates/basecoat/combobox.html:1:97
-    required bool closeOnSelect, // lib/src/ui/templates/basecoat/combobox.html:1:118
-    required bool autoHighlight, // lib/src/ui/templates/basecoat/combobox.html:1:139
-    required bool clear, // lib/src/ui/templates/basecoat/combobox.html:1:152
-    required bool plain, // lib/src/ui/templates/basecoat/combobox.html:1:165
-    required Fragment input, // lib/src/ui/templates/basecoat/combobox.html:1:178
-    required List<Fragment> items, // lib/src/ui/templates/basecoat/combobox.html:1:195
-    Fragment? body, // lib/src/ui/templates/basecoat/combobox.html:1:217
-    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/combobox.html:1:239
-    required Map<String, String> groupAttrs, // lib/src/ui/templates/basecoat/combobox.html:1:272
-    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/combobox.html:1:307
-    required Map<String, String> listboxAttrs, // lib/src/ui/templates/basecoat/combobox.html:1:342
-    required Map<String, String> hiddenInputAttrs, // lib/src/ui/templates/basecoat/combobox.html:1:381
+    required String id, // lib/src/ui/templates/basecoat/combobox.html:2:7
+    String? name, // lib/src/ui/templates/basecoat/combobox.html:3:9
+    required bool hasName, // lib/src/ui/templates/basecoat/combobox.html:4:12
+    required String value, // lib/src/ui/templates/basecoat/combobox.html:5:10
+    required bool multiple, // lib/src/ui/templates/basecoat/combobox.html:6:13
+    required bool objectFormat, // lib/src/ui/templates/basecoat/combobox.html:7:17
+    required bool closeOnSelect, // lib/src/ui/templates/basecoat/combobox.html:8:18
+    required bool autoHighlight, // lib/src/ui/templates/basecoat/combobox.html:9:18
+    required bool clear, // lib/src/ui/templates/basecoat/combobox.html:10:10
+    required bool plain, // lib/src/ui/templates/basecoat/combobox.html:11:10
+    required String placeholder, // lib/src/ui/templates/basecoat/combobox.html:12:16
+    required String inputValue, // lib/src/ui/templates/basecoat/combobox.html:13:15
+    required List<({bool isOption, bool isGroup, bool isSeparator, String id, String value, String label, bool selected, Object content, Map<String, String> attrs, List<({String id, String value, String label, bool selected, Object content, Map<String, String> attrs})> options})> items, // lib/src/ui/templates/basecoat/combobox.html:14:10
+    Object? body, // lib/src/ui/templates/basecoat/combobox.html:15:9
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/combobox.html:16:14
+    required Map<String, String> inputAttrs, // lib/src/ui/templates/basecoat/combobox.html:17:15
+    required Map<String, String> groupAttrs, // lib/src/ui/templates/basecoat/combobox.html:18:15
+    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/combobox.html:19:17
+    required Map<String, String> listboxAttrs, // lib/src/ui/templates/basecoat/combobox.html:20:17
+    required Map<String, String> hiddenInputAttrs, // lib/src/ui/templates/basecoat/combobox.html:21:21
   }) =>
       Fragment._(($out) {
     final $attributeNames0 = <String, bool>{'id': false};
     $out.write('<div id="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:2:13
+    _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:23:13
     $out.write('"');
-    if (objectFormat) { // lib/src/ui/templates/basecoat/combobox.html:2:21
+    if (objectFormat) { // lib/src/ui/templates/basecoat/combobox.html:23:21
       _$addConditionalAttributeName($attributeNames0, 'data-format');
       $out.write(' data-format="object"');
     }
-    if (closeOnSelect) { // lib/src/ui/templates/basecoat/combobox.html:2:56
+    if (closeOnSelect) { // lib/src/ui/templates/basecoat/combobox.html:23:56
       _$addConditionalAttributeName($attributeNames0, 'data-close-on-select');
       $out.write(' data-close-on-select="true"');
     }
-    if (autoHighlight) { // lib/src/ui/templates/basecoat/combobox.html:2:99
+    if (autoHighlight) { // lib/src/ui/templates/basecoat/combobox.html:23:99
       _$addConditionalAttributeName($attributeNames0, 'data-auto-highlight');
       $out.write(' data-auto-highlight="true"');
     }
-    _$writeAttributes($out, mainAttrs, $attributeNames0); // lib/src/ui/templates/basecoat/combobox.html:2:143
-    $out.write('>\n  ');
-    if (multiple) { // lib/src/ui/templates/basecoat/combobox.html:3:15
-      _$write($out, input); // lib/src/ui/templates/basecoat/combobox.html:3:28
-    }
-    $out.write('\n');
-    if (clear) { // lib/src/ui/templates/basecoat/combobox.html:4:15
+    _$writeAttributes($out, mainAttrs, $attributeNames0); // lib/src/ui/templates/basecoat/combobox.html:23:143
+    $out.write('>\n');
+    if (!clear) { // lib/src/ui/templates/basecoat/combobox.html:24:19
       $out.write('    ');
-      final $attributeNames1 = <String, bool>{};
+      final $attributeNames1 = <String, bool>{'type': false, 'role': false, 'value': false, 'placeholder': false, 'autocomplete': false, 'autocorrect': false, 'spellcheck': false, 'aria-autocomplete': false, 'aria-expanded': false, 'aria-controls': false};
+      $out.write('<input type="text" role="combobox" value="');
+      _$write($out, inputValue); // lib/src/ui/templates/basecoat/combobox.html:25:50
+      $out.write('" placeholder="');
+      _$write($out, placeholder); // lib/src/ui/templates/basecoat/combobox.html:25:81
+      $out.write('" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:25:218
+      $out.write('-listbox"');
+      _$writeAttributes($out, inputAttrs, $attributeNames1); // lib/src/ui/templates/basecoat/combobox.html:25:236
+      $out.write('>\n    ');
+      if (plain) { // lib/src/ui/templates/basecoat/combobox.html:26:17
+        $out.write('<i data-lucide="chevron-down" class="combobox-trigger-icon" aria-hidden="true"></i>');
+      }
+      $out.write('\n');
+    }
+    if (clear) { // lib/src/ui/templates/basecoat/combobox.html:28:15
+      $out.write('    ');
+      final $attributeNames2 = <String, bool>{};
       $out.write('<div');
-      _$writeAttributes($out, groupAttrs, $attributeNames1); // lib/src/ui/templates/basecoat/combobox.html:5:13
+      _$writeAttributes($out, groupAttrs, $attributeNames2); // lib/src/ui/templates/basecoat/combobox.html:29:13
       $out.write('>\n      ');
-      _$write($out, input); // lib/src/ui/templates/basecoat/combobox.html:6:10
-      $out.write('\n      <span role="group" data-align="inline-end">\n        <button type="button" data-clear aria-label="Clear selection"><i data-lucide="x" class="size-4" aria-hidden="true"></i></button>\n        <button type="button" class="btn" data-variant="ghost" data-size="icon-xs" aria-label="Open suggestions" aria-haspopup="listbox" aria-expanded="false" aria-controls="');
-      _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:9:178
+      final $attributeNames3 = <String, bool>{'type': false, 'role': false, 'value': false, 'placeholder': false, 'autocomplete': false, 'autocorrect': false, 'spellcheck': false, 'aria-autocomplete': false, 'aria-expanded': false, 'aria-controls': false};
+      $out.write('<input type="text" role="combobox" value="');
+      _$write($out, inputValue); // lib/src/ui/templates/basecoat/combobox.html:30:52
+      $out.write('" placeholder="');
+      _$write($out, placeholder); // lib/src/ui/templates/basecoat/combobox.html:30:83
+      $out.write('" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:30:220
+      $out.write('-listbox"');
+      _$writeAttributes($out, inputAttrs, $attributeNames3); // lib/src/ui/templates/basecoat/combobox.html:30:238
+      $out.write('>\n      <span role="group" data-align="inline-end">\n        <button type="button" data-clear aria-label="Clear selection"><i data-lucide="x" class="size-4" aria-hidden="true"></i></button>\n        <button type="button" class="btn" data-variant="ghost" data-size="icon-xs" aria-label="Open suggestions" aria-haspopup="listbox" aria-expanded="false" aria-controls="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:33:178
       $out.write('-listbox"><i data-lucide="chevron-down" aria-hidden="true"></i></button>\n      </span>\n    </div>\n');
     }
     $out.write('  ');
-    if (plain) { // lib/src/ui/templates/basecoat/combobox.html:13:15
-      _$write($out, input); // lib/src/ui/templates/basecoat/combobox.html:13:25
-      $out.write('<i data-lucide="chevron-down" class="combobox-trigger-icon" aria-hidden="true"></i>');
-    }
-    $out.write('\n  ');
-    final $attributeNames2 = <String, bool>{'id': false, 'data-popover': false, 'aria-hidden': false};
+    final $attributeNames4 = <String, bool>{'id': false, 'data-popover': false, 'aria-hidden': false};
     $out.write('<div id="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:14:15
+    _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:37:15
     $out.write('-popover" data-popover aria-hidden="true"');
-    _$writeAttributes($out, popoverAttrs, $attributeNames2); // lib/src/ui/templates/basecoat/combobox.html:14:65
+    _$writeAttributes($out, popoverAttrs, $attributeNames4); // lib/src/ui/templates/basecoat/combobox.html:37:65
     $out.write('>\n    ');
-    final $attributeNames3 = <String, bool>{'role': false, 'id': false, 'aria-orientation': false};
+    final $attributeNames5 = <String, bool>{'role': false, 'id': false, 'aria-orientation': false};
     $out.write('<div role="listbox" id="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:15:32
+    _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:38:32
     $out.write('-listbox" aria-orientation="vertical"');
-    if (multiple) { // lib/src/ui/templates/basecoat/combobox.html:15:76
-      _$addConditionalAttributeName($attributeNames3, 'aria-multiselectable');
+    if (multiple) { // lib/src/ui/templates/basecoat/combobox.html:38:76
+      _$addConditionalAttributeName($attributeNames5, 'aria-multiselectable');
       $out.write(' aria-multiselectable="true"');
     }
-    _$writeAttributes($out, listboxAttrs, $attributeNames3); // lib/src/ui/templates/basecoat/combobox.html:15:116
-    $out.write('>');
-    _$write($out, items); // lib/src/ui/templates/basecoat/combobox.html:15:132
-    _$write($out, body); // lib/src/ui/templates/basecoat/combobox.html:15:143
-    $out.write('</div>\n  </div>\n  ');
-    final $attributeNames4 = <String, bool>{'type': false, 'value': false};
+    _$writeAttributes($out, listboxAttrs, $attributeNames5); // lib/src/ui/templates/basecoat/combobox.html:38:116
+    $out.write('>\n');
+    for (final item in (items)) { // lib/src/ui/templates/basecoat/combobox.html:39:18
+      $out.write('        ');
+      if (item.isOption) { // lib/src/ui/templates/basecoat/combobox.html:40:21
+        final $attributeNames6 = <String, bool>{'id': false, 'role': false, 'data-label': false, 'data-value': false};
+        $out.write('<div id="');
+        _$write($out, item.id); // lib/src/ui/templates/basecoat/combobox.html:40:48
+        $out.write('" role="option" data-label="');
+        _$write($out, item.label); // lib/src/ui/templates/basecoat/combobox.html:40:89
+        $out.write('" data-value="');
+        _$write($out, item.value); // lib/src/ui/templates/basecoat/combobox.html:40:119
+        $out.write('"');
+        if (item.selected) { // lib/src/ui/templates/basecoat/combobox.html:40:135
+          _$addConditionalAttributeName($attributeNames6, 'aria-selected');
+          $out.write(' aria-selected="true"');
+        }
+        _$writeAttributes($out, item.attrs, $attributeNames6); // lib/src/ui/templates/basecoat/combobox.html:40:173
+        $out.write('>');
+        _$write($out, item.content); // lib/src/ui/templates/basecoat/combobox.html:40:187
+        $out.write('</div>');
+      }
+      $out.write('\n        ');
+      if (item.isSeparator) { // lib/src/ui/templates/basecoat/combobox.html:41:21
+        $out.write('<hr role="separator">');
+      }
+      $out.write('\n');
+      if (item.isGroup) { // lib/src/ui/templates/basecoat/combobox.html:42:21
+        $out.write('          ');
+        final $attributeNames7 = <String, bool>{'role': false, 'aria-labelledby': false};
+        $out.write('<div role="group" aria-labelledby="');
+        _$write($out, item.id); // lib/src/ui/templates/basecoat/combobox.html:43:49
+        $out.write('"');
+        _$writeAttributes($out, item.attrs, $attributeNames7); // lib/src/ui/templates/basecoat/combobox.html:43:64
+        $out.write('>\n            <div role="heading" id="');
+        _$write($out, item.id); // lib/src/ui/templates/basecoat/combobox.html:44:40
+        $out.write('">');
+        _$write($out, item.label); // lib/src/ui/templates/basecoat/combobox.html:44:55
+        $out.write('</div>\n');
+        for (final option in (item.options)) { // lib/src/ui/templates/basecoat/combobox.html:45:24
+          $out.write('              ');
+          final $attributeNames8 = <String, bool>{'id': false, 'role': false, 'data-label': false, 'data-value': false};
+          $out.write('<div id="');
+          _$write($out, option.id); // lib/src/ui/templates/basecoat/combobox.html:46:27
+          $out.write('" role="option" data-label="');
+          _$write($out, option.label); // lib/src/ui/templates/basecoat/combobox.html:46:70
+          $out.write('" data-value="');
+          _$write($out, option.value); // lib/src/ui/templates/basecoat/combobox.html:46:102
+          $out.write('"');
+          if (option.selected) { // lib/src/ui/templates/basecoat/combobox.html:46:120
+            _$addConditionalAttributeName($attributeNames8, 'aria-selected');
+            $out.write(' aria-selected="true"');
+          }
+          _$writeAttributes($out, option.attrs, $attributeNames8); // lib/src/ui/templates/basecoat/combobox.html:46:160
+          $out.write('>');
+          _$write($out, option.content); // lib/src/ui/templates/basecoat/combobox.html:46:176
+          $out.write('</div>\n');
+        }
+        $out.write('          </div>\n');
+      }
+    }
+    $out.write('      ');
+    _$write($out, body); // lib/src/ui/templates/basecoat/combobox.html:51:10
+    $out.write('\n    </div>\n  </div>\n  ');
+    final $attributeNames9 = <String, bool>{'type': false, 'value': false};
     $out.write('<input type="hidden"');
-    if (hasName) { // lib/src/ui/templates/basecoat/combobox.html:17:25
-      _$addConditionalAttributeName($attributeNames4, 'name');
+    if (hasName) { // lib/src/ui/templates/basecoat/combobox.html:54:25
+      _$addConditionalAttributeName($attributeNames9, 'name');
       $out.write(' name="');
-      _$write($out, name); // lib/src/ui/templates/basecoat/combobox.html:17:42
+      _$write($out, name); // lib/src/ui/templates/basecoat/combobox.html:54:42
       $out.write('"');
     }
     $out.write(' value="');
-    _$write($out, value); // lib/src/ui/templates/basecoat/combobox.html:17:61
+    _$write($out, value); // lib/src/ui/templates/basecoat/combobox.html:54:61
     $out.write('"');
-    _$writeAttributes($out, hiddenInputAttrs, $attributeNames4); // lib/src/ui/templates/basecoat/combobox.html:17:74
+    _$writeAttributes($out, hiddenInputAttrs, $attributeNames9); // lib/src/ui/templates/basecoat/combobox.html:54:74
     $out.write('>\n</div>\n');
-  });
-
-  Fragment commandContent({
-    required String id, // lib/src/ui/templates/basecoat/command-content.html:1:14
-    required String placeholder, // lib/src/ui/templates/basecoat/command-content.html:1:35
-    required String emptyText, // lib/src/ui/templates/basecoat/command-content.html:1:54
-    required Map<String, String> inputAttrs, // lib/src/ui/templates/basecoat/command-content.html:1:74
-    required Map<String, String> menuAttrs, // lib/src/ui/templates/basecoat/command-content.html:1:106
-    required List<Fragment> items, // lib/src/ui/templates/basecoat/command-content.html:1:134
-    Fragment? body, // lib/src/ui/templates/basecoat/command-content.html:1:156
-  }) =>
-      Fragment._(($out) {
-    $out.write('<header>\n  <i data-lucide="search" aria-hidden="true"></i>\n  ');
-    final $attributeNames0 = <String, bool>{'type': false, 'id': false, 'placeholder': false, 'autocomplete': false, 'autocorrect': false, 'spellcheck': false, 'aria-autocomplete': false, 'role': false, 'aria-expanded': false, 'aria-controls': false};
-    $out.write('<input type="text" id="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/command-content.html:4:29
-    $out.write('-input" placeholder="');
-    _$write($out, placeholder); // lib/src/ui/templates/basecoat/command-content.html:4:58
-    $out.write('" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/command-content.html:4:210
-    $out.write('-menu"');
-    _$writeAttributes($out, inputAttrs, $attributeNames0); // lib/src/ui/templates/basecoat/command-content.html:4:225
-    $out.write('>\n</header>\n');
-    final $attributeNames1 = <String, bool>{'role': false, 'id': false, 'aria-orientation': false, 'data-empty': false};
-    $out.write('<div role="menu" id="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/command-content.html:6:25
-    $out.write('-menu" aria-orientation="vertical" data-empty="');
-    _$write($out, emptyText); // lib/src/ui/templates/basecoat/command-content.html:6:80
-    $out.write('"');
-    _$writeAttributes($out, menuAttrs, $attributeNames1); // lib/src/ui/templates/basecoat/command-content.html:6:97
-    $out.write('>');
-    _$write($out, items); // lib/src/ui/templates/basecoat/command-content.html:6:110
-    _$write($out, body); // lib/src/ui/templates/basecoat/command-content.html:6:121
-    $out.write('</div>\n');
   });
 
   Fragment commandDialog({
     required String id, // lib/src/ui/templates/basecoat/command-dialog.html:1:14
-    required Fragment content, // lib/src/ui/templates/basecoat/command-dialog.html:1:31
-    required bool open, // lib/src/ui/templates/basecoat/command-dialog.html:1:47
-    required Map<String, String> dialogAttrs, // lib/src/ui/templates/basecoat/command-dialog.html:1:66
+    required bool open, // lib/src/ui/templates/basecoat/command-dialog.html:1:28
+    required String placeholder, // lib/src/ui/templates/basecoat/command-dialog.html:1:47
+    required String emptyText, // lib/src/ui/templates/basecoat/command-dialog.html:1:66
+    required List<({bool isItem, bool isGroup, bool isSeparator, bool isLink, String id, String href, String role, String label, Object? icon, Object content, Map<String, String> attrs, List<({bool isLink, String id, String href, String role, Object? icon, Object content, Map<String, String> attrs})> items})> items, // lib/src/ui/templates/basecoat/command-dialog.html:1:81
+    Object? body, // lib/src/ui/templates/basecoat/command-dialog.html:1:386
+    required Map<String, String> dialogAttrs, // lib/src/ui/templates/basecoat/command-dialog.html:1:408
+    required Map<String, String> commandAttrs, // lib/src/ui/templates/basecoat/command-dialog.html:1:443
+    required Map<String, String> inputAttrs, // lib/src/ui/templates/basecoat/command-dialog.html:1:476
+    required Map<String, String> menuAttrs, // lib/src/ui/templates/basecoat/command-dialog.html:1:508
   }) =>
       Fragment._(($out) {
     final $attributeNames0 = <String, bool>{'id': false, 'onclick': false};
@@ -245,48 +275,166 @@ final class _Html$basecoat {
     }
     $out.write(' onclick="if (event.target === this) this.close()"');
     _$writeAttributes($out, dialogAttrs, $attributeNames0); // lib/src/ui/templates/basecoat/command-dialog.html:2:87
-    $out.write('>\n  <div class="command">');
-    _$write($out, content); // lib/src/ui/templates/basecoat/command-dialog.html:3:27
-    $out.write('</div>\n</dialog>\n');
+    $out.write('>\n  ');
+    _$write($out, Html.basecoat.command( // lib/src/ui/templates/basecoat/command-dialog.html:3:3
+      id: id, // lib/src/ui/templates/basecoat/command-dialog.html:3:46
+      placeholder: placeholder, // lib/src/ui/templates/basecoat/command-dialog.html:3:69
+      emptyText: emptyText, // lib/src/ui/templates/basecoat/command-dialog.html:3:99
+      items: items, // lib/src/ui/templates/basecoat/command-dialog.html:3:123
+      body: body, // lib/src/ui/templates/basecoat/command-dialog.html:3:142
+      mainAttrs: commandAttrs, // lib/src/ui/templates/basecoat/command-dialog.html:3:165
+      inputAttrs: inputAttrs, // lib/src/ui/templates/basecoat/command-dialog.html:3:197
+      menuAttrs: menuAttrs, // lib/src/ui/templates/basecoat/command-dialog.html:3:226
+    )); // lib/src/ui/templates/basecoat/command-dialog.html:3:3
+    $out.write('\n</dialog>\n');
   });
 
   Fragment command({
     required String id, // lib/src/ui/templates/basecoat/command.html:1:14
-    required Fragment content, // lib/src/ui/templates/basecoat/command.html:1:31
-    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/command.html:1:52
+    required String placeholder, // lib/src/ui/templates/basecoat/command.html:1:35
+    required String emptyText, // lib/src/ui/templates/basecoat/command.html:1:54
+    required List<({bool isItem, bool isGroup, bool isSeparator, bool isLink, String id, String href, String role, String label, Object? icon, Object content, Map<String, String> attrs, List<({bool isLink, String id, String href, String role, Object? icon, Object content, Map<String, String> attrs})> items})> items, // lib/src/ui/templates/basecoat/command.html:1:69
+    Object? body, // lib/src/ui/templates/basecoat/command.html:1:374
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/command.html:1:394
+    required Map<String, String> inputAttrs, // lib/src/ui/templates/basecoat/command.html:1:427
+    required Map<String, String> menuAttrs, // lib/src/ui/templates/basecoat/command.html:1:459
   }) =>
       Fragment._(($out) {
-    final $attributeNames0 = <String, bool>{'id': false};
-    $out.write('<div id="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/command.html:2:13
+    final $attributeNames0 = <String, bool>{};
+    $out.write('<div');
+    _$writeAttributes($out, mainAttrs, $attributeNames0); // lib/src/ui/templates/basecoat/command.html:2:9
+    $out.write('>\n  <header>\n    <i data-lucide="search" aria-hidden="true"></i>\n    ');
+    final $attributeNames1 = <String, bool>{'type': false, 'id': false, 'placeholder': false, 'autocomplete': false, 'autocorrect': false, 'spellcheck': false, 'aria-autocomplete': false, 'role': false, 'aria-expanded': false, 'aria-controls': false};
+    $out.write('<input type="text" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/command.html:5:31
+    $out.write('-input" placeholder="');
+    _$write($out, placeholder); // lib/src/ui/templates/basecoat/command.html:5:60
+    $out.write('" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/command.html:5:212
+    $out.write('-menu"');
+    _$writeAttributes($out, inputAttrs, $attributeNames1); // lib/src/ui/templates/basecoat/command.html:5:227
+    $out.write('>\n  </header>\n  ');
+    final $attributeNames2 = <String, bool>{'role': false, 'id': false, 'aria-orientation': false, 'data-empty': false};
+    $out.write('<div role="menu" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/command.html:7:27
+    $out.write('-menu" aria-orientation="vertical" data-empty="');
+    _$write($out, emptyText); // lib/src/ui/templates/basecoat/command.html:7:82
     $out.write('"');
-    _$writeAttributes($out, mainAttrs, $attributeNames0); // lib/src/ui/templates/basecoat/command.html:2:23
-    $out.write('>');
-    _$write($out, content); // lib/src/ui/templates/basecoat/command.html:2:36
-    $out.write('</div>\n');
+    _$writeAttributes($out, menuAttrs, $attributeNames2); // lib/src/ui/templates/basecoat/command.html:7:99
+    $out.write('>\n');
+    for (final item in (items)) { // lib/src/ui/templates/basecoat/command.html:8:16
+      if (item.isItem) { // lib/src/ui/templates/basecoat/command.html:9:19
+        $out.write('        ');
+        if (item.isLink) { // lib/src/ui/templates/basecoat/command.html:10:21
+          final $attributeNames3 = <String, bool>{'id': false, 'href': false, 'role': false};
+          $out.write('<a id="');
+          _$write($out, item.id); // lib/src/ui/templates/basecoat/command.html:10:44
+          $out.write('" href="');
+          _$write($out, item.href); // lib/src/ui/templates/basecoat/command.html:10:65
+          $out.write('" role="');
+          _$write($out, item.role); // lib/src/ui/templates/basecoat/command.html:10:88
+          $out.write('"');
+          _$writeAttributes($out, item.attrs, $attributeNames3); // lib/src/ui/templates/basecoat/command.html:10:105
+          $out.write('>');
+          _$write($out, item.icon); // lib/src/ui/templates/basecoat/command.html:10:119
+          _$write($out, item.content); // lib/src/ui/templates/basecoat/command.html:10:134
+          $out.write('</a>');
+        }
+        $out.write('\n        ');
+        if (!item.isLink) { // lib/src/ui/templates/basecoat/command.html:11:25
+          final $attributeNames4 = <String, bool>{'id': false, 'role': false};
+          $out.write('<div id="');
+          _$write($out, item.id); // lib/src/ui/templates/basecoat/command.html:11:50
+          $out.write('" role="');
+          _$write($out, item.role); // lib/src/ui/templates/basecoat/command.html:11:71
+          $out.write('"');
+          _$writeAttributes($out, item.attrs, $attributeNames4); // lib/src/ui/templates/basecoat/command.html:11:88
+          $out.write('>');
+          _$write($out, item.icon); // lib/src/ui/templates/basecoat/command.html:11:102
+          _$write($out, item.content); // lib/src/ui/templates/basecoat/command.html:11:117
+          $out.write('</div>');
+        }
+        $out.write('\n');
+      }
+      $out.write('      ');
+      if (item.isSeparator) { // lib/src/ui/templates/basecoat/command.html:13:19
+        $out.write('<hr role="separator">');
+      }
+      $out.write('\n');
+      if (item.isGroup) { // lib/src/ui/templates/basecoat/command.html:14:19
+        $out.write('        ');
+        final $attributeNames5 = <String, bool>{'role': false, 'aria-labelledby': false};
+        $out.write('<div role="group" aria-labelledby="');
+        _$write($out, item.id); // lib/src/ui/templates/basecoat/command.html:15:47
+        $out.write('"');
+        _$writeAttributes($out, item.attrs, $attributeNames5); // lib/src/ui/templates/basecoat/command.html:15:62
+        $out.write('>\n          <span role="heading" id="');
+        _$write($out, item.id); // lib/src/ui/templates/basecoat/command.html:16:39
+        $out.write('">');
+        _$write($out, item.label); // lib/src/ui/templates/basecoat/command.html:16:54
+        $out.write('</span>\n');
+        for (final child in (item.items)) { // lib/src/ui/templates/basecoat/command.html:17:22
+          $out.write('            ');
+          if (child.isLink) { // lib/src/ui/templates/basecoat/command.html:18:25
+            final $attributeNames6 = <String, bool>{'id': false, 'href': false, 'role': false};
+            $out.write('<a id="');
+            _$write($out, child.id); // lib/src/ui/templates/basecoat/command.html:18:49
+            $out.write('" href="');
+            _$write($out, child.href); // lib/src/ui/templates/basecoat/command.html:18:71
+            $out.write('" role="');
+            _$write($out, child.role); // lib/src/ui/templates/basecoat/command.html:18:95
+            $out.write('"');
+            _$writeAttributes($out, child.attrs, $attributeNames6); // lib/src/ui/templates/basecoat/command.html:18:113
+            $out.write('>');
+            _$write($out, child.icon); // lib/src/ui/templates/basecoat/command.html:18:128
+            _$write($out, child.content); // lib/src/ui/templates/basecoat/command.html:18:144
+            $out.write('</a>');
+          }
+          $out.write('\n            ');
+          if (!child.isLink) { // lib/src/ui/templates/basecoat/command.html:19:29
+            final $attributeNames7 = <String, bool>{'id': false, 'role': false};
+            $out.write('<div id="');
+            _$write($out, child.id); // lib/src/ui/templates/basecoat/command.html:19:55
+            $out.write('" role="');
+            _$write($out, child.role); // lib/src/ui/templates/basecoat/command.html:19:77
+            $out.write('"');
+            _$writeAttributes($out, child.attrs, $attributeNames7); // lib/src/ui/templates/basecoat/command.html:19:95
+            $out.write('>');
+            _$write($out, child.icon); // lib/src/ui/templates/basecoat/command.html:19:110
+            _$write($out, child.content); // lib/src/ui/templates/basecoat/command.html:19:126
+            $out.write('</div>');
+          }
+          $out.write('\n');
+        }
+        $out.write('        </div>\n');
+      }
+    }
+    $out.write('    ');
+    _$write($out, body); // lib/src/ui/templates/basecoat/command.html:24:8
+    $out.write('\n  </div>\n</div>\n');
   });
 
   Fragment dialog({
     required String id, // lib/src/ui/templates/basecoat/dialog.html:1:14
-    Fragment? trigger, // lib/src/ui/templates/basecoat/dialog.html:1:31
-    String? title, // lib/src/ui/templates/basecoat/dialog.html:1:49
-    String? description, // lib/src/ui/templates/basecoat/dialog.html:1:71
-    Fragment? body, // lib/src/ui/templates/basecoat/dialog.html:1:86
-    Fragment? footer, // lib/src/ui/templates/basecoat/dialog.html:1:105
-    required bool hasTrigger, // lib/src/ui/templates/basecoat/dialog.html:1:128
-    required bool hasTitle, // lib/src/ui/templates/basecoat/dialog.html:1:144
-    required bool hasDescription, // lib/src/ui/templates/basecoat/dialog.html:1:166
-    required bool hasHeader, // lib/src/ui/templates/basecoat/dialog.html:1:183
-    required bool hasBody, // lib/src/ui/templates/basecoat/dialog.html:1:198
-    required bool hasFooter, // lib/src/ui/templates/basecoat/dialog.html:1:215
-    required bool open, // lib/src/ui/templates/basecoat/dialog.html:1:227
-    required bool closeButton, // lib/src/ui/templates/basecoat/dialog.html:1:246
-    required bool closeOnOverlayClick, // lib/src/ui/templates/basecoat/dialog.html:1:273
-    required Map<String, String> dialogAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:292
-    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:327
-    required Map<String, String> headerAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:361
-    required Map<String, String> bodyAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:393
-    required Map<String, String> footerAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:427
+    Object? trigger, // lib/src/ui/templates/basecoat/dialog.html:1:31
+    String? title, // lib/src/ui/templates/basecoat/dialog.html:1:47
+    String? description, // lib/src/ui/templates/basecoat/dialog.html:1:69
+    Object? body, // lib/src/ui/templates/basecoat/dialog.html:1:84
+    Object? footer, // lib/src/ui/templates/basecoat/dialog.html:1:101
+    required bool hasTrigger, // lib/src/ui/templates/basecoat/dialog.html:1:122
+    required bool hasTitle, // lib/src/ui/templates/basecoat/dialog.html:1:138
+    required bool hasDescription, // lib/src/ui/templates/basecoat/dialog.html:1:160
+    required bool hasHeader, // lib/src/ui/templates/basecoat/dialog.html:1:177
+    required bool hasBody, // lib/src/ui/templates/basecoat/dialog.html:1:192
+    required bool hasFooter, // lib/src/ui/templates/basecoat/dialog.html:1:209
+    required bool open, // lib/src/ui/templates/basecoat/dialog.html:1:221
+    required bool closeButton, // lib/src/ui/templates/basecoat/dialog.html:1:240
+    required bool closeOnOverlayClick, // lib/src/ui/templates/basecoat/dialog.html:1:267
+    required Map<String, String> dialogAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:286
+    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:321
+    required Map<String, String> headerAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:355
+    required Map<String, String> bodyAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:387
+    required Map<String, String> footerAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:421
   }) =>
       Fragment._(($out) {
     if (hasTrigger) { // lib/src/ui/templates/basecoat/dialog.html:2:13
@@ -376,13 +524,13 @@ final class _Html$basecoat {
 
   Fragment dropdownMenu({
     required String id, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:14
-    required Fragment trigger, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:31
-    required List<Fragment> items, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:48
-    Fragment? body, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:70
-    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:92
-    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:127
-    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:162
-    required Map<String, String> menuAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:194
+    required Object trigger, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:31
+    required List<({bool isItem, bool isGroup, bool isSeparator, bool isLink, String id, String href, String role, String label, Object? icon, Object content, Map<String, String> attrs, List<({bool isLink, String id, String href, String role, Object? icon, Object content, Map<String, String> attrs})> items})> items, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:46
+    Object? body, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:351
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:371
+    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:406
+    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:441
+    required Map<String, String> menuAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:473
   }) =>
       Fragment._(($out) {
     final $attributeNames0 = <String, bool>{'id': false};
@@ -414,136 +562,106 @@ final class _Html$basecoat {
     _$write($out, id); // lib/src/ui/templates/basecoat/dropdown-menu.html:5:61
     $out.write('-trigger"');
     _$writeAttributes($out, menuAttrs, $attributeNames3); // lib/src/ui/templates/basecoat/dropdown-menu.html:5:79
-    $out.write('>');
-    _$write($out, items); // lib/src/ui/templates/basecoat/dropdown-menu.html:5:92
-    _$write($out, body); // lib/src/ui/templates/basecoat/dropdown-menu.html:5:103
-    $out.write('</div>\n  </div>\n</div>\n');
-  });
-
-  Fragment group({
-    required String id, // lib/src/ui/templates/basecoat/group.html:1:14
-    required String label, // lib/src/ui/templates/basecoat/group.html:1:29
-    required bool command, // lib/src/ui/templates/basecoat/group.html:1:46
-    required List<Fragment> children, // lib/src/ui/templates/basecoat/group.html:1:62
-    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/group.html:1:85
-  }) =>
-      Fragment._(($out) {
-    final $attributeNames0 = <String, bool>{'role': false, 'aria-labelledby': false};
-    $out.write('<div role="group" aria-labelledby="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/group.html:2:39
-    $out.write('"');
-    _$writeAttributes($out, attrs, $attributeNames0); // lib/src/ui/templates/basecoat/group.html:2:49
-    $out.write('>\n  ');
-    if (command) { // lib/src/ui/templates/basecoat/group.html:3:15
-      $out.write('<span role="heading" id="');
-      _$write($out, id); // lib/src/ui/templates/basecoat/group.html:3:52
-      $out.write('">');
-      _$write($out, label); // lib/src/ui/templates/basecoat/group.html:3:62
-      $out.write('</span>');
+    $out.write('>\n');
+    for (final item in (items)) { // lib/src/ui/templates/basecoat/dropdown-menu.html:6:18
+      if (item.isItem) { // lib/src/ui/templates/basecoat/dropdown-menu.html:7:21
+        $out.write('          ');
+        if (item.isLink) { // lib/src/ui/templates/basecoat/dropdown-menu.html:8:23
+          final $attributeNames4 = <String, bool>{'id': false, 'href': false, 'role': false};
+          $out.write('<a id="');
+          _$write($out, item.id); // lib/src/ui/templates/basecoat/dropdown-menu.html:8:46
+          $out.write('" href="');
+          _$write($out, item.href); // lib/src/ui/templates/basecoat/dropdown-menu.html:8:67
+          $out.write('" role="');
+          _$write($out, item.role); // lib/src/ui/templates/basecoat/dropdown-menu.html:8:90
+          $out.write('"');
+          _$writeAttributes($out, item.attrs, $attributeNames4); // lib/src/ui/templates/basecoat/dropdown-menu.html:8:107
+          $out.write('>');
+          _$write($out, item.icon); // lib/src/ui/templates/basecoat/dropdown-menu.html:8:121
+          _$write($out, item.content); // lib/src/ui/templates/basecoat/dropdown-menu.html:8:136
+          $out.write('</a>');
+        }
+        $out.write('\n          ');
+        if (!item.isLink) { // lib/src/ui/templates/basecoat/dropdown-menu.html:9:27
+          final $attributeNames5 = <String, bool>{'id': false, 'role': false};
+          $out.write('<div id="');
+          _$write($out, item.id); // lib/src/ui/templates/basecoat/dropdown-menu.html:9:52
+          $out.write('" role="');
+          _$write($out, item.role); // lib/src/ui/templates/basecoat/dropdown-menu.html:9:73
+          $out.write('"');
+          _$writeAttributes($out, item.attrs, $attributeNames5); // lib/src/ui/templates/basecoat/dropdown-menu.html:9:90
+          $out.write('>');
+          _$write($out, item.icon); // lib/src/ui/templates/basecoat/dropdown-menu.html:9:104
+          _$write($out, item.content); // lib/src/ui/templates/basecoat/dropdown-menu.html:9:119
+          $out.write('</div>');
+        }
+        $out.write('\n');
+      }
+      $out.write('        ');
+      if (item.isSeparator) { // lib/src/ui/templates/basecoat/dropdown-menu.html:11:21
+        $out.write('<hr role="separator">');
+      }
+      $out.write('\n');
+      if (item.isGroup) { // lib/src/ui/templates/basecoat/dropdown-menu.html:12:21
+        $out.write('          ');
+        final $attributeNames6 = <String, bool>{'role': false, 'aria-labelledby': false};
+        $out.write('<div role="group" aria-labelledby="');
+        _$write($out, item.id); // lib/src/ui/templates/basecoat/dropdown-menu.html:13:49
+        $out.write('"');
+        _$writeAttributes($out, item.attrs, $attributeNames6); // lib/src/ui/templates/basecoat/dropdown-menu.html:13:64
+        $out.write('>\n            <div role="heading" id="');
+        _$write($out, item.id); // lib/src/ui/templates/basecoat/dropdown-menu.html:14:40
+        $out.write('">');
+        _$write($out, item.label); // lib/src/ui/templates/basecoat/dropdown-menu.html:14:55
+        $out.write('</div>\n');
+        for (final child in (item.items)) { // lib/src/ui/templates/basecoat/dropdown-menu.html:15:24
+          $out.write('              ');
+          if (child.isLink) { // lib/src/ui/templates/basecoat/dropdown-menu.html:16:27
+            final $attributeNames7 = <String, bool>{'id': false, 'href': false, 'role': false};
+            $out.write('<a id="');
+            _$write($out, child.id); // lib/src/ui/templates/basecoat/dropdown-menu.html:16:51
+            $out.write('" href="');
+            _$write($out, child.href); // lib/src/ui/templates/basecoat/dropdown-menu.html:16:73
+            $out.write('" role="');
+            _$write($out, child.role); // lib/src/ui/templates/basecoat/dropdown-menu.html:16:97
+            $out.write('"');
+            _$writeAttributes($out, child.attrs, $attributeNames7); // lib/src/ui/templates/basecoat/dropdown-menu.html:16:115
+            $out.write('>');
+            _$write($out, child.icon); // lib/src/ui/templates/basecoat/dropdown-menu.html:16:130
+            _$write($out, child.content); // lib/src/ui/templates/basecoat/dropdown-menu.html:16:146
+            $out.write('</a>');
+          }
+          $out.write('\n              ');
+          if (!child.isLink) { // lib/src/ui/templates/basecoat/dropdown-menu.html:17:31
+            final $attributeNames8 = <String, bool>{'id': false, 'role': false};
+            $out.write('<div id="');
+            _$write($out, child.id); // lib/src/ui/templates/basecoat/dropdown-menu.html:17:57
+            $out.write('" role="');
+            _$write($out, child.role); // lib/src/ui/templates/basecoat/dropdown-menu.html:17:79
+            $out.write('"');
+            _$writeAttributes($out, child.attrs, $attributeNames8); // lib/src/ui/templates/basecoat/dropdown-menu.html:17:97
+            $out.write('>');
+            _$write($out, child.icon); // lib/src/ui/templates/basecoat/dropdown-menu.html:17:112
+            _$write($out, child.content); // lib/src/ui/templates/basecoat/dropdown-menu.html:17:128
+            $out.write('</div>');
+          }
+          $out.write('\n');
+        }
+        $out.write('          </div>\n');
+      }
     }
-    $out.write('\n  ');
-    if (!command) { // lib/src/ui/templates/basecoat/group.html:4:19
-      $out.write('<div role="heading" id="');
-      _$write($out, id); // lib/src/ui/templates/basecoat/group.html:4:55
-      $out.write('">');
-      _$write($out, label); // lib/src/ui/templates/basecoat/group.html:4:65
-      $out.write('</div>');
-    }
-    $out.write('\n  ');
-    _$write($out, children); // lib/src/ui/templates/basecoat/group.html:5:6
-    $out.write('\n</div>\n');
-  });
-
-  Fragment icon({
-    required String name, // lib/src/ui/templates/basecoat/icon.html:1:16
-  }) =>
-      Fragment._(($out) {
-    $out.write('<i data-lucide="');
-    _$write($out, name); // lib/src/ui/templates/basecoat/icon.html:2:20
-    $out.write('" aria-hidden="true"></i>\n');
-  });
-
-  Fragment menuItem({
-    required String id, // lib/src/ui/templates/basecoat/menu-item.html:1:14
-    String? href, // lib/src/ui/templates/basecoat/menu-item.html:1:28
-    required bool link, // lib/src/ui/templates/basecoat/menu-item.html:1:43
-    required String role, // lib/src/ui/templates/basecoat/menu-item.html:1:55
-    Fragment? icon, // lib/src/ui/templates/basecoat/menu-item.html:1:69
-    required Fragment content, // lib/src/ui/templates/basecoat/menu-item.html:1:89
-    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/menu-item.html:1:106
-  }) =>
-      Fragment._(($out) {
-    if (link) { // lib/src/ui/templates/basecoat/menu-item.html:2:13
-      final $attributeNames0 = <String, bool>{'id': false, 'href': false, 'role': false};
-      $out.write('<a id="');
-      _$write($out, id); // lib/src/ui/templates/basecoat/menu-item.html:2:29
-      $out.write('" href="');
-      _$write($out, href); // lib/src/ui/templates/basecoat/menu-item.html:2:45
-      $out.write('" role="');
-      _$write($out, role); // lib/src/ui/templates/basecoat/menu-item.html:2:63
-      $out.write('"');
-      _$writeAttributes($out, attrs, $attributeNames0); // lib/src/ui/templates/basecoat/menu-item.html:2:75
-      $out.write('>');
-      _$write($out, icon); // lib/src/ui/templates/basecoat/menu-item.html:2:84
-      _$write($out, content); // lib/src/ui/templates/basecoat/menu-item.html:2:94
-      $out.write('</a>');
-    }
-    $out.write('\n');
-    if (!link) { // lib/src/ui/templates/basecoat/menu-item.html:3:17
-      final $attributeNames1 = <String, bool>{'id': false, 'role': false};
-      $out.write('<div id="');
-      _$write($out, id); // lib/src/ui/templates/basecoat/menu-item.html:3:35
-      $out.write('" role="');
-      _$write($out, role); // lib/src/ui/templates/basecoat/menu-item.html:3:51
-      $out.write('"');
-      _$writeAttributes($out, attrs, $attributeNames1); // lib/src/ui/templates/basecoat/menu-item.html:3:63
-      $out.write('>');
-      _$write($out, icon); // lib/src/ui/templates/basecoat/menu-item.html:3:72
-      _$write($out, content); // lib/src/ui/templates/basecoat/menu-item.html:3:82
-      $out.write('</div>');
-    }
-    $out.write('\n');
-  });
-
-  Fragment option({
-    required String id, // lib/src/ui/templates/basecoat/option.html:1:14
-    String? value, // lib/src/ui/templates/basecoat/option.html:1:29
-    required bool hasValue, // lib/src/ui/templates/basecoat/option.html:1:48
-    required String label, // lib/src/ui/templates/basecoat/option.html:1:61
-    required bool selected, // lib/src/ui/templates/basecoat/option.html:1:79
-    required Fragment content, // lib/src/ui/templates/basecoat/option.html:1:94
-    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/option.html:1:111
-  }) =>
-      Fragment._(($out) {
-    final $attributeNames0 = <String, bool>{'id': false, 'role': false, 'data-label': false};
-    $out.write('<div id="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/option.html:2:13
-    $out.write('" role="option" data-label="');
-    _$write($out, label); // lib/src/ui/templates/basecoat/option.html:2:49
-    $out.write('"');
-    if (hasValue) { // lib/src/ui/templates/basecoat/option.html:2:60
-      _$addConditionalAttributeName($attributeNames0, 'data-value');
-      $out.write(' data-value="');
-      _$write($out, value); // lib/src/ui/templates/basecoat/option.html:2:84
-      $out.write('"');
-    }
-    if (selected) { // lib/src/ui/templates/basecoat/option.html:2:95
-      _$addConditionalAttributeName($attributeNames0, 'aria-selected');
-      $out.write(' aria-selected="true"');
-    }
-    _$writeAttributes($out, attrs, $attributeNames0); // lib/src/ui/templates/basecoat/option.html:2:128
-    $out.write('>');
-    _$write($out, content); // lib/src/ui/templates/basecoat/option.html:2:137
-    $out.write('</div>\n');
+    $out.write('      ');
+    _$write($out, body); // lib/src/ui/templates/basecoat/dropdown-menu.html:22:10
+    $out.write('\n    </div>\n  </div>\n</div>\n');
   });
 
   Fragment popover({
     required String id, // lib/src/ui/templates/basecoat/popover.html:1:14
-    required Fragment trigger, // lib/src/ui/templates/basecoat/popover.html:1:31
-    Fragment? body, // lib/src/ui/templates/basecoat/popover.html:1:47
-    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/popover.html:1:69
-    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/popover.html:1:104
-    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/popover.html:1:139
+    required Object trigger, // lib/src/ui/templates/basecoat/popover.html:1:31
+    Object? body, // lib/src/ui/templates/basecoat/popover.html:1:45
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/popover.html:1:65
+    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/popover.html:1:100
+    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/popover.html:1:135
   }) =>
       Fragment._(($out) {
     final $attributeNames0 = <String, bool>{'id': false};
@@ -582,13 +700,13 @@ final class _Html$basecoat {
     String? placeholder, // lib/src/ui/templates/basecoat/select.html:1:115
     required bool hasPlaceholder, // lib/src/ui/templates/basecoat/select.html:1:140
     required bool closeOnSelect, // lib/src/ui/templates/basecoat/select.html:1:161
-    required List<Fragment> items, // lib/src/ui/templates/basecoat/select.html:1:174
-    Fragment? body, // lib/src/ui/templates/basecoat/select.html:1:196
-    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/select.html:1:218
-    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/select.html:1:253
-    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/select.html:1:288
-    required Map<String, String> listboxAttrs, // lib/src/ui/templates/basecoat/select.html:1:323
-    required Map<String, String> inputAttrs, // lib/src/ui/templates/basecoat/select.html:1:356
+    required List<({bool isOption, bool isGroup, bool isSeparator, String id, String value, String label, bool selected, Object content, Map<String, String> attrs, List<({String id, String value, String label, bool selected, Object content, Map<String, String> attrs})> options})> items, // lib/src/ui/templates/basecoat/select.html:1:174
+    Object? body, // lib/src/ui/templates/basecoat/select.html:1:449
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/select.html:1:469
+    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/select.html:1:504
+    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/select.html:1:539
+    required Map<String, String> listboxAttrs, // lib/src/ui/templates/basecoat/select.html:1:574
+    required Map<String, String> inputAttrs, // lib/src/ui/templates/basecoat/select.html:1:607
   }) =>
       Fragment._(($out) {
     final $attributeNames0 = <String, bool>{'id': false};
@@ -638,110 +756,77 @@ final class _Html$basecoat {
       $out.write(' aria-multiselectable="true"');
     }
     _$writeAttributes($out, listboxAttrs, $attributeNames3); // lib/src/ui/templates/basecoat/select.html:8:151
-    $out.write('>');
-    _$write($out, items); // lib/src/ui/templates/basecoat/select.html:8:167
-    _$write($out, body); // lib/src/ui/templates/basecoat/select.html:8:178
-    $out.write('</div>\n  </div>\n  ');
-    final $attributeNames4 = <String, bool>{'type': false, 'name': false, 'value': false};
+    $out.write('>\n');
+    for (final item in (items)) { // lib/src/ui/templates/basecoat/select.html:9:18
+      $out.write('        ');
+      if (item.isOption) { // lib/src/ui/templates/basecoat/select.html:10:21
+        final $attributeNames4 = <String, bool>{'id': false, 'role': false, 'data-label': false, 'data-value': false};
+        $out.write('<div id="');
+        _$write($out, item.id); // lib/src/ui/templates/basecoat/select.html:10:48
+        $out.write('" role="option" data-label="');
+        _$write($out, item.label); // lib/src/ui/templates/basecoat/select.html:10:89
+        $out.write('" data-value="');
+        _$write($out, item.value); // lib/src/ui/templates/basecoat/select.html:10:119
+        $out.write('"');
+        if (item.selected) { // lib/src/ui/templates/basecoat/select.html:10:135
+          _$addConditionalAttributeName($attributeNames4, 'aria-selected');
+          $out.write(' aria-selected="true"');
+        }
+        _$writeAttributes($out, item.attrs, $attributeNames4); // lib/src/ui/templates/basecoat/select.html:10:173
+        $out.write('>');
+        _$write($out, item.content); // lib/src/ui/templates/basecoat/select.html:10:187
+        $out.write('</div>');
+      }
+      $out.write('\n        ');
+      if (item.isSeparator) { // lib/src/ui/templates/basecoat/select.html:11:21
+        $out.write('<hr role="separator">');
+      }
+      $out.write('\n');
+      if (item.isGroup) { // lib/src/ui/templates/basecoat/select.html:12:21
+        $out.write('          ');
+        final $attributeNames5 = <String, bool>{'role': false, 'aria-labelledby': false};
+        $out.write('<div role="group" aria-labelledby="');
+        _$write($out, item.id); // lib/src/ui/templates/basecoat/select.html:13:49
+        $out.write('"');
+        _$writeAttributes($out, item.attrs, $attributeNames5); // lib/src/ui/templates/basecoat/select.html:13:64
+        $out.write('>\n            <div role="heading" id="');
+        _$write($out, item.id); // lib/src/ui/templates/basecoat/select.html:14:40
+        $out.write('">');
+        _$write($out, item.label); // lib/src/ui/templates/basecoat/select.html:14:55
+        $out.write('</div>\n');
+        for (final option in (item.options)) { // lib/src/ui/templates/basecoat/select.html:15:24
+          $out.write('              ');
+          final $attributeNames6 = <String, bool>{'id': false, 'role': false, 'data-label': false, 'data-value': false};
+          $out.write('<div id="');
+          _$write($out, option.id); // lib/src/ui/templates/basecoat/select.html:16:27
+          $out.write('" role="option" data-label="');
+          _$write($out, option.label); // lib/src/ui/templates/basecoat/select.html:16:70
+          $out.write('" data-value="');
+          _$write($out, option.value); // lib/src/ui/templates/basecoat/select.html:16:102
+          $out.write('"');
+          if (option.selected) { // lib/src/ui/templates/basecoat/select.html:16:120
+            _$addConditionalAttributeName($attributeNames6, 'aria-selected');
+            $out.write(' aria-selected="true"');
+          }
+          _$writeAttributes($out, option.attrs, $attributeNames6); // lib/src/ui/templates/basecoat/select.html:16:160
+          $out.write('>');
+          _$write($out, option.content); // lib/src/ui/templates/basecoat/select.html:16:176
+          $out.write('</div>\n');
+        }
+        $out.write('          </div>\n');
+      }
+    }
+    $out.write('      ');
+    _$write($out, body); // lib/src/ui/templates/basecoat/select.html:21:10
+    $out.write('\n    </div>\n  </div>\n  ');
+    final $attributeNames7 = <String, bool>{'type': false, 'name': false, 'value': false};
     $out.write('<input type="hidden" name="');
-    _$write($out, name); // lib/src/ui/templates/basecoat/select.html:10:33
+    _$write($out, name); // lib/src/ui/templates/basecoat/select.html:24:33
     $out.write('" value="');
-    _$write($out, value); // lib/src/ui/templates/basecoat/select.html:10:52
+    _$write($out, value); // lib/src/ui/templates/basecoat/select.html:24:52
     $out.write('"');
-    _$writeAttributes($out, inputAttrs, $attributeNames4); // lib/src/ui/templates/basecoat/select.html:10:65
+    _$writeAttributes($out, inputAttrs, $attributeNames7); // lib/src/ui/templates/basecoat/select.html:24:65
     $out.write('>\n</div>\n');
-  });
-
-  Fragment separator() =>
-      Fragment._(($out) {
-    $out.write('<hr role="separator">\n');
-  });
-
-  Fragment sidebarGroup({
-    required String id, // lib/src/ui/templates/basecoat/sidebar-group.html:1:14
-    required String label, // lib/src/ui/templates/basecoat/sidebar-group.html:1:29
-    required bool hasLabel, // lib/src/ui/templates/basecoat/sidebar-group.html:1:47
-    required List<Fragment> children, // lib/src/ui/templates/basecoat/sidebar-group.html:1:63
-    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/sidebar-group.html:1:86
-  }) =>
-      Fragment._(($out) {
-    final $attributeNames0 = <String, bool>{'role': false};
-    $out.write('<div role="group"');
-    if (hasLabel) { // lib/src/ui/templates/basecoat/sidebar-group.html:2:20
-      _$addConditionalAttributeName($attributeNames0, 'aria-labelledby');
-      $out.write(' aria-labelledby="');
-      _$write($out, id); // lib/src/ui/templates/basecoat/sidebar-group.html:2:49
-      $out.write('"');
-    }
-    _$writeAttributes($out, attrs, $attributeNames0); // lib/src/ui/templates/basecoat/sidebar-group.html:2:59
-    $out.write('>\n  ');
-    if (hasLabel) { // lib/src/ui/templates/basecoat/sidebar-group.html:3:15
-      $out.write('<h3 id="');
-      _$write($out, id); // lib/src/ui/templates/basecoat/sidebar-group.html:3:36
-      $out.write('">');
-      _$write($out, label); // lib/src/ui/templates/basecoat/sidebar-group.html:3:46
-      $out.write('</h3>');
-    }
-    $out.write('\n  <ul>');
-    _$write($out, children); // lib/src/ui/templates/basecoat/sidebar-group.html:4:10
-    $out.write('</ul>\n</div>\n');
-  });
-
-  Fragment sidebarItem({
-    required String href, // lib/src/ui/templates/basecoat/sidebar-item.html:1:16
-    required bool current, // lib/src/ui/templates/basecoat/sidebar-item.html:1:33
-    Fragment? icon, // lib/src/ui/templates/basecoat/sidebar-item.html:1:45
-    required Fragment content, // lib/src/ui/templates/basecoat/sidebar-item.html:1:65
-    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/sidebar-item.html:1:82
-  }) =>
-      Fragment._(($out) {
-    $out.write('<li>');
-    final $attributeNames0 = <String, bool>{'href': false};
-    $out.write('<a href="');
-    _$write($out, href); // lib/src/ui/templates/basecoat/sidebar-item.html:2:17
-    $out.write('"');
-    if (current) { // lib/src/ui/templates/basecoat/sidebar-item.html:2:27
-      _$addConditionalAttributeName($attributeNames0, 'aria-current');
-      $out.write(' aria-current="page"');
-    }
-    _$writeAttributes($out, attrs, $attributeNames0); // lib/src/ui/templates/basecoat/sidebar-item.html:2:58
-    $out.write('>');
-    _$write($out, icon); // lib/src/ui/templates/basecoat/sidebar-item.html:2:67
-    $out.write('<span>');
-    _$write($out, content); // lib/src/ui/templates/basecoat/sidebar-item.html:2:83
-    $out.write('</span></a></li>\n');
-  });
-
-  Fragment sidebarSubmenu({
-    required String id, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:14
-    required bool open, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:28
-    Fragment? icon, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:40
-    required Fragment content, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:60
-    required List<Fragment> children, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:80
-    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:103
-  }) =>
-      Fragment._(($out) {
-    $out.write('<li>\n  ');
-    final $attributeNames0 = <String, bool>{'id': false};
-    $out.write('<details id="submenu-');
-    _$write($out, id); // lib/src/ui/templates/basecoat/sidebar-submenu.html:3:27
-    $out.write('"');
-    if (open) { // lib/src/ui/templates/basecoat/sidebar-submenu.html:3:35
-      _$addConditionalAttributeName($attributeNames0, 'open');
-      $out.write(' open');
-    }
-    _$writeAttributes($out, attrs, $attributeNames0); // lib/src/ui/templates/basecoat/sidebar-submenu.html:3:48
-    $out.write('>\n    <summary aria-controls="submenu-');
-    _$write($out, id); // lib/src/ui/templates/basecoat/sidebar-submenu.html:4:40
-    $out.write('-content">');
-    _$write($out, icon); // lib/src/ui/templates/basecoat/sidebar-submenu.html:4:58
-    $out.write('<span>');
-    _$write($out, content); // lib/src/ui/templates/basecoat/sidebar-submenu.html:4:74
-    $out.write('</span></summary>\n    <ul id="submenu-');
-    _$write($out, id); // lib/src/ui/templates/basecoat/sidebar-submenu.html:5:24
-    $out.write('-content">');
-    _$write($out, children); // lib/src/ui/templates/basecoat/sidebar-submenu.html:5:42
-    $out.write('</ul>\n  </details>\n</li>\n');
   });
 
   Fragment sidebar({
@@ -750,16 +835,16 @@ final class _Html$basecoat {
     required String side, // lib/src/ui/templates/basecoat/sidebar.html:1:43
     required String hidden, // lib/src/ui/templates/basecoat/sidebar.html:1:59
     required bool closed, // lib/src/ui/templates/basecoat/sidebar.html:1:75
-    Fragment? header, // lib/src/ui/templates/basecoat/sidebar.html:1:89
-    Fragment? footer, // lib/src/ui/templates/basecoat/sidebar.html:1:108
-    required bool hasHeader, // lib/src/ui/templates/basecoat/sidebar.html:1:130
-    required bool hasFooter, // lib/src/ui/templates/basecoat/sidebar.html:1:147
-    required List<Fragment> items, // lib/src/ui/templates/basecoat/sidebar.html:1:160
-    Fragment? body, // lib/src/ui/templates/basecoat/sidebar.html:1:182
-    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:204
-    required Map<String, String> headerAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:238
-    required Map<String, String> contentAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:273
-    required Map<String, String> footerAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:307
+    Object? header, // lib/src/ui/templates/basecoat/sidebar.html:1:89
+    Object? footer, // lib/src/ui/templates/basecoat/sidebar.html:1:106
+    required bool hasHeader, // lib/src/ui/templates/basecoat/sidebar.html:1:126
+    required bool hasFooter, // lib/src/ui/templates/basecoat/sidebar.html:1:143
+    required List<({bool isGroup, bool isSeparator, String id, String label, bool hasLabel, Map<String, String> attrs, List<({bool isSubmenu, String id, String href, bool current, bool open, Object? icon, Object content, Map<String, String> attrs, List<({String href, bool current, Object? icon, Object content, Map<String, String> attrs})> items})> items})> items, // lib/src/ui/templates/basecoat/sidebar.html:1:156
+    Object? body, // lib/src/ui/templates/basecoat/sidebar.html:1:509
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:529
+    required Map<String, String> headerAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:563
+    required Map<String, String> contentAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:598
+    required Map<String, String> footerAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:632
   }) =>
       Fragment._(($out) {
     final $attributeNames0 = <String, bool>{'id': false, 'data-side': false, 'aria-hidden': false};
@@ -790,88 +875,116 @@ final class _Html$basecoat {
     final $attributeNames2 = <String, bool>{};
     $out.write('<section');
     _$writeAttributes($out, contentAttrs, $attributeNames2); // lib/src/ui/templates/basecoat/sidebar.html:5:17
-    $out.write('>');
-    _$write($out, items); // lib/src/ui/templates/basecoat/sidebar.html:5:33
-    _$write($out, body); // lib/src/ui/templates/basecoat/sidebar.html:5:44
-    $out.write('</section>\n    ');
-    if (hasFooter) { // lib/src/ui/templates/basecoat/sidebar.html:6:17
-      final $attributeNames3 = <String, bool>{};
+    $out.write('>\n');
+    for (final group in (items)) { // lib/src/ui/templates/basecoat/sidebar.html:6:18
+      $out.write('        ');
+      if (group.isSeparator) { // lib/src/ui/templates/basecoat/sidebar.html:7:21
+        $out.write('<hr role="separator">');
+      }
+      $out.write('\n');
+      if (group.isGroup) { // lib/src/ui/templates/basecoat/sidebar.html:8:21
+        $out.write('          ');
+        final $attributeNames3 = <String, bool>{'role': false};
+        $out.write('<div role="group"');
+        if (group.hasLabel) { // lib/src/ui/templates/basecoat/sidebar.html:9:30
+          _$addConditionalAttributeName($attributeNames3, 'aria-labelledby');
+          $out.write(' aria-labelledby="');
+          _$write($out, group.id); // lib/src/ui/templates/basecoat/sidebar.html:9:65
+          $out.write('"');
+        }
+        _$writeAttributes($out, group.attrs, $attributeNames3); // lib/src/ui/templates/basecoat/sidebar.html:9:81
+        $out.write('>\n            ');
+        if (group.hasLabel) { // lib/src/ui/templates/basecoat/sidebar.html:10:25
+          $out.write('<h3 id="');
+          _$write($out, group.id); // lib/src/ui/templates/basecoat/sidebar.html:10:52
+          $out.write('">');
+          _$write($out, group.label); // lib/src/ui/templates/basecoat/sidebar.html:10:68
+          $out.write('</h3>');
+        }
+        $out.write('\n            <ul>\n');
+        for (final item in (group.items)) { // lib/src/ui/templates/basecoat/sidebar.html:12:26
+          $out.write('                ');
+          if (!item.isSubmenu) { // lib/src/ui/templates/basecoat/sidebar.html:13:33
+            $out.write('<li>');
+            final $attributeNames4 = <String, bool>{'href': false};
+            $out.write('<a href="');
+            _$write($out, item.href); // lib/src/ui/templates/basecoat/sidebar.html:13:65
+            $out.write('"');
+            if (item.current) { // lib/src/ui/templates/basecoat/sidebar.html:13:80
+              _$addConditionalAttributeName($attributeNames4, 'aria-current');
+              $out.write(' aria-current="page"');
+            }
+            _$writeAttributes($out, item.attrs, $attributeNames4); // lib/src/ui/templates/basecoat/sidebar.html:13:116
+            $out.write('>');
+            _$write($out, item.icon); // lib/src/ui/templates/basecoat/sidebar.html:13:130
+            $out.write('<span>');
+            _$write($out, item.content); // lib/src/ui/templates/basecoat/sidebar.html:13:151
+            $out.write('</span></a></li>');
+          }
+          $out.write('\n');
+          if (item.isSubmenu) { // lib/src/ui/templates/basecoat/sidebar.html:14:29
+            $out.write('                  <li>\n                    ');
+            final $attributeNames5 = <String, bool>{'id': false};
+            $out.write('<details id="submenu-');
+            _$write($out, item.id); // lib/src/ui/templates/basecoat/sidebar.html:16:45
+            $out.write('"');
+            if (item.open) { // lib/src/ui/templates/basecoat/sidebar.html:16:58
+              _$addConditionalAttributeName($attributeNames5, 'open');
+              $out.write(' open');
+            }
+            _$writeAttributes($out, item.attrs, $attributeNames5); // lib/src/ui/templates/basecoat/sidebar.html:16:76
+            $out.write('>\n                      <summary aria-controls="submenu-');
+            _$write($out, item.id); // lib/src/ui/templates/basecoat/sidebar.html:17:58
+            $out.write('-content">');
+            _$write($out, item.icon); // lib/src/ui/templates/basecoat/sidebar.html:17:81
+            $out.write('<span>');
+            _$write($out, item.content); // lib/src/ui/templates/basecoat/sidebar.html:17:102
+            $out.write('</span></summary>\n                      <ul id="submenu-');
+            _$write($out, item.id); // lib/src/ui/templates/basecoat/sidebar.html:18:42
+            $out.write('-content">\n');
+            for (final link in (item.items)) { // lib/src/ui/templates/basecoat/sidebar.html:19:36
+              $out.write('                          <li>');
+              final $attributeNames6 = <String, bool>{'href': false};
+              $out.write('<a href="');
+              _$write($out, link.href); // lib/src/ui/templates/basecoat/sidebar.html:20:43
+              $out.write('"');
+              if (link.current) { // lib/src/ui/templates/basecoat/sidebar.html:20:58
+                _$addConditionalAttributeName($attributeNames6, 'aria-current');
+                $out.write(' aria-current="page"');
+              }
+              _$writeAttributes($out, link.attrs, $attributeNames6); // lib/src/ui/templates/basecoat/sidebar.html:20:94
+              $out.write('>');
+              _$write($out, link.icon); // lib/src/ui/templates/basecoat/sidebar.html:20:108
+              $out.write('<span>');
+              _$write($out, link.content); // lib/src/ui/templates/basecoat/sidebar.html:20:129
+              $out.write('</span></a></li>\n');
+            }
+            $out.write('                      </ul>\n                    </details>\n                  </li>\n');
+          }
+        }
+        $out.write('            </ul>\n          </div>\n');
+      }
+    }
+    $out.write('      ');
+    _$write($out, body); // lib/src/ui/templates/basecoat/sidebar.html:31:10
+    $out.write('\n    </section>\n    ');
+    if (hasFooter) { // lib/src/ui/templates/basecoat/sidebar.html:33:17
+      final $attributeNames7 = <String, bool>{};
       $out.write('<footer');
-      _$writeAttributes($out, footerAttrs, $attributeNames3); // lib/src/ui/templates/basecoat/sidebar.html:6:39
+      _$writeAttributes($out, footerAttrs, $attributeNames7); // lib/src/ui/templates/basecoat/sidebar.html:33:39
       $out.write('>');
-      _$write($out, footer); // lib/src/ui/templates/basecoat/sidebar.html:6:54
+      _$write($out, footer); // lib/src/ui/templates/basecoat/sidebar.html:33:54
       $out.write('</footer>');
     }
     $out.write('\n  </nav>\n</aside>\n');
   });
 
-  Fragment tabPanel({
-    required String id, // lib/src/ui/templates/basecoat/tab-panel.html:1:14
-    required int index, // lib/src/ui/templates/basecoat/tab-panel.html:1:29
-    required String selected, // lib/src/ui/templates/basecoat/tab-panel.html:1:44
-    required bool hidden, // lib/src/ui/templates/basecoat/tab-panel.html:1:60
-    required Fragment content, // lib/src/ui/templates/basecoat/tab-panel.html:1:75
-    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/tab-panel.html:1:92
-  }) =>
-      Fragment._(($out) {
-    final $attributeNames0 = <String, bool>{'role': false, 'id': false, 'aria-labelledby': false, 'tabindex': false, 'aria-selected': false};
-    $out.write('<div role="tabpanel" id="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/tab-panel.html:2:29
-    $out.write('-panel-');
-    _$write($out, index); // lib/src/ui/templates/basecoat/tab-panel.html:2:44
-    $out.write('" aria-labelledby="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/tab-panel.html:2:74
-    $out.write('-tab-');
-    _$write($out, index); // lib/src/ui/templates/basecoat/tab-panel.html:2:87
-    $out.write('" tabindex="-1" aria-selected="');
-    _$write($out, selected); // lib/src/ui/templates/basecoat/tab-panel.html:2:129
-    $out.write('"');
-    if (hidden) { // lib/src/ui/templates/basecoat/tab-panel.html:2:143
-      _$addConditionalAttributeName($attributeNames0, 'hidden');
-      $out.write(' hidden');
-    }
-    _$writeAttributes($out, attrs, $attributeNames0); // lib/src/ui/templates/basecoat/tab-panel.html:2:160
-    $out.write('>');
-    _$write($out, content); // lib/src/ui/templates/basecoat/tab-panel.html:2:169
-    $out.write('</div>\n');
-  });
-
-  Fragment tab({
-    required String id, // lib/src/ui/templates/basecoat/tab.html:1:14
-    required int index, // lib/src/ui/templates/basecoat/tab.html:1:29
-    required String selected, // lib/src/ui/templates/basecoat/tab.html:1:44
-    required String tabindex, // lib/src/ui/templates/basecoat/tab.html:1:62
-    required Fragment content, // lib/src/ui/templates/basecoat/tab.html:1:79
-    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/tab.html:1:96
-  }) =>
-      Fragment._(($out) {
-    final $attributeNames0 = <String, bool>{'type': false, 'role': false, 'id': false, 'aria-controls': false, 'aria-selected': false, 'tabindex': false};
-    $out.write('<button type="button" role="tab" id="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/tab.html:2:41
-    $out.write('-tab-');
-    _$write($out, index); // lib/src/ui/templates/basecoat/tab.html:2:54
-    $out.write('" aria-controls="');
-    _$write($out, id); // lib/src/ui/templates/basecoat/tab.html:2:82
-    $out.write('-panel-');
-    _$write($out, index); // lib/src/ui/templates/basecoat/tab.html:2:97
-    $out.write('" aria-selected="');
-    _$write($out, selected); // lib/src/ui/templates/basecoat/tab.html:2:125
-    $out.write('" tabindex="');
-    _$write($out, tabindex); // lib/src/ui/templates/basecoat/tab.html:2:151
-    $out.write('"');
-    _$writeAttributes($out, attrs, $attributeNames0); // lib/src/ui/templates/basecoat/tab.html:2:167
-    $out.write('>');
-    _$write($out, content); // lib/src/ui/templates/basecoat/tab.html:2:176
-    $out.write('</button>\n');
-  });
-
   Fragment tabs({
     required String id, // lib/src/ui/templates/basecoat/tabs.html:1:14
     required String orientation, // lib/src/ui/templates/basecoat/tabs.html:1:35
-    required List<Fragment> buttons, // lib/src/ui/templates/basecoat/tabs.html:1:52
-    required List<Fragment> panels, // lib/src/ui/templates/basecoat/tabs.html:1:76
-    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/tabs.html:1:103
-    required Map<String, String> tablistAttrs, // lib/src/ui/templates/basecoat/tabs.html:1:138
+    required List<({int index, String selected, String tabindex, bool hidden, bool hasPanel, Object tab, Object? panel, Map<String, String> tabAttrs, Map<String, String> panelAttrs})> tabs, // lib/src/ui/templates/basecoat/tabs.html:1:49
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/tabs.html:1:232
+    required Map<String, String> tablistAttrs, // lib/src/ui/templates/basecoat/tabs.html:1:267
   }) =>
       Fragment._(($out) {
     final $attributeNames0 = <String, bool>{'id': false};
@@ -885,69 +998,56 @@ final class _Html$basecoat {
     _$write($out, orientation); // lib/src/ui/templates/basecoat/tabs.html:3:44
     $out.write('"');
     _$writeAttributes($out, tablistAttrs, $attributeNames1); // lib/src/ui/templates/basecoat/tabs.html:3:63
-    $out.write('>');
-    _$write($out, buttons); // lib/src/ui/templates/basecoat/tabs.html:3:79
-    $out.write('</nav>\n  ');
-    _$write($out, panels); // lib/src/ui/templates/basecoat/tabs.html:4:6
-    $out.write('\n</div>\n');
-  });
-
-  Fragment text({
-    required String text, // lib/src/ui/templates/basecoat/text.html:1:16
-  }) =>
-      Fragment._(($out) {
-    _$write($out, text); // lib/src/ui/templates/basecoat/text.html:2:4
-    $out.write('\n');
-  });
-
-  Fragment toastAction({
-    required String label, // lib/src/ui/templates/basecoat/toast-action.html:1:17
-    String? href, // lib/src/ui/templates/basecoat/toast-action.html:1:31
-    required bool link, // lib/src/ui/templates/basecoat/toast-action.html:1:46
-    required bool cancel, // lib/src/ui/templates/basecoat/toast-action.html:1:60
-    String? onclick, // lib/src/ui/templates/basecoat/toast-action.html:1:75
-    required bool hasOnclick, // lib/src/ui/templates/basecoat/toast-action.html:1:96
-  }) =>
-      Fragment._(($out) {
-    if (link) { // lib/src/ui/templates/basecoat/toast-action.html:2:13
-      $out.write('<a href="');
-      _$write($out, href); // lib/src/ui/templates/basecoat/toast-action.html:2:31
-      $out.write('" class="btn" data-size="sm"');
-      if (cancel) { // lib/src/ui/templates/basecoat/toast-action.html:2:68
-        $out.write(' data-variant="outline"');
-      }
-      if (cancel) { // lib/src/ui/templates/basecoat/toast-action.html:2:99
-        $out.write(' data-toast-cancel');
-      }
-      if (!cancel) { // lib/src/ui/templates/basecoat/toast-action.html:2:126
-        $out.write(' data-toast-action');
-      }
+    $out.write('>\n');
+    for (final tab in (tabs)) { // lib/src/ui/templates/basecoat/tabs.html:4:16
+      $out.write('      ');
+      final $attributeNames2 = <String, bool>{'type': false, 'role': false, 'id': false, 'aria-controls': false, 'aria-selected': false, 'tabindex': false};
+      $out.write('<button type="button" role="tab" id="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/tabs.html:5:47
+      $out.write('-tab-');
+      _$write($out, tab.index); // lib/src/ui/templates/basecoat/tabs.html:5:60
+      $out.write('" aria-controls="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/tabs.html:5:92
+      $out.write('-panel-');
+      _$write($out, tab.index); // lib/src/ui/templates/basecoat/tabs.html:5:107
+      $out.write('" aria-selected="');
+      _$write($out, tab.selected); // lib/src/ui/templates/basecoat/tabs.html:5:139
+      $out.write('" tabindex="');
+      _$write($out, tab.tabindex); // lib/src/ui/templates/basecoat/tabs.html:5:169
+      $out.write('"');
+      _$writeAttributes($out, tab.tabAttrs, $attributeNames2); // lib/src/ui/templates/basecoat/tabs.html:5:189
       $out.write('>');
-      _$write($out, label); // lib/src/ui/templates/basecoat/toast-action.html:2:154
-      $out.write('</a>');
+      _$write($out, tab.tab); // lib/src/ui/templates/basecoat/tabs.html:5:205
+      $out.write('</button>\n');
     }
-    $out.write('\n');
-    if (!link) { // lib/src/ui/templates/basecoat/toast-action.html:3:17
-      $out.write('<button type="button" class="btn" data-size="sm"');
-      if (cancel) { // lib/src/ui/templates/basecoat/toast-action.html:3:73
-        $out.write(' data-variant="outline"');
-      }
-      if (cancel) { // lib/src/ui/templates/basecoat/toast-action.html:3:104
-        $out.write(' data-toast-cancel');
-      }
-      if (!cancel) { // lib/src/ui/templates/basecoat/toast-action.html:3:131
-        $out.write(' data-toast-action');
-      }
-      if (hasOnclick) { // lib/src/ui/templates/basecoat/toast-action.html:3:157
-        $out.write(' onclick="');
-        _$write($out, onclick); // lib/src/ui/templates/basecoat/toast-action.html:3:180
+    $out.write('  </nav>\n');
+    for (final tab in (tabs)) { // lib/src/ui/templates/basecoat/tabs.html:8:14
+      $out.write('    ');
+      if (tab.hasPanel) { // lib/src/ui/templates/basecoat/tabs.html:9:17
+        final $attributeNames3 = <String, bool>{'role': false, 'id': false, 'aria-labelledby': false, 'tabindex': false, 'aria-selected': false};
+        $out.write('<div role="tabpanel" id="');
+        _$write($out, id); // lib/src/ui/templates/basecoat/tabs.html:9:59
+        $out.write('-panel-');
+        _$write($out, tab.index); // lib/src/ui/templates/basecoat/tabs.html:9:74
+        $out.write('" aria-labelledby="');
+        _$write($out, id); // lib/src/ui/templates/basecoat/tabs.html:9:108
+        $out.write('-tab-');
+        _$write($out, tab.index); // lib/src/ui/templates/basecoat/tabs.html:9:121
+        $out.write('" tabindex="-1" aria-selected="');
+        _$write($out, tab.selected); // lib/src/ui/templates/basecoat/tabs.html:9:167
         $out.write('"');
+        if (tab.hidden) { // lib/src/ui/templates/basecoat/tabs.html:9:185
+          _$addConditionalAttributeName($attributeNames3, 'hidden');
+          $out.write(' hidden');
+        }
+        _$writeAttributes($out, tab.panelAttrs, $attributeNames3); // lib/src/ui/templates/basecoat/tabs.html:9:206
+        $out.write('>');
+        _$write($out, tab.panel); // lib/src/ui/templates/basecoat/tabs.html:9:224
+        $out.write('</div>');
       }
-      $out.write('>');
-      _$write($out, label); // lib/src/ui/templates/basecoat/toast-action.html:3:195
-      $out.write('</button>');
+      $out.write('\n');
     }
-    $out.write('\n');
+    $out.write('</div>\n');
   });
 
   Fragment toast({
@@ -959,11 +1059,11 @@ final class _Html$basecoat {
     required String description, // lib/src/ui/templates/basecoat/toast.html:1:105
     required bool hasTitle, // lib/src/ui/templates/basecoat/toast.html:1:123
     required bool hasDescription, // lib/src/ui/templates/basecoat/toast.html:1:145
-    Fragment? icon, // lib/src/ui/templates/basecoat/toast.html:1:157
-    Fragment? action, // lib/src/ui/templates/basecoat/toast.html:1:176
-    Fragment? cancel, // lib/src/ui/templates/basecoat/toast.html:1:195
-    required bool hasFooter, // lib/src/ui/templates/basecoat/toast.html:1:217
-    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/toast.html:1:230
+    required String iconName, // lib/src/ui/templates/basecoat/toast.html:1:161
+    Object? icon, // lib/src/ui/templates/basecoat/toast.html:1:175
+    required bool hasIcon, // lib/src/ui/templates/basecoat/toast.html:1:193
+    required List<({String label, bool isLink, String href, bool cancel, String onclick, bool hasOnclick})> actions, // lib/src/ui/templates/basecoat/toast.html:1:208
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/toast.html:1:311
   }) =>
       Fragment._(($out) {
     final $attributeNames0 = <String, bool>{'role': false, 'aria-atomic': false, 'aria-hidden': false, 'data-category': false};
@@ -980,27 +1080,73 @@ final class _Html$basecoat {
     }
     _$writeAttributes($out, attrs, $attributeNames0); // lib/src/ui/templates/basecoat/toast.html:2:141
     $out.write('>\n  <div class="toast-content">\n    ');
-    _$write($out, icon); // lib/src/ui/templates/basecoat/toast.html:4:8
+    if (!hasIcon) { // lib/src/ui/templates/basecoat/toast.html:4:21
+      $out.write('<i data-lucide="');
+      _$write($out, iconName); // lib/src/ui/templates/basecoat/toast.html:4:49
+      $out.write('" aria-hidden="true"></i>');
+    }
+    $out.write('\n    ');
+    _$write($out, icon); // lib/src/ui/templates/basecoat/toast.html:5:8
     $out.write('\n    <section>\n      ');
-    if (hasTitle) { // lib/src/ui/templates/basecoat/toast.html:6:19
+    if (hasTitle) { // lib/src/ui/templates/basecoat/toast.html:7:19
       $out.write('<h2>');
-      _$write($out, title); // lib/src/ui/templates/basecoat/toast.html:6:36
+      _$write($out, title); // lib/src/ui/templates/basecoat/toast.html:7:36
       $out.write('</h2>');
     }
     $out.write('\n      ');
-    if (hasDescription) { // lib/src/ui/templates/basecoat/toast.html:7:19
+    if (hasDescription) { // lib/src/ui/templates/basecoat/toast.html:8:19
       $out.write('<p>');
-      _$write($out, description); // lib/src/ui/templates/basecoat/toast.html:7:41
+      _$write($out, description); // lib/src/ui/templates/basecoat/toast.html:8:41
       $out.write('</p>');
     }
-    $out.write('\n    </section>\n    ');
-    if (hasFooter) { // lib/src/ui/templates/basecoat/toast.html:9:17
-      $out.write('<footer>');
-      _$write($out, action); // lib/src/ui/templates/basecoat/toast.html:9:39
-      _$write($out, cancel); // lib/src/ui/templates/basecoat/toast.html:9:51
-      $out.write('</footer>');
+    $out.write('\n    </section>\n');
+    if (actions.isNotEmpty) { // lib/src/ui/templates/basecoat/toast.html:10:17
+      $out.write('      <footer>\n');
+      for (final action in (actions)) { // lib/src/ui/templates/basecoat/toast.html:12:20
+        $out.write('          ');
+        if (action.isLink) { // lib/src/ui/templates/basecoat/toast.html:13:23
+          $out.write('<a href="');
+          _$write($out, action.href); // lib/src/ui/templates/basecoat/toast.html:13:50
+          $out.write('" class="btn" data-size="sm"');
+          if (action.cancel) { // lib/src/ui/templates/basecoat/toast.html:13:94
+            $out.write(' data-variant="outline"');
+          }
+          if (action.cancel) { // lib/src/ui/templates/basecoat/toast.html:13:132
+            $out.write(' data-toast-cancel');
+          }
+          if (!action.cancel) { // lib/src/ui/templates/basecoat/toast.html:13:166
+            $out.write(' data-toast-action');
+          }
+          $out.write('>');
+          _$write($out, action.label); // lib/src/ui/templates/basecoat/toast.html:13:201
+          $out.write('</a>');
+        }
+        $out.write('\n          ');
+        if (!action.isLink) { // lib/src/ui/templates/basecoat/toast.html:14:27
+          $out.write('<button type="button" class="btn" data-size="sm"');
+          if (action.cancel) { // lib/src/ui/templates/basecoat/toast.html:14:92
+            $out.write(' data-variant="outline"');
+          }
+          if (action.cancel) { // lib/src/ui/templates/basecoat/toast.html:14:130
+            $out.write(' data-toast-cancel');
+          }
+          if (!action.cancel) { // lib/src/ui/templates/basecoat/toast.html:14:164
+            $out.write(' data-toast-action');
+          }
+          if (action.hasOnclick) { // lib/src/ui/templates/basecoat/toast.html:14:197
+            $out.write(' onclick="');
+            _$write($out, action.onclick); // lib/src/ui/templates/basecoat/toast.html:14:227
+            $out.write('"');
+          }
+          $out.write('>');
+          _$write($out, action.label); // lib/src/ui/templates/basecoat/toast.html:14:249
+          $out.write('</button>');
+        }
+        $out.write('\n');
+      }
+      $out.write('      </footer>\n');
     }
-    $out.write('\n  </div>\n</div>\n');
+    $out.write('  </div>\n</div>\n');
   });
 
   Fragment toaster({

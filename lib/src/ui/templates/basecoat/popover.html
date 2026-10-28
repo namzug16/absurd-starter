@@ -1,4 +1,4 @@
-<x-props id="String" trigger="Fragment" body="Fragment?" mainAttrs="Map<String, String>" triggerAttrs="Map<String, String>" popoverAttrs="Map<String, String>"></x-props>
+<x-props id="String" trigger="Object" body="Object?" mainAttrs="Map<String, String>" triggerAttrs="Map<String, String>" popoverAttrs="Map<String, String>"></x-props>
 <div id="{{ id }}" ...mainAttrs>
   <button id="{{ id }}-trigger" type="button" aria-expanded="false" aria-controls="{{ id }}-popover" ...triggerAttrs>{{ trigger }}</button>
   <div id="{{ id }}-popover" data-popover aria-hidden="true" ...popoverAttrs>{{ body }}</div>

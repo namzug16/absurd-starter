@@ -1,5 +1,11 @@
-<x-props id="String" orientation="String" buttons="List<Fragment>" panels="List<Fragment>" mainAttrs="Map<String, String>" tablistAttrs="Map<String, String>"></x-props>
+<x-props id="String" orientation="String" tabs="List<({int index, String selected, String tabindex, bool hidden, bool hasPanel, Object tab, Object? panel, Map<String, String> tabAttrs, Map<String, String> panelAttrs})>" mainAttrs="Map<String, String>" tablistAttrs="Map<String, String>"></x-props>
 <div id="{{ id }}" ...mainAttrs>
-  <nav role="tablist" aria-orientation="{{ orientation }}" ...tablistAttrs>{{ buttons }}</nav>
-  {{ panels }}
+  <nav role="tablist" aria-orientation="{{ orientation }}" ...tablistAttrs>
+    <x-for in="tabs" as="tab">
+      <button type="button" role="tab" id="{{ id }}-tab-{{ tab.index }}" aria-controls="{{ id }}-panel-{{ tab.index }}" aria-selected="{{ tab.selected }}" tabindex="{{ tab.tabindex }}" ...tab.tabAttrs>{{ tab.tab }}</button>
+    </x-for>
+  </nav>
+  <x-for in="tabs" as="tab">
+    <x-if case="tab.hasPanel"><div role="tabpanel" id="{{ id }}-panel-{{ tab.index }}" aria-labelledby="{{ id }}-tab-{{ tab.index }}" tabindex="-1" aria-selected="{{ tab.selected }}" ?tab.hidden:hidden ...tab.panelAttrs>{{ tab.panel }}</div></x-if>
+  </x-for>
 </div>
