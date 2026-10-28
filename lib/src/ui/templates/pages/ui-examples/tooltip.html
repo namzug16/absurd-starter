@@ -1,0 +1,56 @@
+<section id="tooltip" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Tooltip</h2>
+    <a href="https://basecoatui.com/components/tooltip" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Default</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <button class="btn" data-variant="outline" data-tooltip="Default tooltip">Default</button>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Long text</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <button class="btn" data-variant="outline" data-tooltip="A tooltip with enough text to exceed the default maximum width and demonstrate truncation">Hover</button>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Sides</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="flex flex-wrap gap-2">
+        <button class="btn" data-variant="outline" data-tooltip="Tooltip" data-side="inline-start">Inline Start</button>
+        <button class="btn" data-variant="outline" data-tooltip="Tooltip" data-side="top">Top</button>
+        <button class="btn" data-variant="outline" data-tooltip="Tooltip" data-side="bottom">Bottom</button>
+        <button class="btn" data-variant="outline" data-tooltip="Tooltip" data-side="inline-end">Inline End</button>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Icon button</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <button class="btn" data-variant="ghost" data-size="icon" data-tooltip="Additional information" aria-label="Info"><i data-lucide="info" aria-hidden="true"></i></button>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Disabled button</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <span class="inline-block" data-tooltip="This feature is currently unavailable"> <button class="btn" data-variant="outline" disabled>Disabled</button></span>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Link</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <a href="#" class="text-primary text-sm underline-offset-4 hover:underline" data-tooltip="Click to read the documentation">Learn more</a>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div dir="rtl" class="flex gap-2">
+        <button class="btn" data-variant="outline" data-tooltip="تلميح" data-side="inline-start">Inline Start</button>
+        <button class="btn" data-variant="outline" data-tooltip="تلميح" data-side="inline-end">Inline End</button>
+      </div>
+    </div>
+  </article>
+</section>

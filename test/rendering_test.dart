@@ -1,5 +1,6 @@
 import "package:absurd_starter/generated/html.dart";
 import "package:absurd_starter/src/ui/components/temporary_dialog.dart";
+import "package:absurd_starter/src/ui/pages/ui_page.dart";
 import "package:test/test.dart";
 
 void main() {
@@ -64,5 +65,20 @@ void main() {
     expect(html, isNot(contains('id="details-description"')));
     expect(html, isNot(contains('aria-label="Close dialog"')));
     expect(html, isNot(contains("event.target")));
+  });
+
+  test("ui gallery renders every component section with icon placeholders", () {
+    final html = uiPage().toHtml();
+    for (final id in ["accordion", "combobox", "select", "sidebar", "switch", "toast", "tooltip"]) {
+      expect(html, contains('<section id="$id"'));
+      expect(html, contains('href="#$id"'));
+    }
+    expect(html, contains('id="ui-sidebar"'));
+    expect(html, contains('id="toaster"'));
+    expect(html, contains('hx-get="/ui/toast"'));
+    expect(html, isNot(contains("lucide lucide-")));
+    expect(html, isNot(contains("<script>")));
+    final ids = RegExp(r'\bid="([^"]+)"').allMatches(html).map((m) => m.group(1)).toList();
+    expect(ids.toSet(), hasLength(ids.length), reason: "element ids must be unique");
   });
 }

@@ -1,0 +1,156 @@
+<section id="checkbox" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Checkbox</h2>
+    <a href="https://basecoatui.com/components/checkbox" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Basic</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="fieldset">
+        <div role="group" class="field" data-orientation="horizontal">
+          <input type="checkbox" id="terms-checkbox-basic" name="terms-checkbox-basic" class="input" />
+          <label for="terms-checkbox-basic">Accept terms and conditions</label>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Description</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="fieldset">
+        <div role="group" class="field" data-orientation="horizontal">
+          <input type="checkbox" id="terms-checkbox-desc" name="terms-checkbox-desc" class="input" checked aria-describedby="terms-checkbox-desc-description" />
+          <section>
+            <label for="terms-checkbox-desc">Accept terms and conditions</label>
+            <p id="terms-checkbox-desc-description">By clicking this checkbox, you agree to the terms and conditions.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Disabled</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="fieldset">
+        <div role="group" class="field" data-orientation="horizontal" data-disabled>
+          <input type="checkbox" id="toggle-checkbox-disabled" name="toggle-checkbox-disabled" class="input" disabled />
+          <label for="toggle-checkbox-disabled">Enable notifications</label>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Invalid</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="fieldset">
+        <div role="group" class="field" data-orientation="horizontal" data-invalid>
+          <input type="checkbox" id="terms-checkbox-invalid" name="terms-checkbox-invalid" class="input" aria-invalid="true" />
+          <label for="terms-checkbox-invalid">Accept terms and conditions</label>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Group</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <fieldset class="fieldset">
+        <legend data-variant="label">Show these items on the desktop:</legend>
+        <p>Select the items you want to show on the desktop.</p>
+        <div role="group" aria-label="Desktop items" data-slot="checkbox-group">
+          <div role="group" class="field" data-orientation="horizontal">
+            <input class="input" type="checkbox" id="finder-pref-9k2-hard-disks-ljj-checkbox" name="finder-pref-9k2-hard-disks-ljj-checkbox" checked />
+            <label for="finder-pref-9k2-hard-disks-ljj-checkbox" class="font-normal">Hard disks</label>
+          </div>
+          <div role="group" class="field" data-orientation="horizontal">
+            <input class="input" type="checkbox" id="finder-pref-9k2-external-disks-1yg-checkbox" name="finder-pref-9k2-external-disks-1yg-checkbox" checked />
+            <label for="finder-pref-9k2-external-disks-1yg-checkbox" class="font-normal">External disks</label>
+          </div>
+          <div role="group" class="field" data-orientation="horizontal">
+            <input class="input" type="checkbox" id="finder-pref-9k2-cds-dvds-fzt-checkbox" name="finder-pref-9k2-cds-dvds-fzt-checkbox" />
+            <label for="finder-pref-9k2-cds-dvds-fzt-checkbox" class="font-normal">CDs, DVDs, and iPods</label>
+          </div>
+          <div role="group" class="field" data-orientation="horizontal">
+            <input class="input" type="checkbox" id="finder-pref-9k2-connected-servers-6l2-checkbox" name="finder-pref-9k2-connected-servers-6l2-checkbox" />
+            <label for="finder-pref-9k2-connected-servers-6l2-checkbox" class="font-normal">Connected servers</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Table</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full">
+        <div class="table-container">
+          <table class="table" data-checkbox-table>
+            <thead>
+              <tr>
+                <th class="w-8"><input type="checkbox" id="select-all-checkbox" name="select-all-checkbox" class="input" aria-label="Select all" /></th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-state="selected">
+                <td><input type="checkbox" id="row-1-checkbox" name="row-1-checkbox" class="input" aria-label="Select Sarah Chen" checked /></td>
+                <td class="font-medium">Sarah Chen</td>
+                <td>sarah.chen@example.com</td>
+                <td>Admin</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="row-2-checkbox" name="row-2-checkbox" class="input" aria-label="Select Marcus Rodriguez" /></td>
+                <td class="font-medium">Marcus Rodriguez</td>
+                <td>marcus.rodriguez@example.com</td>
+                <td>User</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="row-3-checkbox" name="row-3-checkbox" class="input" aria-label="Select Priya Patel" /></td>
+                <td class="font-medium">Priya Patel</td>
+                <td>priya.patel@example.com</td>
+                <td>User</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="row-4-checkbox" name="row-4-checkbox" class="input" aria-label="Select David Kim" /></td>
+                <td class="font-medium">David Kim</td>
+                <td>david.kim@example.com</td>
+                <td>Editor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div role="group" class="fieldset" dir="rtl">
+        <div role="group" class="field" data-orientation="horizontal">
+          <input type="checkbox" id="terms-checkbox-rtl" name="terms-checkbox" class="input" />
+          <label for="terms-checkbox-rtl">قبول الشروط والأحكام</label>
+        </div>
+        <div role="group" class="field" data-orientation="horizontal">
+          <input type="checkbox" id="terms-checkbox-2-rtl" name="terms-checkbox-2" class="input" checked aria-describedby="terms-checkbox-2-rtl-description" />
+          <section>
+            <label for="terms-checkbox-2-rtl">قبول الشروط والأحكام</label>
+            <p id="terms-checkbox-2-rtl-description">بالنقر على هذا المربع، فإنك توافق على الشروط.</p>
+          </section>
+        </div>
+        <div role="group" class="field" data-orientation="horizontal" data-disabled>
+          <input type="checkbox" id="toggle-checkbox-rtl" name="toggle-checkbox" class="input" disabled />
+          <label for="toggle-checkbox-rtl">تفعيل الإشعارات</label>
+        </div>
+        <label>
+          <div role="group" class="field" data-orientation="horizontal">
+            <input type="checkbox" id="toggle-checkbox-2-rtl" name="toggle-checkbox-2" class="input" />
+            <section>
+              <h3>تفعيل الإشعارات</h3>
+              <p>يمكنك تفعيل أو إلغاء تفعيل الإشعارات في أي وقت.</p>
+            </section>
+          </div>
+        </label>
+      </div>
+    </div>
+  </article>
+</section>

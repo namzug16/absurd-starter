@@ -1,0 +1,67 @@
+<x-props sidebar="Fragment" toaster="Fragment"></x-props>
+<x-fragment _="/layout/primary.html" title="UI Kitchen Sink | Absurd Starter" description="Development-only gallery of Basecoat component examples.">
+  <x-slot name="body">
+    {{ sidebar }}
+    <main>
+      <header class="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+        <div class="mx-auto flex h-14 max-w-screen-xl items-center gap-3 px-4 lg:px-8">
+          <button type="button" class="btn" data-variant="outline" data-size="icon-sm" data-tooltip="Toggle sidebar" data-side="right" aria-label="Toggle sidebar" onclick="document.getElementById('ui-sidebar').toggle()">
+            <i data-lucide="panel-left" aria-hidden="true"></i>
+          </button>
+          <a href="#top" class="font-semibold tracking-tight">Kitchen Sink</a>
+          <span class="badge hidden sm:inline-flex" data-variant="secondary">DEV ONLY</span>
+          <span class="ml-auto hidden text-xs text-muted-foreground md:inline">Examples from the Basecoat docs</span>
+          <button type="button" class="btn" data-variant="outline" data-size="icon-sm" data-tooltip="Toggle theme" data-side="bottom" data-align="end" aria-label="Toggle theme" onclick="window.basecoat.theme.toggle()">
+            <i data-lucide="sun" class="hidden dark:block" aria-hidden="true"></i>
+            <i data-lucide="moon" class="dark:hidden" aria-hidden="true"></i>
+          </button>
+        </div>
+      </header>
+      <span id="top" class="sr-only"></span>
+      <div class="mx-auto max-w-screen-xl space-y-16 px-4 py-10 lg:px-8">
+        <x-fragment _="/pages/ui-examples/accordion.html" />
+        <x-fragment _="/pages/ui-examples/alert.html" />
+        <x-fragment _="/pages/ui-examples/alert-dialog.html" />
+        <x-fragment _="/pages/ui-examples/avatar.html" />
+        <x-fragment _="/pages/ui-examples/badge.html" />
+        <x-fragment _="/pages/ui-examples/breadcrumb.html" />
+        <x-fragment _="/pages/ui-examples/button.html" />
+        <x-fragment _="/pages/ui-examples/button-group.html" />
+        <x-fragment _="/pages/ui-examples/card.html" />
+        <x-fragment _="/pages/ui-examples/checkbox.html" />
+        <x-fragment _="/pages/ui-examples/combobox.html" />
+        <x-fragment _="/pages/ui-examples/command.html" />
+        <x-fragment _="/pages/ui-examples/dialog.html" />
+        <x-fragment _="/pages/ui-examples/drawer.html" />
+        <x-fragment _="/pages/ui-examples/dropdown-menu.html" />
+        <x-fragment _="/pages/ui-examples/empty.html" />
+        <x-fragment _="/pages/ui-examples/field.html" />
+        <x-fragment _="/pages/ui-examples/input.html" />
+        <x-fragment _="/pages/ui-examples/input-group.html" />
+        <x-fragment _="/pages/ui-examples/item.html" />
+        <x-fragment _="/pages/ui-examples/kbd.html" />
+        <x-fragment _="/pages/ui-examples/label.html" />
+        <x-fragment _="/pages/ui-examples/native-select.html" />
+        <x-fragment _="/pages/ui-examples/pagination.html" />
+        <x-fragment _="/pages/ui-examples/popover.html" />
+        <x-fragment _="/pages/ui-examples/progress.html" />
+        <x-fragment _="/pages/ui-examples/radio-group.html" />
+        <x-fragment _="/pages/ui-examples/scroll-area.html" />
+        <x-fragment _="/pages/ui-examples/select.html" />
+        <x-fragment _="/pages/ui-examples/separator.html" />
+        <x-fragment _="/pages/ui-examples/sidebar.html" />
+        <x-fragment _="/pages/ui-examples/skeleton.html" />
+        <x-fragment _="/pages/ui-examples/slider.html" />
+        <x-fragment _="/pages/ui-examples/spinner.html" />
+        <x-fragment _="/pages/ui-examples/toggle-switch.html" />
+        <x-fragment _="/pages/ui-examples/table.html" />
+        <x-fragment _="/pages/ui-examples/tabs.html" />
+        <x-fragment _="/pages/ui-examples/textarea.html" />
+        <x-fragment _="/pages/ui-examples/theme-switcher.html" />
+        <x-fragment _="/pages/ui-examples/toast.html" />
+        <x-fragment _="/pages/ui-examples/tooltip.html" />
+      </div>
+    </main>
+    {{ toaster }}
+  </x-slot>
+</x-fragment>

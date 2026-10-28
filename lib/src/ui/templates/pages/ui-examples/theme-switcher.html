@@ -1,0 +1,22 @@
+<section id="theme-switcher" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Theme Switcher</h2>
+    <a href="https://basecoatui.com/components/theme-switcher" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Default</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <button
+        type="button"
+        aria-label="Toggle dark mode"
+        data-tooltip="Toggle dark mode"
+        data-side="bottom"
+        onclick="window.basecoat.theme.toggle()"
+        class="btn size-8" data-variant="outline" data-size="icon"
+      >
+        <span class="hidden dark:block"><i data-lucide="sun" aria-hidden="true"></i></span>
+        <span class="block dark:hidden"><i data-lucide="moon" aria-hidden="true"></i></span>
+      </button>
+    </div>
+  </article>
+</section>

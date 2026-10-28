@@ -1,0 +1,202 @@
+<section id="command" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Command</h2>
+    <a href="https://basecoatui.com/components/command" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Basic</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <button type="button" class="btn" data-variant="outline" onclick="document.getElementById('command-basic').showModal()">Open Menu</button>
+      <dialog id="command-basic" class="command-dialog" aria-label="Command menu" onpointerdown="this.dataset.backdropPress = event.target === this" onclick="if (event.target === this && this.dataset.backdropPress === 'true') this.close()">
+        <div class="command">
+          <header><i data-lucide="search" aria-hidden="true"></i>
+            <input type="text" id="command-basic-input" placeholder="Type a command or search..." autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="command-basic-menu" />
+          </header>
+          <div role="menu" id="command-basic-menu" aria-orientation="vertical" data-empty="No results found.">
+            <div role="group" aria-labelledby="command-basic-suggestions">
+              <span role="heading" id="command-basic-suggestions">Suggestions</span>
+              <div role="menuitem" data-filter="Calendar">Calendar</div>
+              <div role="menuitem" data-filter="Search Emoji">Search Emoji</div>
+              <div role="menuitem" data-filter="Calculator">Calculator</div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Shortcuts</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <button type="button" class="btn" data-variant="outline" onclick="document.getElementById('command-shortcuts-dialog').showModal()">Open Menu</button>
+      <dialog id="command-shortcuts-dialog" class="command-dialog" aria-label="Command menu" onpointerdown="this.dataset.backdropPress = event.target === this" onclick="if (event.target === this && this.dataset.backdropPress === 'true') this.close()">
+        <div class="command">
+          <header><i data-lucide="search" aria-hidden="true"></i>
+            <input type="text" id="command-shortcuts-input" placeholder="Type a command or search..." autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="command-shortcuts-menu" />
+          </header>
+          <div role="menu" id="command-shortcuts-menu" aria-orientation="vertical" data-empty="No results found.">
+            <div role="group" aria-labelledby="command-shortcuts-settings">
+              <span role="heading" id="command-shortcuts-settings">Settings</span>
+              <div role="menuitem" data-filter="Profile" data-keywords="user account"><i data-lucide="user" aria-hidden="true"></i>
+                <span>Profile</span>
+                <span data-shortcut>⌘P</span>
+              </div>
+              <div role="menuitem" data-filter="Billing" data-keywords="invoice payment"><i data-lucide="credit-card" aria-hidden="true"></i>
+                <span>Billing</span>
+                <span data-shortcut>⌘B</span>
+              </div>
+              <div role="menuitem" data-filter="Settings" data-keywords="config preferences"><i data-lucide="settings" aria-hidden="true"></i>
+                <span>Settings</span>
+                <span data-shortcut>⌘S</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Groups</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <button type="button" class="btn" data-variant="outline" onclick="document.getElementById('command-groups-dialog').showModal()">Open Menu</button>
+      <dialog id="command-groups-dialog" class="command-dialog" aria-label="Command menu" onpointerdown="this.dataset.backdropPress = event.target === this" onclick="if (event.target === this && this.dataset.backdropPress === 'true') this.close()">
+        <div class="command">
+          <header><i data-lucide="search" aria-hidden="true"></i>
+            <input type="text" id="command-groups-input" placeholder="Type a command or search..." autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="command-groups-menu" />
+          </header>
+          <div role="menu" id="command-groups-menu" aria-orientation="vertical" data-empty="No results found.">
+            <div role="group" aria-labelledby="command-groups-suggestions">
+              <span role="heading" id="command-groups-suggestions">Suggestions</span>
+              <div role="menuitem" data-filter="Calendar" data-keywords="date event schedule"><i data-lucide="calendar" aria-hidden="true"></i>
+                <span>Calendar</span>
+              </div>
+              <div role="menuitem" data-filter="Search Emoji" data-keywords="emoji smile reaction"><i data-lucide="smile" aria-hidden="true"></i>
+                <span>Search Emoji</span>
+              </div>
+              <div role="menuitem" data-filter="Calculator"><i data-lucide="calculator" aria-hidden="true"></i>
+                <span>Calculator</span>
+              </div>
+            </div>
+            <hr role="separator" />
+            <div role="group" aria-labelledby="command-groups-settings">
+              <span role="heading" id="command-groups-settings">Settings</span>
+              <div role="menuitem" data-filter="Profile" data-keywords="user account"><i data-lucide="user" aria-hidden="true"></i>
+                <span>Profile</span>
+                <span data-shortcut>⌘P</span>
+              </div>
+              <div role="menuitem" data-filter="Billing" data-keywords="invoice payment"><i data-lucide="credit-card" aria-hidden="true"></i>
+                <span>Billing</span>
+                <span data-shortcut>⌘B</span>
+              </div>
+              <div role="menuitem" data-filter="Settings" data-keywords="config preferences"><i data-lucide="settings" aria-hidden="true"></i>
+                <span>Settings</span>
+                <span data-shortcut>⌘S</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Scrollable</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <button type="button" class="btn" data-variant="outline" onclick="document.getElementById('command-scrollable-dialog').showModal()">Open Menu</button>
+      <dialog id="command-scrollable-dialog" class="command-dialog" aria-label="Command menu" onpointerdown="this.dataset.backdropPress = event.target === this" onclick="if (event.target === this && this.dataset.backdropPress === 'true') this.close()">
+        <div class="command">
+          <header><i data-lucide="search" aria-hidden="true"></i>
+            <input type="text" id="command-scrollable-input" placeholder="Type a command or search..." autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="command-scrollable-menu" />
+          </header>
+          <div role="menu" id="command-scrollable-menu" aria-orientation="vertical" data-empty="No results found.">
+            <div role="group" aria-labelledby="command-scrollable-navigation">
+              <span role="heading" id="command-scrollable-navigation">Navigation</span>
+              <div role="menuitem" data-filter="Home"><i data-lucide="home" aria-hidden="true"></i><span>Home</span><span data-shortcut>⌘H</span></div>
+              <div role="menuitem" data-filter="Inbox"><i data-lucide="inbox" aria-hidden="true"></i><span>Inbox</span><span data-shortcut>⌘I</span></div>
+              <div role="menuitem" data-filter="Documents"><i data-lucide="file-text" aria-hidden="true"></i><span>Documents</span><span data-shortcut>⌘D</span></div>
+              <div role="menuitem" data-filter="Folders"><i data-lucide="folder" aria-hidden="true"></i><span>Folders</span><span data-shortcut>⌘F</span></div>
+            </div>
+            <hr role="separator" />
+            <div role="group" aria-labelledby="command-scrollable-actions">
+              <span role="heading" id="command-scrollable-actions">Actions</span>
+              <div role="menuitem" data-filter="New File"><i data-lucide="plus" aria-hidden="true"></i><span>New File</span><span data-shortcut>⌘N</span></div>
+              <div role="menuitem" data-filter="New Folder"><i data-lucide="folder-plus" aria-hidden="true"></i><span>New Folder</span><span data-shortcut>⇧⌘N</span></div>
+              <div role="menuitem" data-filter="Copy"><i data-lucide="copy" aria-hidden="true"></i><span>Copy</span><span data-shortcut>⌘C</span></div>
+              <div role="menuitem" data-filter="Cut"><i data-lucide="scissors" aria-hidden="true"></i><span>Cut</span><span data-shortcut>⌘X</span></div>
+              <div role="menuitem" data-filter="Paste"><i data-lucide="clipboard-paste" aria-hidden="true"></i><span>Paste</span><span data-shortcut>⌘V</span></div>
+              <div role="menuitem" data-filter="Delete"><i data-lucide="trash" aria-hidden="true"></i><span>Delete</span><span data-shortcut>⌫</span></div>
+            </div>
+            <hr role="separator" />
+            <div role="group" aria-labelledby="command-scrollable-view">
+              <span role="heading" id="command-scrollable-view">View</span>
+              <div role="menuitem" data-filter="Grid View"><i data-lucide="layout-grid" aria-hidden="true"></i><span>Grid View</span></div>
+              <div role="menuitem" data-filter="List View"><i data-lucide="list" aria-hidden="true"></i><span>List View</span></div>
+              <div role="menuitem" data-filter="Zoom In"><i data-lucide="zoom-in" aria-hidden="true"></i><span>Zoom In</span><span data-shortcut>⌘+</span></div>
+              <div role="menuitem" data-filter="Zoom Out"><i data-lucide="zoom-out" aria-hidden="true"></i><span>Zoom Out</span><span data-shortcut>⌘-</span></div>
+            </div>
+            <hr role="separator" />
+            <div role="group" aria-labelledby="command-scrollable-account">
+              <span role="heading" id="command-scrollable-account">Account</span>
+              <div role="menuitem" data-filter="Profile"><i data-lucide="user" aria-hidden="true"></i><span>Profile</span><span data-shortcut>⌘P</span></div>
+              <div role="menuitem" data-filter="Billing"><i data-lucide="credit-card" aria-hidden="true"></i><span>Billing</span><span data-shortcut>⌘B</span></div>
+              <div role="menuitem" data-filter="Settings"><i data-lucide="settings" aria-hidden="true"></i><span>Settings</span><span data-shortcut>⌘S</span></div>
+              <div role="menuitem" data-filter="Notifications"><i data-lucide="bell" aria-hidden="true"></i><span>Notifications</span></div>
+              <div role="menuitem" data-filter="Help & Support"><i data-lucide="circle-help" aria-hidden="true"></i><span>Help &amp; Support</span></div>
+            </div>
+            <hr role="separator" />
+            <div role="group" aria-labelledby="command-scrollable-tools">
+              <span role="heading" id="command-scrollable-tools">Tools</span>
+              <div role="menuitem" data-filter="Calculator"><i data-lucide="calculator" aria-hidden="true"></i><span>Calculator</span></div>
+              <div role="menuitem" data-filter="Calendar"><i data-lucide="calendar" aria-hidden="true"></i><span>Calendar</span></div>
+              <div role="menuitem" data-filter="Image Editor"><i data-lucide="image" aria-hidden="true"></i><span>Image Editor</span></div>
+              <div role="menuitem" data-filter="Code Editor"><i data-lucide="code" aria-hidden="true"></i><span>Code Editor</span></div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <div dir="rtl">
+          <div id="command-rtl" class="command border" aria-label="Command menu">
+            <header><i data-lucide="search" aria-hidden="true"></i>
+              <input type="text" id="command-rtl-input" placeholder="اكتب أمرًا أو ابحث..." autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="command-rtl-menu" />
+            </header>
+            <div role="menu" id="command-rtl-menu" aria-orientation="vertical" data-empty="لم يتم العثور على نتائج.">
+              <div role="group" aria-labelledby="command-rtl-suggestions">
+                <span role="heading" id="command-rtl-suggestions">اقتراحات</span>
+                <div role="menuitem" data-filter="Calendar"><i data-lucide="calendar" aria-hidden="true"></i>
+                  <span>التقويم</span>
+                  <span data-shortcut>⌘K</span>
+                </div>
+                <div role="menuitem" data-filter="Search Emoji"><i data-lucide="smile" aria-hidden="true"></i>
+                  <span>البحث عن الرموز التعبيرية</span>
+                </div>
+                <div role="menuitem" aria-disabled="true" data-filter="Calculator"><i data-lucide="calculator" aria-hidden="true"></i>
+                  <span>الآلة الحاسبة</span>
+                </div>
+              </div>
+              <hr role="separator" />
+              <div role="group" aria-labelledby="command-rtl-settings">
+                <span role="heading" id="command-rtl-settings">الإعدادات</span>
+                <div role="menuitem" data-filter="Profile"><i data-lucide="user" aria-hidden="true"></i>
+                  <span>الملف الشخصي</span>
+                  <span data-shortcut>⌘P</span>
+                </div>
+                <div role="menuitem" data-filter="Billing"><i data-lucide="credit-card" aria-hidden="true"></i>
+                  <span>الفوترة</span>
+                  <span data-shortcut>⌘B</span>
+                </div>
+                <div role="menuitem" data-filter="Settings"><i data-lucide="settings" aria-hidden="true"></i>
+                  <span>الإعدادات</span>
+                  <span data-shortcut>⌘S</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

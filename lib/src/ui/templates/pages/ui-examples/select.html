@@ -1,0 +1,165 @@
+<section id="select" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Select</h2>
+    <a href="https://basecoatui.com/components/select" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Groups</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="select-groups" class="select" data-placeholder="Select a fruit">
+        <button type="button" class="w-[180px]" id="select-groups-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-groups-listbox">
+          <span class="truncate">Select a fruit</span>
+          <i data-lucide="chevron-down" class="text-muted-foreground opacity-50 shrink-0" aria-hidden="true"></i>
+        </button>
+        <div id="select-groups-popover" data-popover aria-hidden="true">
+          <div role="listbox" id="select-groups-listbox" aria-orientation="vertical" aria-labelledby="select-groups-trigger">
+            <div role="group" aria-labelledby="select-groups-fruits">
+              <span role="heading" id="select-groups-fruits">Fruits</span>
+              <div role="option" data-value="apple">Apple</div>
+              <div role="option" data-value="banana">Banana</div>
+              <div role="option" data-value="blueberry">Blueberry</div>
+            </div>
+            <hr role="separator" />
+            <div role="group" aria-labelledby="select-groups-vegetables">
+              <span role="heading" id="select-groups-vegetables">Vegetables</span>
+              <div role="option" data-value="carrot">Carrot</div>
+              <div role="option" data-value="broccoli">Broccoli</div>
+              <div role="option" data-value="spinach">Spinach</div>
+            </div>
+          </div>
+        </div>
+        <input type="hidden" name="select-groups-value" value="" />
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Scrollable</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="select-scrollable" class="select" data-placeholder="Select a timezone">
+        <button type="button" class="w-[280px]" id="select-scrollable-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-scrollable-listbox">
+          <span class="truncate">Select a timezone</span>
+          <i data-lucide="chevron-down" class="text-muted-foreground opacity-50 shrink-0" aria-hidden="true"></i>
+        </button>
+        <div id="select-scrollable-popover" data-popover aria-hidden="true">
+          <div role="listbox" id="select-scrollable-listbox" class="scrollbar-sm max-h-70 overflow-y-auto" aria-orientation="vertical" aria-labelledby="select-scrollable-trigger">
+            <div role="group" aria-labelledby="select-scrollable-north-america">
+              <span role="heading" id="select-scrollable-north-america">North America</span>
+              <div role="option" data-value="est">Eastern Standard Time (EST)</div>
+              <div role="option" data-value="cst">Central Standard Time (CST)</div>
+              <div role="option" data-value="mst">Mountain Standard Time (MST)</div>
+              <div role="option" data-value="pst">Pacific Standard Time (PST)</div>
+              <div role="option" data-value="akst">Alaska Standard Time (AKST)</div>
+              <div role="option" data-value="hst">Hawaii Standard Time (HST)</div>
+            </div>
+            <div role="group" aria-labelledby="select-scrollable-europe-africa">
+              <span role="heading" id="select-scrollable-europe-africa">Europe &amp; Africa</span>
+              <div role="option" data-value="gmt">Greenwich Mean Time (GMT)</div>
+              <div role="option" data-value="cet">Central European Time (CET)</div>
+              <div role="option" data-value="eet">Eastern European Time (EET)</div>
+              <div role="option" data-value="west">Western European Summer Time (WEST)</div>
+              <div role="option" data-value="cat">Central Africa Time (CAT)</div>
+              <div role="option" data-value="eat">East Africa Time (EAT)</div>
+            </div>
+            <div role="group" aria-labelledby="select-scrollable-asia">
+              <span role="heading" id="select-scrollable-asia">Asia</span>
+              <div role="option" data-value="msk">Moscow Time (MSK)</div>
+              <div role="option" data-value="ist">India Standard Time (IST)</div>
+              <div role="option" data-value="cst_china">China Standard Time (CST)</div>
+              <div role="option" data-value="jst">Japan Standard Time (JST)</div>
+              <div role="option" data-value="kst">Korea Standard Time (KST)</div>
+              <div role="option" data-value="ist_indonesia">Indonesia Central Standard Time (WITA)</div>
+            </div>
+            <div role="group" aria-labelledby="select-scrollable-australia-pacific">
+              <span role="heading" id="select-scrollable-australia-pacific">Australia &amp; Pacific</span>
+              <div role="option" data-value="awst">Australian Western Standard Time (AWST)</div>
+              <div role="option" data-value="acst">Australian Central Standard Time (ACST)</div>
+              <div role="option" data-value="aest">Australian Eastern Standard Time (AEST)</div>
+              <div role="option" data-value="nzst">New Zealand Standard Time (NZST)</div>
+              <div role="option" data-value="fjt">Fiji Time (FJT)</div>
+            </div>
+            <div role="group" aria-labelledby="select-scrollable-south-america">
+              <span role="heading" id="select-scrollable-south-america">South America</span>
+              <div role="option" data-value="art">Argentina Time (ART)</div>
+              <div role="option" data-value="bot">Bolivia Time (BOT)</div>
+              <div role="option" data-value="brt">Brasilia Time (BRT)</div>
+              <div role="option" data-value="clt">Chile Standard Time (CLT)</div>
+            </div>
+          </div>
+        </div>
+        <input type="hidden" name="select-scrollable-value" value="" />
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Disabled</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div id="select-disabled" class="select" data-placeholder="Select a fruit">
+        <button type="button" class="w-[180px]" id="select-disabled-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-disabled-listbox" disabled>
+          <span class="truncate">Select a fruit</span>
+          <i data-lucide="chevron-down" class="text-muted-foreground opacity-50 shrink-0" aria-hidden="true"></i>
+        </button>
+        <div id="select-disabled-popover" data-popover aria-hidden="true">
+          <div role="listbox" id="select-disabled-listbox" aria-orientation="vertical" aria-labelledby="select-disabled-trigger">
+            <div role="option" data-value="apple">Apple</div>
+            <div role="option" data-value="banana">Banana</div>
+            <div role="option" data-value="blueberry">Blueberry</div>
+            <div role="option" data-value="grapes" aria-disabled="true">Grapes</div>
+            <div role="option" data-value="pineapple">Pineapple</div>
+          </div>
+        </div>
+        <input type="hidden" name="select-disabled-value" value="" />
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Invalid</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="field" data-invalid="true">
+        <label for="select-invalid-trigger">Fruit</label>
+        <div id="select-invalid" class="select" data-placeholder="Select a fruit">
+          <button type="button" class="w-[180px]" id="select-invalid-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-invalid-listbox" aria-invalid="true">
+            <span class="truncate">Select a fruit</span>
+            <i data-lucide="chevron-down" class="text-muted-foreground opacity-50 shrink-0" aria-hidden="true"></i>
+          </button>
+          <div id="select-invalid-popover" data-popover aria-hidden="true">
+            <div role="listbox" id="select-invalid-listbox" aria-orientation="vertical" aria-labelledby="select-invalid-trigger">
+              <div role="option" data-value="apple">Apple</div>
+              <div role="option" data-value="banana">Banana</div>
+              <div role="option" data-value="blueberry">Blueberry</div>
+              <div role="option" data-value="grapes">Grapes</div>
+              <div role="option" data-value="pineapple">Pineapple</div>
+            </div>
+          </div>
+          <input type="hidden" name="fruit" value="" />
+        </div>
+        <p role="alert">Please select a valid fruit.</p>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div dir="rtl">
+        <div id="select-rtl" class="select" data-placeholder="اختر فاكهة">
+          <button type="button" class="w-[180px]" id="select-rtl-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-rtl-listbox">
+            <span class="truncate">اختر فاكهة</span>
+            <i data-lucide="chevron-down" class="text-muted-foreground opacity-50 shrink-0" aria-hidden="true"></i>
+          </button>
+          <div id="select-rtl-popover" data-popover aria-hidden="true">
+            <div role="listbox" id="select-rtl-listbox" aria-orientation="vertical" aria-labelledby="select-rtl-trigger">
+              <div role="group" aria-labelledby="select-rtl-fruits">
+                <span role="heading" id="select-rtl-fruits">الفواكه</span>
+                <div role="option" data-value="apple">تفاح</div>
+                <div role="option" data-value="banana">موز</div>
+                <div role="option" data-value="blueberry">توت أزرق</div>
+                <div role="option" data-value="grapes">عنب</div>
+                <div role="option" data-value="pineapple">أناناس</div>
+              </div>
+            </div>
+          </div>
+          <input type="hidden" name="select-rtl-value" value="" />
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

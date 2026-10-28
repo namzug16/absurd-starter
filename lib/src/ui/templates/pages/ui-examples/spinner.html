@@ -1,0 +1,93 @@
+<section id="spinner" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Spinner</h2>
+    <a href="https://basecoatui.com/components/spinner" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Size</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="flex items-center gap-6"><i data-lucide="loader-circle" aria-label="Loading" role="status" class="size-3 animate-spin"></i><i data-lucide="loader-circle" aria-label="Loading" role="status" class="size-4 animate-spin"></i><i data-lucide="loader-circle" aria-label="Loading" role="status" class="size-6 animate-spin"></i><i data-lucide="loader-circle" aria-label="Loading" role="status" class="size-8 animate-spin"></i></div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Button</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="flex flex-col items-center gap-4">
+        <button class="btn" data-size="sm" disabled><i data-lucide="loader-circle" aria-label="Loading" role="status" class="animate-spin"></i>
+          Loading...
+        </button>
+        <button class="btn" data-variant="outline" data-size="sm" disabled><i data-lucide="loader-circle" aria-label="Loading" role="status" class="animate-spin"></i>
+          Please wait
+        </button>
+        <button class="btn" data-variant="secondary" data-size="sm" disabled><i data-lucide="loader-circle" aria-label="Loading" role="status" class="animate-spin"></i>
+          Processing
+        </button>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Badge</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="flex items-center gap-4">
+        <span class="badge"><i data-lucide="loader-circle" aria-label="Loading" role="status" class="animate-spin"></i>
+          Syncing
+        </span>
+        <span class="badge" data-variant="secondary"><i data-lucide="loader-circle" aria-label="Loading" role="status" class="animate-spin"></i>
+          Updating
+        </span>
+        <span class="badge" data-variant="outline"><i data-lucide="loader-circle" aria-label="Loading" role="status" class="animate-spin"></i>
+          Processing
+        </span>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Input group</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-md">
+        <div class="flex w-full max-w-md flex-col gap-4">
+          <div class="input-group">
+            <input placeholder="Send a message..." disabled />
+            <span data-align="inline-end"><i data-lucide="loader-circle" aria-label="Loading" role="status" class="animate-spin"></i></span>
+          </div>
+          <div class="input-group">
+            <textarea placeholder="Send a message..." disabled></textarea>
+            <footer data-align="block-end"><i data-lucide="loader-circle" aria-label="Loading" role="status" class="animate-spin"></i>
+              Validating...
+              <button type="button" class="btn ms-auto" data-size="icon-sm"><i data-lucide="arrow-up" aria-hidden="true"></i>
+                <span class="sr-only">Send</span>
+              </button>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Empty</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full">
+        <div class="empty w-full">
+          <header>
+            <figure><i data-lucide="loader-circle" aria-label="Loading" role="status" class="animate-spin"></i></figure>
+            <h3>Processing your request</h3>
+            <p>Please wait while we process your request. Do not refresh the page.</p>
+          </header>
+          <section> <button class="btn" data-variant="outline" data-size="sm">Cancel</button></section>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <article class="item bg-muted/50 border-transparent" dir="rtl">
+          <figure><i data-lucide="loader-circle" aria-label="Loading" role="status" class="animate-spin"></i></figure>
+          <section> <h3>جاري معالجة الدفع...</h3></section>
+          <aside class="tabular-nums text-sm">١٠٠.٠٠ دولار</aside>
+        </article>
+      </div>
+    </div>
+  </article>
+</section>

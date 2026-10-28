@@ -1,0 +1,321 @@
+<section id="field" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Field</h2>
+    <a href="https://basecoatui.com/components/field" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Input</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <fieldset class="fieldset">
+          <div role="group" aria-label="Account credentials">
+            <div role="group" class="field">
+              <label for="username">Username</label>
+              <input id="username" type="text" placeholder="Max Leiter" aria-describedby="username-description" />
+              <p id="username-description">Choose a unique username for your account.</p>
+            </div>
+            <div role="group" class="field">
+              <label for="password">Password</label>
+              <p id="password-description">Must be at least 8 characters long.</p>
+              <input id="password" type="password" placeholder="••••••••" aria-describedby="password-description" />
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Textarea</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <fieldset class="fieldset">
+          <div role="group" class="field">
+            <label for="feedback">Feedback</label>
+            <textarea id="feedback" placeholder="Your feedback helps us improve..." rows="4" aria-describedby="feedback-description"></textarea>
+            <p id="feedback-description">Share your thoughts about our service.</p>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Select</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" class="field">
+          <label for="department">Department</label>
+          <select id="department" class="select w-full" aria-describedby="department-description">
+            <option value="">Choose department</option>
+            <option value="engineering">Engineering</option>
+            <option value="design">Design</option>
+            <option value="marketing">Marketing</option>
+            <option value="sales">Sales</option>
+            <option value="support">Customer Support</option>
+            <option value="hr">Human Resources</option>
+            <option value="finance">Finance</option>
+            <option value="operations">Operations</option>
+          </select>
+          <p id="department-description">Select your department or area of work.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Slider</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" class="field">
+          <label for="price-range">Price Range</label>
+          <p id="price-range-description">Set your maximum budget <span id="price-range-output">(up to $800)</span>.</p>
+          <input id="price-range" type="range" min="0" max="1000" step="10" value="800" aria-describedby="price-range-description" class="input" />
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Fieldset</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <fieldset class="fieldset">
+          <legend>Address Information</legend>
+          <p>We need your address to deliver your order.</p>
+          <div role="group" aria-label="Address fields">
+            <div role="group" class="field">
+              <label for="street">Street Address</label>
+              <input id="street" type="text" placeholder="123 Main St" />
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div role="group" class="field">
+                <label for="city">City</label>
+                <input id="city" type="text" placeholder="New York" />
+              </div>
+              <div role="group" class="field">
+                <label for="zip">Postal Code</label>
+                <input id="zip" type="text" placeholder="90502" />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Checkbox</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" aria-label="Finder preferences" class="fieldset">
+          <fieldset class="fieldset">
+            <legend data-variant="label">Show these items on the desktop</legend>
+            <p>Select the items you want to show on the desktop.</p>
+            <div role="group" aria-label="Desktop items">
+              <div role="group" class="field" data-orientation="horizontal">
+                <input id="finder-hard-disks" type="checkbox" />
+                <label for="finder-hard-disks" class="font-normal">Hard disks</label>
+              </div>
+              <div role="group" class="field" data-orientation="horizontal">
+                <input id="finder-external-disks" type="checkbox" />
+                <label for="finder-external-disks" class="font-normal">External disks</label>
+              </div>
+              <div role="group" class="field" data-orientation="horizontal">
+                <input id="finder-cds" type="checkbox" />
+                <label for="finder-cds" class="font-normal">CDs, DVDs, and iPods</label>
+              </div>
+              <div role="group" class="field" data-orientation="horizontal">
+                <input id="finder-connected-servers" type="checkbox" />
+                <label for="finder-connected-servers" class="font-normal">Connected servers</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="field-separator">
+            <hr role="separator" />
+          </div>
+          <div role="group" class="field" data-orientation="horizontal">
+            <input id="sync-folders" type="checkbox" checked />
+            <section>
+              <label for="sync-folders">Sync Desktop & Documents folders</label>
+              <p>Your Desktop & Documents folders are being synced with iCloud Drive. You can access them from other devices.</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Radio</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <fieldset class="fieldset">
+          <legend data-variant="label">Subscription Plan</legend>
+          <p>Yearly and lifetime plans offer significant savings.</p>
+          <div role="radiogroup" aria-label="Subscription plan">
+            <div role="group" class="field" data-orientation="horizontal">
+              <input id="plan-monthly" type="radio" name="plan" value="monthly" checked />
+              <label for="plan-monthly" class="font-normal">Monthly ($9.99/month)</label>
+            </div>
+            <div role="group" class="field" data-orientation="horizontal">
+              <input id="plan-yearly" type="radio" name="plan" value="yearly" />
+              <label for="plan-yearly" class="font-normal">Yearly ($99.99/year)</label>
+            </div>
+            <div role="group" class="field" data-orientation="horizontal">
+              <input id="plan-lifetime" type="radio" name="plan" value="lifetime" />
+              <label for="plan-lifetime" class="font-normal">Lifetime ($299.99)</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Switch</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <div role="group" class="field" data-orientation="horizontal">
+          <section>
+            <label for="multi-factor-authentication">Multi-factor authentication</label>
+            <p>Enable multi-factor authentication. If you do not have a two-factor device, you can use a one-time code sent to your email.</p>
+          </section>
+          <input id="multi-factor-authentication" type="checkbox" role="switch" />
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Choice card</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <fieldset class="fieldset">
+          <legend data-variant="label">Compute Environment</legend>
+          <p>Select the compute environment for your cluster.</p>
+          <div role="radiogroup" aria-label="Compute environment">
+            <label for="compute-kubernetes">
+              <div role="group" class="field" data-orientation="horizontal">
+                <section>
+                  <h3>Kubernetes</h3>
+                  <p>Run GPU workloads on a K8s cluster.</p>
+                </section>
+                <input id="compute-kubernetes" type="radio" name="compute" value="kubernetes" checked />
+              </div>
+            </label>
+            <label for="compute-vm">
+              <div role="group" class="field" data-orientation="horizontal">
+                <section>
+                  <h3>Virtual Machine</h3>
+                  <p>Access a cluster to run GPU workloads.</p>
+                </section>
+                <input id="compute-vm" type="radio" name="compute" value="vm" />
+              </div>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Field group</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" aria-label="Notification preferences" class="fieldset">
+          <fieldset class="fieldset">
+            <legend data-variant="label">Responses</legend>
+            <p>Get notified when ChatGPT responds to requests that take time, like research or image generation.</p>
+            <div role="group" aria-label="Response notifications">
+              <div role="group" class="field" data-orientation="horizontal" data-disabled="true">
+                <input id="push-responses" type="checkbox" checked disabled />
+                <label for="push-responses" class="font-normal">Push notifications</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="field-separator">
+            <hr role="separator" />
+          </div>
+          <fieldset class="fieldset">
+            <legend data-variant="label">Tasks</legend>
+            <p>Get notified when tasks you've created have updates. <a href="#">Manage tasks</a></p>
+            <div role="group" aria-label="Task notifications">
+              <div role="group" class="field" data-orientation="horizontal">
+                <input id="push-tasks" type="checkbox" />
+                <label for="push-tasks" class="font-normal">Push notifications</label>
+              </div>
+              <div role="group" class="field" data-orientation="horizontal">
+                <input id="email-tasks" type="checkbox" />
+                <label for="email-tasks" class="font-normal">Email notifications</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Responsive layout</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-4xl">
+        <form>
+          <fieldset class="fieldset">
+            <legend>Profile</legend>
+            <p>Fill in your profile information.</p>
+            <div class="field-separator">
+              <hr role="separator" />
+            </div>
+            <div role="group" aria-label="Profile fields">
+              <div role="group" class="field" data-orientation="responsive">
+                <section>
+                  <label for="responsive-name">Name</label>
+                  <p id="responsive-name-description">Provide your full name for identification</p>
+                </section>
+                <input id="responsive-name" placeholder="Evil Rabbit" aria-describedby="responsive-name-description" required />
+              </div>
+              <div class="field-separator">
+                <hr role="separator" />
+              </div>
+              <div role="group" class="field" data-orientation="responsive">
+                <section>
+                  <label for="responsive-message">Message</label>
+                  <p id="responsive-message-description">You can write your message here. Keep it short, preferably under 100 characters.</p>
+                </section>
+                <textarea id="responsive-message" placeholder="Hello, world!" rows="4" aria-describedby="responsive-message-description" required class="min-h-[100px] resize-none sm:min-w-[300px]"></textarea>
+              </div>
+              <div class="field-separator">
+                <hr role="separator" />
+              </div>
+              <div role="group" class="field" data-orientation="responsive">
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn" data-variant="outline">Cancel</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Validation and errors</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" class="field" data-invalid>
+          <label for="invalid-email">Email</label>
+          <input id="invalid-email" type="email" value="wrong-email" aria-invalid="true" aria-describedby="invalid-email-error" />
+          <p id="invalid-email-error" role="alert">Enter a valid email address.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <fieldset class="fieldset" dir="rtl">
+          <legend>الملف الشخصي</legend>
+          <p>تظهر هذه المعلومات في حسابك.</p>
+          <div role="group" aria-label="حقول الملف الشخصي">
+            <div role="group" class="field">
+              <label for="field-rtl-name">الاسم الكامل</label>
+              <input id="field-rtl-name" type="text" placeholder="أرنب شرير" />
+              <p>اكتب اسمك الأول والأخير.</p>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </article>
+</section>

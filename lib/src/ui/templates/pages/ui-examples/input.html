@@ -1,0 +1,169 @@
+<section id="input" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Input</h2>
+    <a href="https://basecoatui.com/components/input" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Basic</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <input class="input" type="email" placeholder="Email" />
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Field</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" class="field">
+          <label for="input-field">Email</label>
+          <input id="input-field" type="email" placeholder="m@example.com" />
+          <p>Enter your email address.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Field group</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div class="grid gap-4">
+          <div role="group" class="field">
+            <label for="input-first-name">First name</label>
+            <input id="input-first-name" type="text" placeholder="Jane" />
+          </div>
+          <div role="group" class="field">
+            <label for="input-last-name">Last name</label>
+            <input id="input-last-name" type="text" placeholder="Doe" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Disabled</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <input class="input" type="email" placeholder="Email" disabled />
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Invalid</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <input class="input" type="email" placeholder="Email" aria-invalid="true" />
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">File</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <input class="input" type="file" />
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Inline</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div class="flex items-center gap-2">
+          <input class="input" type="search" placeholder="Search..." />
+          <button type="submit" class="btn">Search</button>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Grid</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <div class="grid gap-4 md:grid-cols-2">
+          <input class="input" type="text" placeholder="First name" />
+          <input class="input" type="text" placeholder="Last name" />
+          <input class="input md:col-span-2" type="email" placeholder="Email" />
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Required</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" class="field">
+          <label for="input-required">Username <span class="text-destructive">*</span></label>
+          <input id="input-required" type="text" placeholder="hunvreus" required />
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Badge</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" class="field">
+          <label for="input-badge" class="flex w-full items-center gap-2">
+            Email
+            <span class="badge ml-auto" data-variant="secondary">Recommended</span>
+          </label>
+          <input id="input-badge" type="email" placeholder="m@example.com" />
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Input group</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div class="relative">
+          <input class="input ps-9" type="search" placeholder="Search..." />
+          <div class="pointer-events-none absolute start-3 top-1/2 -translate-y-1/2 text-muted-foreground [&>svg]:size-4"><i data-lucide="search" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Button group</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" aria-label="Search" class="button-group">
+          <input class="input" type="search" placeholder="Search..." />
+          <button type="submit" class="btn" data-variant="outline" data-size="icon" aria-label="Search"><i data-lucide="search" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">Form</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-sm">
+        <form class="space-y-6">
+          <div role="group" class="field">
+            <label for="input-form-username">Username</label>
+            <input id="input-form-username" type="text" placeholder="hunvreus" required />
+            <p>This is your public display name.</p>
+          </div>
+          <div role="group" class="field">
+            <label for="input-form-email">Email</label>
+            <input id="input-form-email" type="email" placeholder="m@example.com" required />
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">RTL</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="w-full max-w-xs">
+        <div role="group" class="field" dir="rtl">
+          <label for="input-rtl-api-key">مفتاح API</label>
+          <input id="input-rtl-api-key" type="password" placeholder="sk-..." />
+          <p>مفتاح API الخاص بك مشفر ومخزن بأمان.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

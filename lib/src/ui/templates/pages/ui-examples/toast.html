@@ -1,0 +1,32 @@
+<section id="toast" class="scroll-mt-20 space-y-6">
+  <header class="flex items-center justify-between gap-4 border-b pb-4">
+    <h2 class="text-2xl font-semibold tracking-tight">Toast</h2>
+    <a href="https://basecoatui.com/components/toast" target="_blank" rel="noreferrer" class="btn" data-variant="ghost" data-size="sm">Docs<i data-lucide="arrow-up-right" data-icon="inline-end" aria-hidden="true"></i></a>
+  </header>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">From the backend (HTMX)</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="max-w-md">
+        <button class="btn" data-variant="outline" hx-get="/ui/toast" hx-target="#toaster" hx-swap="beforeend">Toast from backend (with HTMX)</button>
+      </div>
+    </div>
+  </article>
+  <article class="space-y-3">
+    <h3 class="text-sm font-medium text-muted-foreground">From the front-end</h3>
+    <div class="flex min-h-40 flex-wrap items-center justify-center gap-4 rounded-xl border p-6 sm:p-10">
+      <div class="max-w-md">
+        <button
+          class="btn" data-variant="outline"
+          onclick="document.getElementById('toaster').toast({
+            category: 'success',
+            title: 'Success',
+            description: 'A success toast called from the front-end.',
+            cancel: {
+              label: 'Dismiss'
+            }
+          })"
+        >Toast from front-end</button>
+      </div>
+    </div>
+  </article>
+</section>
