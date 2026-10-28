@@ -7,9 +7,9 @@ select, sidebar, tabs, toast and toaster. Source:
 Upstream MIT attribution is in `LICENSE.md` beside this file and applies to
 the adapted HTML in `../templates/basecoat/` too.
 
-All markup lives in `../templates/basecoat/`; `abs` generates
-`Html.basecoat.*`. `basecoat.dart` prepares defaults, selection state, JSON and
-recursive fragments. There is no Jinja runtime, new dependency or gallery route.
+All markup lives in `../templates/basecoat/`, one template per macro; `abs`
+generates `Html.basecoat.*`. `basecoat.dart` prepares defaults, selection state, JSON and the
+item records the templates loop over. There is no Jinja runtime, new dependency or gallery route.
 
 ```dart
 import "package:absurd_starter/generated/html.dart";
@@ -29,7 +29,7 @@ final fruit = bc.select(
 final details = bc.dialog(
   id: "fruit-details",
   title: "Fruit details",
-  trigger: Html.basecoat.text(text: "Open details"),
+  trigger: "Open details",
   triggerAttrs: {"class": "btn", "data-variant": "outline"},
   body: fruit,
 );
@@ -38,12 +38,14 @@ final details = bc.dialog(
 ## Composition
 
 - `body` replaces Jinja's `caller()`. Structured `items` / sidebar `menu`
-  take precedence when nonempty. Content, icons, triggers, panels and slots are
-  `Fragment` values, not HTML strings. Titles, descriptions and labels are
-  escaped text; use an item's `content` for rich labels and `label` for its
-  accessible/display text. `Html.basecoat.text` makes a text fragment.
-- `ItemType.group`, `separator`, and sidebar-only `submenu` reproduce the
-  recursive helpers. Use groups around sidebar links to provide their `<ul>`.
+  take precedence when nonempty. Triggers, bodies, slots, tabs and panels take
+  a `String` (escaped text) or a `Fragment` (markup). Titles, descriptions and
+  labels are escaped text; use an item's `content` / `icon` fragments for rich
+  labels and `label` for its accessible/display text.
+- `ItemType.group`, `separator`, and sidebar-only `submenu` nest one level,
+  because templates cannot recurse: groups hold plain items, sidebar menus are
+  groups (or separators) holding links and submenus, and submenus hold links.
+  Deeper nesting throws `ArgumentError`.
   Each item supports `attrs`, `disabled`, `current`, `open`, `keywords`, `url`,
   `icon` and rich `content` where applicable.
   Dropdown items accept `attrs: {"role": "menuitemcheckbox", "aria-checked": "false"}`

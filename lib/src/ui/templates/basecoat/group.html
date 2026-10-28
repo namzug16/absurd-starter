@@ -1,6 +1,0 @@
-<x-props id="String" label="String" command="bool" children="List<Fragment>" attrs="Map<String, String>"></x-props>
-<div role="group" aria-labelledby="{{ id }}" ...attrs>
-  <x-if case="command"><span role="heading" id="{{ id }}">{{ label }}</span></x-if>
-  <x-if-not case="command"><div role="heading" id="{{ id }}">{{ label }}</div></x-if-not>
-  {{ children }}
-</div>

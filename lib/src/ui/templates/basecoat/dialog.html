@@ -1,4 +1,4 @@
-<x-props id="String" trigger="Fragment?" title="String?" description="String?" body="Fragment?" footer="Fragment?" hasTrigger="bool" hasTitle="bool" hasDescription="bool" hasHeader="bool" hasBody="bool" hasFooter="bool" open="bool" closeButton="bool" closeOnOverlayClick="bool" dialogAttrs="Map<String, String>" triggerAttrs="Map<String, String>" headerAttrs="Map<String, String>" bodyAttrs="Map<String, String>" footerAttrs="Map<String, String>"></x-props>
+<x-props id="String" trigger="Object?" title="String?" description="String?" body="Object?" footer="Object?" hasTrigger="bool" hasTitle="bool" hasDescription="bool" hasHeader="bool" hasBody="bool" hasFooter="bool" open="bool" closeButton="bool" closeOnOverlayClick="bool" dialogAttrs="Map<String, String>" triggerAttrs="Map<String, String>" headerAttrs="Map<String, String>" bodyAttrs="Map<String, String>" footerAttrs="Map<String, String>"></x-props>
 <x-if case="hasTrigger">
   <button type="button" data-dialog-id="{{ id }}" onclick="document.getElementById(this.dataset.dialogId).showModal()" ...triggerAttrs>{{ trigger }}</button>
 </x-if>

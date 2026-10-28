@@ -1,11 +1,19 @@
-<x-props category="String" role="String" duration="int?" hasDuration="bool" title="String" description="String" hasTitle="bool" hasDescription="bool" icon="Fragment?" action="Fragment?" cancel="Fragment?" hasFooter="bool" attrs="Map<String, String>"></x-props>
+<x-props category="String" role="String" duration="int?" hasDuration="bool" title="String" description="String" hasTitle="bool" hasDescription="bool" iconName="String" icon="Object?" hasIcon="bool" actions="List<({String label, bool isLink, String href, bool cancel, String onclick, bool hasOnclick})>" attrs="Map<String, String>"></x-props>
 <div role="{{ role }}" aria-atomic="true" aria-hidden="false" data-category="{{ category }}" ?hasDuration:data-duration="{{ duration }}" ...attrs>
   <div class="toast-content">
+    <x-if-not case="hasIcon"><i data-lucide="{{ iconName }}" aria-hidden="true"></i></x-if-not>
     {{ icon }}
     <section>
       <x-if case="hasTitle"><h2>{{ title }}</h2></x-if>
       <x-if case="hasDescription"><p>{{ description }}</p></x-if>
     </section>
-    <x-if case="hasFooter"><footer>{{ action }}{{ cancel }}</footer></x-if>
+    <x-if case="actions.isNotEmpty">
+      <footer>
+        <x-for in="actions" as="action">
+          <x-if case="action.isLink"><a href="{{ action.href }}" class="btn" data-size="sm" ?action.cancel:data-variant="outline" ?action.cancel:data-toast-cancel ?!action.cancel:data-toast-action>{{ action.label }}</a></x-if>
+          <x-if-not case="action.isLink"><button type="button" class="btn" data-size="sm" ?action.cancel:data-variant="outline" ?action.cancel:data-toast-cancel ?!action.cancel:data-toast-action ?action.hasOnclick:onclick="{{ action.onclick }}">{{ action.label }}</button></x-if-not>
+        </x-for>
+      </footer>
+    </x-if>
   </div>
 </div>

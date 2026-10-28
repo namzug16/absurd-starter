@@ -1,11 +1,25 @@
-<x-props id="String" name="String" label="String" value="String" multiple="bool" objectFormat="bool" placeholder="String?" hasPlaceholder="bool" closeOnSelect="bool" items="List<Fragment>" body="Fragment?" mainAttrs="Map<String, String>" triggerAttrs="Map<String, String>" popoverAttrs="Map<String, String>" listboxAttrs="Map<String, String>" inputAttrs="Map<String, String>"></x-props>
+<x-props id="String" name="String" label="String" value="String" multiple="bool" objectFormat="bool" placeholder="String?" hasPlaceholder="bool" closeOnSelect="bool" items="List<({bool isOption, bool isGroup, bool isSeparator, String id, String value, String label, bool selected, Object content, Map<String, String> attrs, List<({String id, String value, String label, bool selected, Object content, Map<String, String> attrs})> options})>" body="Object?" mainAttrs="Map<String, String>" triggerAttrs="Map<String, String>" popoverAttrs="Map<String, String>" listboxAttrs="Map<String, String>" inputAttrs="Map<String, String>"></x-props>
 <div id="{{ id }}" ?objectFormat:data-format="object" ?hasPlaceholder:data-placeholder="{{ placeholder }}" ?closeOnSelect:data-close-on-select="true" ...mainAttrs>
   <button type="button" id="{{ id }}-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="{{ id }}-listbox" ...triggerAttrs>
     <span class="truncate">{{ label }}</span>
     <i data-lucide="chevron-down" class="text-muted-foreground opacity-50 shrink-0" aria-hidden="true"></i>
   </button>
   <div id="{{ id }}-popover" data-popover aria-hidden="true" ...popoverAttrs>
-    <div role="listbox" id="{{ id }}-listbox" aria-orientation="vertical" aria-labelledby="{{ id }}-trigger" ?multiple:aria-multiselectable="true" ...listboxAttrs>{{ items }}{{ body }}</div>
+    <div role="listbox" id="{{ id }}-listbox" aria-orientation="vertical" aria-labelledby="{{ id }}-trigger" ?multiple:aria-multiselectable="true" ...listboxAttrs>
+      <x-for in="items" as="item">
+        <x-if case="item.isOption"><div id="{{ item.id }}" role="option" data-label="{{ item.label }}" data-value="{{ item.value }}" ?item.selected:aria-selected="true" ...item.attrs>{{ item.content }}</div></x-if>
+        <x-if case="item.isSeparator"><hr role="separator"></x-if>
+        <x-if case="item.isGroup">
+          <div role="group" aria-labelledby="{{ item.id }}" ...item.attrs>
+            <div role="heading" id="{{ item.id }}">{{ item.label }}</div>
+            <x-for in="item.options" as="option">
+              <div id="{{ option.id }}" role="option" data-label="{{ option.label }}" data-value="{{ option.value }}" ?option.selected:aria-selected="true" ...option.attrs>{{ option.content }}</div>
+            </x-for>
+          </div>
+        </x-if>
+      </x-for>
+      {{ body }}
+    </div>
   </div>
   <input type="hidden" name="{{ name }}" value="{{ value }}" ...inputAttrs>
 </div>

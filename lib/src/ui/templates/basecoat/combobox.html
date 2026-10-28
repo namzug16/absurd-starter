@@ -1,18 +1,55 @@
-<x-props id="String" name="String?" hasName="bool" value="String" multiple="bool" objectFormat="bool" closeOnSelect="bool" autoHighlight="bool" clear="bool" plain="bool" input="Fragment" items="List<Fragment>" body="Fragment?" mainAttrs="Map<String, String>" groupAttrs="Map<String, String>" popoverAttrs="Map<String, String>" listboxAttrs="Map<String, String>" hiddenInputAttrs="Map<String, String>"></x-props>
+<x-props 
+  id="String" 
+  name="String?" 
+  hasName="bool" 
+  value="String" 
+  multiple="bool" 
+  objectFormat="bool" 
+  closeOnSelect="bool" 
+  autoHighlight="bool" 
+  clear="bool" 
+  plain="bool" 
+  placeholder="String" 
+  inputValue="String" 
+  items="List<({bool isOption, bool isGroup, bool isSeparator, String id, String value, String label, bool selected, Object content, Map<String, String> attrs, List<({String id, String value, String label, bool selected, Object content, Map<String, String> attrs})> options})>" 
+  body="Object?" 
+  mainAttrs="Map<String, String>" 
+  inputAttrs="Map<String, String>" 
+  groupAttrs="Map<String, String>" 
+  popoverAttrs="Map<String, String>" 
+  listboxAttrs="Map<String, String>" 
+  hiddenInputAttrs="Map<String, String>"></x-props>
+
 <div id="{{ id }}" ?objectFormat:data-format="object" ?closeOnSelect:data-close-on-select="true" ?autoHighlight:data-auto-highlight="true" ...mainAttrs>
-  <x-if case="multiple">{{ input }}</x-if>
+  <x-if-not case="clear">
+    <input type="text" role="combobox" value="{{ inputValue }}" placeholder="{{ placeholder }}" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="{{ id }}-listbox" ...inputAttrs>
+    <x-if case="plain"><i data-lucide="chevron-down" class="combobox-trigger-icon" aria-hidden="true"></i></x-if>
+  </x-if-not>
   <x-if case="clear">
     <div ...groupAttrs>
-      {{ input }}
+      <input type="text" role="combobox" value="{{ inputValue }}" placeholder="{{ placeholder }}" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="{{ id }}-listbox" ...inputAttrs>
       <span role="group" data-align="inline-end">
         <button type="button" data-clear aria-label="Clear selection"><i data-lucide="x" class="size-4" aria-hidden="true"></i></button>
         <button type="button" class="btn" data-variant="ghost" data-size="icon-xs" aria-label="Open suggestions" aria-haspopup="listbox" aria-expanded="false" aria-controls="{{ id }}-listbox"><i data-lucide="chevron-down" aria-hidden="true"></i></button>
       </span>
     </div>
   </x-if>
-  <x-if case="plain">{{ input }}<i data-lucide="chevron-down" class="combobox-trigger-icon" aria-hidden="true"></i></x-if>
   <div id="{{ id }}-popover" data-popover aria-hidden="true" ...popoverAttrs>
-    <div role="listbox" id="{{ id }}-listbox" aria-orientation="vertical" ?multiple:aria-multiselectable="true" ...listboxAttrs>{{ items }}{{ body }}</div>
+    <div role="listbox" id="{{ id }}-listbox" aria-orientation="vertical" ?multiple:aria-multiselectable="true" ...listboxAttrs>
+      <x-for in="items" as="item">
+        <x-if case="item.isOption"><div id="{{ item.id }}" role="option" data-label="{{ item.label }}" data-value="{{ item.value }}" ?item.selected:aria-selected="true" ...item.attrs>{{ item.content }}</div></x-if>
+        <x-if case="item.isSeparator"><hr role="separator"></x-if>
+        <x-if case="item.isGroup">
+          <div role="group" aria-labelledby="{{ item.id }}" ...item.attrs>
+            <div role="heading" id="{{ item.id }}">{{ item.label }}</div>
+            <x-for in="item.options" as="option">
+              <div id="{{ option.id }}" role="option" data-label="{{ option.label }}" data-value="{{ option.value }}" ?option.selected:aria-selected="true" ...option.attrs>{{ option.content }}</div>
+            </x-for>
+          </div>
+        </x-if>
+      </x-for>
+      {{ body }}
+    </div>
   </div>
   <input type="hidden" ?hasName:name="{{ name }}" value="{{ value }}" ...hiddenInputAttrs>
 </div>
