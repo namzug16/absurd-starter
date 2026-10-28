@@ -1,3 +1,5 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 @import "./basecoat/basecoat-vega.cdn.min.css";
-@source "./lib/**/*.{dart}";
+@source "./lib/src/ui/templates/**/*.html";
+@source "./lib/**/*.dart";
+@source not "./lib/generated/**";

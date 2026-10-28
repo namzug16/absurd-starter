@@ -1,0 +1,16 @@
+<x-props title="String" description="String" content="Fragment"></x-props>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="stylesheet" href="/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@4.0.0/dist/htmx.min.js" integrity="sha384-BvJpBiO8Kh31EqtJe5DRIeWrHWnCGkwytKs9NKFi86Hhw96dEqdEMzZDeK9iEGTc" crossorigin="anonymous"></script>
+    <script src="/basecoat.all.min.js"></script>
+    <script src="/js/lucide.min.js"></script>
+    <script src="/index.js"></script>
+  </head>
+  {{ content }}
+</html>

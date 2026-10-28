@@ -1,111 +1,26 @@
-import "package:absurd_starter/src/ui/lucide.dart";
-import "package:htmleez/htmleez.dart";
-import "package:htmleez/htmleez.dart" as tags;
+import "package:absurd_starter/generated/html.dart";
 
-/// Renders a self-contained modal dialog intended for temporary HTMX/service
-/// responses.
-///
-/// This is not a Basecoat primitive. It lives in `components` because it wraps
-/// the native `<dialog>` element with the behavior we need when a service
-/// returns a dialog fragment directly: the dialog opens itself as soon as it is
-/// inserted into the DOM, and removes itself after it is closed.
-///
-/// Use this for short-lived dialogs that are returned as HTML fragments. Do not
-/// use it for persistent page structure, because the root `<dialog>` node is
-/// intentionally deleted on close.
-///
-/// Typical usage is a trigger that asks the server for a dialog without swapping
-/// the trigger itself:
-///
-/// ```dart
-/// button([
-///   $("type")("button"),
-///   $("hx-get")("/items/$itemId/details-dialog"),
-///   $("hx-swap")("none"),
-///   "Details".t,
-/// ]);
-/// ```
-///
-/// The handler returns the dialog as an out-of-band fragment appended to
-/// `<body>`. Once appended, [temporaryDialog] opens itself. When the user closes
-/// it, the dialog removes itself from the DOM.
-///
-/// ```dart
-/// Future<Response> itemDetailsDialogHandler(Request request) async {
-///   final itemId = request.pathParameters[#itemId];
-///
-///   return htmlFragments([
-///     div([
-///       $("hx-swap-oob")("beforeend:body"),
-///       temporaryDialog(
-///         id: "item-details-dialog-$itemId",
-///         title: "Item details",
-///         body: div([
-///           "Loaded from the server".t,
-///         ]),
-///       ),
-///     ]),
-///   ]);
-/// }
-/// ```
-HTML temporaryDialog({
+/// Opens when inserted by HTMX and removes itself after closing.
+Fragment temporaryDialog({
   required String id,
   required String title,
   String? description,
-  required HTML body,
-  HTML? footer,
+  required Fragment body,
+  Fragment? footer,
   String? dialogExtraClasses,
   String? dialogContentExtraClasses,
-  List<HTML>? dialogAttrs,
-  List<HTML>? headerAttrs,
-  List<HTML>? bodyAttrs,
-  List<HTML>? footerAttrs,
   bool closeButton = true,
   bool closeOnOverlayClick = true,
-}) {
-  final hasDescription = description != null && description.isNotEmpty;
-
-  return tags.dialog([
-    $("id")(id),
-    $classes(["dialog", ?dialogExtraClasses]),
-    $("aria-labelledby")("$id-title"),
-    if (hasDescription) $("aria-describedby")("$id-description"),
-    raw$("_")("init call me.showModal() end on close remove me"),
-    if (closeOnOverlayClick) $("onclick")("if (event.target === this) this.close()"),
-    ...?dialogAttrs,
-    div([
-      $classes([?dialogContentExtraClasses]),
-      tags.header([
-        ...?headerAttrs,
-        h2([
-          $("id")("$id-title"),
-          title.t,
-        ]),
-        if (hasDescription)
-          p([
-            $("id")("$id-description"),
-            description.t,
-          ]),
-      ]),
-      section([
-        ...?bodyAttrs,
-        body,
-      ]),
-      if (footer != null)
-        tags.footer([
-          ...?footerAttrs,
-          footer,
-        ]),
-      if (closeButton)
-        button([
-          $("type")("button"),
-          $("class")("btn"),
-          $("data-variant")("ghost"),
-          $("data-size")("icon-sm"),
-          $("aria-label")("Close dialog"),
-          $("onclick")("this.closest('dialog').close()"),
-          Lucide.x([Attribute("aria-hidden")("true")]),
-        ]),
-    ]),
-  ]);
-}
+}) => Html.temporaryDialog(
+  id: id,
+  title: title,
+  description: description,
+  hasDescription: description != null && description.isNotEmpty,
+  body: body,
+  footer: footer,
+  hasFooter: footer != null,
+  dialogClasses: ["dialog", ?dialogExtraClasses].join(" "),
+  contentClasses: dialogContentExtraClasses ?? "",
+  closeButton: closeButton,
+  overlayClick: closeOnOverlayClick ? "if (event.target === this) this.close()" : "",
+);

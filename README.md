@@ -1,226 +1,148 @@
 # Absurd Starter
 
-| Tool | Version | Used for |
-| --- | --- | --- |
-| Dart SDK | `^3.12.0` | Runtime and server application language |
-| Relic | `2.0.0-rc.1` | HTTP server and routing foundation |
-| htmleez | `1.0.0` | Server-rendered HTML and custom attributes |
-| HTMX | `4.0.0` | Partial page updates and HTML fragments |
-| Tailwind CSS | `v4` via `@tailwindcss/cli` | Utility CSS generation |
-| Basecoat UI | `1.0.2` | CSS components and themes |
-| Lucide Icons | `1.33.0` | Generated Dart icon helpers |
-| Docker | Dockerfile-based | Production image packaging |
-
-Absurd Starter is a pragmatic Dart web template for building small,
-server-driven web apps without pulling in a SPA stack.
-
-It combines Relic, server-rendered HTML, HTMX fragments, Tailwind CSS, Basecoat UI, and generated Lucide icon
-helpers. The goal is to make the common path fast: add routes, return full pages
-or fragments, style with Tailwind/Basecoat classes, iterate quickly in
-development, and ship a Docker image.
-
-The starter uses:
-
-- Relic for the HTTP server
-- htmleez for server-rendered HTML and HTMX attributes
-- HTMX for partial updates
-- Tailwind CSS and Basecoat for styling/components
-- Lucide icons generated into Dart helpers
-- Docker for deployment
+A small server-rendered Dart starter: Relic, Absurd Templates, HTMX 4,
+Tailwind CSS 4, Basecoat 1.0.2 and Lucide 1.33.0. No SPA stack.
 
 ## Quick Start
 
+Requires Dart `^3.12.0`, Node/npm for Tailwind, and `abs` 0.1.0 on your PATH.
+
 ```sh
 dart pub get
-make css
-make lucide
-make dev
+make start
 ```
 
-Open `http://localhost:8080`.
+Open `http://localhost:8080`. Generated HTML Dart and browser assets are
+committed; there is no Absurd Templates runtime dependency. Only template
+generation needs the `abs` CLI.
 
-## Common Commands
+## Commands
 
 ```sh
-make dev       # run the development server
-make prod      # run the server without DEV=true
-make css       # rebuild public/index.css from input.css
-make basecoat  # download Basecoat CSS bundles and JS
-make lucide    # regenerate lib/src/ui/lucide.dart from Lucide SVGs
+make start      # rebuild CSS and templates before starting development
+make dev        # regenerate templates, then run the server
+make prod       # same server startup, without rebuilding CSS
+make templates  # run abs using abs.yaml
+make css        # rebuild public/index.css
+make basecoat   # download pinned Basecoat CSS and JS
+make lucide     # download pinned Lucide JS to public/js/lucide.min.js
 ```
 
-Update agent skills from Dart package dependencies with:
+Re-run `make templates` after editing markup; these commands do not watch files.
+`make dev` and `make prod` do not rebuild CSS; use `make start` or `make css`
+after changing utility classes. The start target waits for CSS before launching
+the template-generation/server target, including with `make -j`.
 
-```sh
-dart run skills@ get
+## Templates And Dart Composition
+
+All markup belongs in `lib/src/ui/templates/**/*.html`, including layouts, pages and small
+fragments. `abs.yaml` configures input `lib/src/ui/templates`,
+output `lib/generated/html.dart`, and entry class `Html`. Never hand-edit the
+generated file; regenerate and commit it with template changes.
+
+Templates declare typed props and render escaped values:
+
+```html
+<x-props title="String" content="Fragment"></x-props>
+<section class="space-y-4">
+  <h1>{{ title }}</h1>
+  {{ content }}
+</section>
 ```
 
-When prompted, install the skills you want. Use `dart run skills@ get --all`
-to install every available skill without prompting.
+Keep calculations and conditional utility strings in Dart. Compose typed
+`Fragment` values from generated methods, then pass them to outer templates.
+A template at `lib/src/ui/templates/section.html` generates `Html.section(...)`;
+subdirectories become namespaces such as `Html.pages.home(...)`.
 
-`make dev` runs `DEV=true dart run bin/server.dart`, using Relic for the HTTP
-server with development mode enabled.
+```dart
+import 'package:absurd_starter/generated/html.dart';
 
-## Verification
+Fragment section(Fragment content) => Html.section(
+  title: 'Overview',
+  content: content,
+);
+```
+
+To add a page, create its HTML template, compose it with the layout in
+`lib/src/ui/pages/`, register a route in `lib/router.dart`, and return
+`htmlPage(Fragment)`. Use `htmlFragments(List<Fragment>)` for partial responses.
+Both helpers live in `lib/src/utils/htmx.dart`.
+
+Write HTMX attributes directly in HTML. For out-of-band updates, set
+`hx-swap-oob` directly in templates and return them with `htmlFragments`.
+
+### Verification
 
 ```sh
+abs check
+abs
 dart analyze
 dart test
+node --test test/index_test.js
 ```
 
-## How To
+For a focused edit, use `abs check lib/src/ui/templates/path/to/template.html` first.
+The `absurd-templates` agent skill describes syntax and composition patterns.
 
-### Add A Page
+## Styling And Browser Behavior
 
-1. Create a page function under `lib/src/ui/pages/`.
-2. Wrap full pages with `primaryLayout(...)` from `lib/src/ui/layout/primary_layout.dart`.
-3. Register the route in `lib/router.dart`.
-4. Return HTML with `htmlPage(...)`.
+Check `docs/basecoat-kitchen-sink.html` and `docs/basecoat-llms.md` for Basecoat
+markup. Write that HTML directly in the page or fragment where it is needed;
+there is no Basecoat wrapper layer or component catalog route.
 
-### Return An HTMX Fragment
+`input.css` scans `lib/src/ui/templates/**/*.html` and Dart sources for complete utility
+strings, excluding generated Dart. Do not assemble utility names dynamically
+(for example, `bg-$color-600`); choose complete strings in Dart instead.
+The active Basecoat theme is the import in `input.css`. To update assets,
+change `_version` in `bin/download_basecoat.dart`, run `make basecoat`, then
+`make css`.
 
-Use htmleez custom attributes for HTMX in your markup, then return only the
-fragment that should replace the target.
+### Lucide Icons
 
-```dart
-form([
-  $("hx-post")("/api/counter/increment"),
-  $("hx-target")("#counter-result"),
-  $("hx-swap")("outerHTML"),
-  // ...
-]);
+Use ordinary template markup:
+
+```html
+<i data-lucide="plus" class="size-4" aria-hidden="true"></i>
 ```
 
-For response helpers, see `lib/src/utils/htmx.dart`. For htmleez syntax, use
-the installed `htmleez-html` agent skill rather than a copied markdown reference.
+Give icon-only buttons an accessible label. The layout loads vendored
+`public/js/lucide.min.js`; `public/index.js` initializes icons on page load and
+after HTMX 4's `htmx:after:swap` event. Do not add inline initialization or
+legacy HTMX event names to templates.
 
-### Update Basecoat CSS And JS
+`make lucide` downloads the pinned UMD bundle from
+`https://unpkg.com/lucide@1.33.0/dist/umd/lucide.min.js`. It replaces the existing
+asset only after a successful download. Change the URL version in `Makefile`
+to upgrade, then regenerate and commit the asset.
 
-Basecoat assets are vendored into the repo so the app does not depend on a CDN
-for component CSS or JS at runtime.
+### Temporary Dialogs
 
-```sh
-make basecoat
-```
-
-This runs `dart run bin/download_basecoat.dart`, which downloads the pinned
-`basecoat-css` version into:
-
-- `basecoat/*.cdn.min.css`
-- `public/basecoat.all.min.js`
-
-To change the Basecoat version, update `_version` in
-`bin/download_basecoat.dart`, then run:
-
-```sh
-make basecoat
-make css
-```
-
-The active theme import lives in `input.css`:
-
-```css
-@import "./basecoat/basecoat-vega.cdn.min.css";
-```
-
-Switch that import to another downloaded bundle, then run `make css`.
-
-### Regenerate Lucide Icons
-
-Lucide SVGs are converted into Dart helpers so icons can be used directly in
-server-rendered markup.
-
-```sh
-make lucide
-```
-
-This runs `dart run bin/generate_lucide.dart` and writes
-`lib/src/ui/lucide.dart`.
-
-Do not hand-edit `lib/src/ui/lucide.dart`; change `_version` in
-`bin/generate_lucide.dart` if you want a different Lucide release, then
-regenerate.
-
-Example usage:
-
-```dart
-import "package:absurd_starter/src/ui/lucide.dart";
-
-button([
-  $("class")("btn"),
-  Lucide.plus([$("class")("size-4")]),
-  "Add item".t,
-]);
-```
-
-### Use Extra Components
-
-Project-specific components live in `lib/src/ui/components/`.
-
-- `htmx_on.dart`: reusable hx-on snippets for HTMX loading states.
-- `temporary_dialog.dart`: a self-contained temporary `<dialog>` component for
-  HTMX/server responses.
-
-`temporaryDialog(...)` is useful when a route returns a modal as an HTML
-fragment. It opens itself when inserted into the DOM and removes itself after it
-closes, so it is best for short-lived dialogs rather than persistent page
-structure.
-
-```dart
-return htmlFragments([
-  div([
-    $("hx-swap-oob")("beforeend:body"),
-    temporaryDialog(
-      id: "item-details-dialog",
-      title: "Item details",
-      body: div(["Loaded from the server".t]),
-    ),
-  ]),
-]);
-```
-
-## Basecoat Kitchen Sink
-
-The repo includes Basecoat references to help both humans and agents translate
-Basecoat examples into Dart markup:
-
-- `docs/basecoat-llms.md`: Basecoat component/class reference.
-- `docs/basecoat-kitchen-sink.html`: broad HTML examples for many Basecoat
-  components.
-
-When adding a new Basecoat component, check the kitchen sink HTML first, then
-translate the markup into htmleez Dart code. Keep Tailwind and
-Basecoat classes in Dart files so Tailwind can discover them through
-`@source "./lib/**/*.{dart}"` in `input.css`.
+`lib/src/ui/templates/temporary-dialog.html` owns dialog markup;
+`lib/src/ui/components/temporary_dialog.dart` composes its fragments.
+`public/index.js` automatically opens inserted nodes marked
+`data-temporary-dialog` and removes them when closed. No inline scripts are
+needed. Put OOB insertion attributes in the relevant HTML template.
 
 ## Structure
 
-- `bin/server.dart`: server entry point and shutdown handling
-- `lib/router.dart`: route wiring
-- `lib/src/ui/layout/primary_layout.dart`: base HTML layout and assets
-- `lib/src/ui/basecoat/`: reusable Dart helpers for Basecoat components
-- `lib/src/ui/components/`: extra app/template components
-- `lib/src/ui/pages/home_page.dart`: starter page and HTMX demo
-- `lib/src/utils/htmx.dart`: response/request helpers for HTMX
-- `lib/src/ui/components/temporary_dialog.dart`: temporary HTMX dialog helper
-- `bin/download_basecoat.dart`: downloads pinned Basecoat CSS and JS assets
-- `bin/generate_lucide.dart`: downloads Lucide SVGs and generates `lib/src/ui/lucide.dart`
-- `input.css`: Tailwind/Basecoat input
-- `public/`: static assets
-- `docs/`: LLM-oriented references for Basecoat
-
-## LLM Docs
-
-- `docs/basecoat-llms.md`: Basecoat component/class reference
-- `docs/basecoat-kitchen-sink.html`: broad Basecoat markup examples
-
-For agents: read `docs/basecoat-kitchen-sink.html` before implementing an
-unfamiliar Basecoat component. For htmleez, load the `htmleez-html` skill; keep
-it updated with `dart run skills@ get`.
+- `bin/server.dart`: entry point and shutdown handling
+- `lib/router.dart`: routes
+- `lib/src/ui/templates/`: all HTML templates
+- `abs.yaml`: template compiler configuration
+- `lib/generated/html.dart`: committed, generated `Html` methods and `Fragment`
+- `lib/src/ui/`: Dart composition and page logic
+- `lib/src/utils/htmx.dart`: HTML response/request helpers
+- `input.css`: Tailwind sources and Basecoat theme
+- `public/`: committed CSS and vendored browser assets
+- `docs/`: Basecoat markup references
 
 ## Docker
 
+Regenerate templates and CSS before packaging changes:
+
 ```sh
+make templates css
 docker build . -t absurd-starter
 docker run --rm -p 8080:8080 absurd-starter
 ```
