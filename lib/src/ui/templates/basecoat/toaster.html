@@ -1,0 +1,2 @@
+<x-props id="String" toasts="List<Fragment>" body="Fragment?" attrs="Map<String, String>"></x-props>
+<div id="{{ id }}" <x-for in="attrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ toasts }}{{ body }}</div>

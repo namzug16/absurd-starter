@@ -35,5 +35,5 @@
 - Use `<i data-lucide="icon-name">` in templates. `public/index.js` initializes icons; never add inline initialization.
 - `public/index.js` auto-opens/removes temporary dialog nodes marked `data-temporary-dialog`; do not put lifecycle scripts in templates.
 - Tailwind scans HTML templates and non-generated Dart. Keep complete utility strings in these sources; run `make css` after class changes.
-- Basecoat is CSS/JS only. Write its HTML directly where needed; do not add a wrapper layer or a component catalog.
+- Basecoat is CSS/JS only. Write its HTML directly where needed; do not add a wrapper layer.
 - Basecoat references: `docs/basecoat-llms.md` and `docs/basecoat-kitchen-sink.html`.

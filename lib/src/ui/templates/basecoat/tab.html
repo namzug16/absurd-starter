@@ -1,0 +1,2 @@
+<x-props id="String" index="int" selected="String" tabindex="String" content="Fragment" attrs="Map<String, String>"></x-props>
+<button type="button" role="tab" id="{{ id }}-tab-{{ index }}" aria-controls="{{ id }}-panel-{{ index }}" aria-selected="{{ selected }}" tabindex="{{ tabindex }}" <x-for in="attrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ content }}</button>

@@ -1,0 +1,3 @@
+<x-props id="String" href="String?" link="bool" button="bool" role="String" icon="Fragment?" content="Fragment" attrs="Map<String, String>"></x-props>
+<x-if case="link"><a id="{{ id }}" href="{{ href }}" role="{{ role }}" <x-for in="attrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ icon }}{{ content }}</a></x-if>
+<x-if case="button"><div id="{{ id }}" role="{{ role }}" <x-for in="attrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ icon }}{{ content }}</div></x-if>

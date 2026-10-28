@@ -1,0 +1,2 @@
+<x-props id="String" value="String?" hasValue="bool" label="String" selected="bool" content="Fragment" attrs="Map<String, String>"></x-props>
+<div id="{{ id }}" role="option" data-label="{{ label }}" <x-if case="hasValue">data-value="{{ value }}" </x-if><x-if case="selected">aria-selected="true" </x-if><x-for in="attrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ content }}</div>

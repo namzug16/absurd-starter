@@ -1,0 +1,3 @@
+<x-props label="String" href="String?" link="bool" button="bool" cancel="bool" action="bool" onclick="String?" hasOnclick="bool"></x-props>
+<x-if case="link"><a href="{{ href }}" class="btn" data-size="sm" <x-if case="cancel">data-variant="outline" data-toast-cancel</x-if><x-if case="action">data-toast-action</x-if>>{{ label }}</a></x-if>
+<x-if case="button"><button type="button" class="btn" data-size="sm" <x-if case="cancel">data-variant="outline" data-toast-cancel </x-if><x-if case="action">data-toast-action </x-if><x-if case="hasOnclick">onclick="{{ onclick }}"</x-if>>{{ label }}</button></x-if>

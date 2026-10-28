@@ -1,0 +1,11 @@
+<x-props category="String" role="String" duration="int?" hasDuration="bool" title="String" description="String" hasTitle="bool" hasDescription="bool" icon="Fragment?" action="Fragment?" cancel="Fragment?" hasFooter="bool" attrs="Map<String, String>"></x-props>
+<div role="{{ role }}" aria-atomic="true" aria-hidden="false" data-category="{{ category }}" <x-if case="hasDuration">data-duration="{{ duration }}" </x-if><x-for in="attrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+  <div class="toast-content">
+    {{ icon }}
+    <section>
+      <x-if case="hasTitle"><h2>{{ title }}</h2></x-if>
+      <x-if case="hasDescription"><p>{{ description }}</p></x-if>
+    </section>
+    <x-if case="hasFooter"><footer>{{ action }}{{ cancel }}</footer></x-if>
+  </div>
+</div>
