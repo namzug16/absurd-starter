@@ -1,0 +1,5 @@
+<x-props id="String" label="String" hasLabel="bool" children="List<Fragment>" attrs="Map<String, String>"></x-props>
+<div role="group" <x-if case="hasLabel">aria-labelledby="{{ id }}" </x-if><x-for in="attrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+  <x-if case="hasLabel"><h3 id="{{ id }}">{{ label }}</h3></x-if>
+  <ul>{{ children }}</ul>
+</div>

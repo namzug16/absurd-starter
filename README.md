@@ -88,8 +88,11 @@ The `absurd-templates` agent skill describes syntax and composition patterns.
 ## Styling And Browser Behavior
 
 Check `docs/basecoat-kitchen-sink.html` and `docs/basecoat-llms.md` for Basecoat
-markup. Write that HTML directly in the page or fragment where it is needed;
-there is no Basecoat wrapper layer or component catalog route.
+markup. Write simple HTML directly in the page or fragment where it is needed.
+The larger upstream template-backed components live in
+[`lib/src/ui/templates/basecoat/`](lib/src/ui/templates/basecoat/), with Dart
+composition and usage notes in [`lib/src/ui/basecoat/`](lib/src/ui/basecoat/README.md).
+There is no generic Basecoat wrapper layer or component catalog route.
 
 `input.css` scans `lib/src/ui/templates/**/*.html` and Dart sources for complete utility
 strings, excluding generated Dart. Do not assemble utility names dynamically

@@ -69,9 +69,1086 @@ abstract final class Html {
     $out.write('  </div>\n</dialog>\n');
   });
 
+  static const basecoat = _Html$basecoat();
+
   static const layout = _Html$layout();
 
   static const pages = _Html$pages();
+}
+
+final class _Html$basecoat {
+  const _Html$basecoat();
+
+  Fragment comboboxInput({
+    required String id, // lib/src/ui/templates/basecoat/combobox-input.html:1:14
+    required String placeholder, // lib/src/ui/templates/basecoat/combobox-input.html:1:35
+    required String value, // lib/src/ui/templates/basecoat/combobox-input.html:1:50
+    required Map<String, String> inputAttrs, // lib/src/ui/templates/basecoat/combobox-input.html:1:70
+  }) =>
+      Fragment._(($out) {
+    $out.write('<input type="text" role="combobox" value="');
+    _$write($out, value); // lib/src/ui/templates/basecoat/combobox-input.html:2:46
+    $out.write('" placeholder="');
+    _$write($out, placeholder); // lib/src/ui/templates/basecoat/combobox-input.html:2:72
+    $out.write('" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/combobox-input.html:2:209
+    $out.write('-listbox" ');
+    for (final attr in (inputAttrs.entries)) { // lib/src/ui/templates/basecoat/combobox-input.html:2:235
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/combobox-input.html:2:268
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/combobox-input.html:2:284
+      $out.write('" ');
+    }
+    $out.write('>\n');
+  });
+
+  Fragment combobox({
+    required String id, // lib/src/ui/templates/basecoat/combobox.html:1:14
+    String? name, // lib/src/ui/templates/basecoat/combobox.html:1:28
+    required bool hasName, // lib/src/ui/templates/basecoat/combobox.html:1:46
+    required String value, // lib/src/ui/templates/basecoat/combobox.html:1:59
+    required bool multiple, // lib/src/ui/templates/basecoat/combobox.html:1:77
+    required bool objectFormat, // lib/src/ui/templates/basecoat/combobox.html:1:97
+    required bool closeOnSelect, // lib/src/ui/templates/basecoat/combobox.html:1:118
+    required bool autoHighlight, // lib/src/ui/templates/basecoat/combobox.html:1:139
+    required bool clear, // lib/src/ui/templates/basecoat/combobox.html:1:152
+    required bool plain, // lib/src/ui/templates/basecoat/combobox.html:1:165
+    required Fragment input, // lib/src/ui/templates/basecoat/combobox.html:1:178
+    required List<Fragment> items, // lib/src/ui/templates/basecoat/combobox.html:1:195
+    Fragment? body, // lib/src/ui/templates/basecoat/combobox.html:1:217
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/combobox.html:1:239
+    required Map<String, String> groupAttrs, // lib/src/ui/templates/basecoat/combobox.html:1:272
+    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/combobox.html:1:307
+    required Map<String, String> listboxAttrs, // lib/src/ui/templates/basecoat/combobox.html:1:342
+    required Map<String, String> hiddenInputAttrs, // lib/src/ui/templates/basecoat/combobox.html:1:381
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:2:13
+    $out.write('" ');
+    if (objectFormat) { // lib/src/ui/templates/basecoat/combobox.html:2:32
+      $out.write('data-format="object" ');
+    }
+    if (closeOnSelect) { // lib/src/ui/templates/basecoat/combobox.html:2:86
+      $out.write('data-close-on-select="true" ');
+    }
+    if (autoHighlight) { // lib/src/ui/templates/basecoat/combobox.html:2:148
+      $out.write('data-auto-highlight="true" ');
+    }
+    for (final attr in (mainAttrs.entries)) { // lib/src/ui/templates/basecoat/combobox.html:2:208
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/combobox.html:2:240
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/combobox.html:2:256
+      $out.write('" ');
+    }
+    $out.write('>\n  ');
+    if (multiple) { // lib/src/ui/templates/basecoat/combobox.html:3:15
+      _$write($out, input); // lib/src/ui/templates/basecoat/combobox.html:3:28
+    }
+    $out.write('\n');
+    if (clear) { // lib/src/ui/templates/basecoat/combobox.html:4:15
+      $out.write('    <div ');
+      for (final attr in (groupAttrs.entries)) { // lib/src/ui/templates/basecoat/combobox.html:5:21
+        _$write($out, attr.key); // lib/src/ui/templates/basecoat/combobox.html:5:54
+        $out.write('="');
+        _$write($out, attr.value); // lib/src/ui/templates/basecoat/combobox.html:5:70
+        $out.write('" ');
+      }
+      $out.write('>\n      ');
+      _$write($out, input); // lib/src/ui/templates/basecoat/combobox.html:6:10
+      $out.write('\n      <span role="group" data-align="inline-end">\n        <button type="button" data-clear aria-label="Clear selection"><i data-lucide="x" class="size-4" aria-hidden="true"></i></button>\n        <button type="button" class="btn" data-variant="ghost" data-size="icon-xs" aria-label="Open suggestions" aria-haspopup="listbox" aria-expanded="false" aria-controls="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:9:178
+      $out.write('-listbox"><i data-lucide="chevron-down" aria-hidden="true"></i></button>\n      </span>\n    </div>\n');
+    }
+    $out.write('  ');
+    if (plain) { // lib/src/ui/templates/basecoat/combobox.html:13:15
+      _$write($out, input); // lib/src/ui/templates/basecoat/combobox.html:13:25
+      $out.write('<i data-lucide="chevron-down" class="combobox-trigger-icon" aria-hidden="true"></i>');
+    }
+    $out.write('\n  <div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:14:15
+    $out.write('-popover" data-popover aria-hidden="true" ');
+    for (final attr in (popoverAttrs.entries)) { // lib/src/ui/templates/basecoat/combobox.html:14:73
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/combobox.html:14:108
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/combobox.html:14:124
+      $out.write('" ');
+    }
+    $out.write('>\n    <div role="listbox" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/combobox.html:15:32
+    $out.write('-listbox" aria-orientation="vertical" ');
+    if (multiple) { // lib/src/ui/templates/basecoat/combobox.html:15:87
+      $out.write('aria-multiselectable="true" ');
+    }
+    for (final attr in (listboxAttrs.entries)) { // lib/src/ui/templates/basecoat/combobox.html:15:143
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/combobox.html:15:178
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/combobox.html:15:194
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, items); // lib/src/ui/templates/basecoat/combobox.html:15:221
+    _$write($out, body); // lib/src/ui/templates/basecoat/combobox.html:15:232
+    $out.write('</div>\n  </div>\n  <input type="hidden" ');
+    if (hasName) { // lib/src/ui/templates/basecoat/combobox.html:17:36
+      $out.write('name="');
+      _$write($out, name); // lib/src/ui/templates/basecoat/combobox.html:17:54
+      $out.write('" ');
+    }
+    $out.write('value="');
+    _$write($out, value); // lib/src/ui/templates/basecoat/combobox.html:17:80
+    $out.write('" ');
+    for (final attr in (hiddenInputAttrs.entries)) { // lib/src/ui/templates/basecoat/combobox.html:17:101
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/combobox.html:17:140
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/combobox.html:17:156
+      $out.write('" ');
+    }
+    $out.write('>\n</div>\n');
+  });
+
+  Fragment commandContent({
+    required String id, // lib/src/ui/templates/basecoat/command-content.html:1:14
+    required String placeholder, // lib/src/ui/templates/basecoat/command-content.html:1:35
+    required String emptyText, // lib/src/ui/templates/basecoat/command-content.html:1:54
+    required Map<String, String> inputAttrs, // lib/src/ui/templates/basecoat/command-content.html:1:74
+    required Map<String, String> menuAttrs, // lib/src/ui/templates/basecoat/command-content.html:1:106
+    required List<Fragment> items, // lib/src/ui/templates/basecoat/command-content.html:1:134
+    Fragment? body, // lib/src/ui/templates/basecoat/command-content.html:1:156
+  }) =>
+      Fragment._(($out) {
+    $out.write('<header>\n  <i data-lucide="search" aria-hidden="true"></i>\n  <input type="text" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/command-content.html:4:29
+    $out.write('-input" placeholder="');
+    _$write($out, placeholder); // lib/src/ui/templates/basecoat/command-content.html:4:58
+    $out.write('" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/command-content.html:4:210
+    $out.write('-menu" ');
+    for (final attr in (inputAttrs.entries)) { // lib/src/ui/templates/basecoat/command-content.html:4:233
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/command-content.html:4:266
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/command-content.html:4:282
+      $out.write('" ');
+    }
+    $out.write('>\n</header>\n<div role="menu" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/command-content.html:6:25
+    $out.write('-menu" aria-orientation="vertical" data-empty="');
+    _$write($out, emptyText); // lib/src/ui/templates/basecoat/command-content.html:6:80
+    $out.write('" ');
+    for (final attr in (menuAttrs.entries)) { // lib/src/ui/templates/basecoat/command-content.html:6:105
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/command-content.html:6:137
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/command-content.html:6:153
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, items); // lib/src/ui/templates/basecoat/command-content.html:6:180
+    _$write($out, body); // lib/src/ui/templates/basecoat/command-content.html:6:191
+    $out.write('</div>\n');
+  });
+
+  Fragment commandDialog({
+    required String id, // lib/src/ui/templates/basecoat/command-dialog.html:1:14
+    required Fragment content, // lib/src/ui/templates/basecoat/command-dialog.html:1:31
+    required bool open, // lib/src/ui/templates/basecoat/command-dialog.html:1:47
+    required Map<String, String> dialogAttrs, // lib/src/ui/templates/basecoat/command-dialog.html:1:66
+  }) =>
+      Fragment._(($out) {
+    $out.write('<dialog id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/command-dialog.html:2:16
+    $out.write('" ');
+    if (open) { // lib/src/ui/templates/basecoat/command-dialog.html:2:35
+      $out.write('open ');
+    }
+    $out.write('onclick="if (event.target === this) this.close()" ');
+    for (final attr in (dialogAttrs.entries)) { // lib/src/ui/templates/basecoat/command-dialog.html:2:114
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/command-dialog.html:2:148
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/command-dialog.html:2:164
+      $out.write('" ');
+    }
+    $out.write('>\n  <div class="command">');
+    _$write($out, content); // lib/src/ui/templates/basecoat/command-dialog.html:3:27
+    $out.write('</div>\n</dialog>\n');
+  });
+
+  Fragment command({
+    required String id, // lib/src/ui/templates/basecoat/command.html:1:14
+    required Fragment content, // lib/src/ui/templates/basecoat/command.html:1:31
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/command.html:1:52
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/command.html:2:13
+    $out.write('" ');
+    for (final attr in (mainAttrs.entries)) { // lib/src/ui/templates/basecoat/command.html:2:31
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/command.html:2:63
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/command.html:2:79
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, content); // lib/src/ui/templates/basecoat/command.html:2:106
+    $out.write('</div>\n');
+  });
+
+  Fragment dialog({
+    required String id, // lib/src/ui/templates/basecoat/dialog.html:1:14
+    Fragment? trigger, // lib/src/ui/templates/basecoat/dialog.html:1:31
+    String? title, // lib/src/ui/templates/basecoat/dialog.html:1:49
+    String? description, // lib/src/ui/templates/basecoat/dialog.html:1:71
+    Fragment? body, // lib/src/ui/templates/basecoat/dialog.html:1:86
+    Fragment? footer, // lib/src/ui/templates/basecoat/dialog.html:1:105
+    required bool hasTrigger, // lib/src/ui/templates/basecoat/dialog.html:1:128
+    required bool hasTitle, // lib/src/ui/templates/basecoat/dialog.html:1:144
+    required bool hasDescription, // lib/src/ui/templates/basecoat/dialog.html:1:166
+    required bool hasHeader, // lib/src/ui/templates/basecoat/dialog.html:1:183
+    required bool hasBody, // lib/src/ui/templates/basecoat/dialog.html:1:198
+    required bool hasFooter, // lib/src/ui/templates/basecoat/dialog.html:1:215
+    required bool open, // lib/src/ui/templates/basecoat/dialog.html:1:227
+    required bool closeButton, // lib/src/ui/templates/basecoat/dialog.html:1:246
+    required bool closeOnOverlayClick, // lib/src/ui/templates/basecoat/dialog.html:1:273
+    required Map<String, String> dialogAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:292
+    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:327
+    required Map<String, String> headerAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:361
+    required Map<String, String> bodyAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:393
+    required Map<String, String> footerAttrs, // lib/src/ui/templates/basecoat/dialog.html:1:427
+  }) =>
+      Fragment._(($out) {
+    if (hasTrigger) { // lib/src/ui/templates/basecoat/dialog.html:2:13
+      $out.write('  <button type="button" data-dialog-id="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/dialog.html:3:44
+      $out.write('" onclick="document.getElementById(this.dataset.dialogId).showModal()" ');
+      for (final attr in (triggerAttrs.entries)) { // lib/src/ui/templates/basecoat/dialog.html:3:131
+        _$write($out, attr.key); // lib/src/ui/templates/basecoat/dialog.html:3:166
+        $out.write('="');
+        _$write($out, attr.value); // lib/src/ui/templates/basecoat/dialog.html:3:182
+        $out.write('" ');
+      }
+      $out.write('>');
+      _$write($out, trigger); // lib/src/ui/templates/basecoat/dialog.html:3:209
+      $out.write('</button>\n');
+    }
+    $out.write('<dialog id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/dialog.html:5:16
+    $out.write('" ');
+    if (hasTitle) { // lib/src/ui/templates/basecoat/dialog.html:5:35
+      $out.write('aria-labelledby="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/dialog.html:5:65
+      $out.write('-title" ');
+    }
+    if (hasDescription) { // lib/src/ui/templates/basecoat/dialog.html:5:97
+      $out.write('aria-describedby="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/dialog.html:5:134
+      $out.write('-description" ');
+    }
+    if (open) { // lib/src/ui/templates/basecoat/dialog.html:5:172
+      $out.write('open ');
+    }
+    if (closeOnOverlayClick) { // lib/src/ui/templates/basecoat/dialog.html:5:202
+      $out.write('onclick="if (event.target === this) this.close()" ');
+    }
+    for (final attr in (dialogAttrs.entries)) { // lib/src/ui/templates/basecoat/dialog.html:5:291
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/dialog.html:5:325
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/dialog.html:5:341
+      $out.write('" ');
+    }
+    $out.write('>\n  <div>\n');
+    if (hasHeader) { // lib/src/ui/templates/basecoat/dialog.html:7:17
+      $out.write('      <header ');
+      for (final attr in (headerAttrs.entries)) { // lib/src/ui/templates/basecoat/dialog.html:8:26
+        _$write($out, attr.key); // lib/src/ui/templates/basecoat/dialog.html:8:60
+        $out.write('="');
+        _$write($out, attr.value); // lib/src/ui/templates/basecoat/dialog.html:8:76
+        $out.write('" ');
+      }
+      $out.write('>\n        ');
+      if (hasTitle) { // lib/src/ui/templates/basecoat/dialog.html:9:21
+        $out.write('<h2 id="');
+        _$write($out, id); // lib/src/ui/templates/basecoat/dialog.html:9:42
+        $out.write('-title">');
+        _$write($out, title); // lib/src/ui/templates/basecoat/dialog.html:9:58
+        $out.write('</h2>');
+      }
+      $out.write('\n        ');
+      if (hasDescription) { // lib/src/ui/templates/basecoat/dialog.html:10:21
+        $out.write('<p id="');
+        _$write($out, id); // lib/src/ui/templates/basecoat/dialog.html:10:47
+        $out.write('-description">');
+        _$write($out, description); // lib/src/ui/templates/basecoat/dialog.html:10:69
+        $out.write('</p>');
+      }
+      $out.write('\n      </header>\n');
+    }
+    $out.write('    ');
+    if (hasBody) { // lib/src/ui/templates/basecoat/dialog.html:13:17
+      $out.write('<section ');
+      for (final attr in (bodyAttrs.entries)) { // lib/src/ui/templates/basecoat/dialog.html:13:46
+        _$write($out, attr.key); // lib/src/ui/templates/basecoat/dialog.html:13:78
+        $out.write('="');
+        _$write($out, attr.value); // lib/src/ui/templates/basecoat/dialog.html:13:94
+        $out.write('" ');
+      }
+      $out.write('>');
+      _$write($out, body); // lib/src/ui/templates/basecoat/dialog.html:13:121
+      $out.write('</section>');
+    }
+    $out.write('\n    ');
+    if (hasFooter) { // lib/src/ui/templates/basecoat/dialog.html:14:17
+      $out.write('<footer ');
+      for (final attr in (footerAttrs.entries)) { // lib/src/ui/templates/basecoat/dialog.html:14:47
+        _$write($out, attr.key); // lib/src/ui/templates/basecoat/dialog.html:14:81
+        $out.write('="');
+        _$write($out, attr.value); // lib/src/ui/templates/basecoat/dialog.html:14:97
+        $out.write('" ');
+      }
+      $out.write('>');
+      _$write($out, footer); // lib/src/ui/templates/basecoat/dialog.html:14:124
+      $out.write('</footer>');
+    }
+    $out.write('\n    ');
+    if (closeButton) { // lib/src/ui/templates/basecoat/dialog.html:15:17
+      $out.write('<button type="button" class="btn" data-variant="ghost" data-size="icon-sm" aria-label="Close dialog" onclick="this.closest(\'dialog\').close()"><i data-lucide="x" aria-hidden="true"></i></button>');
+    }
+    $out.write('\n  </div>\n</dialog>\n');
+  });
+
+  Fragment dropdownMenu({
+    required String id, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:14
+    required Fragment trigger, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:31
+    required List<Fragment> items, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:48
+    Fragment? body, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:70
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:92
+    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:127
+    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:162
+    required Map<String, String> menuAttrs, // lib/src/ui/templates/basecoat/dropdown-menu.html:1:194
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/dropdown-menu.html:2:13
+    $out.write('" ');
+    for (final attr in (mainAttrs.entries)) { // lib/src/ui/templates/basecoat/dropdown-menu.html:2:31
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/dropdown-menu.html:2:63
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/dropdown-menu.html:2:79
+      $out.write('" ');
+    }
+    $out.write('>\n  <button type="button" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/dropdown-menu.html:3:32
+    $out.write('-trigger" aria-haspopup="menu" aria-controls="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/dropdown-menu.html:3:86
+    $out.write('-menu" aria-expanded="false" ');
+    for (final attr in (triggerAttrs.entries)) { // lib/src/ui/templates/basecoat/dropdown-menu.html:3:131
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/dropdown-menu.html:3:166
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/dropdown-menu.html:3:182
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, trigger); // lib/src/ui/templates/basecoat/dropdown-menu.html:3:209
+    $out.write('</button>\n  <div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/dropdown-menu.html:4:15
+    $out.write('-popover" data-popover aria-hidden="true" ');
+    for (final attr in (popoverAttrs.entries)) { // lib/src/ui/templates/basecoat/dropdown-menu.html:4:73
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/dropdown-menu.html:4:108
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/dropdown-menu.html:4:124
+      $out.write('" ');
+    }
+    $out.write('>\n    <div role="menu" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/dropdown-menu.html:5:29
+    $out.write('-menu" aria-labelledby="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/dropdown-menu.html:5:61
+    $out.write('-trigger" ');
+    for (final attr in (menuAttrs.entries)) { // lib/src/ui/templates/basecoat/dropdown-menu.html:5:87
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/dropdown-menu.html:5:119
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/dropdown-menu.html:5:135
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, items); // lib/src/ui/templates/basecoat/dropdown-menu.html:5:162
+    _$write($out, body); // lib/src/ui/templates/basecoat/dropdown-menu.html:5:173
+    $out.write('</div>\n  </div>\n</div>\n');
+  });
+
+  Fragment group({
+    required String id, // lib/src/ui/templates/basecoat/group.html:1:14
+    required String label, // lib/src/ui/templates/basecoat/group.html:1:29
+    required bool command, // lib/src/ui/templates/basecoat/group.html:1:46
+    required bool other, // lib/src/ui/templates/basecoat/group.html:1:59
+    required List<Fragment> children, // lib/src/ui/templates/basecoat/group.html:1:75
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/group.html:1:98
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div role="group" aria-labelledby="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/group.html:2:39
+    $out.write('" ');
+    for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/group.html:2:57
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/group.html:2:85
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/group.html:2:101
+      $out.write('" ');
+    }
+    $out.write('>\n  ');
+    if (command) { // lib/src/ui/templates/basecoat/group.html:3:15
+      $out.write('<span role="heading" id="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/group.html:3:52
+      $out.write('">');
+      _$write($out, label); // lib/src/ui/templates/basecoat/group.html:3:62
+      $out.write('</span>');
+    }
+    $out.write('\n  ');
+    if (other) { // lib/src/ui/templates/basecoat/group.html:4:15
+      $out.write('<div role="heading" id="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/group.html:4:49
+      $out.write('">');
+      _$write($out, label); // lib/src/ui/templates/basecoat/group.html:4:59
+      $out.write('</div>');
+    }
+    $out.write('\n  ');
+    _$write($out, children); // lib/src/ui/templates/basecoat/group.html:5:6
+    $out.write('\n</div>\n');
+  });
+
+  Fragment icon({
+    required String name, // lib/src/ui/templates/basecoat/icon.html:1:16
+  }) =>
+      Fragment._(($out) {
+    $out.write('<i data-lucide="');
+    _$write($out, name); // lib/src/ui/templates/basecoat/icon.html:2:20
+    $out.write('" aria-hidden="true"></i>\n');
+  });
+
+  Fragment menuItem({
+    required String id, // lib/src/ui/templates/basecoat/menu-item.html:1:14
+    String? href, // lib/src/ui/templates/basecoat/menu-item.html:1:28
+    required bool link, // lib/src/ui/templates/basecoat/menu-item.html:1:43
+    required bool button, // lib/src/ui/templates/basecoat/menu-item.html:1:57
+    required String role, // lib/src/ui/templates/basecoat/menu-item.html:1:69
+    Fragment? icon, // lib/src/ui/templates/basecoat/menu-item.html:1:83
+    required Fragment content, // lib/src/ui/templates/basecoat/menu-item.html:1:103
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/menu-item.html:1:120
+  }) =>
+      Fragment._(($out) {
+    if (link) { // lib/src/ui/templates/basecoat/menu-item.html:2:13
+      $out.write('<a id="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/menu-item.html:2:29
+      $out.write('" href="');
+      _$write($out, href); // lib/src/ui/templates/basecoat/menu-item.html:2:45
+      $out.write('" role="');
+      _$write($out, role); // lib/src/ui/templates/basecoat/menu-item.html:2:63
+      $out.write('" ');
+      for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/menu-item.html:2:83
+        _$write($out, attr.key); // lib/src/ui/templates/basecoat/menu-item.html:2:111
+        $out.write('="');
+        _$write($out, attr.value); // lib/src/ui/templates/basecoat/menu-item.html:2:127
+        $out.write('" ');
+      }
+      $out.write('>');
+      _$write($out, icon); // lib/src/ui/templates/basecoat/menu-item.html:2:154
+      _$write($out, content); // lib/src/ui/templates/basecoat/menu-item.html:2:164
+      $out.write('</a>');
+    }
+    $out.write('\n');
+    if (button) { // lib/src/ui/templates/basecoat/menu-item.html:3:13
+      $out.write('<div id="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/menu-item.html:3:33
+      $out.write('" role="');
+      _$write($out, role); // lib/src/ui/templates/basecoat/menu-item.html:3:49
+      $out.write('" ');
+      for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/menu-item.html:3:69
+        _$write($out, attr.key); // lib/src/ui/templates/basecoat/menu-item.html:3:97
+        $out.write('="');
+        _$write($out, attr.value); // lib/src/ui/templates/basecoat/menu-item.html:3:113
+        $out.write('" ');
+      }
+      $out.write('>');
+      _$write($out, icon); // lib/src/ui/templates/basecoat/menu-item.html:3:140
+      _$write($out, content); // lib/src/ui/templates/basecoat/menu-item.html:3:150
+      $out.write('</div>');
+    }
+    $out.write('\n');
+  });
+
+  Fragment option({
+    required String id, // lib/src/ui/templates/basecoat/option.html:1:14
+    String? value, // lib/src/ui/templates/basecoat/option.html:1:29
+    required bool hasValue, // lib/src/ui/templates/basecoat/option.html:1:48
+    required String label, // lib/src/ui/templates/basecoat/option.html:1:61
+    required bool selected, // lib/src/ui/templates/basecoat/option.html:1:79
+    required Fragment content, // lib/src/ui/templates/basecoat/option.html:1:94
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/option.html:1:111
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/option.html:2:13
+    $out.write('" role="option" data-label="');
+    _$write($out, label); // lib/src/ui/templates/basecoat/option.html:2:49
+    $out.write('" ');
+    if (hasValue) { // lib/src/ui/templates/basecoat/option.html:2:71
+      $out.write('data-value="');
+      _$write($out, value); // lib/src/ui/templates/basecoat/option.html:2:96
+      $out.write('" ');
+    }
+    if (selected) { // lib/src/ui/templates/basecoat/option.html:2:125
+      $out.write('aria-selected="true" ');
+    }
+    for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/option.html:2:174
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/option.html:2:202
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/option.html:2:218
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, content); // lib/src/ui/templates/basecoat/option.html:2:245
+    $out.write('</div>\n');
+  });
+
+  Fragment popover({
+    required String id, // lib/src/ui/templates/basecoat/popover.html:1:14
+    required Fragment trigger, // lib/src/ui/templates/basecoat/popover.html:1:31
+    Fragment? body, // lib/src/ui/templates/basecoat/popover.html:1:47
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/popover.html:1:69
+    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/popover.html:1:104
+    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/popover.html:1:139
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/popover.html:2:13
+    $out.write('" ');
+    for (final attr in (mainAttrs.entries)) { // lib/src/ui/templates/basecoat/popover.html:2:31
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/popover.html:2:63
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/popover.html:2:79
+      $out.write('" ');
+    }
+    $out.write('>\n  <button id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/popover.html:3:18
+    $out.write('-trigger" type="button" aria-expanded="false" aria-controls="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/popover.html:3:87
+    $out.write('-popover" ');
+    for (final attr in (triggerAttrs.entries)) { // lib/src/ui/templates/basecoat/popover.html:3:113
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/popover.html:3:148
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/popover.html:3:164
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, trigger); // lib/src/ui/templates/basecoat/popover.html:3:191
+    $out.write('</button>\n  <div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/popover.html:4:15
+    $out.write('-popover" data-popover aria-hidden="true" ');
+    for (final attr in (popoverAttrs.entries)) { // lib/src/ui/templates/basecoat/popover.html:4:73
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/popover.html:4:108
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/popover.html:4:124
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, body); // lib/src/ui/templates/basecoat/popover.html:4:151
+    $out.write('</div>\n</div>\n');
+  });
+
+  Fragment select({
+    required String id, // lib/src/ui/templates/basecoat/select.html:1:14
+    required String name, // lib/src/ui/templates/basecoat/select.html:1:28
+    required String label, // lib/src/ui/templates/basecoat/select.html:1:43
+    required String value, // lib/src/ui/templates/basecoat/select.html:1:58
+    required bool multiple, // lib/src/ui/templates/basecoat/select.html:1:76
+    required bool objectFormat, // lib/src/ui/templates/basecoat/select.html:1:96
+    String? placeholder, // lib/src/ui/templates/basecoat/select.html:1:115
+    required bool hasPlaceholder, // lib/src/ui/templates/basecoat/select.html:1:140
+    required bool closeOnSelect, // lib/src/ui/templates/basecoat/select.html:1:161
+    required List<Fragment> items, // lib/src/ui/templates/basecoat/select.html:1:174
+    Fragment? body, // lib/src/ui/templates/basecoat/select.html:1:196
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/select.html:1:218
+    required Map<String, String> triggerAttrs, // lib/src/ui/templates/basecoat/select.html:1:253
+    required Map<String, String> popoverAttrs, // lib/src/ui/templates/basecoat/select.html:1:288
+    required Map<String, String> listboxAttrs, // lib/src/ui/templates/basecoat/select.html:1:323
+    required Map<String, String> inputAttrs, // lib/src/ui/templates/basecoat/select.html:1:356
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/select.html:2:13
+    $out.write('" ');
+    if (objectFormat) { // lib/src/ui/templates/basecoat/select.html:2:32
+      $out.write('data-format="object" ');
+    }
+    if (hasPlaceholder) { // lib/src/ui/templates/basecoat/select.html:2:86
+      $out.write('data-placeholder="');
+      _$write($out, placeholder); // lib/src/ui/templates/basecoat/select.html:2:123
+      $out.write('" ');
+    }
+    if (closeOnSelect) { // lib/src/ui/templates/basecoat/select.html:2:158
+      $out.write('data-close-on-select="true" ');
+    }
+    for (final attr in (mainAttrs.entries)) { // lib/src/ui/templates/basecoat/select.html:2:219
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/select.html:2:251
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/select.html:2:267
+      $out.write('" ');
+    }
+    $out.write('>\n  <button type="button" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/select.html:3:32
+    $out.write('-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/select.html:3:111
+    $out.write('-listbox" ');
+    for (final attr in (triggerAttrs.entries)) { // lib/src/ui/templates/basecoat/select.html:3:137
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/select.html:3:172
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/select.html:3:188
+      $out.write('" ');
+    }
+    $out.write('>\n    <span class="truncate">');
+    _$write($out, label); // lib/src/ui/templates/basecoat/select.html:4:31
+    $out.write('</span>\n    <i data-lucide="chevron-down" class="text-muted-foreground opacity-50 shrink-0" aria-hidden="true"></i>\n  </button>\n  <div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/select.html:7:15
+    $out.write('-popover" data-popover aria-hidden="true" ');
+    for (final attr in (popoverAttrs.entries)) { // lib/src/ui/templates/basecoat/select.html:7:73
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/select.html:7:108
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/select.html:7:124
+      $out.write('" ');
+    }
+    $out.write('>\n    <div role="listbox" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/select.html:8:32
+    $out.write('-listbox" aria-orientation="vertical" aria-labelledby="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/select.html:8:95
+    $out.write('-trigger" ');
+    if (multiple) { // lib/src/ui/templates/basecoat/select.html:8:122
+      $out.write('aria-multiselectable="true" ');
+    }
+    for (final attr in (listboxAttrs.entries)) { // lib/src/ui/templates/basecoat/select.html:8:178
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/select.html:8:213
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/select.html:8:229
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, items); // lib/src/ui/templates/basecoat/select.html:8:256
+    _$write($out, body); // lib/src/ui/templates/basecoat/select.html:8:267
+    $out.write('</div>\n  </div>\n  <input type="hidden" name="');
+    _$write($out, name); // lib/src/ui/templates/basecoat/select.html:10:33
+    $out.write('" value="');
+    _$write($out, value); // lib/src/ui/templates/basecoat/select.html:10:52
+    $out.write('" ');
+    for (final attr in (inputAttrs.entries)) { // lib/src/ui/templates/basecoat/select.html:10:73
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/select.html:10:106
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/select.html:10:122
+      $out.write('" ');
+    }
+    $out.write('>\n</div>\n');
+  });
+
+  Fragment separator() =>
+      Fragment._(($out) {
+    $out.write('<hr role="separator">\n');
+  });
+
+  Fragment sidebarGroup({
+    required String id, // lib/src/ui/templates/basecoat/sidebar-group.html:1:14
+    required String label, // lib/src/ui/templates/basecoat/sidebar-group.html:1:29
+    required bool hasLabel, // lib/src/ui/templates/basecoat/sidebar-group.html:1:47
+    required List<Fragment> children, // lib/src/ui/templates/basecoat/sidebar-group.html:1:63
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/sidebar-group.html:1:86
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div role="group" ');
+    if (hasLabel) { // lib/src/ui/templates/basecoat/sidebar-group.html:2:31
+      $out.write('aria-labelledby="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/sidebar-group.html:2:61
+      $out.write('" ');
+    }
+    for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/sidebar-group.html:2:86
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/sidebar-group.html:2:114
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/sidebar-group.html:2:130
+      $out.write('" ');
+    }
+    $out.write('>\n  ');
+    if (hasLabel) { // lib/src/ui/templates/basecoat/sidebar-group.html:3:15
+      $out.write('<h3 id="');
+      _$write($out, id); // lib/src/ui/templates/basecoat/sidebar-group.html:3:36
+      $out.write('">');
+      _$write($out, label); // lib/src/ui/templates/basecoat/sidebar-group.html:3:46
+      $out.write('</h3>');
+    }
+    $out.write('\n  <ul>');
+    _$write($out, children); // lib/src/ui/templates/basecoat/sidebar-group.html:4:10
+    $out.write('</ul>\n</div>\n');
+  });
+
+  Fragment sidebarItem({
+    required String href, // lib/src/ui/templates/basecoat/sidebar-item.html:1:16
+    required bool current, // lib/src/ui/templates/basecoat/sidebar-item.html:1:33
+    Fragment? icon, // lib/src/ui/templates/basecoat/sidebar-item.html:1:45
+    required Fragment content, // lib/src/ui/templates/basecoat/sidebar-item.html:1:65
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/sidebar-item.html:1:82
+  }) =>
+      Fragment._(($out) {
+    $out.write('<li><a href="');
+    _$write($out, href); // lib/src/ui/templates/basecoat/sidebar-item.html:2:17
+    $out.write('" ');
+    if (current) { // lib/src/ui/templates/basecoat/sidebar-item.html:2:38
+      $out.write('aria-current="page" ');
+    }
+    for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/sidebar-item.html:2:85
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/sidebar-item.html:2:113
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/sidebar-item.html:2:129
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, icon); // lib/src/ui/templates/basecoat/sidebar-item.html:2:156
+    $out.write('<span>');
+    _$write($out, content); // lib/src/ui/templates/basecoat/sidebar-item.html:2:172
+    $out.write('</span></a></li>\n');
+  });
+
+  Fragment sidebarSubmenu({
+    required String id, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:14
+    required bool open, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:28
+    Fragment? icon, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:40
+    required Fragment content, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:60
+    required List<Fragment> children, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:80
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/sidebar-submenu.html:1:103
+  }) =>
+      Fragment._(($out) {
+    $out.write('<li>\n  <details id="submenu-');
+    _$write($out, id); // lib/src/ui/templates/basecoat/sidebar-submenu.html:3:27
+    $out.write('" ');
+    if (open) { // lib/src/ui/templates/basecoat/sidebar-submenu.html:3:46
+      $out.write('open ');
+    }
+    for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/sidebar-submenu.html:3:75
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/sidebar-submenu.html:3:103
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/sidebar-submenu.html:3:119
+      $out.write('" ');
+    }
+    $out.write('>\n    <summary aria-controls="submenu-');
+    _$write($out, id); // lib/src/ui/templates/basecoat/sidebar-submenu.html:4:40
+    $out.write('-content">');
+    _$write($out, icon); // lib/src/ui/templates/basecoat/sidebar-submenu.html:4:58
+    $out.write('<span>');
+    _$write($out, content); // lib/src/ui/templates/basecoat/sidebar-submenu.html:4:74
+    $out.write('</span></summary>\n    <ul id="submenu-');
+    _$write($out, id); // lib/src/ui/templates/basecoat/sidebar-submenu.html:5:24
+    $out.write('-content">');
+    _$write($out, children); // lib/src/ui/templates/basecoat/sidebar-submenu.html:5:42
+    $out.write('</ul>\n  </details>\n</li>\n');
+  });
+
+  Fragment sidebar({
+    required String id, // lib/src/ui/templates/basecoat/sidebar.html:1:14
+    required String label, // lib/src/ui/templates/basecoat/sidebar.html:1:29
+    required String side, // lib/src/ui/templates/basecoat/sidebar.html:1:43
+    required String hidden, // lib/src/ui/templates/basecoat/sidebar.html:1:59
+    required bool closed, // lib/src/ui/templates/basecoat/sidebar.html:1:75
+    Fragment? header, // lib/src/ui/templates/basecoat/sidebar.html:1:89
+    Fragment? footer, // lib/src/ui/templates/basecoat/sidebar.html:1:108
+    required bool hasHeader, // lib/src/ui/templates/basecoat/sidebar.html:1:130
+    required bool hasFooter, // lib/src/ui/templates/basecoat/sidebar.html:1:147
+    required List<Fragment> items, // lib/src/ui/templates/basecoat/sidebar.html:1:160
+    Fragment? body, // lib/src/ui/templates/basecoat/sidebar.html:1:182
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:204
+    required Map<String, String> headerAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:238
+    required Map<String, String> contentAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:273
+    required Map<String, String> footerAttrs, // lib/src/ui/templates/basecoat/sidebar.html:1:307
+  }) =>
+      Fragment._(($out) {
+    $out.write('<aside id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/sidebar.html:2:15
+    $out.write('" data-side="');
+    _$write($out, side); // lib/src/ui/templates/basecoat/sidebar.html:2:36
+    $out.write('" aria-hidden="');
+    _$write($out, hidden); // lib/src/ui/templates/basecoat/sidebar.html:2:61
+    $out.write('" ');
+    if (closed) { // lib/src/ui/templates/basecoat/sidebar.html:2:84
+      $out.write('inert ');
+    }
+    for (final attr in (mainAttrs.entries)) { // lib/src/ui/templates/basecoat/sidebar.html:2:116
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/sidebar.html:2:148
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/sidebar.html:2:164
+      $out.write('" ');
+    }
+    $out.write('>\n  <nav aria-label="');
+    _$write($out, label); // lib/src/ui/templates/basecoat/sidebar.html:3:23
+    $out.write('">\n    ');
+    if (hasHeader) { // lib/src/ui/templates/basecoat/sidebar.html:4:17
+      $out.write('<header ');
+      for (final attr in (headerAttrs.entries)) { // lib/src/ui/templates/basecoat/sidebar.html:4:47
+        _$write($out, attr.key); // lib/src/ui/templates/basecoat/sidebar.html:4:81
+        $out.write('="');
+        _$write($out, attr.value); // lib/src/ui/templates/basecoat/sidebar.html:4:97
+        $out.write('" ');
+      }
+      $out.write('>');
+      _$write($out, header); // lib/src/ui/templates/basecoat/sidebar.html:4:124
+      $out.write('</header>');
+    }
+    $out.write('\n    <section ');
+    for (final attr in (contentAttrs.entries)) { // lib/src/ui/templates/basecoat/sidebar.html:5:25
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/sidebar.html:5:60
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/sidebar.html:5:76
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, items); // lib/src/ui/templates/basecoat/sidebar.html:5:103
+    _$write($out, body); // lib/src/ui/templates/basecoat/sidebar.html:5:114
+    $out.write('</section>\n    ');
+    if (hasFooter) { // lib/src/ui/templates/basecoat/sidebar.html:6:17
+      $out.write('<footer ');
+      for (final attr in (footerAttrs.entries)) { // lib/src/ui/templates/basecoat/sidebar.html:6:47
+        _$write($out, attr.key); // lib/src/ui/templates/basecoat/sidebar.html:6:81
+        $out.write('="');
+        _$write($out, attr.value); // lib/src/ui/templates/basecoat/sidebar.html:6:97
+        $out.write('" ');
+      }
+      $out.write('>');
+      _$write($out, footer); // lib/src/ui/templates/basecoat/sidebar.html:6:124
+      $out.write('</footer>');
+    }
+    $out.write('\n  </nav>\n</aside>\n');
+  });
+
+  Fragment tabPanel({
+    required String id, // lib/src/ui/templates/basecoat/tab-panel.html:1:14
+    required int index, // lib/src/ui/templates/basecoat/tab-panel.html:1:29
+    required String selected, // lib/src/ui/templates/basecoat/tab-panel.html:1:44
+    required bool hidden, // lib/src/ui/templates/basecoat/tab-panel.html:1:60
+    required Fragment content, // lib/src/ui/templates/basecoat/tab-panel.html:1:75
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/tab-panel.html:1:92
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div role="tabpanel" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/tab-panel.html:2:29
+    $out.write('-panel-');
+    _$write($out, index); // lib/src/ui/templates/basecoat/tab-panel.html:2:44
+    $out.write('" aria-labelledby="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/tab-panel.html:2:74
+    $out.write('-tab-');
+    _$write($out, index); // lib/src/ui/templates/basecoat/tab-panel.html:2:87
+    $out.write('" tabindex="-1" aria-selected="');
+    _$write($out, selected); // lib/src/ui/templates/basecoat/tab-panel.html:2:129
+    $out.write('" ');
+    if (hidden) { // lib/src/ui/templates/basecoat/tab-panel.html:2:154
+      $out.write('hidden ');
+    }
+    for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/tab-panel.html:2:187
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/tab-panel.html:2:215
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/tab-panel.html:2:231
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, content); // lib/src/ui/templates/basecoat/tab-panel.html:2:258
+    $out.write('</div>\n');
+  });
+
+  Fragment tab({
+    required String id, // lib/src/ui/templates/basecoat/tab.html:1:14
+    required int index, // lib/src/ui/templates/basecoat/tab.html:1:29
+    required String selected, // lib/src/ui/templates/basecoat/tab.html:1:44
+    required String tabindex, // lib/src/ui/templates/basecoat/tab.html:1:62
+    required Fragment content, // lib/src/ui/templates/basecoat/tab.html:1:79
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/tab.html:1:96
+  }) =>
+      Fragment._(($out) {
+    $out.write('<button type="button" role="tab" id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/tab.html:2:41
+    $out.write('-tab-');
+    _$write($out, index); // lib/src/ui/templates/basecoat/tab.html:2:54
+    $out.write('" aria-controls="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/tab.html:2:82
+    $out.write('-panel-');
+    _$write($out, index); // lib/src/ui/templates/basecoat/tab.html:2:97
+    $out.write('" aria-selected="');
+    _$write($out, selected); // lib/src/ui/templates/basecoat/tab.html:2:125
+    $out.write('" tabindex="');
+    _$write($out, tabindex); // lib/src/ui/templates/basecoat/tab.html:2:151
+    $out.write('" ');
+    for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/tab.html:2:175
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/tab.html:2:203
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/tab.html:2:219
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, content); // lib/src/ui/templates/basecoat/tab.html:2:246
+    $out.write('</button>\n');
+  });
+
+  Fragment tabs({
+    required String id, // lib/src/ui/templates/basecoat/tabs.html:1:14
+    required String orientation, // lib/src/ui/templates/basecoat/tabs.html:1:35
+    required List<Fragment> buttons, // lib/src/ui/templates/basecoat/tabs.html:1:52
+    required List<Fragment> panels, // lib/src/ui/templates/basecoat/tabs.html:1:76
+    required Map<String, String> mainAttrs, // lib/src/ui/templates/basecoat/tabs.html:1:103
+    required Map<String, String> tablistAttrs, // lib/src/ui/templates/basecoat/tabs.html:1:138
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/tabs.html:2:13
+    $out.write('" ');
+    for (final attr in (mainAttrs.entries)) { // lib/src/ui/templates/basecoat/tabs.html:2:31
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/tabs.html:2:63
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/tabs.html:2:79
+      $out.write('" ');
+    }
+    $out.write('>\n  <nav role="tablist" aria-orientation="');
+    _$write($out, orientation); // lib/src/ui/templates/basecoat/tabs.html:3:44
+    $out.write('" ');
+    for (final attr in (tablistAttrs.entries)) { // lib/src/ui/templates/basecoat/tabs.html:3:71
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/tabs.html:3:106
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/tabs.html:3:122
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, buttons); // lib/src/ui/templates/basecoat/tabs.html:3:149
+    $out.write('</nav>\n  ');
+    _$write($out, panels); // lib/src/ui/templates/basecoat/tabs.html:4:6
+    $out.write('\n</div>\n');
+  });
+
+  Fragment text({
+    required String text, // lib/src/ui/templates/basecoat/text.html:1:16
+  }) =>
+      Fragment._(($out) {
+    _$write($out, text); // lib/src/ui/templates/basecoat/text.html:2:4
+    $out.write('\n');
+  });
+
+  Fragment toastAction({
+    required String label, // lib/src/ui/templates/basecoat/toast-action.html:1:17
+    String? href, // lib/src/ui/templates/basecoat/toast-action.html:1:31
+    required bool link, // lib/src/ui/templates/basecoat/toast-action.html:1:46
+    required bool button, // lib/src/ui/templates/basecoat/toast-action.html:1:60
+    required bool cancel, // lib/src/ui/templates/basecoat/toast-action.html:1:74
+    required bool action, // lib/src/ui/templates/basecoat/toast-action.html:1:88
+    String? onclick, // lib/src/ui/templates/basecoat/toast-action.html:1:103
+    required bool hasOnclick, // lib/src/ui/templates/basecoat/toast-action.html:1:124
+  }) =>
+      Fragment._(($out) {
+    if (link) { // lib/src/ui/templates/basecoat/toast-action.html:2:13
+      $out.write('<a href="');
+      _$write($out, href); // lib/src/ui/templates/basecoat/toast-action.html:2:31
+      $out.write('" class="btn" data-size="sm" ');
+      if (cancel) { // lib/src/ui/templates/basecoat/toast-action.html:2:79
+        $out.write('data-variant="outline" data-toast-cancel');
+      }
+      if (action) { // lib/src/ui/templates/basecoat/toast-action.html:2:146
+        $out.write('data-toast-action');
+      }
+      $out.write('>');
+      _$write($out, label); // lib/src/ui/templates/basecoat/toast-action.html:2:182
+      $out.write('</a>');
+    }
+    $out.write('\n');
+    if (button) { // lib/src/ui/templates/basecoat/toast-action.html:3:13
+      $out.write('<button type="button" class="btn" data-size="sm" ');
+      if (cancel) { // lib/src/ui/templates/basecoat/toast-action.html:3:82
+        $out.write('data-variant="outline" data-toast-cancel ');
+      }
+      if (action) { // lib/src/ui/templates/basecoat/toast-action.html:3:150
+        $out.write('data-toast-action ');
+      }
+      if (hasOnclick) { // lib/src/ui/templates/basecoat/toast-action.html:3:195
+        $out.write('onclick="');
+        _$write($out, onclick); // lib/src/ui/templates/basecoat/toast-action.html:3:219
+        $out.write('"');
+      }
+      $out.write('>');
+      _$write($out, label); // lib/src/ui/templates/basecoat/toast-action.html:3:241
+      $out.write('</button>');
+    }
+    $out.write('\n');
+  });
+
+  Fragment toast({
+    required String category, // lib/src/ui/templates/basecoat/toast.html:1:20
+    required String role, // lib/src/ui/templates/basecoat/toast.html:1:34
+    int? duration, // lib/src/ui/templates/basecoat/toast.html:1:52
+    required bool hasDuration, // lib/src/ui/templates/basecoat/toast.html:1:71
+    required String title, // lib/src/ui/templates/basecoat/toast.html:1:84
+    required String description, // lib/src/ui/templates/basecoat/toast.html:1:105
+    required bool hasTitle, // lib/src/ui/templates/basecoat/toast.html:1:123
+    required bool hasDescription, // lib/src/ui/templates/basecoat/toast.html:1:145
+    Fragment? icon, // lib/src/ui/templates/basecoat/toast.html:1:157
+    Fragment? action, // lib/src/ui/templates/basecoat/toast.html:1:176
+    Fragment? cancel, // lib/src/ui/templates/basecoat/toast.html:1:195
+    required bool hasFooter, // lib/src/ui/templates/basecoat/toast.html:1:217
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/toast.html:1:230
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div role="');
+    _$write($out, role); // lib/src/ui/templates/basecoat/toast.html:2:15
+    $out.write('" aria-atomic="true" aria-hidden="false" data-category="');
+    _$write($out, category); // lib/src/ui/templates/basecoat/toast.html:2:81
+    $out.write('" ');
+    if (hasDuration) { // lib/src/ui/templates/basecoat/toast.html:2:106
+      $out.write('data-duration="');
+      _$write($out, duration); // lib/src/ui/templates/basecoat/toast.html:2:137
+      $out.write('" ');
+    }
+    for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/toast.html:2:168
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/toast.html:2:196
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/toast.html:2:212
+      $out.write('" ');
+    }
+    $out.write('>\n  <div class="toast-content">\n    ');
+    _$write($out, icon); // lib/src/ui/templates/basecoat/toast.html:4:8
+    $out.write('\n    <section>\n      ');
+    if (hasTitle) { // lib/src/ui/templates/basecoat/toast.html:6:19
+      $out.write('<h2>');
+      _$write($out, title); // lib/src/ui/templates/basecoat/toast.html:6:36
+      $out.write('</h2>');
+    }
+    $out.write('\n      ');
+    if (hasDescription) { // lib/src/ui/templates/basecoat/toast.html:7:19
+      $out.write('<p>');
+      _$write($out, description); // lib/src/ui/templates/basecoat/toast.html:7:41
+      $out.write('</p>');
+    }
+    $out.write('\n    </section>\n    ');
+    if (hasFooter) { // lib/src/ui/templates/basecoat/toast.html:9:17
+      $out.write('<footer>');
+      _$write($out, action); // lib/src/ui/templates/basecoat/toast.html:9:39
+      _$write($out, cancel); // lib/src/ui/templates/basecoat/toast.html:9:51
+      $out.write('</footer>');
+    }
+    $out.write('\n  </div>\n</div>\n');
+  });
+
+  Fragment toaster({
+    required String id, // lib/src/ui/templates/basecoat/toaster.html:1:14
+    required List<Fragment> toasts, // lib/src/ui/templates/basecoat/toaster.html:1:30
+    Fragment? body, // lib/src/ui/templates/basecoat/toaster.html:1:52
+    required Map<String, String> attrs, // lib/src/ui/templates/basecoat/toaster.html:1:70
+  }) =>
+      Fragment._(($out) {
+    $out.write('<div id="');
+    _$write($out, id); // lib/src/ui/templates/basecoat/toaster.html:2:13
+    $out.write('" ');
+    for (final attr in (attrs.entries)) { // lib/src/ui/templates/basecoat/toaster.html:2:31
+      _$write($out, attr.key); // lib/src/ui/templates/basecoat/toaster.html:2:59
+      $out.write('="');
+      _$write($out, attr.value); // lib/src/ui/templates/basecoat/toaster.html:2:75
+      $out.write('" ');
+    }
+    $out.write('>');
+    _$write($out, toasts); // lib/src/ui/templates/basecoat/toaster.html:2:102
+    _$write($out, body); // lib/src/ui/templates/basecoat/toaster.html:2:114
+    $out.write('</div>\n');
+  });
 }
 
 final class _Html$layout {

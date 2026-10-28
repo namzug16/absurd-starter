@@ -1,0 +1,18 @@
+<x-props id="String" name="String?" hasName="bool" value="String" multiple="bool" objectFormat="bool" closeOnSelect="bool" autoHighlight="bool" clear="bool" plain="bool" input="Fragment" items="List<Fragment>" body="Fragment?" mainAttrs="Map<String, String>" groupAttrs="Map<String, String>" popoverAttrs="Map<String, String>" listboxAttrs="Map<String, String>" hiddenInputAttrs="Map<String, String>"></x-props>
+<div id="{{ id }}" <x-if case="objectFormat">data-format="object" </x-if><x-if case="closeOnSelect">data-close-on-select="true" </x-if><x-if case="autoHighlight">data-auto-highlight="true" </x-if><x-for in="mainAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+  <x-if case="multiple">{{ input }}</x-if>
+  <x-if case="clear">
+    <div <x-for in="groupAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+      {{ input }}
+      <span role="group" data-align="inline-end">
+        <button type="button" data-clear aria-label="Clear selection"><i data-lucide="x" class="size-4" aria-hidden="true"></i></button>
+        <button type="button" class="btn" data-variant="ghost" data-size="icon-xs" aria-label="Open suggestions" aria-haspopup="listbox" aria-expanded="false" aria-controls="{{ id }}-listbox"><i data-lucide="chevron-down" aria-hidden="true"></i></button>
+      </span>
+    </div>
+  </x-if>
+  <x-if case="plain">{{ input }}<i data-lucide="chevron-down" class="combobox-trigger-icon" aria-hidden="true"></i></x-if>
+  <div id="{{ id }}-popover" data-popover aria-hidden="true" <x-for in="popoverAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+    <div role="listbox" id="{{ id }}-listbox" aria-orientation="vertical" <x-if case="multiple">aria-multiselectable="true" </x-if><x-for in="listboxAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ items }}{{ body }}</div>
+  </div>
+  <input type="hidden" <x-if case="hasName">name="{{ name }}" </x-if>value="{{ value }}" <x-for in="hiddenInputAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+</div>

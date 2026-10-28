@@ -1,0 +1,17 @@
+<x-props id="String" trigger="Fragment?" title="String?" description="String?" body="Fragment?" footer="Fragment?" hasTrigger="bool" hasTitle="bool" hasDescription="bool" hasHeader="bool" hasBody="bool" hasFooter="bool" open="bool" closeButton="bool" closeOnOverlayClick="bool" dialogAttrs="Map<String, String>" triggerAttrs="Map<String, String>" headerAttrs="Map<String, String>" bodyAttrs="Map<String, String>" footerAttrs="Map<String, String>"></x-props>
+<x-if case="hasTrigger">
+  <button type="button" data-dialog-id="{{ id }}" onclick="document.getElementById(this.dataset.dialogId).showModal()" <x-for in="triggerAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ trigger }}</button>
+</x-if>
+<dialog id="{{ id }}" <x-if case="hasTitle">aria-labelledby="{{ id }}-title" </x-if><x-if case="hasDescription">aria-describedby="{{ id }}-description" </x-if><x-if case="open">open </x-if><x-if case="closeOnOverlayClick">onclick="if (event.target === this) this.close()" </x-if><x-for in="dialogAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+  <div>
+    <x-if case="hasHeader">
+      <header <x-for in="headerAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>
+        <x-if case="hasTitle"><h2 id="{{ id }}-title">{{ title }}</h2></x-if>
+        <x-if case="hasDescription"><p id="{{ id }}-description">{{ description }}</p></x-if>
+      </header>
+    </x-if>
+    <x-if case="hasBody"><section <x-for in="bodyAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ body }}</section></x-if>
+    <x-if case="hasFooter"><footer <x-for in="footerAttrs.entries" as="attr">{{ attr.key }}="{{ attr.value }}" </x-for>>{{ footer }}</footer></x-if>
+    <x-if case="closeButton"><button type="button" class="btn" data-variant="ghost" data-size="icon-sm" aria-label="Close dialog" onclick="this.closest('dialog').close()"><i data-lucide="x" aria-hidden="true"></i></button></x-if>
+  </div>
+</dialog>
