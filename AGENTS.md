@@ -22,6 +22,7 @@
 - Dart composition: `lib/src/ui/`
 - HTMX helpers: `lib/src/utils/htmx.dart`
 - Temporary dialog markup/composition: `lib/src/ui/templates/temporary-dialog.html`, `lib/src/ui/components/temporary_dialog.dart`
+- Dev-only component gallery (`DEV=true`, `/ui`): `lib/src/ui/templates/pages/ui.html`, one section per component in `lib/src/ui/templates/pages/ui-examples/`, composed by `lib/src/ui/pages/ui_page.dart`. Sections are plain Basecoat HTML copied from the docs examples.
 - Browser initialization: `public/index.js`
 - Vendored Lucide: `public/js/lucide.min.js`
 
