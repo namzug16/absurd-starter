@@ -1,4 +1,4 @@
-<x-fragment _="/layout/primary.html" title="Absurd Starter" description="A Dart starter using Relic, HTMX, Tailwind, Basecoat, and Absurd Templates.">
+<x-fragment template="/layout/primary.html" title="Absurd Starter" description="A Dart starter using Relic, HTMX, Tailwind, Basecoat, and Absurd Templates.">
   <x-slot name="body">
     <div class="mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center gap-10 px-6 py-12">
       <section class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
@@ -21,7 +21,7 @@
             <i data-lucide="zap" class="size-4" aria-hidden="true"></i>
             HTMX fragment demo
           </div>
-          <x-fragment _="/counter.html" count="0" />
+          <x-fragment template="/counter.html" count="0" />
           <form id="counter-form" hx-post="/api/counter/increment" hx-target="#counter-result" hx-swap="outerHTML"
                 hx-on:htmx:before:request="this.querySelectorAll('fieldset').forEach((fieldset) => fieldset.disabled = true)"
                 hx-on:htmx:finally:request="this.querySelectorAll('fieldset').forEach((fieldset) => fieldset.disabled = false)">
